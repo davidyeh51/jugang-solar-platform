@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230c3a63'/%3E%3Cpath d='M12 48h10V28H12zm15 0h10V18H27zm15 0h10V8H42z' fill='%231bb1bf'/%3E%3Ccircle cx='47' cy='13' r='5' fill='%23e09a2b'/%3E%3C/svg%3E">
+<title>台中西屯・鉅鋼機械 新廠光電方案簡報暨 MEDDIC 顧問 QA 決策平台｜進能服 6692</title>
+<meta name="description" content="鉅鋼機械股份有限公司新廠光電配置規劃（D棟+C棟屋突二處）：結合 MEDDIC 高層銷售顧問策略、客戶 5 大想法解析、資深光伏顧問 5 大疑問精算解答與董事長 5 大採購決策指南。">
+<style>
+:root{
+  --blue:#1968AD; --blue-d:#12518A; --blue-dd:#0C3A63; --blue-soft:#E8F1F9;
+  --teal:#1BB1BF; --teal-d:#12818C; --teal-soft:#E2F5F7;
+  --ink:#12293D; --muted:#5B7285; --line:#D9E3EC; --paper:#F4F7FA; --card:#fff;
+  --amber:#E09A2B; --amber-soft:#FCF2DE;
+  --coral:#D95F45; --coral-soft:#FBEAE5;
+  --grey:#9FB1C0; --grey-soft:#EDF1F5;
+  --green:#2E7D32; --green-soft:#E8F5E9;
+  --purple:#6B46C1; --purple-soft:#F3E8FF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:fixed; top:0; left:0; right:0; z-index:50; height:56px;
+  display:flex; align-items:center; gap:8px; padding:0 18px;
+  background:rgba(255,255,255,.97); backdrop-filter:blur(8px);
+  border-bottom:2px solid var(--blue);
+  box-shadow:0 2px 10px rgba(12,58,99,.06);
+}
+.topbar .brand{display:flex; align-items:center; gap:9px; margin-right:10px; white-space:nowrap; text-decoration:none}
+.topbar .brand .mk{flex:0 0 26px}
+.topbar .brand .tx{font-weight:800; font-size:.86rem; letter-spacing:.02em; color:var(--ink); line-height:1.15}
+.topbar .brand .tx small{display:block; font-weight:700; font-size:.65rem; letter-spacing:.06em; color:var(--blue)}
+.topnav{display:flex; gap:4px; flex:1; min-width:0; overflow-x:auto; scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{
+  text-decoration:none; color:var(--muted); font-size:.81rem; font-weight:700;
+  padding:6px 11px; border-radius:4px; white-space:nowrap; border:1px solid transparent;
+  transition:all .15s ease;
+}
+.topnav a:hover{color:var(--blue); background:var(--blue-soft)}
+.topnav a.active{color:#fff; background:var(--blue); font-weight:800}
+.topnav a.badge-new{border-color:rgba(224,154,43,.45); background:#FFFDF7}
+.topnav a.badge-new.active{background:var(--blue); border-color:var(--blue)}
+.topbar .actions{display:flex; align-items:center; gap:10px}
+.btn-dl{
+  text-decoration:none; font-size:.75rem; font-weight:800; padding:6px 11px;
+  border-radius:4px; background:var(--amber-soft); color:#8c5d08; border:1px solid #f0c975;
+  white-space:nowrap; transition:all .15s ease;
+}
+.btn-dl:hover{background:var(--amber); color:#fff}
+.topbar .meta{font-size:.72rem; color:var(--muted); white-space:nowrap; font-weight:600}
+@media(max-width:1280px){.topbar .meta{display:none}}
+@media(max-width:860px){.topbar .brand .tx{font-size:.76rem}}
+
+/* ---------- views / slides ---------- */
+.view{display:none}
+.view.active{display:block}
+.slide{
+  display:none; min-height:100vh; padding:76px 42px 86px;
+  max-width:1400px; margin:0 auto; flex-direction:column;
+}
+.slide.active{display:flex}
+.slide-header{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:16px}
+.eyebrow{font-size:.75rem; font-weight:800; letter-spacing:.12em; color:var(--teal-d); text-transform:uppercase; margin-bottom:5px}
+.slide-header h1,.slide-header h2{font-size:clamp(1.3rem,2.5vw,1.82rem); line-height:1.3; font-weight:900; max-width:36em; color:var(--ink)}
+.slide-header h1::after,.slide-header h2::after{
+  content:""; display:block; width:64px; height:4px; margin-top:8px;
+  background:linear-gradient(90deg,var(--blue),var(--teal));
+}
+.slide-header .sub{margin-top:8px; color:var(--muted); font-size:.9rem; max-width:68em; line-height:1.55}
+.flags{display:flex; gap:7px; flex-wrap:wrap; justify-content:flex-end}
+.flag{font-size:.72rem; font-weight:800; padding:5px 11px; border-radius:3px; white-space:nowrap}
+.flag.blue{background:var(--blue-soft); color:var(--blue-d)}
+.flag.teal{background:var(--teal-soft); color:var(--teal-d)}
+.flag.amber{background:var(--amber-soft); color:#9a6a10}
+.flag.coral{background:var(--coral-soft); color:#b4432c}
+.flag.green{background:var(--green-soft); color:var(--green)}
+.flag.purple{background:var(--purple-soft); color:var(--purple)}
+.flag.grey{background:var(--grey-soft); color:var(--muted)}
+.slide-body{flex:1; display:flex; flex-direction:column; gap:14px}
+.slide-foot{display:flex; justify-content:space-between; gap:16px; margin-top:18px; padding:10px 12px; border-top:1px solid var(--line); font-size:.73rem; color:var(--muted); background:rgba(255,255,255,.7); border-radius:4px}
+.slide-foot .pageno{white-space:nowrap; font-weight:800; color:var(--blue)}
+
+/* ---------- layout grids ---------- */
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:stretch}
+.three-col{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+.four-col{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+.five-col{display:grid; grid-template-columns:repeat(5,1fr); gap:10px}
+.six-col{display:grid; grid-template-columns:repeat(6,1fr); gap:10px}
+.split-45{display:grid; grid-template-columns:44% 1fr; gap:16px; align-items:start}
+.split-55{display:grid; grid-template-columns:1fr 44%; gap:16px; align-items:start}
+.split-img-right{display:grid; grid-template-columns:1fr 1.12fr; gap:16px; align-items:start}
+.split-img-left{display:grid; grid-template-columns:1.12fr 1fr; gap:16px; align-items:start}
+
+@media(max-width:1080px){
+  .slide{padding:70px 16px 92px}
+  .two-col,.three-col,.four-col,.five-col,.six-col,.split-45,.split-55,.split-img-right,.split-img-left{grid-template-columns:1fr}
+}
+
+/* ---------- components ---------- */
+.card{background:var(--card); border:1px solid var(--line); border-top:3px solid var(--blue); border-radius:4px; padding:15px 17px; box-shadow:0 3px 10px rgba(18,41,61,.04)}
+.card.teal{border-top-color:var(--teal)}
+.card.amber{border-top-color:var(--amber)}
+.card.coral{border-top-color:var(--coral)}
+.card.green{border-top-color:var(--green)}
+.card.purple{border-top-color:var(--purple)}
+.card.grey{border-top-color:var(--grey)}
+.card h3{font-size:.96rem; font-weight:800; margin-bottom:8px; color:var(--ink); display:flex; align-items:center; gap:8px}
+.card p{font-size:.86rem; color:var(--muted); line-height:1.56}
+.card ul{padding-left:18px; font-size:.85rem; color:var(--ink); line-height:1.6}
+.card ul li{margin-bottom:5px}
+
+.metric{border-radius:4px; padding:13px 15px; border:1px solid var(--line); background:#fff; border-left:5px solid var(--blue); box-shadow:0 2px 8px rgba(18,41,61,.03)}
+.metric .k{font-size:clamp(1.25rem,2.1vw,1.75rem); font-weight:900; line-height:1.15; color:var(--blue); font-variant-numeric:tabular-nums}
+.metric .t{font-size:.78rem; color:var(--muted); margin-top:5px; line-height:1.42; font-weight:600}
+.metric.teal{border-left-color:var(--teal)} .metric.teal .k{color:var(--teal-d)}
+.metric.amber{border-left-color:var(--amber)} .metric.amber .k{color:#9a6a10}
+.metric.coral{border-left-color:var(--coral)} .metric.coral .k{color:#b4432c}
+.metric.green{border-left-color:var(--green)} .metric.green .k{color:var(--green)}
+.metric.purple{border-left-color:var(--purple)} .metric.purple .k{color:var(--purple)}
+
+.big-callout{
+  background:linear-gradient(120deg,var(--blue-dd),var(--blue) 62%,var(--teal-d)); color:#fff;
+  border-radius:4px; padding:16px 22px; position:relative; overflow:hidden;
+}
+.big-callout .label{font-size:.71rem; letter-spacing:.14em; opacity:.88; font-weight:800; margin-bottom:5px; text-transform:uppercase}
+.big-callout .answer{font-size:clamp(1.05rem,2vw,1.38rem); font-weight:800; line-height:1.36}
+.big-callout .more{margin-top:7px; font-size:.86rem; opacity:.94; line-height:1.55}
+
+.table-wrap{background:#fff; border:1px solid var(--line); border-radius:4px; overflow-x:auto; box-shadow:0 4px 14px rgba(7,29,59,.04)}
+table{width:100%; border-collapse:collapse; font-size:.83rem; min-width:540px}
+th{background:var(--blue); color:#fff; text-align:left; font-weight:700; padding:8px 11px; white-space:nowrap; font-size:.8rem}
+th.sub{background:var(--blue-d)}
+td{padding:7px 11px; border-bottom:1px solid #EDF1F5; vertical-align:top; line-height:1.48}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:#FAFCFE}
+tbody tr:hover{background:#F0F6FC}
+td.num,th.num{text-align:right; font-variant-numeric:tabular-nums}
+td.ctr,th.ctr{text-align:center}
+.hl-row{background:var(--amber-soft) !important}
+.hl-row td{font-weight:700}
+.bad-row{background:var(--coral-soft) !important}
+.good-row{background:var(--green-soft) !important}
+.good-row td{font-weight:600}
+
+.table-toggle{display:block; width:100%; padding:8px 12px; border:0; border-top:1px solid var(--line); background:var(--blue-soft); color:var(--blue-dd); text-align:center; font:800 .78rem inherit; cursor:pointer}
+.table-toggle:hover{background:#d8e6f5}
+.table-extra{display:none}
+.table-wrap.expanded .table-extra{display:table-row}
+
+.chip{display:inline-block; font-size:.69rem; font-weight:800; padding:2px 8px; border-radius:3px; white-space:nowrap}
+.chip.blue{background:var(--blue-soft); color:var(--blue-d)}
+.chip.teal{background:var(--teal-soft); color:var(--teal-d)}
+.chip.amber{background:var(--amber-soft); color:#9a6a10}
+.chip.coral{background:var(--coral-soft); color:#b4432c}
+.chip.green{background:var(--green-soft); color:var(--green)}
+.chip.purple{background:var(--purple-soft); color:var(--purple)}
+.chip.grey{background:var(--grey-soft); color:var(--muted)}
+
+.note{background:var(--amber-soft); border-left:4px solid var(--amber); padding:9px 13px; font-size:.84rem; border-radius:0 3px 3px 0; line-height:1.52}
+.warn{background:var(--coral-soft); border-left:4px solid var(--coral); padding:9px 13px; font-size:.84rem; border-radius:0 3px 3px 0; line-height:1.52}
+.tip{background:var(--green-soft); border-left:4px solid var(--green); padding:9px 13px; font-size:.84rem; border-radius:0 3px 3px 0; line-height:1.52}
+
+.fig{background:#fff; border:1px solid var(--line); border-radius:4px; padding:11px 13px; box-shadow:0 3px 12px rgba(18,41,61,.04)}
+.fig .cap{font-size:.75rem; color:var(--muted); margin-top:7px; text-align:center; font-weight:600}
+.fig .figtitle{font-size:.85rem; font-weight:800; margin-bottom:8px; color:var(--blue-dd); display:flex; justify-content:space-between; align-items:center}
+.fig img{display:block; width:100%; max-height:380px; height:auto; border-radius:3px; object-fit:contain; background:#f8fafc; cursor:zoom-in}
+
+/* Lightbox modal for zooming diagrams */
+.lightbox{
+  display:none; position:fixed; inset:0; z-index:200; background:rgba(8,25,43,.88);
+  align-items:center; justify-content:center; padding:24px; cursor:zoom-out;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95vw; max-height:90vh; border-radius:6px; background:#fff; padding:8px; box-shadow:0 12px 40px rgba(0,0,0,.5)}
+
+/* ---------- home ---------- */
+.home{min-height:100vh}
+.hero{
+  position:relative; overflow:hidden; color:#fff;
+  background:linear-gradient(115deg,var(--blue-dd) 0%,var(--blue) 55%,#1580A8 100%);
+  padding:92px 44px 46px;
+}
+.hero .inner{max-width:1380px; margin:0 auto; position:relative; z-index:2}
+.hero .kicker{font-size:.78rem; font-weight:800; letter-spacing:.15em; color:#8FD9E4; text-transform:uppercase}
+.hero h1{font-size:clamp(1.6rem,3.6vw,2.45rem); font-weight:900; line-height:1.26; margin-top:10px; max-width:34em}
+.hero .lede{margin-top:12px; max-width:64em; font-size:.95rem; opacity:.94; line-height:1.65}
+.hero .herometa{margin-top:18px; display:flex; gap:8px; flex-wrap:wrap}
+.hero .herometa span{font-size:.74rem; font-weight:700; background:rgba(255,255,255,.16); padding:5px 12px; border-radius:3px; border:1px solid rgba(255,255,255,.22)}
+.hero .deco{position:absolute; right:-60px; top:-40px; width:840px; opacity:.28; pointer-events:none; z-index:1}
+@media(max-width:1000px){.hero{padding:78px 18px 36px} .hero .deco{width:520px; right:-140px; opacity:.2}}
+.homebody{max-width:1380px; margin:0 auto; padding:28px 44px 56px}
+@media(max-width:1000px){.homebody{padding:22px 18px 46px}}
+
+.part-cards{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+@media(max-width:1150px){.part-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.part-cards{grid-template-columns:1fr}}
+.part-card{
+  display:flex; flex-direction:column; justify-content:space-between;
+  text-decoration:none; color:var(--ink); background:#fff;
+  border:1px solid var(--line); border-top:4px solid var(--blue); border-radius:4px; padding:20px;
+  transition:transform .15s ease, box-shadow .15s ease; position:relative; overflow:hidden;
+}
+.part-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px rgba(18,41,61,.12)}
+.part-card.c1{border-top-color:var(--amber); background:linear-gradient(180deg,#FFFDF9 0%,#fff 40%)}
+.part-card.c2{border-top-color:var(--blue)}
+.part-card.c3{border-top-color:var(--teal); background:linear-gradient(180deg,#F7FEFF 0%,#fff 40%)}
+.part-card.c4{border-top-color:var(--purple)}
+.part-card .pc-eyebrow{font-size:.72rem; font-weight:900; letter-spacing:.12em; color:var(--blue)}
+.part-card.c1 .pc-eyebrow{color:#b4690e}
+.part-card.c3 .pc-eyebrow{color:var(--teal-d)}
+.part-card.c4 .pc-eyebrow{color:var(--purple)}
+.part-card h2{font-size:1.15rem; font-weight:900; margin:7px 0 6px; line-height:1.35}
+.part-card p{color:var(--muted); font-size:.84rem; line-height:1.56; flex:1}
+.part-card .pc-flags{margin-top:12px; display:flex; gap:5px; flex-wrap:wrap}
+.part-card .pc-go{margin-top:12px; font-weight:800; color:var(--blue); font-size:.83rem}
+
+.quick-spec-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-top:22px}
+.home-foot{padding-top:18px; font-size:.74rem; color:var(--muted); border-top:1px solid var(--line); margin-top:26px; line-height:1.75; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
+
+/* ---------- bottom controls ---------- */
+.deckbar{position:fixed; left:0; right:0; bottom:0; z-index:50; pointer-events:none; display:none}
+.progress{height:4px; background:#DFE7EE}
+.progress .fill{height:100%; width:0%; background:linear-gradient(90deg,var(--blue),var(--teal)); transition:width .25s ease}
+.hint{position:absolute; left:20px; bottom:12px; font-size:.73rem; color:var(--muted); background:rgba(255,255,255,.95); padding:4px 10px; border-radius:3px; border:1px solid var(--line); pointer-events:auto}
+.ctrl{position:absolute; right:16px; bottom:10px; display:flex; align-items:center; gap:7px; pointer-events:auto}
+.ctrl .counter{font-size:.76rem; font-weight:700; color:var(--ink); background:rgba(255,255,255,.95); border:1px solid var(--line); padding:5px 11px; border-radius:3px; font-variant-numeric:tabular-nums}
+.ctrl button{
+  width:32px; height:32px; border:1px solid var(--line); background:rgba(255,255,255,.95);
+  border-radius:3px; cursor:pointer; font-size:1.05rem; color:var(--ink); font-weight:800;
+  display:flex; align-items:center; justify-content:center; transition:background .15s;
+}
+.ctrl button:hover{background:var(--blue); color:#fff}
+@media(max-width:800px){.hint{display:none}}
+</style>
+</head>
+<body>
+
+<!-- Lightbox for zooming any image -->
+<div class="lightbox" id="lightbox" title="點擊關閉放大檢視">
+  <img id="lightbox-img" src="" alt="放大圖面">
+</div>
+
+<!-- ================= TOP BAR ================= -->
+<div class="topbar">
+  <a class="brand" href="#home">
+    <svg class="mk" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#1968AD" opacity=".9"/>
+      <rect x="14" y="0" width="12" height="12" rx="2" fill="#1BB1BF" opacity=".9"/>
+      <rect x="0" y="14" width="12" height="12" rx="2" fill="#1BB1BF" opacity=".6"/>
+      <rect x="14" y="14" width="12" height="12" rx="2" fill="#1968AD"/>
+    </svg>
+    <div class="tx">進能服 6692<small>台中西屯 · 鉅鋼機械光電決策平台</small></div>
+  </a>
+  <nav class="topnav">
+    <a href="#home" data-nav="home">戰情封面</a>
+    <a href="#p1" data-nav="p1" class="badge-new">★ Part 1 客戶想法與 MEDDIC 策略 (5頁)</a>
+    <a href="#p2" data-nav="p2">Part 2 D棟+C棟雙軌方案規劃 (7頁)</a>
+    <a href="#p3" data-nav="p3" class="badge-new">★ Part 3 資深顧問 QA 與高層決策 (7頁)</a>
+    <a href="#p4" data-nav="p4">Part 4 進能服簡介與實績預備 (4頁)</a>
+  </nav>
+  <div class="actions">
+    <a class="btn-dl" href="assets/鉅鋼機械_光電方案簡報_MEDDIC顧問版.pptx" download>⬇ 下載升級版 PPTX (33頁)</a>
+    <div class="meta">呈閱：鉅鋼機械 董事長 ｜ 顧問團隊：進能服 (6692)</div>
+  </div>
+</div>
+
+<!-- ================= HOME VIEW ================= -->
+<div class="view active home" id="view-home">
+  <div class="hero">
+    <svg class="deco" viewBox="0 0 900 520" aria-hidden="true">
+      <g fill="#fff" opacity=".22">
+        <path d="M260 50 L440 10 L580 55 L400 105 Z"/>
+        <path d="M600 120 L780 70 L890 115 L710 165 Z"/>
+        <path d="M220 240 L400 190 L530 235 L350 285 Z"/>
+        <path d="M640 320 L820 270 L900 300 L720 350 Z"/>
+      </g>
+      <g fill="#8FD9E4" opacity=".35">
+        <circle cx="560" cy="170" r="45"/>
+        <circle cx="390" cy="310" r="35"/>
+      </g>
+    </svg>
+    <div class="inner">
+      <div class="kicker">MEDDIC Executive Sales Advisory × Senior PV Consultant QA Platform</div>
+      <h1>台中西屯・鉅鋼機械股份有限公司<br>新廠光電配置規劃（D棟＋C棟屋突）暨高層決策簡報</h1>
+      <p class="lede">
+        本平台完整涵蓋原 30 頁提案簡報圖面與數據，並依據業務第一線情報新增 <strong>【Part 1：客戶五大想法與 MEDDIC 高層銷售策略】</strong> 及 <strong>【Part 3：資深光伏顧問五大疑問精算解答 ＆ 董事長五大採購決策指南】</strong>。全面拉齊「方案一：出租分潤（774.745 kW）」與「方案二：鉅鋼自建（612.320 kW）」之 DCF 折現財務基準（NPV / IRR / 回收期 / ±10% 電價敏感度），協助董事長一頁拍板最適方案！
+      </p>
+      <div class="herometa">
+        <span>★ 新增 Part 1：客戶 5 大想法 × MEDDIC 銷售顧問解析</span>
+        <span>★ 新增 Part 3：資深顧問 5 大疑問重算 ＋ 業主高層 5 大採購題目</span>
+        <span>方案一（出租）：774.745 kW ｜ 0 出資 ｜ 建坤能源 (37億資本額)</span>
+        <span>方案二（自建）：612.320 kW ｜ 淨 IRR 21.4% (含綠憑) / 12.4% (純節電)</span>
+        <span>D 棟空間創新：退縮 2 米免加欄杆 ＋ 浪板 29.03% 免雜照合規</span>
+        <span>C 棟露台決策：合法僅 17.6 kW (雜照費 170 萬) 主動建議剔除不做</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="homebody">
+    <div class="part-cards">
+      <a class="part-card c1" href="#p1-1">
+        <div>
+          <div class="pc-eyebrow">★ 新增專章 PART 1 (5 頁)</div>
+          <h2>針對客戶的想法 × MEDDIC 業務顧問說明</h2>
+          <p>解構業務第一線 5 點情報：① 窗口請我們跟高層直接對話（自建&出租皆考慮）、② D棟退縮2米不加欄杆浪板方案、③ 出租中途回購方案、④ C棟露台17kW主動勸退、⑤ 進能服簡介放最後預備。</p>
+        </div>
+        <div>
+          <div class="pc-flags"><span class="chip amber">MEDDIC 六維度</span><span class="chip blue">直達董事長</span><span class="chip green">退縮2米免欄杆</span></div>
+          <div class="pc-go">進入客戶想法與 MEDDIC 專章 &rarr;</div>
+        </div>
+      </a>
+
+      <a class="part-card c2" href="#p2-1">
+        <div>
+          <div class="pc-eyebrow">原簡報核心 PART 2 (7 頁)</div>
+          <h2>D棟＋C棟屋突雙軌方案與工程規劃</h2>
+          <p>完整呈現 D 棟主屋頂與 C1/C2 屋突（151.745kW）施作範圍、方案一出租（774.745kW，建坤能源）與 20 年回購表、方案二自建（612.32kW 含浪板）、CSI 445W 模組、華為/亞力逆變器與 C 棟露台評估。</p>
+        </div>
+        <div>
+          <div class="pc-flags"><span class="chip blue">出租 774.7kW</span><span class="chip teal">自建 612.3kW</span><span class="chip coral">C棟露台 17.6kW</span></div>
+          <div class="pc-go">進入雙軌方案與工程圖面 &rarr;</div>
+        </div>
+      </a>
+
+      <a class="part-card c3" href="#p3-1">
+        <div>
+          <div class="pc-eyebrow">★ 新增專章 PART 3 (7 頁)</div>
+          <h2>資深光伏顧問 QA ＆ 業主高層五大採購決策</h2>
+          <p>正面回答資深顧問 5 大疑問（比較基準拉齊 NPV/IRR、3.5h PVsyst 與 0.8% 衰減率、回購溢價與外併改內併、30% 免雜法規、租約空間條款）與董事長 5 大採購拍板題目。</p>
+        </div>
+        <div>
+          <div class="pc-flags"><span class="chip teal">同基準 NPV/IRR</span><span class="chip amber">±10% 敏感度</span><span class="chip green">5大採購拍板</span></div>
+          <div class="pc-go">進入顧問 QA 與高層決策專章 &rarr;</div>
+        </div>
+      </a>
+
+      <a class="part-card c4" href="#p4-1">
+        <div>
+          <div class="pc-eyebrow">壓軸預備庫 PART 4 (4 頁)</div>
+          <h2>進金生能源服務 (6692) 簡介與標竿實績</h2>
+          <p>首家 IPO 上櫃 EPC（資本額 5.88 億）、全台 750 MW / 348 座實績、南科 24 MW 科技廠（年省 1.35 億）與芳生螺絲 3.66 MW 實證、雲端專管與德國萊因 TÜV AAA 頂級維運肯定。</p>
+        </div>
+        <div>
+          <div class="pc-flags"><span class="chip purple">首家上櫃 6692</span><span class="chip blue">750 MW 實績</span><span class="chip green">TÜV AAA 維運</span></div>
+          <div class="pc-go">進入進能服實績預備庫 &rarr;</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick spec grid -->
+    <div class="quick-spec-grid">
+      <div class="metric">
+        <div class="k">774.75 kW</div>
+        <div class="t">方案一（出租分潤・無浪板）｜20年發電 1,836 萬度</div>
+      </div>
+      <div class="metric teal">
+        <div class="k">612.32 kW</div>
+        <div class="t">方案二（鉅鋼自建・含浪板）｜20年發電 1,451 萬度</div>
+      </div>
+      <div class="metric green">
+        <div class="k">21.4% / 4.4年</div>
+        <div class="t">方案二含綠憑 ($8.8) 扣維運後真實淨 IRR 與回收期</div>
+      </div>
+      <div class="metric amber">
+        <div class="k">12.4% / 6.8年</div>
+        <div class="t">方案二純節電 ($5.8) 扣維運後真實淨 IRR 與回收期</div>
+      </div>
+      <div class="metric purple">
+        <div class="k">29.03% &lt; 30%</div>
+        <div class="t">D棟退縮2米免欄杆浪板方案｜維護通道比例合規免雜照</div>
+      </div>
+      <div class="metric coral">
+        <div class="k">立省 170 萬</div>
+        <div class="t">主動勸退 C 棟露台 17.6kW 雜照區｜展現顧問誠信</div>
+      </div>
+    </div>
+
+    <div class="home-foot">
+      <div>進金生能源服務股份有限公司 (6692) ｜ 工商光伏事業部 ｜ 原簡報日期：2026/09/29（提報日期 2026/10/02）｜ 點擊任一圖面可全螢幕放大檢視</div>
+      <div>快捷鍵：<code>&larr;</code> / <code>&rarr;</code> 翻頁 ｜ <code>Space</code> 下一頁 ｜ <code>Home</code> 回戰情封面 ｜ <code>F</code> 全螢幕簡報模式</div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================================
+     PART 1: 針對客戶的想法 × MEDDIC 架構業務顧問戰略說明 (5 SLIDES)
+     ===================================================================== -->
+<div class="view" id="view-p1">
+
+  <!-- Slide P1-1 -->
+  <section class="slide" id="slide-p1-1">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 1 │ 針對客戶的想法 × MEDDIC 業務顧問診斷 (1/5)</div>
+        <h2>從「窗口抓不清」到「直達董事長拍板」：客戶五大想法之 MEDDIC 戰略解構</h2>
+        <div class="sub">扮演專精 MEDDIC 架構之銷售顧問，將業務第一線回報的 5 點現場情報，轉化為高層對話的精準贏單劇本</div>
+      </div>
+      <div class="flags">
+        <span class="flag amber">MEDDIC 銷售顧問視角</span>
+        <span class="flag blue">直達 Economic Buyer</span>
+        <span class="flag green">5 大想法全解構</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="split-55">
+        <div>
+          <div class="card amber" style="margin-bottom:12px">
+            <h3>業務第一線回報「客戶 5 大想法」與 MEDDIC 戰略映射表</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>#</th><th>業務回報與客戶現場想法</th><th>背後真實決策心理 (Why)</th><th>MEDDIC 對應維度與我方出招</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="hl-row">
+                    <td class="ctr">1</td>
+                    <td><strong>窗口抓不清董事長想法，直接請我們跟高層對話；今天說自建 &amp; 出租都有考慮</strong></td>
+                    <td>2,900 萬 CAPEX 動用權與未來綠電剛需僅董事長能拍板，窗口不敢代為選邊站。</td>
+                    <td><span class="chip amber">E 經濟決策者</span> <span class="chip purple">C 內部教練</span><br>跨越傳話落差，以「統一基準雙軌儀表板」讓董事長當場二選一。</td>
+                  </tr>
+                  <tr>
+                    <td class="ctr">2</td>
+                    <td><strong>請設計排出一版「不加欄杆、棚架邊緣往內退縮 2 米」的 D 棟浪板方案供董事長評估</strong></td>
+                    <td>高層極度重視新廠建築外觀（討厭女兒牆外露欄杆）並希望頂樓具備防雨隔熱實用機能。</td>
+                    <td><span class="chip blue">D 決策標準</span><br>退縮 2 米免除女兒牆欄杆、減少植筋漏水點，並精算 29.03% (&lt;30%) 合規免雜照。</td>
+                  </tr>
+                  <tr>
+                    <td class="ctr">3</td>
+                    <td><strong>客戶有考慮「出租到一半購回」，已準備 20 年逐年回購方案</strong></td>
+                    <td>想享 0 出資好處，但怕屋頂被綁死 20 年、未來供應鏈要求綠電時無法自用。</td>
+                    <td><span class="chip teal">D 決策標準</span> <span class="chip green">M 量化指標</span><br>提供「中途買回權 (Call Option)」＋「綠電優先回購權 (ROFR)」，鎖定第 8~10 年甜蜜點。</td>
+                  </tr>
+                  <tr class="good-row">
+                    <td class="ctr">4</td>
+                    <td><strong>C 棟露臺算出合法僅 17.6 kW 預估發電量，主動不建議客戶施作</strong></td>
+                    <td>全鋪可達 185kW，但合法容積僅 32 坪 (17.6kW)，雜照費卻要 170 萬元，投資必虧。</td>
+                    <td><span class="chip green">I 痛點識別 (建立信任)</span><br><strong>全場最強信任殺手鐧！</strong>主動替董事長砍掉雞肋工項、立省 170 萬冤枉錢。</td>
+                  </tr>
+                  <tr>
+                    <td class="ctr">5</td>
+                    <td><strong>進能服（6692）簡介與實績放最後做預備</strong></td>
+                    <td>董事長時間寶貴，前 20 分鐘只關心「鉅鋼的錢與屋頂」，公司介紹放後面備查即可。</td>
+                    <td><span class="chip purple">D 決策流程</span><br>倒金字塔議程：開場直奔方案與財務 QA，最後以 6692 上櫃與 TÜV AAA 壓軸背書。</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <h3>MEDDIC 六大要素成交檢核（鉅鋼機械專案）</h3>
+            <div class="two-col" style="gap:10px; margin-top:8px">
+              <div class="metric">
+                <div class="k" style="font-size:1.1rem">M — Metrics 量化指標</div>
+                <div class="t">拉齊 $8.8 vs $5.8 基準，補齊扣維運後之 <strong>NPV (+4,690萬)、IRR (21.4%) 與 ±10% 敏感度</strong>。</div>
+              </div>
+              <div class="metric amber">
+                <div class="k" style="font-size:1.1rem">E — Economic Buyer</div>
+                <div class="t"><strong>鉅鋼機械 董事長</strong>。窗口直接安排高層對話，是 B2B 銷售最理想的「直達天聽」局勢。</div>
+              </div>
+              <div class="metric teal">
+                <div class="k" style="font-size:1.1rem">D — Decision Criteria</div>
+                <div class="t">① 2,900萬資金機會成本 ② D棟退縮2米無欄杆與空間權 ③ 中途回購彈性 ④ 不漏水與資安。</div>
+              </div>
+              <div class="metric purple">
+                <div class="k" style="font-size:1.1rem">D — Decision Process</div>
+                <div class="t">高層會議當場拍板「出租或自建」與「剔除C棟露台」➔ 細部設計與 PVsyst 確認 ➔ 簽約進場。</div>
+              </div>
+              <div class="metric coral">
+                <div class="k" style="font-size:1.1rem">I — Identify Pain</div>
+                <div class="t">舊廠用電均價已達 <strong>$5.8/度</strong>，新廠急需削峰節費、頂樓隔熱降溫與未來綠電憑證護城河。</div>
+              </div>
+              <div class="metric green">
+                <div class="k" style="font-size:1.1rem">C — Champion 內部教練</div>
+                <div class="t">客戶窗口已替我方打開董事長大門並劇透考題，我方以零破綻顧問報告全力成就窗口功勞。</div>
+              </div>
+            </div>
+            <div class="tip" style="margin-top:12px">
+              <strong>MEDDIC 顧問核心指導：</strong>「窗口抓不清」不是劣勢，而是因為我們過去只給了工程規格表、沒給董事長決策所需的<strong>「資金機會成本與風險邊界表」</strong>。本次新增 Part 1 與 Part 3 即為徹底解決此痛點！
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>角色：MEDDIC 架構銷售顧問 ｜ 依據：業務第一線 5 點現場情報與原 30 頁簡報全盤診斷</div>
+      <div class="pageno">Part 1 - P. 01 / 05</div>
+    </div>
+  </section>
+
+  <!-- Slide P1-2 -->
+  <section class="slide" id="slide-p1-2">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 1 │ 客戶想法 1 深度說明 (2/5)</div>
+        <h2>想法 1：窗口抓不清董事長想法，直接與高層對話（自建 &amp; 出租皆考慮）</h2>
+        <div class="sub">為什麼董事長同時考慮自建與出租？因為他在權衡「2,900 萬現金留本業」與「年賺 12.4%~21.4% 穩定報酬」的機會成本</div>
+      </div>
+      <div class="flags">
+        <span class="flag amber">直面董事長 (EB)</span>
+        <span class="flag blue">雙軌並行不預設</span>
+        <span class="flag teal">3 問當場收斂</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="big-callout" style="margin-bottom:4px">
+        <div class="label">MEDDIC HIGH-LEVEL ENGAGEMENT 破局話術</div>
+        <div class="answer">「董事長，出租與自建沒有絕對的對錯，只取決於您對『2,900 萬資金用途』與『未來 3 年綠電剛需』的戰略選擇。我們把兩套劇本放在同一個天平上算清楚，您今天只需勾選最適合鉅鋼的一條路！」</div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <h3>高層對話「三問定位法」：10 分鐘抓準董事長真實傾向</h3>
+          <div class="table-wrap" style="margin-top:8px">
+            <table>
+              <thead>
+                <tr><th>向董事長請教的戰略問題</th><th>若董事長回答 A 傾向</th><th>若董事長回答 B 傾向</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Q1：供應鏈綠電時程</strong><br>歐美品牌客戶（製鞋設備買家）未來 3 年內是否要求鉅鋼提供 RE100 或減碳憑證？</td>
+                  <td class="good-row"><strong>「已經在問／3年內必用」</strong><br>&rarr; 鎖定 <strong>方案二：鉅鋼自建</strong>（100% 取得每年 78 萬度綠電＋憑證，度電價值高達 $8.8）</td>
+                  <td><strong>「目前還沒有強制要求」</strong><br>&rarr; 可選 <strong>方案一：出租收租</strong>，或方案二純節電（抵減 $5.8 電費，憑證還可外賣變現！）</td>
+                </tr>
+                <tr>
+                  <td><strong>Q2：2,900 萬資金配置</strong><br>新廠落成階段，帳上 2,900 萬預算您希望全數保留給本業機台，還是配置穩定現金流資產？</td>
+                  <td class="good-row"><strong>「帳上資金充裕／可配綠能貸款」</strong><br>&rarr; 鎖定 <strong>方案二：鉅鋼自建</strong>（搭配銀行製造業綠能專案融資 7~8 成，自備款僅約 600 萬！）</td>
+                  <td class="hl-row"><strong>「新廠資本支出大，不想動現金」</strong><br>&rarr; 鎖定 <strong>方案一：建坤能源全額出資</strong>（鉅鋼 0 出資，白拿 20% 租金或綠電＋保留中途買回權）</td>
+                </tr>
+                <tr>
+                  <td><strong>Q3：D 棟頂樓空間用途</strong><br>D 棟頂樓未來是否需要作為半戶外倉儲、機具暫置或員工活動空間？</td>
+                  <td class="good-row"><strong>「需要防雨遮陽半戶外空間」</strong><br>&rarr; 必選 <strong>D 棟加鋪浪板＋退縮 2 米方案</strong>（淨高 3.4~3.8 米，空間使用權歸鉅鋼）</td>
+                  <td><strong>「頂樓純閒置，不會放東西」</strong><br>&rarr; 選 <strong>無浪板滿鋪方案 (623 kW)</strong>，省下 322 萬浪板費，發電容量最大化！</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card teal">
+          <h3>消除「二選一焦慮」的第三條路：銀行綠能融資 vs 先租後買</h3>
+          <p style="margin-bottom:10px">許多企業主之所以在「自建」與「出租」間猶豫，是因為誤以為自建一定要一次掏出 2,894 萬現金。顧問於會中主動提供兩大破局槓桿：</p>
+          <div class="card green" style="margin-bottom:10px; padding:12px">
+            <h3 style="font-size:.9rem">槓桿 A：自建搭配銀行 75%~80% 專案融資（最推薦！）</h3>
+            <p style="font-size:.83rem; color:var(--ink)">
+              鉅鋼身為優質精密機械製造大廠，自建光電設備可申請銀行綠色專案貸款（成數約 75%~80%，利率約 2.2%~2.6%）。<strong>鉅鋼實際自備款僅約 580~720 萬元</strong>，每年光電節電效益（約 450萬~688萬元）扣除銀行本息後，<strong>第 1 年起即產生正現金流</strong>，完美兼顧「保留現金」與「獨享 100% 電廠效益」！
+            </p>
+          </div>
+          <div class="card amber" style="padding:12px">
+            <h3 style="font-size:.9rem">槓桿 B：方案一「先出租 0 出資 ＋ 第 8~10 年中途購回」</h3>
+            <p style="font-size:.83rem; color:var(--ink)">
+              若董事長決定新廠初期 100% 零資本支出，則由建坤能源（國泰金控 95%＋進能服 5%）全額出資建置 774.745 kW。前 7~9 年鉅鋼零風險收租，待第 8~10 年折舊單價降至甜蜜點（$32,819~$38,786/kW）且綠電剛需明確時，再行買回自用。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>客戶想法 1 解析 ｜ 策略核心：不讓窗口為難，以 3 問定位法＋銀行融資槓桿協助董事長當場拍板</div>
+      <div class="pageno">Part 1 - P. 02 / 05</div>
+    </div>
+  </section>
+
+  <!-- Slide P1-3 -->
+  <section class="slide" id="slide-p1-3">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 1 │ 客戶想法 2 深度說明 (3/5)</div>
+        <h2>想法 2：設計排出「不加欄杆、棚架邊緣往內退縮 2 米」的 D 棟浪板方案</h2>
+        <div class="sub">把職安防墜規定轉化為建築美學與防水優勢：退縮 2 米利用既有女兒牆防墜，免設外圍欄杆且合規免雜照</div>
+      </div>
+      <div class="flags">
+        <span class="flag green">免加外圍防墜欄杆</span>
+        <span class="flag blue">棚架內退 2 米</span>
+        <span class="flag teal">通道占比 29.03% (&lt;30%)</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="split-img-right">
+        <div>
+          <div class="card">
+            <h3>為何特別排出「退縮 2 米、不加欄杆」的 D 棟浪板方案？</h3>
+            <p style="margin-bottom:10px">針對董事長對新廠外觀、工安與頂樓空間機能的重視，設計團隊重新排佈 D 棟高棚架（460.575 kW）方案，解決三大工程痛點：</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>評估維度</th><th>傳統滿鋪貼齊女兒牆做法</th><th>本次新增「內退 2 米免欄杆＋浪板」方案</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>職安防墜與外觀</strong></td>
+                    <td class="bad-row">棚架貼齊女兒牆邊緣，高空維運有墜落風險，<strong>必須沿女兒牆加裝防墜欄杆</strong>，破壞新廠建築立面美觀。</td>
+                    <td class="good-row"><strong>棚架邊緣自女兒牆向內退縮 2 米</strong>，留出安全緩衝帶，利用既有女兒牆作為天然屏障，<strong>免加外圍欄杆</strong>（僅步道終止處加設防墜器與母索）。</td>
+                  </tr>
+                  <tr>
+                    <td><strong>屋頂防水與結構</strong></td>
+                    <td>女兒牆頂部或內側鑽孔固定欄杆，增加牆體滲水風險與迎風面風阻。</td>
+                    <td class="good-row">減少女兒牆周邊鑽孔點；棚架下滿鋪浪板，為 D 棟 RC 屋頂提供<strong>雙重防雨與隔熱降溫 3~5°C</strong> 保護。</td>
+                  </tr>
+                  <tr>
+                    <td><strong>免請領雜照合規性</strong><br>*(30% 鐵律)*</td>
+                    <td>無浪板時可滿鋪 623 kW；但若滿鋪浪板卻未精算退縮比，極易超過 30% 遭建管退件。</td>
+                    <td class="good-row">精準配置 <strong>1,035 片 CSI 445W (460.575 kW)</strong>，維護通道水平投影占比 <strong>29.03% &le; 30%</strong>，100% 符合免雜照標準！</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note" style="margin-top:10px">
+              <strong>設計補充說明（可向董事長主動報告）：</strong><br>
+              • 圖面精算：建築面積 <code>2,668.23 m²</code> － 模組總面積 <code>2,067.93 m² (1.998×1,035片)</code> ＝ 通道面積 <code>600.3 m²</code>；<code>600.3 ÷ 2,067.93 = 29.03% &lt; 30%</code>。<br>
+              • 若董事長希望自建有浪板容量再拉高（衝上 580~600kW），亦可選擇「浪板隨模組同步退縮 2 米（退縮區不鋪浪板）」，立即釋放 30% 額度限制！
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="fig">
+            <div class="figtitle">
+              <span>D 棟方案二：退縮 2 米免欄杆＋浪板配置圖 (460.575 kW)</span>
+              <span class="chip blue">點擊放大檢視</span>
+            </div>
+            <img src="assets/d_plan2_layout.png" alt="D棟退縮2米浪板配置圖" style="max-height:330px">
+            <img src="assets/d_plan2_30pct_calc.png" alt="D棟30%免雜計算式" style="max-height:70px; margin-top:6px; background:#fff">
+            <div class="cap">圖 1-1：紅框向內退縮 2,000mm (左/下) 與 1,786~1,993mm (上/右)，免設女兒牆外圍欄杆，僅於橘色清洗步道終止處設防墜設備</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>客戶想法 2 解析 ｜ 工程價值：兼顧新廠現代化立面美觀、職安防墜合規、RC 屋頂隔熱防漏與免雜照快速取照</div>
+      <div class="pageno">Part 1 - P. 03 / 05</div>
+    </div>
+  </section>
+
+  <!-- Slide P1-4 -->
+  <section class="slide" id="slide-p1-4">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 1 │ 客戶想法 3 深度說明 (4/5)</div>
+        <h2>想法 3：客戶考慮「出租到一半購回」，準備 20 年中途回購方案</h2>
+        <div class="sub">賦予董事長「進可攻、退可守」的買回選擇權（Call Option）：何時買回最划算？買回後怎麼改自用？</div>
+      </div>
+      <div class="flags">
+        <span class="flag teal">消除 20 年長約顧慮</span>
+        <span class="flag amber">黃金回購點：第 8~10 年</span>
+        <span class="flag green">雙軌轉自用解方</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card">
+          <h3>為什麼準備「中途回購方案」能大幅加速簽約？</h3>
+          <p style="margin-bottom:10px">在 MEDDIC 決策心理學中，工業業主對「出租屋頂 20 年」最大的隱性恐懼是<strong>「喪失未來控制權」</strong>。準備明確的逐年回購價目表（詳見 Part 2 P.4），能立即達成三大戰略效果：</p>
+          <ul>
+            <li><strong>1. 破解「綁死 20 年」心理障礙：</strong>白紙黑字明訂每年期初回購單價（按 20 年直線折舊每年遞減 <code>$2,983.5/kW</code>，期中交易按日數比例分攤），讓董事長知道隨時可以把電廠買回來。</li>
+            <li><strong>2. 誠實揭露「前 3 年不建議買回，第 8~10 年才是黃金甜蜜點」：</strong><br>
+              方案一首年回購價為 <code>$59,670/kW</code>（總價 4,623 萬），因為包含了建坤能源前期投入的<strong>台電外線線補費、臨路 MOF 盤、高壓外併工程與 SPV 融資開發成本</strong>。我們主動告訴董事長：<strong>「若 3 年內就想買回，請直接選方案二自建（$42,000/kW）立省上千萬！但若是第 8~10 年後才因供應鏈綠電需求買回，此時回購單價已降至 $32,819~$38,786/kW（總價 2,543萬~3,005萬），且前 9 年已白領 826 萬租金，最為划算！」</strong></li>
+            <li><strong>3. 提供「不買回電廠、只買回綠電」的零資本替代方案：</strong><br>
+              提醒董事長：就算不掏幾千萬買回硬體設備，方案一已附帶<strong>「本場綠電優先回購權 (ROFR)」</strong>，當鉅鋼有綠電剛需時，可直接優先購買本場產出之綠電與憑證！</li>
+          </ul>
+        </div>
+        <div class="card amber">
+          <h3>中途回購曲線與「高壓外併轉自用」無縫銜接設計</h3>
+          <div class="fig" style="margin-bottom:10px">
+            <div class="figtitle">方案一 (774.745 kW) 逐年回購總價 vs 方案二自建成本對照圖</div>
+            <svg viewBox="0 0 580 230" width="100%" height="200">
+              <rect x="0" y="0" width="580" height="230" fill="#FAFCFE" rx="4"/>
+              <!-- Axes -->
+              <line x1="55" y1="20" x2="55" y2="190" stroke="#9FB1C0" stroke-width="1.5"/>
+              <line x1="55" y1="190" x2="550" y2="190" stroke="#9FB1C0" stroke-width="1.5"/>
+              <!-- Y labels -->
+              <text x="48" y="30" font-size="10" fill="#5B7285" text-anchor="end">4,623萬</text>
+              <text x="48" y="92" font-size="10" fill="#1968AD" font-weight="700" text-anchor="end">2,894萬</text>
+              <text x="48" y="135" font-size="10" fill="#2E7D32" font-weight="700" text-anchor="end">2,080萬</text>
+              <text x="48" y="188" font-size="10" fill="#5B7285" text-anchor="end">231萬</text>
+              <!-- Plan 2 CAPEX horizontal line -->
+              <line x1="55" y1="92" x2="550" y2="92" stroke="#1968AD" stroke-width="2" stroke-dasharray="5,4"/>
+              <text x="545" y="85" font-size="10.5" fill="#1968AD" font-weight="800" text-anchor="end">方案二自建工程總價：2,894 萬元 ($42,000/kW+浪板)</text>
+              <!-- Sweet spot highlight zone Yr 8 - Yr 12 -->
+              <rect x="235" y="20" width="120" height="170" fill="#E8F5E9" opacity=".65"/>
+              <text x="295" y="38" font-size="11" fill="#2E7D32" font-weight="800" text-anchor="middle">★ 第 8~12 年黃金贖回區</text>
+              <text x="295" y="53" font-size="9.5" fill="#2E7D32" text-anchor="middle">(回購價 2,080~3,005 萬)</text>
+              <!-- Buyout linear depreciation line -->
+              <path d="M 70 28 L 535 182" stroke="#D95F45" stroke-width="3.5" fill="none"/>
+              <circle cx="70" cy="28" r="4.5" fill="#D95F45"/>
+              <circle cx="244" cy="86" r="5" fill="#2E7D32"/>
+              <circle cx="295" cy="103" r="5.5" fill="#2E7D32"/>
+              <circle cx="535" cy="182" r="4.5" fill="#D95F45"/>
+              <text x="80" y="25" font-size="10" fill="#B4432C" font-weight="700">Y1: 4,623萬 ($59,670/kW)</text>
+              <text x="295" y="122" font-size="10.5" fill="#2E7D32" font-weight="800" text-anchor="middle">Y10: 2,543萬 ($32,819/kW)</text>
+              <text x="530" y="172" font-size="10" fill="#5B7285" text-anchor="end">Y20: 231萬</text>
+              <!-- X labels -->
+              <text x="70" y="206" font-size="10" fill="#5B7285" text-anchor="middle">第1年</text>
+              <text x="180" y="206" font-size="10" fill="#5B7285" text-anchor="middle">第5年</text>
+              <text x="295" y="206" font-size="10" fill="#2E7D32" font-weight="800" text-anchor="middle">第10年</text>
+              <text x="415" y="206" font-size="10" fill="#5B7285" text-anchor="middle">第15年</text>
+              <text x="535" y="206" font-size="10" fill="#5B7285" text-anchor="middle">第20年</text>
+            </svg>
+          </div>
+          <div class="tip">
+            <strong>顧問預先排雷（外併買回後如何自用？）：</strong><br>
+            方案一原為「高壓外併」，中途買回後若要自用，無須花大錢敲打廠房改拉內線！可直接維持高壓外併架構，以<strong>「同企業電號綠電轉供」</strong>方式將電力與綠憑 100% 轉入鉅鋼帳下；或於本次施工時<strong>預留高壓內併套管</strong>，未來隨時可改接內併。
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>客戶想法 3 解析 ｜ 商務價值：以透明折舊公式化解長約疑慮，並誠實指引第 8~10 年黃金贖回點</div>
+      <div class="pageno">Part 1 - P. 04 / 05</div>
+    </div>
+  </section>
+
+  <!-- Slide P1-5 -->
+  <section class="slide" id="slide-p1-5">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 1 │ 客戶想法 4 &amp; 5 深度說明 (5/5)</div>
+        <h2>想法 4 &amp; 5：C 棟露臺 17.6kW 主動建議不施作 × 進能服簡介壓軸預備</h2>
+        <div class="sub">顧問式銷售（Trusted Advisor）的黃金法則：主動幫客戶省下不該花的 170 萬，把上市櫃實力留作最後一哩路的定心丸</div>
+      </div>
+      <div class="flags">
+        <span class="flag coral">C棟露台：主動勸退不做</span>
+        <span class="flag green">替業主省 170 萬雜照費</span>
+        <span class="flag purple">進能服簡介壓軸預備</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card coral">
+          <h3>想法 4：C 棟露臺算出 17.6 kW 預估發電量，為何主動建議不施作？</h3>
+          <p style="margin-bottom:10px">客戶原本詢問 C 棟 4F 露臺能否架高棚架做太陽能。我方工程與法規團隊實地檢討台中建管處規定後，把帳算得一清二楚，並<strong>主動建議董事長「絕對不要做」</strong>：</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>檢討項目</th><th>全平台滿鋪理想值</th><th>台中建管處合法容積實際值</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>可設置容量</strong></td>
+                  <td class="num">185.12 kW</td>
+                  <td class="num bad-row"><strong>僅 17.60 kW (合法容積僅 32 坪)</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>20 年總發電量</strong></td>
+                  <td class="num">4,386,000 度</td>
+                  <td class="num"><strong>僅 417,090 度</strong> (年均僅 2.08 萬度)</td>
+                </tr>
+                <tr>
+                  <td><strong>20 年毛發電效益 ($8.8)</strong></td>
+                  <td class="num">約 3,860 萬元</td>
+                  <td class="num"><strong>僅 367.0 萬元 ($3,670,392)</strong></td>
+                </tr>
+                <tr class="bad-row">
+                  <td><strong>建置與雜照剛性成本</strong></td>
+                  <td class="num">具規模經濟可攤提</td>
+                  <td><strong>光雜照申請費約 170 萬元</strong> ＋ 高棚架工程費約 133 萬 ($75,600/kW) ＋ 20年維運保險回收費 &rarr; <strong>總成本逾 330 萬，實質零報酬！</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="warn" style="margin-top:10px">
+            <strong>MEDDIC 信任槓桿效應：</strong>當我們在簡報中主動向董事長報告「C 棟露台因為 170 萬雜照費攤在 17.6kW 上完全不划算，進能服建議您砍掉不做」，董事長會立刻認知到：<strong>「這家公司是真的幫我算投資報酬率，不是為了賺工程款硬塞容量！」</strong>這將使他對 D 棟主方案的數字產生 100% 信任。
+          </div>
+        </div>
+
+        <div class="card purple">
+          <h3>想法 5：進能服（6692）簡介與實績放最後做預備（高層會議節奏控制）</h3>
+          <p style="margin-bottom:10px">傳統業務一上台先講 15 分鐘公司歷史，董事長早就失去耐性。將進能服簡介放在最後（Part 4 預備庫），完全符合頂尖管顧「結論先行、證據墊後」的高層簡報鐵律：</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>會議階段 (45分鐘)</th><th>簡報對應章節</th><th>高層互動目標與心理推進</th></tr>
+              </thead>
+              <tbody>
+                <tr class="good-row">
+                  <td><strong>第 01~15 分鐘</strong><br>*(黃金注意力期)*</td>
+                  <td><strong>Part 2 雙軌方案總覽</strong><br>(D棟+C棟屋突 vs 剔除露台)</td>
+                  <td>直奔主題：看懂新廠屋頂能裝多少、出租 (0出資) 與自建 (2,894萬) 兩套方案的空間與配置差異。</td>
+                </tr>
+                <tr class="hl-row">
+                  <td><strong>第 15~30 分鐘</strong><br>*(深度交鋒決策期)*</td>
+                  <td><strong>Part 1 &amp; Part 3</strong><br>(同基準 DCF 模型 + 5大QA + 5大決策)</td>
+                  <td>當董事長或財務長提出「投資回收期、免雜30%法規、中途回購、空間使用權」疑問時，直接切入 Part 3 精算表當場解答。</td>
+                </tr>
+                <tr>
+                  <td><strong>第 30~40 分鐘</strong><br>*(臨門一腳信任期)*</td>
+                  <td><strong>Part 4 進能服實績預備庫</strong><br>(6692上櫃 / 750MW / 芳生案例 / TÜV AAA)</td>
+                  <td>當董事長問：「若交給你們做，施工品質跟 20 年維運誰保證？」立刻翻出 <strong>首家上櫃 6692、南科 24MW、芳生螺絲省電實證與 TÜV AAA 認證</strong> 一錘定音！</td>
+                </tr>
+                <tr class="good-row">
+                  <td><strong>最後 5 分鐘</strong></td>
+                  <td><strong>Part 3 P.7 拍板核決表</strong></td>
+                  <td>請董事長針對 5 個採購題目勾選傾向，啟動台電併審與 PVsyst 細設！</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tip" style="margin-top:10px">
+            <strong>預備庫隨時一鍵切換：</strong>在本網頁平台頂部導覽列，點擊 <code>Part 4 進能服簡介與實績預備</code> 即可在 0.1 秒內調出 750MW 實績、芳生螺絲案例與 TÜV AAA 維運地圖！
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>客戶想法 4 &amp; 5 解析 ｜ 銷售心法：以「主動勸退 17.6kW 露台」建立顧問誠信，以「6692 壓軸預備庫」完成最終信任閉環</div>
+      <div class="pageno">Part 1 - P. 05 / 05</div>
+    </div>
+  </section>
+
+</div>
+
+<!-- =====================================================================
+     PART 2: D棟+C棟屋突雙軌方案與工程規劃 (原簡報 30 頁核心完整呈現 - 7 SLIDES)
+     ===================================================================== -->
+<div class="view" id="view-p2">
+
+  <!-- Slide P2-1 (Orig Slides 1, 2, 3, 5) -->
+  <section class="slide" id="slide-p2-1">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 2 │ 新廠光電施作範圍總覽 (原簡報 P.1 ~ P.5)</div>
+        <h2>鉅鋼機械新廠施作範圍：D 棟主屋頂 ＋ C 棟屋突二處（C1、C2）</h2>
+        <div class="sub">C 棟屋突共 151.745 kW 採南向單斜矮棚架（最高點 1.2m 不高於女兒牆），方案一與方案二之 C 棟做法完全相同</div>
+      </div>
+      <div class="flags">
+        <span class="flag blue">D 棟主屋頂 (460.6 ~ 623 kW)</span>
+        <span class="flag teal">C1 屋突 94.785 kW</span>
+        <span class="flag green">C2 屋突 56.96 kW</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div>
+          <div class="fig" style="margin-bottom:12px">
+            <div class="figtitle">
+              <span>1. 鉅鋼新廠建築平面與施作分區圖 (D棟 + C1/C2屋突)</span>
+              <span class="chip blue">點擊放大</span>
+            </div>
+            <img src="assets/site_scope_d_c.png" alt="鉅鋼新廠施作範圍平面圖" style="max-height:250px">
+            <div class="cap">圖 2-1：左側為 D 棟主屋頂平台；右側上方為 C1 屋突、下方為 C2 屋突（中央為 C 棟露台區）</div>
+          </div>
+          <div class="card teal">
+            <h3>C 棟屋突二處規劃規格（方案一、方案二皆適用）</h3>
+            <div class="three-col" style="margin-top:8px">
+              <div class="metric teal">
+                <div class="k">151.745 kW</div>
+                <div class="t">C 棟屋突合計容量<br>(出租/自建形式相同)</div>
+              </div>
+              <div class="metric">
+                <div class="k">94.785 kW</div>
+                <div class="t">C1 屋突裝置容量<br>(南向單斜陣列)</div>
+              </div>
+              <div class="metric green">
+                <div class="k">56.960 kW</div>
+                <div class="t">C2 屋突裝置容量<br>(南向單斜陣列)</div>
+              </div>
+            </div>
+            <p style="margin-top:8px; font-size:.84rem; color:var(--ink)">
+              • <strong>工程工法：</strong>RC 屋頂植筋矮棚架，單斜陣列（朝南最佳受光角）。<br>
+              • <strong>視覺美學：</strong>模組最高點僅 <strong>1.2 米 &rarr; 不高於女兒牆</strong>，完美維持鉅鋼新廠建物外觀視覺整體性！
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="fig">
+            <div class="figtitle">
+              <span>2. D 棟主屋頂 ＋ C1、C2 屋突太陽光電模組排佈總圖</span>
+              <span class="chip teal">點擊放大</span>
+            </div>
+            <img src="assets/c_roof_layout.png" alt="D棟與C棟屋突模組排佈圖" style="max-height:430px">
+            <div class="cap">圖 2-2：粉紅色區塊為太陽能光電模組排佈，已精準避開屋突女兒牆遮陰範圍與冷卻水塔設備區</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.1 ~ P.3、P.5 ｜ 施作核心區：D 棟主屋頂 ＋ C 棟屋突二處 (C1 + C2 = 151.745 kW)</div>
+      <div class="pageno">Part 2 - P. 01 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P2-2 (Orig Slide 4) -->
+  <section class="slide" id="slide-p2-2">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 2 │ 出租 vs 自建雙軌方案總表 (原簡報 P.4)</div>
+        <h2>光電規劃核心對照：「方案一：出租分潤」vs「方案二：光電自建」</h2>
+        <div class="sub">並列原簡報 P.4 規劃數據與資深顧問「統一基準 DCF 淨現值」校正指標，讓兩方案在同一起跑線清晰對比</div>
+      </div>
+      <div class="flags">
+        <span class="flag blue">方案一：774.745 kW (0出資)</span>
+        <span class="flag teal">方案二：612.320 kW (含浪板)</span>
+        <span class="flag amber">以電價 $5.8 + 綠憑 $3 估算</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:18%">比較項目</th>
+              <th style="width:38%">方案一：出租分潤（建坤能源投資）</th>
+              <th style="width:44%">方案二：光電自建（鉅鋼機械投資）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>D 棟浪板配置</strong></td>
+              <td><strong>無浪板</strong>（高棚架山型陣列滿鋪）</td>
+              <td class="good-row"><strong>有浪板</strong>（棚架邊緣退縮 2 米免加欄杆，符合法規 30% 維護通道比例限制）</td>
+            </tr>
+            <tr>
+              <td><strong>總裝置容量 (kW)</strong></td>
+              <td class="font-bold" style="color:var(--blue)"><strong>774.745 kW</strong>（D棟 623.0 kW ＋ C棟屋突 151.745 kW）</td>
+              <td class="font-bold" style="color:var(--teal-d)"><strong>612.320 kW</strong>（D棟 460.575 kW ＋ C棟屋突 151.745 kW）</td>
+            </tr>
+            <tr>
+              <td><strong>20 年預估總發電量</strong></td>
+              <td><strong>18,360,153 度</strong>（約 1,836 萬度，首年 989,737 度）</td>
+              <td><strong>14,510,953 度</strong>（約 1,451 萬度，首年 782,239 度）</td>
+            </tr>
+            <tr class="hl-row">
+              <td><strong>鉅鋼投入成本 (CAPEX)</strong></td>
+              <td style="color:var(--green)"><strong>$0 元（零出資）</strong><br><small>由建坤能源全額負擔工程、外線線補、審查、維運、保險與模組回收費</small></td>
+              <td><strong>$28,937,440 元（約 2,894 萬元）</strong><br><small>光電單價 $42,000/kW ($2,571.7萬) ＋ D棟浪板 $7,000/kW ($322萬)；規費/回收費另計約 69.7 萬</small></td>
+            </tr>
+            <tr>
+              <td><strong>20 年分潤收入／毛效益</strong><br><small>(原簡報 P.4 呈現數值)</small></td>
+              <td><strong>二擇一：</strong><br>① <strong>租金回饋（20%售電收入）</strong>：<strong>$18,360,153 元</strong>（以綠電 $5/度計，年均約 91.8 萬）<br>② <strong>綠電回饋（20%發電度數）</strong>：共 3,672,031 度，以 $5.8/度計值 <strong>$21,297,777 元</strong></td>
+              <td class="good-row"><strong>20 年節電＋綠憑毛效益：$127,696,386 元（約 1.277 億元）</strong><br><small>以舊廠用電均價 $5.8/度（約 8,416 萬）＋ 綠能憑證 $3.0/度（約 4,353 萬）合併估算</small></td>
+            </tr>
+            <tr class="good-row">
+              <td><strong>★ 顧問拉齊基準重算</strong><br><small>(扣全週期成本 &amp; 5%折現)</small></td>
+              <td>• 若 20% 綠電回饋同步計入 $3 綠憑（按 <strong>$8.8/度</strong> 同基準），20年總價值實達 <strong>$3,231.4 萬元</strong>！<br>• 折現淨現值 <strong>NPV(5%)：租金 $1,159 萬 ／ 綠電($8.8) $2,039 萬</strong></td>
+              <td>扣除第 6~20 年維運保險、第 11 年換機與回收規費（共約 804.5 萬）後：<br>• <strong>含綠憑 ($8.8/度)：20年淨賺 9,071 萬 ｜ 淨回收期 4.4 年 ｜ IRR 21.4% ｜ NPV +4,690 萬</strong><br>• <strong>純節電 ($5.8/度)：20年淨賺 4,718 萬 ｜ 淨回收期 6.8 年 ｜ IRR 12.4% ｜ NPV +1,942 萬</strong></td>
+            </tr>
+            <tr>
+              <td><strong>外加效益与綠電權利</strong></td>
+              <td><strong>優先綠電回購權 (ROFR)</strong>：當鉅鋼有綠電剛需時，享本場綠電優先購回權</td>
+              <td>100% 綠電與國家再生能源憑證 (T-REC) 歸屬鉅鋼自用或自由交易</td>
+            </tr>
+            <tr>
+              <td><strong>合約年限與退場機制</strong></td>
+              <td><strong>20 年租約</strong>｜鉅鋼可依案場折舊殘值<strong>中途購回</strong>（詳見 P2-4）</td>
+              <td><strong>5 年免費保固維運</strong>｜第 6 年起，每 5 年維運評估續約</td>
+            </tr>
+            <tr>
+              <td><strong>併聯方式與預估工期</strong></td>
+              <td><strong>高壓外併</strong>（須提供臨路位置放置 MOF 盤）｜工期約 <strong>7–8 個月</strong></td>
+              <td><strong>高壓內併</strong>（併接廠內高壓系統，免設臨路 MOF 盤）｜工期約 <strong>9–10 個月</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.4 ｜ 註：顧問同基準詳細敏感度分析請見 Part 3 - P.02</div>
+      <div class="pageno">Part 2 - P. 02 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P2-3 (Orig Slides 6, 7, 8) -->
+  <section class="slide" id="slide-p2-3">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 2 │ 方案一：出租分潤與建坤能源 SPV (原簡報 P.6 ~ P.8)</div>
+        <h2>方案一「出租分潤（鉅鋼 0 出資）」：國泰金控 × 進能服 37 億資本額護航</h2>
+        <div class="sub">D 棟滿鋪 623 kW（無浪板，棚架淨高 3.5~4.2m）＋ C 棟屋突 151.745 kW ＝ 774.745 kW，由建坤能源全額出資統包</div>
+      </div>
+      <div class="flags">
+        <span class="flag green">鉅鋼 0 出資</span>
+        <span class="flag blue">建坤能源 (資本額 37 億)</span>
+        <span class="flag amber">國泰金控 95% + 進能服 5%</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div>
+          <div class="card" style="margin-bottom:12px">
+            <h3>未來承租方：建坤能源（國泰金控 95% ＋ 進能服 5%）</h3>
+            <p style="margin-bottom:10px">國泰金控雄厚的綠色金融實力，結合進能服（6692）頂尖的 EPC 系統整合技術，打造最值得信賴的 20 年長期 SPV 資產管理平台：</p>
+            <div class="three-col" style="margin-bottom:10px">
+              <div class="metric">
+                <div class="k">37 億元</div>
+                <div class="t">建坤能源實收資本額<br>專案融資與架構極度穩健</div>
+              </div>
+              <div class="metric amber">
+                <div class="k">95% : 5%</div>
+                <div class="t">國泰金控持股 95%<br>進能服 (5.88億資本) 5%</div>
+              </div>
+              <div class="metric teal">
+                <div class="k">750 MW</div>
+                <div class="t">頂級 EPC 團隊一站式服務<br>從饋線圖審到完工維運</div>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>項目</th><th>方案一（出租分潤・高壓外併）規劃明細</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>總裝置容量</strong></td><td><strong>774.745 kW</strong>（D棟 623 kW 山型東西向 ＋ C棟 151.745 kW）</td></tr>
+                  <tr><td><strong>投資方全額負擔</strong></td><td>建置光電工程、高壓審查費、加強電力網費用、台電線路設置費(線補費)、模組回收費、綠憑審查評鑑費、水費、網路費及 20 年全責維運保險</td></tr>
+                  <tr class="good-row"><td><strong>分潤回饋 (二擇一)<br>+ 綠電優先回購權</strong></td><td>① <strong>20% 售電收入 (租金)</strong>：單年預估 <strong>$918,008</strong>，20年預估 <strong>$18,360,160</strong> (以綠電 $5/度計)<br>② <strong>20% 綠電回饋</strong>：20年總計預估回饋 <strong>3,672,031 度</strong> 綠電</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="fig">
+            <div class="figtitle">
+              <span>方案一 D 棟無浪板配置圖 (623 kW) ＆ 清洗步道防墜實景</span>
+              <span class="chip blue">點擊放大</span>
+            </div>
+            <div class="two-col" style="gap:10px; align-items:center">
+              <img src="assets/d_plan1_layout.png" alt="方案一D棟623kW配置圖" style="max-height:260px">
+              <img src="assets/walkway_lifeline.png" alt="清洗用步道與防墜母索實景" style="max-height:260px">
+            </div>
+            <div class="cap">圖 2-3：D 棟 RC 屋頂高棚架植筋（棚架淨空間 3.5~4.2m），保留既有紅柱、增設黑柱支撐（若少註1黑柱容量僅減 10.68kW），步道終止處加設防墜設備</div>
+          </div>
+          <div class="note" style="margin-top:10px">
+            <strong>高層會議主動補充（空間權利優化）：</strong>原簡報註記「棚架下空間歸投資方所用，中途購回後可調整」，我方已於 Part 3 提出合約修正案——<strong>除低壓設備區與必要檢修走道外，D 棟高棚架下方空間使用權歸還鉅鋼機械！</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.6 ~ P.8 ｜ 平均每日發電時數：3.5 小時 ｜ 20 年預估總發電量：18,360,153 度</div>
+      <div class="pageno">Part 2 - P. 03 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P2-4 (Orig Slide 9) -->
+  <section class="slide" id="slide-p2-4">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 2 │ 方案一：出租後中途回購方案 (原簡報 P.9)</div>
+        <h2>方案一「出租後回購」：1～20 年逐年直線折舊回購金額與自用效益明細</h2>
+        <div class="sub">回購金額 ＝ 運轉年度期初回購單價 × 實際容量（774.745 kW），按每年固定折舊逐年遞減；期中交易按日數比例分攤</div>
+      </div>
+      <div class="flags">
+        <span class="flag amber">每年固定直線折舊</span>
+        <span class="flag green">黃金回購點：第 8~10 年</span>
+        <span class="flag blue">可展開完整 20 年明細</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="ctr">運轉年度</th>
+              <th class="num">期初回購單價 (元/kW)</th>
+              <th class="num">回購複價總額 (元)</th>
+              <th class="num">當年度預估發電量</th>
+              <th class="num">購回後自用年效益<br><small>($5.8節電+$3綠憑=$8.8)</small></th>
+              <th class="num">購回後純節電年效益<br><small>(僅以$5.8/度計)</small></th>
+              <th>顧問投資決策評註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bad-row"><td class="ctr"><strong>第 1 年</strong></td><td class="num">$59,670</td><td class="num"><strong>$46,229,034</strong></td><td class="num">989,737 度</td><td class="num" style="color:var(--green)"><strong>$8,709,683</strong></td><td class="num" style="color:var(--blue)">$5,740,475</td><td>首年含外線/MOF/線補沉沒成本，不建議立即買回</td></tr>
+<tr class="bad-row"><td class="ctr"><strong>第 2 年</strong></td><td class="num">$56,687</td><td class="num"><strong>$43,917,582</strong></td><td class="num">981,819 度</td><td class="num" style="color:var(--green)"><strong>$8,640,006</strong></td><td class="num" style="color:var(--blue)">$5,694,550</td><td>外線攤提初期，建議維持收租</td></tr>
+<tr><td class="ctr"><strong>第 3 年</strong></td><td class="num">$53,703</td><td class="num"><strong>$41,606,131</strong></td><td class="num">973,964 度</td><td class="num" style="color:var(--green)"><strong>$8,570,886</strong></td><td class="num" style="color:var(--blue)">$5,648,991</td><td>3年內若欲自用，直接選方案二自建省1,267萬</td></tr>
+<tr><td class="ctr"><strong>第 4 年</strong></td><td class="num">$50,720</td><td class="num"><strong>$39,294,679</strong></td><td class="num">966,173 度</td><td class="num" style="color:var(--green)"><strong>$8,502,319</strong></td><td class="num" style="color:var(--blue)">$5,603,803</td><td>已領4年租金約360萬</td></tr>
+<tr><td class="ctr"><strong>第 5 年</strong></td><td class="num">$47,736</td><td class="num"><strong>$36,983,227</strong></td><td class="num">958,443 度</td><td class="num" style="color:var(--green)"><strong>$8,434,300</strong></td><td class="num" style="color:var(--blue)">$5,558,969</td><td>已領5年租金約448萬</td></tr>
+<tr><td class="ctr"><strong>第 6 年</strong></td><td class="num">$44,753</td><td class="num"><strong>$34,671,776</strong></td><td class="num">950,776 度</td><td class="num" style="color:var(--green)"><strong>$8,366,826</strong></td><td class="num" style="color:var(--blue)">$5,514,501</td><td>單價逐步接近自建成本線</td></tr>
+<tr><td class="ctr"><strong>第 7 年</strong></td><td class="num">$41,769</td><td class="num"><strong>$32,360,324</strong></td><td class="num">943,169 度</td><td class="num" style="color:var(--green)"><strong>$8,299,891</strong></td><td class="num" style="color:var(--blue)">$5,470,380</td><td>★ 單價正式低於自建單價 ($42,000/kW)</td></tr>
+<tr class="good-row"><td class="ctr"><strong>第 8 年</strong></td><td class="num">$38,786</td><td class="num"><strong>$30,048,872</strong></td><td class="num">935,624 度</td><td class="num" style="color:var(--green)"><strong>$8,233,492</strong></td><td class="num" style="color:var(--blue)">$5,426,619</td><td>★ 黃金回購甜蜜點起點（剩餘13年高效發電）</td></tr>
+<tr class="good-row"><td class="ctr"><strong>第 9 年</strong></td><td class="num">$35,802</td><td class="num"><strong>$27,737,420</strong></td><td class="num">928,139 度</td><td class="num" style="color:var(--green)"><strong>$8,167,624</strong></td><td class="num" style="color:var(--blue)">$5,383,206</td><td>★ 黃金回購甜蜜點（總價低於方案二自建總價）</td></tr>
+<tr class="good-row"><td class="ctr"><strong>第 10 年</strong></td><td class="num">$32,819</td><td class="num"><strong>$25,425,969</strong></td><td class="num">920,714 度</td><td class="num" style="color:var(--green)"><strong>$8,102,283</strong></td><td class="num" style="color:var(--blue)">$5,340,141</td><td>★ 黃金回購中點（前9年已領約826萬租金）</td></tr>
+<tr><td class="ctr"><strong>第 11 年</strong></td><td class="num">$29,835</td><td class="num"><strong>$23,114,517</strong></td><td class="num">913,348 度</td><td class="num" style="color:var(--green)"><strong>$8,037,465</strong></td><td class="num" style="color:var(--blue)">$5,297,418</td><td>注意：買回前須要求承租方完成逆變器健檢/保固移交</td></tr>
+<tr><td class="ctr"><strong>第 12 年</strong></td><td class="num">$26,852</td><td class="num"><strong>$20,803,065</strong></td><td class="num">906,041 度</td><td class="num" style="color:var(--green)"><strong>$7,973,165</strong></td><td class="num" style="color:var(--blue)">$5,255,038</td><td>剩餘9年運轉期，約2.6年回本</td></tr>
+<tr><td class="ctr"><strong>第 13 年</strong></td><td class="num">$23,868</td><td class="num"><strong>$18,491,614</strong></td><td class="num">898,793 度</td><td class="num" style="color:var(--green)"><strong>$7,909,380</strong></td><td class="num" style="color:var(--blue)">$5,212,999</td><td>剩餘8年運轉期，約2.3年回本</td></tr>
+<tr><td class="ctr"><strong>第 14 年</strong></td><td class="num">$20,885</td><td class="num"><strong>$16,180,162</strong></td><td class="num">891,603 度</td><td class="num" style="color:var(--green)"><strong>$7,846,105</strong></td><td class="num" style="color:var(--blue)">$5,171,297</td><td>剩餘7年運轉期，約2.1年回本</td></tr>
+<tr><td class="ctr"><strong>第 15 年</strong></td><td class="num">$17,901</td><td class="num"><strong>$13,868,710</strong></td><td class="num">884,470 度</td><td class="num" style="color:var(--green)"><strong>$7,783,336</strong></td><td class="num" style="color:var(--blue)">$5,129,926</td><td>剩餘6年運轉期，約1.8年回本</td></tr>
+<tr><td class="ctr"><strong>第 16 年</strong></td><td class="num">$14,918</td><td class="num"><strong>$11,557,259</strong></td><td class="num">877,394 度</td><td class="num" style="color:var(--green)"><strong>$7,721,069</strong></td><td class="num" style="color:var(--blue)">$5,088,885</td><td>剩餘5年運轉期，約1.5年回本</td></tr>
+<tr><td class="ctr"><strong>第 17 年</strong></td><td class="num">$11,934</td><td class="num"><strong>$9,245,807</strong></td><td class="num">870,375 度</td><td class="num" style="color:var(--green)"><strong>$7,659,301</strong></td><td class="num" style="color:var(--blue)">$5,048,175</td><td>剩餘4年運轉期，約1.2年回本</td></tr>
+<tr><td class="ctr"><strong>第 18 年</strong></td><td class="num">$8,951</td><td class="num"><strong>$6,934,355</strong></td><td class="num">863,412 度</td><td class="num" style="color:var(--green)"><strong>$7,598,026</strong></td><td class="num" style="color:var(--blue)">$5,007,790</td><td>剩餘3年運轉期，當年度即近乎回本</td></tr>
+<tr><td class="ctr"><strong>第 19 年</strong></td><td class="num">$5,967</td><td class="num"><strong>$4,622,903</strong></td><td class="num">856,505 度</td><td class="num" style="color:var(--green)"><strong>$7,537,242</strong></td><td class="num" style="color:var(--blue)">$4,967,729</td><td>合約尾聲，可視結構狀況決定買回或要求拆除</td></tr>
+<tr><td class="ctr"><strong>第 20 年</strong></td><td class="num">$2,984</td><td class="num"><strong>$2,311,452</strong></td><td class="num">849,653 度</td><td class="num" style="color:var(--green)"><strong>$7,476,944</strong></td><td class="num" style="color:var(--blue)">$4,927,987</td><td>第20年期滿：依約定無償移轉或由建坤自費拆除復原</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="two-col" style="margin-top:6px">
+        <div class="warn">
+          <strong>資深顧問提醒（前 3 年回購不划算）：</strong>第 1 年回購單價 <code>$59,670/kW</code>（複價 4,623 萬）含 SPV 外線線補費、臨路 MOF 盤與融資開發沉沒成本，比方案二自建（<code>$42,000/kW</code>）高出 42%。若鉅鋼預計 3 年內買回，請直接選擇「方案二：鉅鋼自建」！
+        </div>
+        <div class="tip">
+          <strong>最佳回購時機（第 8～10 年）：</strong>第 8 年起回購單價降至 <code>$38,786/kW</code> 以下（第 10 年為 <code>$32,819/kW</code>、總價 2,543 萬），此時前 9 年已收租約 826 萬元，買回後尚有 11 年高效發電期（年效益約 810 萬），約 <strong>3.1 年即可回本</strong>！
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.9 ｜ 點擊表格下方藍色按鈕可展開／收合全部 1～20 年完整回購明細</div>
+      <div class="pageno">Part 2 - P. 04 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P2-5 (Orig Slides 10, 11, 17, 18) -->
+  <section class="slide" id="slide-p2-5">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 2 │ 方案二：鉅鋼自建與免雜法規檢討 (原簡報 P.10, P.11, P.17, P.18)</div>
+        <h2>方案二「鉅鋼自建（612.32 kW 高壓內併）」：D 棟加浪板退縮 2 米與立面配置</h2>
+        <div class="sub">RC 屋頂高棚架植筋（低點淨高 3.4~3.8m），自女兒牆向內退縮 2 米免設外圍欄杆，工程總價 $28,937,440（含 D 棟浪板鋪設）</div>
+      </div>
+      <div class="flags">
+        <span class="flag teal">總容量 612.320 kW</span>
+        <span class="flag blue">光電 $42,000/kW + 浪板 $7,000/kW</span>
+        <span class="flag green">免雜 30% 法規合規 (29.03%)</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div>
+          <div class="card teal" style="margin-bottom:12px">
+            <h3>方案二：鉅鋼投資自建（高壓內併）工程與財務規格表</h3>
+            <div class="table-wrap" style="margin-top:6px">
+              <table>
+                <thead>
+                  <tr><th>項目</th><th>方案二（鉅鋼自建・高壓內併）明細</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>總裝置容量</strong></td><td><strong>612.320 kW</strong>（D棟 460.575 kW 有浪板 ＋ C棟屋突 151.745 kW）</td></tr>
+                  <tr class="hl-row"><td><strong>鉅鋼投資成本</strong></td><td>• 光電單價：<strong>$42,000 / kW</strong>（計 $25,717,440）<br>• D 棟浪板鋪設：<strong>$7,000 / kW</strong>（計 $3,220,000）<br>• <strong>工程總價：$28,937,440 元（含 D 棟浪板鋪設）</strong></td></tr>
+                  <tr><td><strong>其他規費與預估費用</strong></td><td>高壓審查費約 <strong>$85,000</strong>、加強電力網費用、台電線路設置費(線補費)、模組回收費約 <strong>$612,320</strong> ($1,000/kW)、綠憑案場審查/評鑑費、水費、網路費等</td></tr>
+                  <tr><td><strong>20 年預估總發電量</strong></td><td><strong>14,510,953 度</strong>（首年 782,239 度，平均每日發電 3.5 小時）</td></tr>
+                  <tr class="good-row"><td><strong>20 年綠電節費效益</strong></td><td>• 毛效益預估：<strong>$127,696,386 元</strong>（舊廠均價 $5.8/度 ＋ 綠憑 $3/度）<br>• <strong>扣全週期維運/換機/規費後淨賺：9,071 萬元（IRR 21.4%，4.4年回本）</strong></td></tr>
+                  <tr><td><strong>結構與空間配置重點</strong></td><td>• 棚架邊緣自女兒牆向內退縮 2 米（工安維護考量，免設外圍欄杆）<br>• 棚架低點淨空間 <strong>3.4 ~ 3.8 米</strong>，山型陣列（東西向）<br>• 保留既有紅柱、新增黑柱加強支撐；低壓設備放戶外、高壓盤放光電機房</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="fig" style="margin-bottom:10px">
+            <div class="figtitle">
+              <span>補充說明：D 棟北北東立面示意圖（屋頂面起算 4.5m 以下免雜照）</span>
+              <span class="chip teal">點擊放大</span>
+            </div>
+            <img src="assets/d_elevation.png" alt="D棟北北東立面圖" style="max-height:230px">
+            <div class="cap">圖 2-4：D 棟屋頂 RFL 至棚架高點 4,500mm (4.5米) 以下，完全符合《設置再生能源設施免請領雜項執照標準》第 5 條高度限制</div>
+          </div>
+          <div class="fig">
+            <div class="figtitle">
+              <span>免請領雜項執照標準第 5 條（維護通道 &le; 30% 規定）</span>
+              <span class="chip blue">點擊放大</span>
+            </div>
+            <img src="assets/exempt_law_art5.png" alt="免請領雜項執照標準第5條" style="max-height:135px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.10、P.11、P.17、P.18 ｜ 5 年免費保固維運，第 6 年起每 5 年維運評估</div>
+      <div class="pageno">Part 2 - P. 05 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P2-6 (Orig Slides 12, 13, 14, 15, 19) -->
+  <section class="slide" id="slide-p2-6">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 2 │ 專案時程與主設備選用 (原簡報 P.12 ~ P.15, P.19)</div>
+        <h2>推進時程預估（出租 7–8 月 / 自建 9–10 月）＆ 模組、逆變器頂級選型</h2>
+        <div class="sub">選用加國陽光 CSI 445W 模組（通過 115/3/11 新修法 17 級抗風壓認證），並提供華為 SUN2000 與亞力電機雙逆變器選項</div>
+      </div>
+      <div class="flags">
+        <span class="flag blue">CSI 445W (效率 22.3%)</span>
+        <span class="flag green">符合 115/3/11 新制 5400Pa</span>
+        <span class="flag amber">華為 vs 亞力電機</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div>
+          <div class="fig" style="margin-bottom:10px">
+            <div class="figtitle">
+              <span>1. D 棟＋C 棟屋突時程預估甘特圖（實際施工期約 3–4 個月）</span>
+              <span class="chip blue">點擊放大</span>
+            </div>
+            <img src="assets/timeline_gantt.png" alt="專案時程甘特圖" style="max-height:195px">
+            <div class="cap">圖 2-5：合約簽訂後，方案一（出租）約 7–8 個月完工併聯；方案二（自建含浪板與綠能憑證流程）約 9–10 個月完成</div>
+          </div>
+          <div class="fig">
+            <div class="figtitle">
+              <span>2. 115 年 3 月 11 日再生能源發電設備設置管理辦法修正重點</span>
+              <span class="chip green">點擊放大</span>
+            </div>
+            <img src="assets/moea_2026_rule.png" alt="經濟部115年3月11日修法重點" style="max-height:195px">
+            <div class="cap">圖 2-6：新制要求抗風壓由 14 級提升至 17 級（正負向皆須達 5,400 Pa）且模組回收費 $1,000/kW 改為報竣前一次收取</div>
+          </div>
+        </div>
+        <div>
+          <div class="card" style="margin-bottom:10px">
+            <h3>主設備選用（一）：高效太陽能模組 — CSI 加國陽光 445W</h3>
+            <div class="split-45" style="align-items:center">
+              <div class="fig" style="padding:6px">
+                <img src="assets/csi_445w_module.png" alt="CSI 445W 模組" style="max-height:150px">
+              </div>
+              <div>
+                <ul style="font-size:.83rem">
+                  <li><strong>型號：</strong><code>CS6.2-48TM-445W</code>（泰國製造，國際 Tier-1 品牌）</li>
+                  <li><strong>單片容量與效率：</strong><strong>445 W</strong> ｜ 轉換效率高達 <strong>22.3%</strong></li>
+                  <li><strong>低衰減保證：</strong>首年功率衰減 <strong>&lt; 1%</strong>，第 2~25 年每年衰減 <strong>&lt; 0.4%</strong></li>
+                  <li><strong>極限結構耐受：</strong>可承載 <strong>8,100 Pa 雪荷</strong> 及 <strong>正負向 5,400 Pa 風壓（17級陣風）</strong>，已取得認證完全符合 115/3/11 新修法規！</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card amber">
+            <h3>主設備選用（二）：智能組串式逆變器（海外 vs 國內雙品牌供決策）</h3>
+            <div class="two-col" style="gap:10px; margin-top:6px">
+              <div style="border:1px solid var(--line); border-radius:4px; padding:10px; background:#FAFCFE">
+                <div style="font-weight:800; color:var(--blue-dd); font-size:.86rem; margin-bottom:6px">選項 A：海外品牌 — 華為 HUAWEI</div>
+                <img src="assets/huawei_40ktl.png" alt="華為SUN2000逆變器" style="height:85px; width:100%; object-fit:contain; margin-bottom:6px">
+                <div style="font-size:.79rem; color:var(--ink); line-height:1.48">
+                  • 型號：<code>SUN2000-100KTL-M1</code> / <code>40KTL-M3</code><br>
+                  • 免設 DC 箱設計、10 路 MPPT 降低組串失配<br>
+                  • 內置 <strong>AFCI 直流拉弧檢測</strong> 主動防起火、內置 PID 修復、IP66 防護
+                </div>
+              </div>
+              <div style="border:2px solid var(--green); border-radius:4px; padding:10px; background:#F4FBF5">
+                <div style="font-weight:800; color:var(--green); font-size:.86rem; margin-bottom:6px">★ 選項 B：國內上市公司 — 亞力電機</div>
+                <img src="assets/allis_inverter.png" alt="亞力電機逆變器" style="height:85px; width:100%; object-fit:contain; margin-bottom:6px">
+                <div style="font-size:.79rem; color:var(--ink); line-height:1.48">
+                  • 型號：<strong>亞力電機 110 / 136 kW</strong> (380V/480V 滿載不降載)<br>
+                  • 業界最高 <strong>12 組 MPPT / 24 組串輸入</strong>，支援 M10/G12 高電流模組<br>
+                  • <strong>台灣本土資安零疑慮</strong>、內建各串電流實時量測、IP66 防護
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.12 ~ P.15、P.19 ｜ 註：逆變器資安、保固與備品深度比較表請見 Part 3 - P.06</div>
+      <div class="pageno">Part 2 - P. 06 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P2-7 (Orig Slides 20, 21, 22) -->
+  <section class="slide" id="slide-p2-7">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 2 │ C 棟露台評估與不建議施作實證 (原簡報 P.20 ~ P.22)</div>
+        <h2>C 棟露台（高棚架雜照案場）評估：合法容積僅 17.6 kW，不建議施作</h2>
+        <div class="sub">受限於台中建管處合法容積率僅剩 32 坪（17.6 kW），光請領雜項執照費用即高達約 170 萬元，經濟效益完全不成立</div>
+      </div>
+      <div class="flags">
+        <span class="flag coral">合法容積僅 32 坪 = 17.6 kW</span>
+        <span class="flag amber">雜照申請費高達 170 萬</span>
+        <span class="flag green">顧問結論：建議剔除不做</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div>
+          <div class="card coral" style="margin-bottom:12px">
+            <h3>C 棟露臺（高棚架雜照區）建管法規與財務試算表</h3>
+            <p style="margin-bottom:10px">因為 C 棟露台若要架設高棚架（高度逾 4.5m 或作為露台頂蓋結構），必須正式請領建築雜項執照並檢討建蔽率與容積率：</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>評估項目</th><th>檢討結果與數據說明</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>【建蔽率】檢討</strong></td>
+                    <td>設置於既有屋頂／露臺之上，符合 &lt;70% 規則，應可不必檢討建蔽率。</td>
+                  </tr>
+                  <tr class="bad-row">
+                    <td><strong>【容積率】致命瓶頸</strong></td>
+                    <td>全平台滿鋪原可達 <code>185.12 kW</code>；但台中建管處未給予放寬回覆，<strong>合法剩餘容積率僅 32 坪 &rarr; 僅能鋪設 17.6 kW！</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>20 年發電預估 (度)</strong></td>
+                    <td><strong>417,090 度</strong>（17.6 kW × 3.5h × 365天，20年總計僅 41.7 萬度）</td>
+                  </tr>
+                  <tr>
+                    <td><strong>20 年發電毛效益 ($)</strong></td>
+                    <td><strong>$3,670,392 元</strong>（以節電 $5.8 ＋ 綠憑 $3.0 ＝ $8.8/度估算之 20 年毛收入）</td>
+                  </tr>
+                  <tr class="bad-row">
+                    <td><strong>建置與雜照成本結構</strong><br>*(原簡報備忘錄揭露)*</td>
+                    <td>• <strong>雜照申請費：約 $1,700,000 元（170 萬元！）</strong><br>• 高棚架光電工程費：約 $75,600/kW × 17.6kW ＝ <strong>$1,330,560 元</strong><br>• 另加 20 年維運費、保險費、模組回收費 &rarr; <strong>總成本超過 330 萬元！</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="warn" style="margin-top:10px">
+              <strong>明確決策建議：</strong>投入逾 330 萬元（其中 170 萬為行政雜照規費），20 年毛收入僅 367 萬元，扣除折現後<strong>淨現值 (NPV) 為負數</strong>。建議董事長直接拍板<strong>「C 棟露台不施作」</strong>，將資源 100% 集中於免雜照之 D 棟與 C1/C2 屋突！
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="fig" style="margin-bottom:10px">
+            <div class="figtitle">
+              <span>C 棟露臺平面配置圖（橘框為浪板範圍，含新設安全欄杆與爬梯）</span>
+              <span class="chip coral">點擊放大</span>
+            </div>
+            <img src="assets/c_terrace_layout.png" alt="C棟露台平面配置圖" style="max-height:215px">
+          </div>
+          <div class="fig">
+            <div class="figtitle">
+              <span>C 棟露臺光電高棚架立面圖（5.2 米高棚架＋防墜欄杆）</span>
+              <span class="chip coral">點擊放大</span>
+            </div>
+            <img src="assets/c_terrace_elevation.png" alt="C棟露台立面圖" style="max-height:205px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.20 ~ P.22 ＆ 講者備忘錄（雜照費約 170 萬、工程單價 $75,600/kW）</div>
+      <div class="pageno">Part 2 - P. 07 / 07</div>
+    </div>
+  </section>
+
+</div>
+
+<!-- =====================================================================
+     PART 3: 針對其他建議的 QA：資深光伏顧問視角 ＋ 業主高層五大採購決策 (7 SLIDES)
+     ===================================================================== -->
+<div class="view" id="view-p3">
+
+  <!-- Slide P3-1 -->
+  <section class="slide" id="slide-p3-1">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 3 │ 針對其他建議的 QA：一、資深光伏顧問視角總覽 (1/7)</div>
+        <h2>資深光伏顧問視角：30 頁簡報關鍵數字重算摘要與「五大核心疑問」總覽</h2>
+        <div class="sub">我們將外部資深光伏顧問審閱 30 頁簡報後的重點摘要與 5 個最尖銳問題完整列出，並在接下來 3 頁逐題給出精算解答</div>
+      </div>
+      <div class="flags">
+        <span class="flag teal">資深光伏顧問獨立驗算</span>
+        <span class="flag amber">5 大核心疑問正面解答</span>
+        <span class="flag blue">零迴避透明對帳</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="split-55">
+        <div>
+          <div class="card teal">
+            <h3>資深光伏顧問：全案重點摘要複核表</h3>
+            <div class="table-wrap" style="margin-top:6px">
+              <table>
+                <thead>
+                  <tr><th>項目</th><th>方案一：出租分潤</th><th>方案二：鉅鋼自建</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>施作範圍</strong></td><td colspan="2">D 棟主屋頂 ＋ C 棟兩處屋突（C1 為 <code>94.785 kW</code>，C2 為 <code>56.96 kW</code>，合計 <code>151.745 kW</code> 南向單斜矮棚架，兩方案 C 棟做法相同）</td></tr>
+                  <tr><td><strong>裝置容量</strong></td><td><strong>774.745 kW</strong>（D 棟 623 kW，無浪板）</td><td><strong>612.320 kW</strong>（D 棟 460.575 kW，有浪板，受 30% 法規限制）</td></tr>
+                  <tr><td><strong>20 年發電量</strong></td><td><strong>1,836 萬度</strong>（18,360,153 度）</td><td><strong>1,451 萬度</strong>（14,510,953 度）</td></tr>
+                  <tr><td><strong>鉅鋼出資</strong></td><td><strong>0 元</strong></td><td><strong>2,894 萬元</strong>（每 kW 42,000 元，浪板另計每 kW 7,000 元）</td></tr>
+                  <tr><td><strong>回饋／效益</strong></td><td>二選一：20% 售電收入（20年約 1,836 萬），或 20% 綠電（約 367 萬度）</td><td>20 年節電加綠憑毛效益 <strong>1.277 億元</strong>（每度以 5.8 + 3 元計）</td></tr>
+                  <tr><td><strong>併網與工期</strong></td><td>高壓外併（臨路設 MOF 盤）｜約 7–8 個月</td><td>高壓內併｜約 9–10 個月</td></tr>
+                  <tr><td><strong>承租方與設備</strong></td><td colspan="2">• <strong>承租方：</strong>建坤能源（國泰金控持股 95%、進金生持股 5%，資本額 37 億）<br>• <strong>設備：</strong>模組用 CSI 445W（泰國製，效率 22.3%）；逆變器提供華為 SUN2000 和亞力 110/136kW 兩選項<br>• <strong>C 棟露台：</strong>合法容積只能裝 17.6 kW，光雜照申請費就要約 170 萬元，經濟效益不成立。</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card amber">
+            <h3>資深顧問「最有疑問的五個問題」導覽清單</h3>
+            <div class="table-wrap" style="margin-top:6px">
+              <table>
+                <thead>
+                  <tr><th>疑問編號與核心爭點</th><th>我方顧問解答專頁與核心結論</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="hl-row">
+                    <td><strong>Q1：兩方案比較基準不一致</strong><br><small>方案一綠電算5.8元、方案二算8.8元；1.277億未扣第6年後維運/換機/回收與折現；5.8元含基本電費；3元綠憑需剛需。</small></td>
+                    <td><strong>&rarr; 詳見 P3-2：</strong>已建立統一基準 DCF 表！方案一綠電按 $8.8 重算達 <strong>3,231萬</strong>；方案二扣盡 804.5 萬成本後，淨回收期 <strong>4.4年 (IRR 21.4%)</strong> / 純節電 <strong>6.8年 (IRR 12.4%)</strong>。</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Q2：發電量假設與衰減率不一致</strong><br><small>台中東西向山型 3.5h 偏樂觀需 PVsyst；表內年衰減 0.8% 但模組寫 &lt;0.4%。</small></td>
+                    <td><strong>&rarr; 詳見 P3-3：</strong>承諾交付 PVsyst 報告；0.4% 為組件衰減，表內用 <strong>0.8% 為「全系統綜合保守安全邊際」</strong>（少算 55 萬度保底）。</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Q3：回購機制偏貴且外併改自用存疑</strong><br><small>首年回購 $59,670/kW 比自建貴 42%；外併躉售改內併自用程序與費用未交代。</small></td>
+                    <td><strong>&rarr; 詳見 P3-3：</strong>首年含外線/MOF 沉沒成本，<strong>第 8~10 年 ($3.28~$3.88萬/kW) 方為黃金回購點</strong>；外併免改內線即可直接<strong>轉供綠電自用</strong>，或施工預留內併套管。</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Q4：D 棟容量落差與 30% 法規依據</strong><br><small>623kW vs 460.575kW 差 162kW；為何方案一不受 30% 限制？黑柱與防水責任。</small></td>
+                    <td><strong>&rarr; 詳見 P3-4：</strong>因方案二滿鋪浪板（新設頂蓋），未鋪模組浪板區計入維護通道須 &le;30% (實算 29.03%)；拿掉黑柱僅減 10.68kW；防水 100% 歸責保固。</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Q5：租金基準與棚架下空間權利不明</strong><br><small>綠電 $5 分潤基準、有無保底？棚架下空間歸投資方限制業主；期滿拆遷未寫。</small></td>
+                    <td><strong>&rarr; 詳見 P3-4：</strong>主動修訂合約：① 增設 FIT 保底租金 ② <strong>D棟棚架下空間使用權歸還鉅鋼</strong> ③ 明訂期滿 60 天無條件自費拆除復原。</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>資深光伏顧問視角（重點摘要 ＋ 五大疑問總覽）｜ 下一頁起逐題呈現精算解答</div>
+      <div class="pageno">Part 3 - P. 01 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P3-2 (QA 1) -->
+  <section class="slide" id="slide-p3-2">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 3 │ 資深顧問疑問 Q1 深度解答 (2/7)</div>
+        <h2>顧問 QA 1：兩方案比較基準拉齊・扣除全週期成本之 NPV / IRR 與敏感度重算</h2>
+        <div class="sub">徹底解決「5.8元 vs 8.8元基準不一」、「未扣第6年後維運換機回收費」與「流動電價敏感度」三大財務盲點</div>
+      </div>
+      <div class="flags">
+        <span class="flag green">Apple-to-Apple 統一基準</span>
+        <span class="flag blue">扣除 804.5 萬全週期 OPEX</span>
+        <span class="flag amber">電價 ±10% 敏感度分析</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div>
+          <div class="card">
+            <h3>1. 為什麼原簡報有基準差異？顧問如何拉齊並扣實成本？</h3>
+            <ul style="margin-top:6px; font-size:.83rem">
+              <li><strong>修正一（拉齊方案一綠電價值）：</strong>原簡報方案一 20% 綠電回饋（367.2萬度）只乘 <code>$5.8/度</code>（計 2,130 萬），漏算每度 <code>$3.0</code> 綠憑價值。拉齊按 <strong>$8.8/度</strong> 計算後，方案一綠電回饋 20 年總值實為 <strong>3,231.4 萬元</strong>（NPV 5% = <strong>+2,039.4 萬元</strong>）！</li>
+              <li><strong>修正二（方案二扣除第 6~20 年全週期成本共 804.5 萬元）：</strong><br>
+                原簡報 1.277 億元為毛效益（單純回收期用 8.8 元算約 4.2~4.3 年，用 5.8 元算約 6.4~6.5 年）。我們在下方 DCF 模型中<strong>全數扣除四項真實成本</strong>：<br>
+                ① <strong>第 6~20 年維運與保險費</strong>（前 5 年免費保固，第 6 年起按 <code>$600/kW/年</code> 計，每年 $367,392，15 年共 <strong>551.1 萬元</strong>）<br>
+                ② <strong>第 11 年逆變器中壽期汰換準備金</strong>（按 <code>$3,000/kW</code> 提列，計 <strong>183.7 萬元</strong>）<br>
+                ③ <strong>新制模組回收費一次繳納</strong>（<code>$1,000/kW</code>，計 <strong>61.2 萬元</strong>）＋ ④ <strong>高壓審查規費</strong>（<strong>8.5 萬元</strong>）。</li>
+              <li><strong>修正三（區分 $5.8 舊廠均價 vs 日間流動電價 ±10% 敏感度）：</strong><br>
+                舊廠均價 $5.8 含基本電費；台電高壓夏月半尖峰為 <code>$5.85/度</code>、非夏月半尖峰為 <code>$5.47/度</code>。考慮週休與基本電費影響，我們將日間實質抵減之流動電價做 <strong>-10% 保守壓力測試（$5.22/度）</strong> 與 <strong>+10% 電價上調測試（$6.38/度）</strong>。</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="card green">
+            <h3>2. 雙方案統一基準 DCF 財務模型與 ±10% 電價敏感度總表</h3>
+            <div class="table-wrap" style="margin-top:6px">
+              <table>
+                <thead>
+                  <tr>
+                    <th>方案與評估情境 (統一折現率 WACC = 5%)</th>
+                    <th class="num">20年營運淨入</th>
+                    <th class="num">扣CAPEX淨賺</th>
+                    <th class="num">真實回收期</th>
+                    <th class="num">專案 IRR</th>
+                    <th class="num">淨現值 NPV(5%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="hl-row">
+                    <td><strong>【方案一 A】出租：20% 售電現金租金</strong> ($5/度×20%)</td>
+                    <td class="num">1,836.0 萬</td>
+                    <td class="num"><strong>+1,836.0 萬</strong></td>
+                    <td class="ctr">0出資即刻正現金</td>
+                    <td class="ctr">∞ (0出資)</td>
+                    <td class="num"><strong>+1,158.7 萬</strong></td>
+                  </tr>
+                  <tr class="hl-row">
+                    <td><strong>【方案一 B】出租：20% 綠電回饋</strong> (純節電 $5.8/度)</td>
+                    <td class="num">2,129.8 萬</td>
+                    <td class="num"><strong>+2,129.8 萬</strong></td>
+                    <td class="ctr">0出資即刻正現金</td>
+                    <td class="ctr">∞ (0出資)</td>
+                    <td class="num"><strong>+1,344.1 萬</strong></td>
+                  </tr>
+                  <tr class="good-row">
+                    <td><strong>【方案一 C】出租：20% 綠電回饋 (同基準 $8.8/度)</strong></td>
+                    <td class="num">3,231.4 萬</td>
+                    <td class="num"><strong>+3,231.4 萬</strong></td>
+                    <td class="ctr">0出資即刻正現金</td>
+                    <td class="ctr">∞ (0出資)</td>
+                    <td class="num"><strong>+2,039.4 萬</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>【方案二】原簡報毛效益</strong> ($8.8/度，未扣維運換機)</td>
+                    <td class="num">12,769.6 萬</td>
+                    <td class="num">+9,875.9 萬</td>
+                    <td class="num">4.2 ~ 4.3 年</td>
+                    <td class="num">22.6%</td>
+                    <td class="num">+5,165.4 萬</td>
+                  </tr>
+                  <tr class="good-row">
+                    <td><strong>★【方案二】含綠憑淨效益 ($8.8/度，扣全週期成本)</strong></td>
+                    <td class="num">12,034.9 萬</td>
+                    <td class="num"><strong>+9,071.4 萬</strong></td>
+                    <td class="num"><strong>4.4 年</strong></td>
+                    <td class="num"><strong>21.4%</strong></td>
+                    <td class="num"><strong>+4,689.5 萬</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>【方案二】含綠憑淨效益 (電價 -10% 保守：$7.92/度)</strong></td>
+                    <td class="num">10,757.9 萬</td>
+                    <td class="num">+7,794.4 萬</td>
+                    <td class="num">4.9 年</td>
+                    <td class="num">18.9%</td>
+                    <td class="num">+3,883.6 萬</td>
+                  </tr>
+                  <tr>
+                    <td><strong>【方案二】含綠憑淨效益 (電價 +10% 樂觀：$9.68/度)</strong></td>
+                    <td class="num">13,311.8 萬</td>
+                    <td class="num">+10,348.3 萬</td>
+                    <td class="num">4.0 年</td>
+                    <td class="num">23.9%</td>
+                    <td class="num">+5,495.4 萬</td>
+                  </tr>
+                  <tr class="hl-row">
+                    <td><strong>★【方案二】純節電淨效益 ($5.8/度，無綠憑剛需)</strong></td>
+                    <td class="num">7,681.6 萬</td>
+                    <td class="num"><strong>+4,718.1 萬</strong></td>
+                    <td class="num"><strong>6.8 年</strong> <small>(毛6.4年)</small></td>
+                    <td class="num"><strong>12.4%</strong></td>
+                    <td class="num"><strong>+1,942.1 萬</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>【方案二】純節電淨效益 (日間流動 -10%：$5.22/度)</strong></td>
+                    <td class="num">6,839.9 萬</td>
+                    <td class="num">+3,876.5 萬</td>
+                    <td class="num">7.7 年</td>
+                    <td class="num">10.5%</td>
+                    <td class="num">+1,410.9 萬</td>
+                  </tr>
+                  <tr>
+                    <td><strong>【方案二】純節電淨效益 (電價上調 +10%：$6.38/度)</strong></td>
+                    <td class="num">8,523.2 萬</td>
+                    <td class="num">+5,559.7 萬</td>
+                    <td class="num">6.1 年</td>
+                    <td class="num">14.2%</td>
+                    <td class="num">+2,473.2 萬</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>顧問 QA 1 解答 ｜ 關鍵結論：即便完全不計綠憑 ($0) 且扣除 804.5 萬全週期維運換機成本，自建淨 IRR 仍達 10.5%~14.2%！</div>
+      <div class="pageno">Part 3 - P. 02 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P3-3 (QA 2 & QA 3) -->
+  <section class="slide" id="slide-p3-3">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 3 │ 資深顧問疑問 Q2 &amp; Q3 深度解答 (3/7)</div>
+        <h2>顧問 QA 2 &amp; 3：發電時數 PVsyst 佐證、衰減率 (0.8% vs 0.4%) 與中途回購可行性</h2>
+        <div class="sub">解答「台中東西向山型 3.5h 與衰減率前後不一致」及「方案一首年回購貴 42%、外併改內併自用如何執行」</div>
+      </div>
+      <div class="flags">
+        <span class="flag blue">0.8% 系統保守安全邊際</span>
+        <span class="flag teal">承諾交付 PVsyst 模擬報告</span>
+        <span class="flag amber">外併轉供 vs 內併套管預留</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card">
+          <h3>【問題 2 解答】發電量假設佐證 ＆ 為何表內衰減 0.8% 與模組 &lt;0.4% 不同？</h3>
+          <div class="table-wrap" style="margin-top:6px; margin-bottom:10px">
+            <table>
+              <thead>
+                <tr><th>顧問質疑點</th><th>進能服技術顧問實證解答与承諾</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. 東西向山型陣列在台中每天 3.5 小時偏樂觀，需 PVsyst 支撐？</strong></td>
+                  <td>• <strong>氣象與傾角實算：</strong>台中市西屯區長年日射量約 <code>4.15~4.30 kWh/m²/d</code>。D 棟採 <strong>5° 低傾角東西向山型陣列</strong>（降低風壓並最大化面積利用率），方位角折減僅約 3.2%~3.5%（遠低於高傾角東西向之折減）。<br>• <strong>N-Type 弱光增益：</strong>搭配 CSI 445W TOPCon 模組（效率 22.3%），首年 PR 值約 82.5%~84%，折算等效日照約 <code>3.45~3.52 小時/日</code>。<br>• <strong>交付承諾：</strong>於細部設計階段<strong>正式提交 PVsyst 模擬報告（含 3D 女兒牆與屋突遮陰建模）</strong>作為合約附件。</td>
+                </tr>
+                <tr class="good-row">
+                  <td><strong>2. 表內衰減率約 0.8%/年，但模組規格寫 &lt;0.4%/年，前後不一致？</strong></td>
+                  <td>• <strong>這是刻意的「工程保守安全邊際 (Conservative Buffer)」！</strong><br>• 模組規格書之「首年 &lt;1%、次年起 &lt;0.4%/年」為實驗室下之<strong>單純太陽能板功率衰減 (Module Degradation)</strong>。<br>• 財務表採用 <code>0.8%/年</code> 幾何遞減（如方案一首年 989,737 度 &rarr; 第 2 年 981,819 度，<code>981,819 / 989,737 = 99.2%</code>），是將 20 年間之<strong>直交流線損微增、接頭阻抗、逆變器老化與清洗週期間落塵折減</strong>一併納入「全系統綜合衰減率」。<br>• 若單按 0.4% 計算，方案二 20 年發電量將達 <strong>1,506 萬度（多出 55 萬度、多賺 484 萬）</strong>。我們堅持用 0.8% 保守試算，確保董事長看到的數字<strong>「只會超額達標、絕不誇大灌水」</strong>！</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card coral">
+          <h3>【問題 3 解答】方案一回購單價高出 42% 原因 ＆ 外併改自用技術可行性</h3>
+          <div class="table-wrap" style="margin-top:6px">
+            <table>
+              <thead>
+                <tr><th>顧問質疑點</th><th>商務結構拆解與工程轉自用雙路徑解方</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. 第 1 年回購單價 $59,670/kW 比自建 $42,000/kW 高約 42%？</strong></td>
+                  <td>• <strong>成本結構差異：</strong>方案一為「高壓外併 SPV 統包投資」，建坤能源初期除支付光電工程外，還全額承擔了<strong>台電外線線補費、加強電力網費、臨路 MOF 盤建置、高壓外併專線、SPV 專案融資安排費、綠憑評鑑費與前 20 年風險溢價</strong>。<br>• <strong>顧問良心建議：</strong>前 3 年回購單價（$53,703~$59,670/kW）確實對業主不利！<strong>若鉅鋼計畫 3 年內擁有電廠，應直接選「方案二：自建 ($42,000/kW)」</strong>；中途回購權是為<strong>「第 8~10 年後（單價降至 $32,819~$38,786/kW）」</strong>才爆發綠電剛需所設計的贖回選擇權。</td>
+                </tr>
+                <tr class="good-row">
+                  <td><strong>2. 原本是高壓外併，買回後如何改成「自用、每度 $8.8 元」？時程與費用？</strong></td>
+                  <td><strong>提供兩條明確可行的法定與工程路徑（寫入租約附約）：</strong><br>
+                  • <strong>路徑 A（最推薦・免動外線 0 工程費）：維持高壓外併，採「同企業電號綠電轉供 (CPPA 自用轉供)」</strong>。因為本案原本即規劃走綠電憑證交易（非綁死不可解約之台電傳統 FIT 躉售），鉅鋼買回電廠後，無須拆除臨路 MOF 盤或重拉內線，直接經由台電電網轉供予鉅鋼廠區電號（時程約 2~3 個月行政變更，僅需台電轉供輸配電規費約 $0.1~0.3/度），即可 <strong>100% 取得綠電憑證並抵減流動電費</strong>！<br>
+                  • <strong>路徑 B（實體改接高壓內併）：</strong>若欲解除外線改接廠內高壓受電盤，須向台電申辦「併聯型態變更」並由 D 棟頂樓光電機房改拉高壓電纜至廠內變電站（時程約 4~6 個月，工程與審查費約 150~200 萬元）。<strong>我方承諾於 D 棟施工時預留內併管路，確保未來無痛切換！</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>顧問 QA 2 &amp; QA 3 解答 ｜ 技術與商務雙重透明化，徹底消除高層對發電灌水與回購卡關之疑慮</div>
+      <div class="pageno">Part 3 - P. 03 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P3-4 (QA 4 & QA 5) -->
+  <section class="slide" id="slide-p3-4">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 3 │ 資深顧問疑問 Q4 &amp; Q5 深度解答 (4/7)</div>
+        <h2>顧問 QA 4 &amp; 5：D 棟免雜 30% 法規真相 (623 vs 460kW)、結構防水與租約條款修訂</h2>
+        <div class="sub">詳解為何方案一無浪板可裝 623kW 而方案二有浪板為 460.575kW，並主動提出「保底租金、空間歸還業主、期滿拆遷」三大合約修訂</div>
+      </div>
+      <div class="flags">
+        <span class="flag teal">免雜標準第5條完全解析</span>
+        <span class="flag amber">不落黑柱僅減 10.68 kW</span>
+        <span class="flag green">棚架下空間使用權歸還鉅鋼</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card teal">
+          <h3>【問題 4 解答】D 棟容量落差 (162 kW)、免雜 30% 法規與黑柱結構防水責任</h3>
+          <div class="table-wrap" style="margin-top:6px">
+            <table>
+              <thead>
+                <tr><th>顧問疑問細項</th><th>建築法規依據與工程簽證解答</th></tr>
+              </thead>
+              <tbody>
+                <tr class="hl-row">
+                  <td><strong>1. 為何方案一 (623kW) 不受 30% 限制，方案二 (460.575kW) 卻受限？加浪板還符合免雜照嗎？</strong></td>
+                  <td>• <strong>法源依據：</strong>《設置再生能源設施免請領雜項執照標準》第 5 條第 1、3、4 項明訂：屋頂型高度 4.5m 以下<strong>「得結合新設頂蓋（即浪板）」免請領雜照</strong>，但「架高於設置面之運轉維護孔道或通道設施，其水平投影面積不得超過光電設備整體水平投影面積 <strong>30%</strong>」。<br>
+                  • <strong>為何兩案差 162 kW？</strong><br>
+                  &nbsp;&nbsp;① <strong>方案一（無浪板）：</strong>未鋪模組處為原 RC 屋頂露空面，無新設頂蓋，故貼齊女兒牆滿鋪 <strong>1,400 片 = 623 kW</strong>。<br>
+                  &nbsp;&nbsp;② <strong>方案二（滿鋪浪板 2,668.23 m² ＋ 模組退縮 2 米）：</strong>因退縮 2 米區下方仍有鋪浪板，建管審查將「有浪板但上方無模組」之面積（<code>600.3 m²</code>）全數計入維護通道！為符合 <code>600.3 ÷ 2,067.93 = 29.03% &le; 30%</code>，模組面積須為 <code>2,067.93 m² (1,035片 = 460.575 kW)</code>。<br>
+                  • <strong>★ 增容突破口：</strong>若董事長希望方案二自建也衝上 580~600 kW，只需將「浪板邊緣隨模組同步退縮 2 米」，即可解除 600.3 m² 通道限制！</td>
+                </tr>
+                <tr>
+                  <td><strong>2. 新增黑色立柱、植筋與屋頂防水責任劃分？拿掉黑柱減多少？</strong></td>
+                  <td>• <strong>黑色立柱彈性：</strong>增設黑柱係為分擔大跨距風載（17級風壓 5,400Pa）；若鉅鋼考量棚架下動線<strong>決定「不加黑色立柱」，容量僅需微減 10.68 kW（24片模組）</strong>，完全可行！<br>
+                  • <strong>簽證與防水保固：</strong>全案由開業結構技師出具結構安全簽證；植筋處採化學錨栓＋無收縮水泥基座＋PU防水層＋金屬防水罩，<strong>合約明訂施工植筋處滲漏水由我方負 100% 修繕與賠償責任</strong>。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card green">
+          <h3>【問題 5 解答】租金基準、棚架下空間權利與 20 年期滿拆遷條款修正承諾</h3>
+          <p style="margin-bottom:8px">針對顧問指出原簡報在租約條款上的三處不明確，進能服與建坤能源主動提出<strong>「保護鉅鋼權益之三大合約修訂承諾」</strong>：</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>條款項目</th><th>原簡報潛在疑慮</th><th>本次主動升級之「董事長安心合約條款」</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. 租金分潤基準與保底機制</strong></td>
+                  <td>20% 分潤以「綠電 $5/度」估算，實際是 FIT 還是轉供？有無保底？</td>
+                  <td class="good-row"><strong>明訂「FIT 保底 ＋ 綠電轉供上行共享」雙軌制：</strong><br>• 未轉供期間或保底基準：按台電公告高壓屋頂型 FIT 費率（115年為 <code>$3.6236/度</code>）× 20% 計算保底租金。<br>• 綠電 CPPA 轉供期間：按實際售電單價（市價約 <code>$5.0~$5.5/度</code>）× 20% 結算，公開透明對帳！</td>
+                </tr>
+                <tr class="good-row">
+                  <td><strong>2. D 棟棚架下空間使用權利</strong></td>
+                  <td>P.6 寫「棚架下空間歸投資方所用」，限制鉅鋼使用自家屋頂。</td>
+                  <td><strong>全面修正！空間使用權歸還鉅鋼機械：</strong><br>• 合約改為：「D 棟高棚架下淨高 3.4~4.2m 空間歸鉅鋼機械無償使用（可作半戶外倉儲、設備區），惟不得違法封閉四周外牆（避免觸犯違建撤照）或堆置危險易燃物，並保留投資方必要配電箱與維運通行權。」</td>
+                </tr>
+                <tr>
+                  <td><strong>3. 20 年期滿拆除復原與屋頂修繕</strong></td>
+                  <td>到期怎麼拆除復原、屋頂修繕期間怎麼補償未寫。</td>
+                  <td class="good-row"><strong>白紙黑字寫入租約主文：</strong><br>• <strong>期滿復原：</strong>20 年到期若不留用，建坤能源（37億資本額）須於 <strong>60 日內全額自費拆除設備並完成屋頂防水復原</strong>（且已依法預繳 $1,000/kW 政府模組回收基金）。<br>• <strong>修繕免責：</strong>租期內鉅鋼因屋頂修繕需配合停機，每年享有約定免責日數，免賠售電損失。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>顧問 QA 4 &amp; QA 5 解答 ｜ 已完成法規算式驗證與三大業主保護條款修訂</div>
+      <div class="pageno">Part 3 - P. 04 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P3-5 (Executive Decisions 1 & 2) -->
+  <section class="slide" id="slide-p3-5">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 3 │ 二、業主高層視角：五個要決策的採購題目 (5/7)</div>
+        <h2>高層採購決策 1 &amp; 2：要出租還是自建？綠電自己用還是賣掉收租？</h2>
+        <div class="sub">站在鉅鋼董事長與財務長視角，針對資金配置、用電大戶義務、供應鏈綠電剛需與 ROFR 優先回購權給出明確決策樹</div>
+      </div>
+      <div class="flags">
+        <span class="flag amber">採購題目 1：出租 vs 自建</span>
+        <span class="flag teal">採購題目 2：租金 vs 綠電回饋</span>
+        <span class="flag green">ROFR 價格公式入約</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card amber">
+          <h3>採購題目 1：要出租還是自建？（2,900 萬 CAPEX vs 本業資金配置）</h3>
+          <p style="margin-bottom:8px; color:var(--ink)"><strong>高層決策三大檢核點：</strong>① 帳上可否動用 2,900 萬資本支出（或保留給本業）？② 鉅鋼是否為用電大戶或有歐美客戶綠電要求？③ 同基準 NPV/IRR 與電價 ±10% 敏感度表現。</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>決策情境條件</th><th>顧問推薦拍板方案</th><th>核心財務與戰略理由</th></tr>
+              </thead>
+              <tbody>
+                <tr class="good-row">
+                  <td><strong>情境 A（首推）：</strong><br>本業資金充裕，或願搭配<strong>銀行綠能專案貸款 (75%~80%)</strong>；且未來 3~5 年有減碳/綠憑需求</td>
+                  <td><strong>★ 拍板【方案二：鉅鋼自建】</strong><br><small>(612.32 kW，總價 2,894 萬；若貸款 8 成自備僅約 580 萬)</small></td>
+                  <td>• <strong>含綠憑 ($8.8)：淨 IRR 21.4%</strong>、回收期 <strong>4.4 年</strong>、NPV <strong>+4,690 萬</strong>。<br>• <strong>純節電 ($5.8)：淨 IRR 12.4%</strong>、回收期 <strong>6.8 年</strong>、NPV <strong>+1,942 萬</strong>。<br>• 電價每漲 10%，自建 IRR 再增約 2 個百分點，是抗通膨與能源漲價的最佳盾牌！</td>
+                </tr>
+                <tr class="hl-row">
+                  <td><strong>情境 B：</strong><br>2,900 萬預算須 100% 投入核心製鞋機械研發擴產，嚴控非本業 CAPEX</td>
+                  <td><strong>拍板【方案一：出租分潤】</strong><br><small>(774.745 kW，鉅鋼 0 出資，建坤能源全額投資)</small></td>
+                  <td>• <strong>零資本支出、零維運責任、零台電外線風險</strong>。<br>• 20 年穩收 <strong>1,836 萬租金 (NPV +1,159萬)</strong> 或 <strong>367萬度綠電 (同基準價值 3,231萬，NPV +2,039萬)</strong>，並保有第 8~10 年中途購回權。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card teal">
+          <h3>採購題目 2：綠電是自己用，還是賣掉收租？（方案一分潤與 ROFR 條款）</h3>
+          <p style="margin-bottom:8px; color:var(--ink)"><strong>高層決策檢核點：</strong>選方案一時，分潤要選「20% 租金」還是「20% 綠電回饋」？「綠電優先回購權」的價格和條件怎麼寫進合約？</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>綠電策略階段</th><th>建議採購拍板動作与合約條款設計</th></tr>
+              </thead>
+              <tbody>
+                <tr class="good-row">
+                  <td><strong>1. 分潤二選一怎麼選？</strong><br><small>(取決於未來 3~5 年綠電剛需)</small></td>
+                  <td>• <strong>若未來 3 年內已有 RE100/減碳指標：直接選「20% 綠電回饋」</strong>（每年免費取得約 18.4 萬度綠電＋T-REC 憑證，每度抵減 $5.8 電費＋$3 憑證價值＝實質價值 <strong>$1.76/度</strong>，比收現金租金 <strong>$1.0/度</strong> 高出 <strong>76%</strong>！）。<br>
+                  • <strong>若目前尚無綠電剛需：先選「20% 售電現金租金」</strong>，但於合約增訂<strong>「年度分潤模式轉換權」</strong>——鉅鋼得於每年底提前 60 天通知，自次年起由「收現金租金」無償切換為「領取 20% 綠電回饋」！</td>
+                </tr>
+                <tr class="hl-row">
+                  <td><strong>2. 「綠電優先回購權 (ROFR)」如何寫入合約？</strong></td>
+                  <td>不能只寫「享優先回購權」五個空泛字！建議於合約明訂<strong>三大具體執行條件</strong>：<br>
+                  ① <strong>回購額度：</strong>除 20% 分潤外，建坤能源所持有之其餘 <strong>80% 綠電與憑證（約 73 萬度/年）</strong>，鉅鋼享有第一順位優先承購權。<br>
+                  ② <strong>定價公式：</strong>回購單價以「當時經濟部國家再生能源憑證中心公告之 CPPA 市場均價折讓 3%~5%」或「約定價格區間上限（Cap Price）」計算。<br>
+                  ③ <strong>觸發窗口：</strong>每滿 3 年或當原外部購電合約到期前 6 個月，建坤須書面通知鉅鋼是否行使優先回購權。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>業主高層視角（採購題目 1 &amp; 2）｜ 將財務指標與合約選擇權結構化，協助董事長精準決策</div>
+      <div class="pageno">Part 3 - P. 05 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P3-6 (Executive Decisions 3 & 4) -->
+  <section class="slide" id="slide-p3-6">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 3 │ 二、業主高層視角：五個要決策的採購題目 (6/7)</div>
+        <h2>高層採購決策 3 &amp; 4：D 棟屋頂與棚架下空間怎麼用？設備規格與品牌怎麼選？</h2>
+        <div class="sub">先定 D 棟頂樓用途再決定「浪板與黑色立柱」；逆變器從資安、保固與在地備品全方位比選，模組鎖死「同級或更優」標準</div>
+      </div>
+      <div class="flags">
+        <span class="flag blue">採購題目 3：D棟空間用途</span>
+        <span class="flag green">採購題目 4：亞力 vs 華為逆變器</span>
+        <span class="flag amber">模組合約同級或更優條款</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card">
+          <h3>採購題目 3：D 棟屋頂和棚架下的空間怎麼用？（決定浪板、立柱與空間條款）</h3>
+          <p style="margin-bottom:8px">D 棟棚架淨高 3.4～4.2 米，面積逾 800 坪。請董事長先拍板頂樓用途，工程配置即刻定案：</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>D 棟棚架下空間規劃用途</th><th>是否加鋪浪板<br><small>($7,000/kW，約322萬)</small></th><th>是否保留新增黑色立柱<br><small>(影響容量 10.68 kW)</small></th><th>建議搭配方案與空間條款</th></tr>
+              </thead>
+              <tbody>
+                <tr class="good-row">
+                  <td><strong>用途 A：半戶外倉儲區、模具/設備暫置區或員工休憩區</strong><br><small>(需百分之百防雨且動線寬敞)</small></td>
+                  <td><strong>必加浪板！</strong><br>全面防雨阻熱，退縮 2 米免設外圍防墜欄杆</td>
+                  <td><strong>建議拿掉黑色立柱！</strong><br>僅少 10.68 kW (24片)，換取全跨距無立柱阻礙之寬敞倉儲動線</td>
+                  <td>• 選方案二自建 (約 449.9 kW)<br>• 若選方案一出租加浪板，必須刪除「空間歸投資方」條款，明訂<strong>棚架下空間歸鉅鋼使用</strong></td>
+                </tr>
+                <tr class="hl-row">
+                  <td><strong>用途 B：頂樓純閒置無人員物料進出，僅需幫頂樓廠房降溫</strong></td>
+                  <td><strong>不加浪板！</strong><br>直接省下 322 萬浪板成本，太陽能板本身已遮蔽 75% 日照降溫 3~5°C</td>
+                  <td><strong>保留黑色立柱！</strong><br>強化 17 級抗風壓結構剛性，發電容量最大化</td>
+                  <td>• 不論自建或出租，D 棟皆可<strong>滿鋪至 623 kW</strong>（全場達 774.745 kW），20 年多發 385 萬度電！</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card green">
+          <h3>採購題目 4：設備規格和品牌怎麼選？（華為 vs 亞力逆變器 ＆ 模組鎖定條款）</h3>
+          <div class="table-wrap" style="margin-bottom:8px">
+            <table>
+              <thead>
+                <tr><th>評估維度</th><th>海外品牌：華為 SUN2000 (100KTL/40KTL)</th><th>★ 國內品牌（推薦）：亞力電機 (110/136 kW)</th></tr>
+              </thead>
+              <tbody>
+                <tr class="good-row">
+                  <td><strong>資安合規性</strong><br><small>(監控連外網)</small></td>
+                  <td class="bad-row">陸系通訊晶片背景，若鉅鋼廠內有國防、歐美機敏客戶稽核或政府補助案，外網連線易遭資安質疑。</td>
+                  <td><strong>100% 台灣上市重電大廠（股票 1514）本土製造</strong>，符合政府與歐美大廠最高資安規範，廠區內外網隔離最安心！</td>
+                </tr>
+                <tr>
+                  <td><strong>MPPT 與規格</strong></td>
+                  <td>10 路 MPPT、內建 AFCI 直流拉弧檢測與 PID 修復、IP66。</td>
+                  <td class="good-row">同級最高 <strong>12 組 MPPT / 24 串輸入</strong>、內建各串電流實時量測（利於 UNSW 組串故障診斷）、滿載不降載、IP66。</td>
+                </tr>
+                <tr>
+                  <td><strong>保固與在地備品</strong></td>
+                  <td>透過台灣代理商出保，部分核心板件需跨國調撥。</td>
+                  <td class="good-row"><strong>台灣原廠直營服務、在地備品充足</strong>，配合進能服全台維運據點，完修速度最快。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="note">
+            <strong>模組更換「同級或更優」合約硬指標（防範進場縮水）：</strong><br>
+            針對簡報 P.13 註記「依進場時程配置當時最新合規模組」，合約明訂若更換型號，新模組必須同時滿足五項硬指標：① <strong>Bloomberg Tier-1 一級品牌（非陸製違規產地）</strong> ② <strong>單片功率 &ge; 445W</strong> ③ <strong>轉換效率 &ge; 22.3% (N-type TOPCon)</strong> ④ <strong>衰減率首年 &le; 1%、年衰減 &le; 0.4%</strong> ⑤ <strong>通過 CNS/IEC 61215 正負向 5,400Pa (17級風壓) 認證</strong>，且工程總價不加價！
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>業主高層視角（採購題目 3 &amp; 4）｜ 空間決定浪板與立柱，資安與備品決定逆變器選型</div>
+      <div class="pageno">Part 3 - P. 06 / 07</div>
+    </div>
+  </section>
+
+  <!-- Slide P3-7 (Executive Decision 5 + Board Sign-off Sheet) -->
+  <section class="slide" id="slide-p3-7">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 3 │ 二、業主高層視角：採購決策 5 與當場拍板核決單 (7/7)</div>
+        <h2>高層採購決策 5：合約條件、退出機制、維運 SLA 保證與董事長拍板核決表</h2>
+        <div class="sub">將「20年退場機制、2天到場/5天修復 SLA、屋頂漏水 100% 歸責、期滿拆除復原」全數入約，並當場剔除 C 棟露台案</div>
+      </div>
+      <div class="flags">
+        <span class="flag coral">C棟露台 17.6kW 拍板不做</span>
+        <span class="flag green">2天到場 / 5天修復 SLA 入約</span>
+        <span class="flag blue">董事長五題拍板單</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card">
+          <h3>採購題目 5：合約條件與退出機制怎麼訂？（四大合約鐵律）</h3>
+          <div class="table-wrap" style="margin-top:6px">
+            <table>
+              <thead>
+                <tr><th>合約保障維度</th><th>寫入正式合約之具體條款內容（白紙黑字保障鉅鋼）</th></tr>
+              </thead>
+              <tbody>
+                <tr class="good-row">
+                  <td><strong>1. 維運 SLA 與發電保證</strong></td>
+                  <td>• 將簡報 P.30 承諾之 <strong>「接獲異常通報後 2 個工作天內現場查檢、5 個工作天內完成案場修復」</strong> 正式寫入合約 SLA 條款。<br>• 若為方案二自建維運合約，增訂 <strong>「系統年可用率 (Availability) &ge; 98% / PR 值保證」</strong>，未達標按比例扣減維運費。</td>
+                </tr>
+                <tr>
+                  <td><strong>2. 屋頂漏水責任歸屬</strong></td>
+                  <td>• 施工進場前雙方會勘進行<strong>屋頂現況拍照存證與積水測試</strong>。<br>• 凡因光電棚架植筋、管線穿牆或施工人員作業所致之屋頂滲漏水，於合約期間內由進能服／建坤能源負 <strong>100% 無償修繕與廠內設備受損連帶賠償責任</strong>。</td>
+                </tr>
+                <tr>
+                  <td><strong>3. 20 年租約退出與回購公式</strong></td>
+                  <td>• <strong>中途回購權：</strong>載明 1~20 年期初直線折舊回購單價表（第 8~10 年為 $38,786~$32,819/kW），期中按日數比例計算。<br>• <strong>違約與不可抗力退出：</strong>若因承租方破產或重大違約，鉅鋼有權終止租約並無償取得設備或要求限期拆除。</td>
+                </tr>
+                <tr class="hl-row">
+                  <td><strong>4. 期滿拆除復原與 C 棟露台決策</strong></td>
+                  <td>• <strong>20 年期滿拆遷：</strong>租期屆滿若鉅鋼不續租亦不無償留用，建坤能源須於 <strong>60 日內全額自費拆除全部設備、切平植筋並復原防水層</strong>。<br>• <strong>C 棟露台直接剔除：</strong>170 萬雜照費換 17.6 kW 完全不符經濟效益，<strong>當場拍板不做！</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card amber">
+          <h3>鉅鋼機械新廠光電案 — 董事長五大採購題目當場拍板核決表</h3>
+          <p style="margin-bottom:8px; color:var(--ink)">會議現場僅需請董事長確認以下 5 項勾選，設計與法務團隊即可於 3 個工作天內產出定案合約與細設圖面：</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>決策序號</th><th>採購決策題目</th><th>顧問推薦首選 (Recommended)</th><th>備選方案</th></tr>
+              </thead>
+              <tbody>
+                <tr class="good-row">
+                  <td class="ctr"><strong>決策 1</strong></td>
+                  <td><strong>商業與出資模式</strong></td>
+                  <td>&#9745; <strong>方案二：鉅鋼自建</strong> (可搭銀行 8 成綠能融資，享 IRR 21.4% / 12.4%)</td>
+                  <td>&#9744; 方案一：出租予建坤能源 (0出資)</td>
+                </tr>
+                <tr>
+                  <td class="ctr"><strong>決策 2</strong></td>
+                  <td><strong>綠電與分潤用途</strong></td>
+                  <td>&#9745; <strong>自建自用＋綠憑保留/出售</strong> (若出租則前3年收租＋綁定 ROFR 優先回購權)</td>
+                  <td>&#9744; 出租直接領取 20% 綠電度數回饋</td>
+                </tr>
+                <tr class="good-row">
+                  <td class="ctr"><strong>決策 3</strong></td>
+                  <td><strong>D 棟頂樓空間配置</strong></td>
+                  <td>&#9745; <strong>加鋪浪板＋退縮 2 米免欄杆＋不落黑柱</strong> (449.9kW，空間歸鉅鋼倉儲用)</td>
+                  <td>&#9744; 無浪板滿鋪 623 kW (省 322 萬浪板費)</td>
+                </tr>
+                <tr>
+                  <td class="ctr"><strong>決策 4</strong></td>
+                  <td><strong>逆變器與模組品牌</strong></td>
+                  <td>&#9745; <strong>亞力電機 110/136kW (本土零資安風險)</strong> ＋ CSI 445W (同級或更優入約)</td>
+                  <td>&#9744; 華為 SUN2000-100KTL/40KTL</td>
+                </tr>
+                <tr class="bad-row">
+                  <td class="ctr"><strong>決策 5</strong></td>
+                  <td><strong>C 棟露台 (17.6kW)</strong></td>
+                  <td colspan="2" style="color:#b4432c; font-weight:800">&#9745; <strong>直接拍板剔除不施作！（立省 170 萬元雜照申請費與高昂棚架成本）</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tip" style="margin-top:10px">
+            <strong>下一步推進時程 (Next Steps)：</strong>今日拍板方向後 &rarr; <strong>3 日內</strong>提交修正版合約草稿與 D 棟更新圖面 &rarr; <strong>7 日內</strong>完成 PVsyst 發電模擬報告與台電饋線併審掛件！
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>業主高層視角（採購題目 5 與核決單）｜ 完成 Part 3 全部 10 大顧問與高層問題閉環</div>
+      <div class="pageno">Part 3 - P. 07 / 07</div>
+    </div>
+  </section>
+
+</div>
+
+<!-- =====================================================================
+     PART 4: 進金生能源服務 (6692) 企業簡介與標竿實績預備庫 (原簡報 P.23 ~ P.30 - 4 SLIDES)
+     ===================================================================== -->
+<div class="view" id="view-p4">
+
+  <!-- Slide P4-1 (Orig Slides 23, 24, 25) -->
+  <section class="slide" id="slide-p4-1">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 4 │ 進能服簡介與實績預備庫 (原簡報 P.23 ~ P.25)</div>
+        <h2>進金生能源服務（6692）：全台首家 IPO 上櫃光電 EPC 與全方位能源生態系</h2>
+        <div class="sub">實收資本額 5.88 億元，自有正式編制工程與維運團隊，科學園區及工業區覆蓋率達 50%</div>
+      </div>
+      <div class="flags">
+        <span class="flag purple">股票代號 6692 (首家上櫃 EPC)</span>
+        <span class="flag blue">資本額 5.88 億元</span>
+        <span class="flag green">ISO 9001 / 14001 / 45001</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="four-col" style="margin-bottom:6px">
+        <div class="card">
+          <div class="chip blue" style="margin-bottom:6px">自有團隊</div>
+          <h3>關鍵節點自主把關</h3>
+          <p>業務／設計／採購／專管／監工／環安衛／維運全數為<strong>正式編制團隊</strong>，不層層轉包，工程品質與進度可控。</p>
+        </div>
+        <div class="card teal">
+          <div class="chip teal" style="margin-bottom:6px">工安嚴謹</div>
+          <h3>50% 科學園區覆蓋率</h3>
+          <p>高達 <strong>50% 科學園區及工業區覆蓋率</strong>，工程管理與高空防墜完全符合一線科技大廠與跨國企業工安標準。</p>
+        </div>
+        <div class="card amber">
+          <div class="chip amber" style="margin-bottom:6px">體質穩健</div>
+          <h3>6692 首家上櫃 EPC</h3>
+          <p>全台首家 IPO 上櫃光電 EPC，<strong>實收資本額 5.88 億元</strong>，通過 ISO 9001 / 14001 / 45001 國際三認證，20 年履約最安心。</p>
+        </div>
+        <div class="card green">
+          <div class="chip green" style="margin-bottom:6px">實績肯定</div>
+          <h3>300+ 案場 &amp; TÜV AAA</h3>
+          <p>累積逾 <strong>348 座光電案場 (750 MW)</strong>，全台首家獲德國萊因 <strong>TÜV AAA 最高等級維運肯定</strong>，連續榮獲 2020~2025 國家金質獎。</p>
+        </div>
+      </div>
+
+      <div class="card purple">
+        <h3>進金生服務 — 全方位企業綠能生態系（從光電自建、合資電廠到綠電交易與儲能）</h3>
+        <div class="six-col" style="margin-top:10px">
+          <div class="metric"><div class="k" style="font-size:1.05rem">企業能源自建</div><div class="t">廠房光電 EPC 統包規劃與高壓內併節費</div></div>
+          <div class="metric teal"><div class="k" style="font-size:1.05rem">電廠投資 (合資)</div><div class="t">與國泰金控合資建坤能源 (37億資本) 屋頂租賃</div></div>
+          <div class="metric green"><div class="k" style="font-size:1.05rem">綠電交易</div><div class="t">CPPA 綠電轉供媒合與 T-REC 憑證規劃</div></div>
+          <div class="metric amber"><div class="k" style="font-size:1.05rem">工商儲能 / 家儲</div><div class="t">表後削峰填谷、需量反應與不斷電備援</div></div>
+          <div class="metric coral"><div class="k" style="font-size:1.05rem">一級模組代理</div><div class="t">國際 Tier-1 高效合規模組直供保固</div></div>
+          <div class="metric purple"><div class="k" style="font-size:1.05rem">地熱與 AIDC</div><div class="t">基載型再生能源與 AI 算力中心綠電整合</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.23 ~ P.25 ｜ 進金生能源服務股份有限公司 (ACMEPOINT ENERGY SERVICES, 6692)</div>
+      <div class="pageno">Part 4 - P. 01 / 04</div>
+    </div>
+  </section>
+
+  <!-- Slide P4-2 (Orig Slide 26) -->
+  <section class="slide" id="slide-p4-2">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 4 │ 建置實績總覽 (原簡報 P.26)</div>
+        <h2>太陽能電廠與儲能建置及維護經驗：累積 750 MW ／ 348 座實績</h2>
+        <div class="sub">深耕全台工商廠房、科學園區、大型地面型與 AFC 調頻備轉／表後儲能系統，深受上市櫃製造業信賴</div>
+      </div>
+      <div class="flags">
+        <span class="flag blue">累積建置 750 MW</span>
+        <span class="flag teal">太陽能發電系統 348 座</span>
+        <span class="flag amber">AFC / 區域電網 / 表後儲能</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="split-img-right">
+        <div>
+          <div class="two-col" style="margin-bottom:12px">
+            <div class="metric">
+              <div class="k" style="font-size:2.2rem">750 MW</div>
+              <div class="t">累積太陽能與儲能案場建置容量</div>
+            </div>
+            <div class="metric teal">
+              <div class="k" style="font-size:2.2rem">348 座</div>
+              <div class="t">全台累積建置太陽能發電系統座數</div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>工商製造業與園區標竿客戶肯定</h3>
+            <ul style="margin-top:8px">
+              <li><strong>精密製造與金屬加工業：</strong>熟悉高壓大用電工廠之受電室架構、母線停電切換排程（配合廠方歲修或假日施工，零影響產線運作）。</li>
+              <li><strong>高棚架與防水結構專精：</strong>擁有數百座 RC 植筋高棚架、輕鋼構與無鑽孔浪板防漏實績，全部通過專業結構技師耐風壓簽證。</li>
+              <li><strong>光儲充一體化預留能力：</strong>除了屋頂型太陽能外，具備台電 AFC 調頻備轉、區域電網及工廠表後儲能建置經驗，為鉅鋼新廠未來十年的能源轉型預留完整擴充彈性。</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="fig">
+            <div class="figtitle">
+              <span>進能服全台太陽能光電與儲能代表實績一覽</span>
+              <span class="chip blue">點擊放大</span>
+            </div>
+            <img src="assets/track_record_map.png" alt="進能服750MW建置實績" style="max-height:410px">
+            <div class="cap">圖 4-1：涵蓋全台各大工業區、科學園區及知名上市櫃企業廠房屋頂實績</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.26 ｜ 累積建置容量 750 MW、348 座太陽能發電系統</div>
+      <div class="pageno">Part 4 - P. 02 / 04</div>
+    </div>
+  </section>
+
+  <!-- Slide P4-3 (Orig Slides 27, 28) -->
+  <section class="slide" id="slide-p4-3">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 4 │ 標竿實績案例驗證 (原簡報 P.27 ~ P.28)</div>
+        <h2>實績雙驗證：南科 24 MW 大型科技廠案 ＆ 芳生螺絲 3.66 MW 自發自用減碳案</h2>
+        <div class="sub">從嚴苛工安的南部科學園區 24 MW 案，到傳統金屬加工龍頭芳生螺絲自發自用減碳 15%~20% 的真實數據</div>
+      </div>
+      <div class="flags">
+        <span class="flag blue">南科大型科技廠 24 MW</span>
+        <span class="flag green">年扣抵電費 1.35 億元</span>
+        <span class="flag amber">芳生螺絲 3.66 MW 減碳 15~20%</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card">
+          <h3>案例一：大型科技廠光電建置案（24 MW・南部科學園區）</h3>
+          <div class="fig" style="margin:8px 0">
+            <img src="assets/case_24mw.png" alt="24MW大型光電案實景" style="max-height:200px">
+          </div>
+          <div class="three-col" style="margin-bottom:8px">
+            <div class="metric green"><div class="k" style="font-size:1.2rem">&darr; 2,700 萬度</div><div class="t">每年節省外購電力</div></div>
+            <div class="metric"><div class="k" style="font-size:1.2rem">&darr; $1.35 億/年</div><div class="t">每年直接扣抵電費支出</div></div>
+            <div class="metric teal"><div class="k" style="font-size:1.2rem">&darr; 14,000 噸/年</div><div class="t">每年實質降低碳排量</div></div>
+          </div>
+          <p style="font-size:.83rem; color:var(--ink)">
+            • <strong>專案挑戰與成果：</strong>多案場整合、大容量建置、科技廠與南科管理局工安要求極度嚴格；進能服團隊如期併聯，協助業主<strong>超前 2 年達標用電大戶建置義務</strong>，大幅提升 ESG 國際形象！
+          </p>
+        </div>
+
+        <div class="card teal">
+          <h3>案例二：金屬製造標竿 — 芳生螺絲自發自用案（3.66 MW）</h3>
+          <div class="fig" style="margin:8px 0">
+            <img src="assets/case_fangsheng.jpg" alt="芳生螺絲3.66MW實景" style="max-height:200px">
+          </div>
+          <div class="two-col" style="margin-bottom:8px">
+            <div class="metric teal"><div class="k" style="font-size:1.2rem">50 萬度 / 月</div><div class="t">光電月均發電（自用 8 成 / 餘電躉售 2 成）</div></div>
+            <div class="metric amber"><div class="k" style="font-size:1.2rem">減碳 15% ~ 20%</div><div class="t">每年直接幫全廠降低 15%~20% 碳排量</div></div>
+          </div>
+          <div class="tip" style="font-size:.82rem">
+            <strong>業主蔡總經理實證回饋：</strong>「芳生的 10 年減碳計畫整合許多子項目，其中<strong>增設自發自用的太陽能板</strong>、熱處理爐及球化爐設備汰換是優先執行重點。預估光是太陽能板的增設，<strong>每年即可幫芳生減碳至少 15% 至 20%</strong>，同時大幅降低日間外購電費！」
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.27 ~ P.28 ｜ 科技大廠與精密金屬製造業雙重實績背書</div>
+      <div class="pageno">Part 4 - P. 03 / 04</div>
+    </div>
+  </section>
+
+  <!-- Slide P4-4 (Orig Slides 29, 30) -->
+  <section class="slide" id="slide-p4-4">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">PART 4 │ 工程階段管理與 TÜV AAA 維運肯定 (原簡報 P.29 ~ P.30)</div>
+        <h2>雲端專管平台 ＋ 德國萊因 TÜV Rheinland AAA 台灣最高等級維運肯定</h2>
+        <div class="sub">全台綿密維運據點，合約白紙黑字承諾「2 工作天內現場查檢，5 工作天內案場修復」，保障 20 年長期發電收益</div>
+      </div>
+      <div class="flags">
+        <span class="flag green">新版 TÜV AAA 最高等級認證</span>
+        <span class="flag blue">2 工作天查檢 / 5 工作天修復</span>
+        <span class="flag teal">雲端專管 + 24/7 發電監控</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div>
+          <div class="card" style="margin-bottom:10px">
+            <h3>1. 申設／施工期 vs 發電／維運期：雙平台數位化透明管理</h3>
+            <div class="two-col" style="gap:10px; margin-top:6px">
+              <div style="border:1px solid var(--line); border-radius:4px; padding:10px; background:#FAFCFE">
+                <div style="font-weight:800; color:var(--blue); font-size:.86rem; margin-bottom:4px">【申設/施工期】雲端專管平台</div>
+                <div style="font-size:.8rem; color:var(--ink); line-height:1.5">
+                  即時掌握光電案件：<br>1. 台電與能源署申請進度追蹤<br>2. 工項日程安排與現場回報<br>3. 核准公文與簽證圖面雲端備存
+                </div>
+              </div>
+              <div style="border:1px solid var(--line); border-radius:4px; padding:10px; background:#FAFCFE">
+                <div style="font-weight:800; color:var(--teal-d); font-size:.86rem; margin-bottom:4px">【發電/維運期】發電監控＋專責巡檢</div>
+                <div style="font-size:.8rem; color:var(--ink); line-height:1.5">
+                  1. 24/7 監控案場狀況與發電數據<br>2. 發電日／週／月報自動查詢<br>3. 異常即時告警派工、定期巡檢與清水清洗
+                </div>
+              </div>
+            </div>
+            <div class="fig" style="margin-top:8px">
+              <img src="assets/cloud_monitoring.png" alt="發電監控系統介面" style="max-height:185px">
+              <div class="cap">圖 4-2：進能服智能發電監控管理平台與現場工程師定期清洗巡檢</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card green">
+            <h3>2. 通過新版德國萊因 TÜV 認證【台灣最高・AAA 等級】肯定</h3>
+            <p style="font-size:.83rem; color:var(--ink); margin-bottom:8px">
+              德國萊因 TÜV Rheinland 集團成立於 1872 年，為國際最權威之獨立第三方驗證機構。進能服為全台首家通過新版 <strong>TÜV AAA 最高等級維運認證</strong> 之光電服務商！
+            </p>
+            <div class="fig" style="margin-bottom:8px">
+              <img src="assets/tuv_aaa_cert.png" alt="TÜV AAA認證與全台維運據點" style="max-height:220px">
+              <div class="cap">圖 4-3：德國萊因 TÜV AAA 證書與進能服北、中、南綿密維運駐點（台中案場在地即時支援）</div>
+            </div>
+            <div class="big-callout" style="padding:12px 16px">
+              <div class="label">CONTRACTUAL SLA GUARANTEE 合約級維運服務承諾</div>
+              <div class="answer" style="font-size:1.15rem">「2 個工作天內現場查檢，5 個工作天內完成案場修復！」</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>原簡報對應頁碼：P.29 ~ P.30 ｜ 進金生能源服務 (6692) 全台綿密維運據點，為鉅鋼機械提供 20 年無憂保障</div>
+      <div class="pageno">Part 4 - P. 04 / 04</div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ================= BOTTOM CONTROLS ================= -->
+<div class="deckbar" id="bottomBar">
+  <div class="progress"><div class="fill" id="pFill"></div></div>
+  <div class="hint">按 <strong>&larr;</strong> / <strong>&rarr;</strong> 翻頁 ｜ <strong>Space</strong> 下一頁 ｜ <strong>Home</strong> 回戰情封面 ｜ <strong>F</strong> 全螢幕 ｜ 點擊圖片可放大</div>
+  <div class="ctrl">
+    <div class="counter" id="counter">1 / 5</div>
+    <button type="button" id="btnPrev" aria-label="上一頁">&larr;</button>
+    <button type="button" id="btnNext" aria-label="下一頁">&rarr;</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var parts = {
+    p1: ['slide-p1-1','slide-p1-2','slide-p1-3','slide-p1-4','slide-p1-5'],
+    p2: ['slide-p2-1','slide-p2-2','slide-p2-3','slide-p2-4','slide-p2-5','slide-p2-6','slide-p2-7'],
+    p3: ['slide-p3-1','slide-p3-2','slide-p3-3','slide-p3-4','slide-p3-5','slide-p3-6','slide-p3-7'],
+    p4: ['slide-p4-1','slide-p4-2','slide-p4-3','slide-p4-4']
+  };
+  var order = ['p1','p2','p3','p4'];
+  var state = { view: 'home', idx: 0 };
+
+  function parseHash(h){
+    if(!h || h==='#home' || h==='#') return { view:'home', idx:0 };
+    var m = h.match(/^#p([1-4])(?:-(\d+))?$/);
+    if(m){
+      var v = 'p' + m[1];
+      var idx = m[2] ? parseInt(m[2],10) - 1 : 0;
+      if(parts[v]){
+        if(isNaN(idx) || idx < 0) idx = 0;
+        if(idx >= parts[v].length) idx = parts[v].length - 1;
+        return { view: v, idx: idx };
+      }
+    }
+    return { view:'home', idx:0 };
+  }
+
+  function goHash(h){
+    var s = parseHash(h);
+    state.view = s.view; state.idx = s.idx;
+    render();
+  }
+
+  function render(){
+    document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
+    document.querySelectorAll('.slide').forEach(function(s){ s.classList.remove('active'); });
+    document.querySelectorAll('.topnav a').forEach(function(a){ a.classList.remove('active'); });
+    var bar = document.getElementById('bottomBar');
+
+    if(state.view === 'home'){
+      var vHome = document.getElementById('view-home');
+      if(vHome) vHome.classList.add('active');
+      var aHome = document.querySelector('.topnav a[data-nav="home"]');
+      if(aHome) aHome.classList.add('active');
+      bar.style.display = 'none';
+      window.scrollTo(0,0);
+      return;
+    }
+
+    var vEl = document.getElementById('view-' + state.view);
+    if(vEl) vEl.classList.add('active');
+    var navA = document.querySelector('.topnav a[data-nav="' + state.view + '"]');
+    if(navA) navA.classList.add('active');
+
+    var slides = parts[state.view];
+    if(!slides) return;
+    var sId = slides[state.idx];
+    var sEl = document.getElementById(sId);
+    if(sEl) sEl.classList.add('active');
+
+    bar.style.display = 'block';
+    document.getElementById('counter').textContent = state.view.toUpperCase() + ' · ' + (state.idx + 1) + ' / ' + slides.length;
+    var pct = ((state.idx + 1) / slides.length) * 100;
+    document.getElementById('pFill').style.width = pct + '%';
+    window.scrollTo(0,0);
+  }
+
+  function setHash(){
+    var h = state.view === 'home' ? '#home' : '#' + state.view + '-' + (state.idx + 1);
+    if(location.hash !== h) history.replaceState(null, '', h);
+  }
+
+  function move(d){
+    if(state.view === 'home'){
+      if(d > 0){ state.view = 'p1'; state.idx = 0; render(); setHash(); }
+      return;
+    }
+    var slides = parts[state.view];
+    var n = state.idx + d, pos = order.indexOf(state.view);
+    if(n < 0){
+      if(pos > 0){ state.view = order[pos-1]; state.idx = parts[state.view].length - 1; }
+      else { state.view = 'home'; }
+    } else if(n >= slides.length){
+      if(pos < order.length - 1){ state.view = order[pos+1]; state.idx = 0; }
+      else { state.view = 'home'; }
+    } else {
+      state.idx = n;
+    }
+    render(); setHash();
+  }
+
+  document.getElementById('btnPrev').addEventListener('click', function(){ move(-1); });
+  document.getElementById('btnNext').addEventListener('click', function(){ move(1); });
+
+  document.addEventListener('keydown', function(e){
+    var lb = document.getElementById('lightbox');
+    if(lb && lb.classList.contains('open')){
+      if(e.key === 'Escape' || e.key === ' ') { lb.classList.remove('open'); e.preventDefault(); }
+      return;
+    }
+    var t = e.target;
+    if(t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
+    if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'){ e.preventDefault(); move(1); }
+    else if(e.key === 'ArrowLeft' || e.key === 'PageUp'){ e.preventDefault(); move(-1); }
+    else if(e.key === 'Home'){ e.preventDefault(); state.view = 'home'; render(); setHash(); }
+    else if(e.key === 'End' && state.view !== 'home'){ e.preventDefault(); state.idx = parts[state.view].length - 1; render(); setHash(); }
+    else if(e.key === 'f' || e.key === 'F'){
+      if(document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+    }
+  });
+
+  var tx = null, ty = null;
+  document.addEventListener('touchstart', function(e){ tx = e.changedTouches[0].clientX; ty = e.changedTouches[0].clientY; }, {passive:true});
+  document.addEventListener('touchend', function(e){
+    if(tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+    if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) move(dx < 0 ? 1 : -1);
+    tx = null; ty = null;
+  }, {passive:true});
+
+  window.addEventListener('hashchange', function(){ goHash(location.hash); });
+  goHash(location.hash);
+})();
+
+/* 表格展開/收合功能 (針對超過 8 列的長表格如 20 年回購表) */
+document.querySelectorAll('.slide .table-wrap').forEach(function(wrap){
+  var rows = Array.prototype.slice.call(wrap.querySelectorAll('tbody tr'));
+  if(rows.length <= 10) return;
+  rows.slice(10).forEach(function(row){ row.classList.add('table-extra'); });
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'table-toggle';
+  button.textContent = '⬇ 展開完整 20 年回購明細（共 ' + rows.length + ' 個年度，含第 8~10 年黃金回購點）';
+  button.addEventListener('click', function(){
+    var open = wrap.classList.toggle('expanded');
+    button.textContent = open ? '⬆ 收合明細（僅顯示前 10 年）' : '⬇ 展開完整 20 年回購明細（共 ' + rows.length + ' 個年度，含第 8~10 年黃金回購點）';
+  });
+  wrap.appendChild(button);
+});
+
+/* 圖片點擊放大檢視 */
+(function(){
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.fig img').forEach(function(img){
+    img.addEventListener('click', function(){
+      lbImg.src = img.src;
+      lb.classList.add('open');
+    });
+  });
+  lb.addEventListener('click', function(){
+    lb.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
