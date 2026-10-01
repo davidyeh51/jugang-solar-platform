@@ -1,2800 +1,836 @@
 <!DOCTYPE html>
-<html lang="zh-Hant" data-global-style="hybrid">
+<html lang="zh-TW" class="h-full">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23051C2C'/%3E%3Crect x='12' y='32' width='10' height='20' fill='%2394A3B8'/%3E%3Crect x='27' y='22' width='10' height='30' fill='%2394A3B8'/%3E%3Crect x='42' y='12' width='10' height='40' fill='%23D97706'/%3E%3C/svg%3E">
-<title>鉅鋼機械 新廠光電方案｜無雜訊頂尖顧問決策簡報 (McKinsey・BCG・Accenture)</title>
-<meta name="description" content="依據前 BCG 顧問森秀明《無雜訊簡報製作法：8 種邏輯簡報版型》與三大管顧巨頭（McKinsey、BCG、Accenture）視覺系統打造之鉅鋼機械新廠光電高層決策簡報。">
-<style>
-/* ============================================================================
-   ZERO-NOISE TRI-CONSULTING DESIGN SYSTEM (McKinsey / BCG / Accenture)
-   鐵律：單頁色彩不超過 3 種（主結構色 Primary/Secondary ＋ 中性灰階 Neutral ＋ 唯一強調色 Accent）
-   ============================================================================ */
-:root {
-  /* Neutral Grayscale Foundation (Shared across all consulting styles) */
-  --zn-bg: #FFFFFF;
-  --zn-canvas: #F8FAFC;
-  --zn-card-bg: #F8FAFC;
-  --zn-border: #CBD5E1;
-  --zn-border-light: #E2E8F0;
-  --zn-text-main: #1F2937;
-  --zn-text-muted: #64748B;
-  --zn-bar-muted: #CBD5E1;
-
-  /* Default: McKinsey & Company (Deep Navy + Royal Blue + Amber Gold) */
-  --c-primary: #051C2C;
-  --c-secondary: #1E3A8A;
-  --c-accent: #D97706;
-  --c-accent-soft: #FEF3C7;
-  --c-style-name: "McKinsey & Company";
-}
-
-/* Slide-level or Global Style: McKinsey */
-[data-global-style="mckinsey"] .slide,
-[data-global-style="hybrid"] .slide[data-style="mckinsey"],
-[data-global-style="mckinsey"] .hero {
-  --c-primary: #051C2C;
-  --c-secondary: #1E3A8A;
-  --c-accent: #D97706;
-  --c-accent-soft: #FEF3C7;
-  --zn-card-bg: #F8FAFC;
-  --zn-border: #CBD5E1;
-}
-
-/* Slide-level or Global Style: BCG (Boston Consulting Group) */
-[data-global-style="bcg"] .slide,
-[data-global-style="hybrid"] .slide[data-style="bcg"],
-[data-global-style="bcg"] .hero {
-  --c-primary: #004F32;
-  --c-secondary: #177B57;
-  --c-accent: #29BA74;
-  --c-accent-soft: #DCFCE7;
-  --zn-card-bg: #F3F4F6;
-  --zn-border: #D1D5DB;
-}
-
-/* Slide-level or Global Style: Accenture */
-[data-global-style="accenture"] .slide,
-[data-global-style="hybrid"] .slide[data-style="accenture"],
-[data-global-style="accenture"] .hero {
-  --c-primary: #111827;
-  --c-secondary: #6B21A8;
-  --c-accent: #A100FF;
-  --c-accent-soft: #F3E8FF;
-  --zn-card-bg: #F9FAFB;
-  --zn-border: #E2E8F0;
-}
-
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--zn-canvas);
-  color: var(--zn-text-main);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ---------- Top Navigation & Consulting Style Switcher ---------- */
-.topbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 60; height: 54px;
-  display: flex; align-items: center; gap: 10px; padding: 0 20px;
-  background: #051C2C; color: #FFFFFF;
-  border-bottom: 2px solid #D97706;
-}
-.topbar .brand {
-  display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff;
-  margin-right: 8px; white-space: nowrap;
-}
-.topbar .brand .bar-mark {
-  width: 6px; height: 26px; background: #D97706; border-radius: 1px;
-}
-.topbar .brand .tx { font-weight: 800; font-size: .84rem; letter-spacing: .03em; line-height: 1.15; }
-.topbar .brand .tx small { display: block; font-weight: 600; font-size: .64rem; color: #94A3B8; letter-spacing: .08em; }
-
-.topnav { display: flex; gap: 4px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
-.topnav::-webkit-scrollbar { display: none; }
-.topnav a {
-  text-decoration: none; color: #CBD5E1; font-size: .79rem; font-weight: 600;
-  padding: 6px 11px; border-radius: 3px; white-space: nowrap;
-  transition: all .15s ease; border: 1px solid transparent;
-}
-.topnav a:hover { color: #FFFFFF; background: rgba(255,255,255,.08); }
-.topnav a.active { color: #051C2C; background: #FFFFFF; font-weight: 800; }
-
-.style-switcher {
-  display: flex; align-items: center; gap: 5px; background: rgba(255,255,255,.08);
-  padding: 3px 6px; border-radius: 4px; border: 1px solid rgba(255,255,255,.15);
-}
-.style-switcher span { font-size: .68rem; color: #94A3B8; font-weight: 700; padding: 0 4px; white-space: nowrap; }
-.style-btn {
-  border: 0; background: transparent; color: #CBD5E1; font-size: .7rem; font-weight: 700;
-  padding: 4px 8px; border-radius: 3px; cursor: pointer; white-space: nowrap; font-family: inherit;
-}
-.style-btn:hover { color: #fff; background: rgba(255,255,255,.12); }
-.style-btn.active { background: #D97706; color: #fff; }
-
-.btn-dl {
-  text-decoration: none; font-size: .73rem; font-weight: 800; padding: 6px 11px;
-  border-radius: 3px; background: transparent; color: #FCD34D; border: 1px solid #D97706;
-  white-space: nowrap; transition: all .15s ease;
-}
-.btn-dl:hover { background: #D97706; color: #fff; }
-@media(max-width:1180px) { .style-switcher span { display: none; } }
-@media(max-width:920px) { .btn-dl { display: none; } }
-
-/* ---------- Views & 16:9 Consulting Slide Canvas ---------- */
-.view { display: none; }
-.view.active { display: block; }
-
-.slide {
-  display: none; min-height: calc(100vh - 54px); margin-top: 54px;
-  padding: 28px 48px 74px; max-width: 1420px; margin-left: auto; margin-right: auto;
-  background: var(--zn-bg); border-left: 1px solid var(--zn-border-light); border-right: 1px solid var(--zn-border-light);
-  flex-direction: column; justify-content: space-between;
-}
-.slide.active { display: flex; }
-
-/* ---------- Zero-Noise Top-Down Header (Action Title) ---------- */
-.zn-header {
-  border-bottom: 2px solid var(--zn-border);
-  padding-bottom: 14px; margin-bottom: 20px;
-}
-.zn-meta-row {
-  display: flex; justify-content: space-between; align-items: center; gap: 12px;
-  margin-bottom: 8px;
-}
-.zn-category-bar {
-  font-size: .78rem; font-weight: 800; color: var(--c-accent); letter-spacing: .04em;
-  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-}
-.zn-archetype-pill {
-  display: inline-block; background: var(--c-primary); color: #FFFFFF;
-  padding: 2px 9px; border-radius: 2px; font-size: .72rem; font-weight: 800; letter-spacing: .05em;
-}
-.zn-style-pill {
-  display: inline-block; background: var(--zn-card-bg); color: var(--zn-text-muted);
-  border: 1px solid var(--zn-border); padding: 1px 8px; border-radius: 2px; font-size: .7rem; font-weight: 700;
-}
-.zn-pageno {
-  font-size: .8rem; font-weight: 700; color: var(--zn-text-muted); font-variant-numeric: tabular-nums;
-}
-.zn-action-title {
-  font-size: clamp(1.28rem, 2.2vw, 1.68rem); font-weight: 900; color: var(--c-primary);
-  line-height: 1.32; letter-spacing: -.01em;
-}
-.zn-subtitle {
-  margin-top: 6px; font-size: .9rem; color: var(--zn-text-muted); font-weight: 500; line-height: 1.45;
-}
-
-/* ---------- Evidence Zone (② 下方證據區：8 Archetypes) ---------- */
-.zn-evidence {
-  flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 16px;
-}
-
-/* ============================================================================
-   ARCHETYPE 1: 一對一論法 (One-to-One Bar Chart Highlight)
-   ============================================================================ */
-.arch-one-to-one {
-  display: grid; grid-template-columns: 1.65fr 1fr; gap: 28px; align-items: stretch; min-height: 390px;
-}
-.zn-chart-box {
-  background: #FFFFFF; border: 1px solid var(--zn-border); border-radius: 4px;
-  padding: 22px 26px 18px; display: flex; flex-direction: column; justify-content: space-between;
-}
-.zn-chart-title {
-  font-size: .84rem; font-weight: 800; color: var(--zn-text-muted); text-transform: uppercase; letter-spacing: .06em;
-  margin-bottom: 12px;
-}
-.zn-bars-stage {
-  flex: 1; display: flex; align-items: flex-end; justify-content: space-around;
-  gap: 14px; height: 270px; padding: 28px 10px 0; border-bottom: 2px solid var(--c-primary);
-}
-.zn-bar-col {
-  flex: 1; max-width: 110px; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;
-}
-.zn-bar-val {
-  font-size: .82rem; font-weight: 700; color: var(--zn-text-muted); margin-bottom: 6px;
-  white-space: nowrap; font-variant-numeric: tabular-nums;
-}
-.zn-bar-fill {
-  width: 72%; background: var(--zn-bar-muted); border-radius: 2px 2px 0 0;
-  transition: height .3s ease;
-}
-.zn-bar-col.is-focus .zn-bar-val {
-  font-size: 1.02rem; font-weight: 900; color: var(--c-primary);
-  background: var(--c-accent-soft); padding: 2px 7px; border-radius: 2px; border: 1px solid var(--c-accent);
-}
-.zn-bar-col.is-focus .zn-bar-fill {
-  background: var(--c-accent); width: 82%; box-shadow: 0 4px 14px rgba(0,0,0,.1);
-}
-.zn-bar-lbl {
-  margin-top: 10px; font-size: .8rem; font-weight: 600; color: var(--zn-text-muted);
-  text-align: center; line-height: 1.3; min-height: 2.6em;
-}
-.zn-bar-col.is-focus .zn-bar-lbl {
-  font-weight: 900; color: var(--c-primary);
-}
-.zn-takeaway-card {
-  background: var(--zn-card-bg); border: 2px solid var(--c-accent); border-radius: 6px;
-  padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;
-}
-.zn-takeaway-card h3 {
-  font-size: 1.05rem; font-weight: 900; color: var(--c-secondary); margin-bottom: 14px;
-  padding-bottom: 8px; border-bottom: 1px solid var(--zn-border);
-}
-.zn-takeaway-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-.zn-takeaway-list li {
-  font-size: .88rem; color: var(--zn-text-main); line-height: 1.55;
-  padding-left: 14px; border-left: 3px solid var(--c-accent);
-}
-
-/* ============================================================================
-   ARCHETYPE 2: 並列論法 (Parallel Pillars)
-   ============================================================================ */
-.arch-parallel {
-  display: grid; gap: 18px; align-items: stretch; min-height: 390px;
-}
-.arch-parallel.cols-2 { grid-template-columns: repeat(2, 1fr); }
-.arch-parallel.cols-3 { grid-template-columns: repeat(3, 1fr); }
-.arch-parallel.cols-4 { grid-template-columns: repeat(4, 1fr); }
-.zn-pillar-card {
-  background: var(--zn-card-bg); border: 1px solid var(--zn-border); border-radius: 5px;
-  overflow: hidden; display: flex; flex-direction: column;
-}
-.zn-pillar-card.is-focus {
-  border: 2px solid var(--c-accent); background: #FFFFFF;
-}
-.zn-pillar-hdr {
-  background: var(--c-primary); color: #FFFFFF; padding: 12px 16px;
-  font-size: .94rem; font-weight: 800; text-align: center;
-}
-.zn-pillar-card:nth-child(even) .zn-pillar-hdr { background: var(--c-secondary); }
-.zn-pillar-card.is-focus .zn-pillar-hdr { background: var(--c-accent); color: #FFFFFF; }
-.zn-pillar-body {
-  padding: 18px 20px; flex: 1; display: flex; flex-direction: column; gap: 10px;
-}
-.zn-pillar-item {
-  font-size: .86rem; color: var(--zn-text-main); line-height: 1.55;
-  display: flex; gap: 8px; align-items: flex-start;
-}
-.zn-pillar-num {
-  flex: 0 0 20px; height: 20px; border-radius: 50%; background: var(--zn-border);
-  color: var(--c-primary); font-size: .72rem; font-weight: 900;
-  display: flex; align-items: center; justify-content: center; margin-top: 2px;
-}
-.zn-pillar-card.is-focus .zn-pillar-num {
-  background: var(--c-accent); color: #FFFFFF;
-}
-
-/* ============================================================================
-   ARCHETYPE 3: 結合論法 (Combined / Deductive Pyramid Tree)
-   ============================================================================ */
-.arch-combined {
-  display: flex; flex-direction: column; gap: 10px; min-height: 390px; justify-content: center;
-}
-.zn-tree-top {
-  background: var(--c-primary); color: #FFFFFF; padding: 14px 24px; border-radius: 5px;
-  text-align: center; font-size: 1.02rem; font-weight: 900; width: 82%; margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,.08);
-}
-.zn-tree-arrows {
-  display: grid; grid-template-columns: 1fr 1fr; width: 82%; margin: 0 auto;
-  text-align: center; font-size: .76rem; font-weight: 800; color: var(--c-accent); letter-spacing: .08em;
-}
-.zn-tree-mid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-}
-.zn-tree-branch { display: flex; flex-direction: column; gap: 10px; }
-.zn-tree-pillar {
-  background: var(--c-secondary); color: #FFFFFF; padding: 11px 16px; border-radius: 4px;
-  text-align: center; font-size: .92rem; font-weight: 800;
-}
-.zn-tree-facts {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 1;
-}
-.zn-tree-fact {
-  background: var(--zn-card-bg); border: 1px solid var(--zn-border); border-radius: 4px;
-  padding: 14px 16px; font-size: .84rem; color: var(--zn-text-main); line-height: 1.52;
-}
-.zn-tree-fact.is-focus {
-  background: var(--c-accent-soft); border: 1.5px solid var(--c-accent);
-}
-.zn-tree-fact strong { display: block; color: var(--c-primary); font-size: .88rem; margin-bottom: 5px; }
-
-/* ============================================================================
-   ARCHETYPE 4: 連鎖論法 (Chain / Sequential Flow)
-   ============================================================================ */
-.arch-chain {
-  display: flex; flex-direction: column; gap: 14px; min-height: 390px; justify-content: center;
-}
-.zn-chain-axis {
-  background: var(--c-accent); color: #FFFFFF; padding: 9px 20px; border-radius: 3px;
-  font-size: .84rem; font-weight: 800; text-align: center; letter-spacing: .06em;
-  position: relative;
-}
-.zn-chain-steps {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: stretch;
-}
-.zn-chain-col { display: flex; flex-direction: column; gap: 10px; }
-.zn-chevron {
-  background: var(--c-secondary); color: #FFFFFF; padding: 12px 14px;
-  font-size: .9rem; font-weight: 800; text-align: center; border-radius: 3px;
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-}
-.zn-chain-col.is-focus .zn-chevron {
-  background: var(--c-primary); border-bottom: 4px solid var(--c-accent);
-}
-.zn-chain-card {
-  background: var(--zn-card-bg); border: 1px solid var(--zn-border); border-radius: 4px;
-  padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 8px;
-}
-.zn-chain-col.is-focus .zn-chain-card {
-  background: var(--c-accent-soft); border: 1.5px solid var(--c-accent);
-}
-.zn-chain-card p, .zn-chain-card li { font-size: .84rem; line-height: 1.52; color: var(--zn-text-main); }
-
-/* ============================================================================
-   ARCHETYPE 5: 麥肯錫論法 (McKinsey Flow × Factor Matrix)
-   ============================================================================ */
-.arch-mckinsey {
-  display: flex; flex-direction: column; gap: 12px; min-height: 390px; justify-content: center;
-}
-.zn-mck-grid {
-  display: grid; gap: 10px; align-items: stretch;
-}
-.zn-mck-grid.cols-4 { grid-template-columns: 170px repeat(4, 1fr); }
-.zn-mck-grid.cols-5 { grid-template-columns: 160px repeat(5, 1fr); }
-.zn-mck-stage {
-  background: var(--c-secondary); color: #FFFFFF; padding: 11px 12px; border-radius: 3px;
-  font-size: .85rem; font-weight: 800; text-align: center; display: flex; align-items: center; justify-content: center;
-}
-.zn-mck-row-lbl {
-  background: var(--c-primary); color: #FFFFFF; padding: 14px 12px; border-radius: 3px;
-  font-size: .85rem; font-weight: 800; display: flex; align-items: center; justify-content: center; text-align: center;
-}
-.zn-mck-row-lbl.is-solution { background: var(--c-accent); }
-.zn-mck-cell {
-  background: var(--zn-card-bg); border: 1px solid var(--zn-border); border-radius: 4px;
-  padding: 13px 14px; font-size: .82rem; color: var(--zn-text-main); line-height: 1.5;
-}
-.zn-mck-cell.is-solution {
-  background: var(--c-accent-soft); border: 1.5px solid var(--c-accent); font-weight: 500;
-}
-.zn-mck-cell strong { color: var(--c-primary); display: block; margin-bottom: 4px; }
-
-/* ============================================================================
-   ARCHETYPE 6: 對立論法 (Opposition Argumentation)
-   ============================================================================ */
-.arch-opposition {
-  display: flex; flex-direction: column; gap: 10px; min-height: 390px; justify-content: center;
-}
-.zn-opp-row {
-  display: grid; grid-template-columns: 165px 1fr 1fr; gap: 14px; align-items: stretch;
-}
-.zn-opp-hdr {
-  padding: 12px 16px; border-radius: 3px; font-size: .92rem; font-weight: 800; text-align: center;
-}
-.zn-opp-hdr.side-a { background: var(--zn-bar-muted); color: var(--zn-text-main); }
-.zn-opp-hdr.side-b { background: var(--c-primary); color: #FFFFFF; border-bottom: 4px solid var(--c-accent); }
-.zn-opp-dim {
-  background: var(--c-accent-soft); border: 1.5px solid var(--c-accent); border-radius: 30px;
-  padding: 8px 12px; font-size: .82rem; font-weight: 800; color: var(--c-primary);
-  display: flex; align-items: center; justify-content: center; text-align: center;
-}
-.zn-opp-cell {
-  background: var(--zn-card-bg); border: 1px solid var(--zn-border); border-radius: 4px;
-  padding: 11px 16px; font-size: .84rem; color: var(--zn-text-muted); line-height: 1.5;
-  display: flex; align-items: center;
-}
-.zn-opp-cell.is-focus {
-  background: #FFFFFF; border: 1.5px solid var(--c-primary); border-left: 5px solid var(--c-accent);
-  color: var(--zn-text-main); font-weight: 600;
-}
-
-/* ============================================================================
-   ARCHETYPE 7: 比較論法 (Comparison / Venn Intersection)
-   ============================================================================ */
-.arch-comparison {
-  display: grid; grid-template-columns: 1fr 1.05fr 1fr; gap: 16px; align-items: stretch; min-height: 380px;
-}
-.zn-venn-card {
-  background: var(--zn-card-bg); border: 1.5px solid var(--zn-border); border-radius: 12px;
-  padding: 20px 22px; display: flex; flex-direction: column; gap: 10px;
-}
-.zn-venn-card.is-common {
-  background: var(--c-accent-soft); border: 2px solid var(--c-accent);
-  box-shadow: 0 6px 20px rgba(0,0,0,.06);
-}
-.zn-venn-title {
-  font-size: .96rem; font-weight: 900; color: var(--c-primary); padding-bottom: 8px;
-  border-bottom: 1px solid var(--zn-border);
-}
-.zn-venn-card.is-common .zn-venn-title { color: var(--c-primary); border-bottom-color: var(--c-accent); }
-.zn-venn-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-.zn-venn-list li { font-size: .84rem; color: var(--zn-text-main); line-height: 1.52; padding-left: 12px; border-left: 2px solid var(--zn-border); }
-.zn-venn-card.is-common .zn-venn-list li { border-left: 3px solid var(--c-accent); font-weight: 600; }
-
-/* ============================================================================
-   ARCHETYPE 8: BCG 論法 (BCG 2×2 Matrix)
-   ============================================================================ */
-.arch-bcg {
-  display: grid; grid-template-columns: 120px 1fr; gap: 12px; min-height: 390px; align-items: stretch;
-}
-.zn-bcg-yaxis {
-  background: var(--c-primary); color: #FFFFFF; border-radius: 4px; padding: 14px 10px;
-  display: flex; flex-direction: column; justify-content: space-between; align-items: center;
-  text-align: center; font-size: .8rem; font-weight: 800;
-}
-.zn-bcg-main { display: flex; flex-direction: column; gap: 12px; }
-.zn-bcg-quads {
-  flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; position: relative;
-}
-.zn-bcg-q {
-  background: var(--zn-card-bg); border: 1px solid var(--zn-border); border-radius: 5px;
-  padding: 16px 20px; display: flex; flex-direction: column; gap: 8px;
-}
-.zn-bcg-q.is-focus {
-  background: var(--c-accent-soft); border: 2.5px solid var(--c-accent);
-  box-shadow: 0 6px 18px rgba(0,0,0,.07);
-}
-.zn-bcg-q h3 { font-size: .95rem; font-weight: 900; color: var(--c-secondary); }
-.zn-bcg-q.is-focus h3 { color: var(--c-primary); font-size: 1.02rem; }
-.zn-bcg-q p { font-size: .84rem; color: var(--zn-text-main); line-height: 1.54; }
-.zn-bcg-xaxis {
-  background: var(--c-primary); color: #FFFFFF; border-radius: 4px; padding: 9px 20px;
-  display: flex; justify-content: space-between; align-items: center; font-size: .8rem; font-weight: 800;
-}
-
-/* ---------- Supporting Visual Evidence Strip & Tables ---------- */
-.zn-evidence-strip {
-  display: flex; gap: 14px; align-items: center; background: var(--zn-card-bg);
-  border: 1px solid var(--zn-border); border-radius: 4px; padding: 10px 16px;
-}
-.zn-thumb {
-  height: 82px; width: 135px; object-fit: contain; background: #fff;
-  border: 1px solid var(--zn-border); border-radius: 3px; cursor: zoom-in; flex-shrink: 0;
-}
-.zn-table-wrap {
-  background: #FFFFFF; border: 1px solid var(--zn-border); border-radius: 4px; overflow-x: auto;
-}
-table.zn-table { width: 100%; border-collapse: collapse; font-size: .81rem; }
-table.zn-table th {
-  background: var(--c-primary); color: #FFFFFF; text-align: left; font-weight: 700;
-  padding: 7px 11px; white-space: nowrap;
-}
-table.zn-table td {
-  padding: 6px 11px; border-bottom: 1px solid var(--zn-border-light); color: var(--zn-text-main);
-}
-table.zn-table tr.zn-focus-row {
-  background: var(--c-accent-soft); font-weight: 700;
-}
-table.zn-table tr.zn-focus-row td:first-child {
-  border-left: 4px solid var(--c-accent);
-}
-td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
-td.ctr, th.ctr { text-align: center; }
-
-/* ---------- Zero-Noise Footer (Source + Speaker Notes Toggle) ---------- */
-.zn-footer {
-  margin-top: 16px; padding-top: 10px; border-top: 1px solid var(--zn-border);
-  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
-}
-.zn-source { font-size: .75rem; color: var(--zn-text-muted); font-weight: 500; }
-.zn-notes-btn {
-  border: 1px solid var(--zn-border); background: var(--zn-card-bg); color: var(--c-primary);
-  font-size: .73rem; font-weight: 800; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-family: inherit;
-}
-.zn-notes-btn:hover { border-color: var(--c-accent); background: var(--c-accent-soft); }
-.zn-notes-drawer {
-  display: none; width: 100%; margin-top: 8px; padding: 12px 16px;
-  background: var(--zn-card-bg); border-left: 4px solid var(--c-accent); border-radius: 0 4px 4px 0;
-  font-size: .8rem; color: var(--zn-text-main); line-height: 1.55;
-}
-.zn-notes-drawer.open { display: block; }
-.zn-notes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.zn-notes-grid div strong { display: block; color: var(--c-primary); margin-bottom: 3px; }
-
-/* ---------- Home Executive Cover ---------- */
-.home { min-height: 100vh; padding-top: 54px; background: var(--zn-bg); }
-.hero {
-  background: var(--c-primary); color: #FFFFFF; padding: 56px 48px 44px;
-  border-bottom: 4px solid var(--c-accent);
-}
-.hero .inner { max-width: 1360px; margin: 0 auto; }
-.hero .accent-rule { width: 88px; height: 5px; background: var(--c-accent); margin-bottom: 16px; }
-.hero .kicker { font-size: .8rem; font-weight: 800; letter-spacing: .14em; color: #FCD34D; text-transform: uppercase; }
-.hero h1 { font-size: clamp(1.65rem, 3.3vw, 2.45rem); font-weight: 900; line-height: 1.25; margin-top: 10px; max-width: 34em; }
-.hero .core-claim {
-  margin-top: 16px; padding: 14px 20px; background: rgba(255,255,255,.07);
-  border-left: 4px solid var(--c-accent); font-size: .96rem; line-height: 1.6; max-width: 64em; color: #F1F5F9;
-}
-.hero .meta-strip { margin-top: 18px; font-size: .8rem; color: #94A3B8; display: flex; gap: 20px; flex-wrap: wrap; }
-
-.homebody { max-width: 1360px; margin: 0 auto; padding: 32px 48px 60px; }
-.part-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-.part-card {
-  text-decoration: none; color: var(--zn-text-main); background: var(--zn-card-bg);
-  border: 1px solid var(--zn-border); border-top: 4px solid var(--c-primary); border-radius: 4px;
-  padding: 20px; display: flex; flex-direction: column; justify-content: space-between;
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-.part-card.is-focus { border-top-color: var(--c-accent); background: #FFFFFF; box-shadow: 0 4px 16px rgba(0,0,0,.05); }
-.part-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.09); }
-.part-card .pc-tag { font-size: .71rem; font-weight: 800; color: var(--zn-text-muted); letter-spacing: .1em; }
-.part-card.is-focus .pc-tag { color: var(--c-accent); }
-.part-card h2 { font-size: 1.1rem; font-weight: 900; color: var(--c-primary); margin: 8px 0; line-height: 1.35; }
-.part-card p { font-size: .83rem; color: var(--zn-text-muted); line-height: 1.55; flex: 1; }
-.part-card .pc-archetypes {
-  margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--zn-border-light);
-  font-size: .73rem; font-weight: 700; color: var(--c-secondary);
-}
-
-.kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 24px; }
-.kpi-box {
-  background: var(--zn-card-bg); border: 1px solid var(--zn-border); border-radius: 4px; padding: 14px;
-}
-.kpi-box.is-focus { background: var(--c-accent-soft); border-color: var(--c-accent); }
-.kpi-box .num { font-size: 1.35rem; font-weight: 900; color: var(--c-primary); font-variant-numeric: tabular-nums; }
-.kpi-box .lbl { font-size: .75rem; color: var(--zn-text-muted); margin-top: 4px; line-height: 1.35; font-weight: 600; }
-
-/* Lightbox */
-.lightbox {
-  display: none; position: fixed; inset: 0; z-index: 200; background: rgba(5,28,44,.9);
-  align-items: center; justify-content: center; padding: 24px; cursor: zoom-out;
-}
-.lightbox.open { display: flex; }
-.lightbox img { max-width: 95vw; max-height: 90vh; border-radius: 4px; background: #fff; padding: 8px; }
-
-/* Bottom Deck Bar */
-.deckbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; pointer-events: none; display: none; }
-.progress { height: 3px; background: #E2E8F0; }
-.progress .fill { height: 100%; width: 0%; background: var(--c-accent); transition: width .2s ease; }
-.hint {
-  position: absolute; left: 20px; bottom: 10px; font-size: .72rem; color: var(--zn-text-muted);
-  background: rgba(255,255,255,.96); padding: 4px 10px; border-radius: 3px; border: 1px solid var(--zn-border); pointer-events: auto;
-}
-.ctrl { position: absolute; right: 20px; bottom: 8px; display: flex; align-items: center; gap: 6px; pointer-events: auto; }
-.ctrl .counter {
-  font-size: .75rem; font-weight: 800; color: var(--c-primary); background: #FFFFFF;
-  border: 1px solid var(--zn-border); padding: 5px 11px; border-radius: 3px; font-variant-numeric: tabular-nums;
-}
-.ctrl button {
-  width: 30px; height: 30px; border: 1px solid var(--zn-border); background: #FFFFFF;
-  border-radius: 3px; cursor: pointer; font-size: 1rem; color: var(--c-primary); font-weight: 900;
-}
-.ctrl button:hover { background: var(--c-primary); color: #FFFFFF; }
-
-@media(max-width:1100px) {
-  .slide { padding: 20px 18px 80px; }
-  .arch-one-to-one, .arch-parallel.cols-3, .arch-parallel.cols-4, .zn-tree-mid, .zn-chain-steps,
-  .zn-mck-grid.cols-4, .zn-mck-grid.cols-5, .zn-opp-row, .arch-comparison, .arch-bcg,
-  .part-cards, .kpi-strip, .zn-notes-grid { grid-template-columns: 1fr; }
-}
-</style>
-</head>
-<body>
-
-<!-- Lightbox for CAD & Engineering Diagrams -->
-<div class="lightbox" id="lightbox" title="點擊關閉放大檢視">
-  <img id="lightbox-img" src="" alt="工程圖面放大檢視">
-</div>
-
-<!-- ================= TOP BAR ================= -->
-<div class="topbar">
-  <a class="brand" href="#home">
-    <div class="bar-mark"></div>
-    <div class="tx">進能服 6692 · 鉅鋼機械光電案<small>ZERO-NOISE CONSULTING DECK</small></div>
-  </a>
-  <nav class="topnav">
-    <a href="#home" data-nav="home">執行摘要封面</a>
-    <a href="#p1" data-nav="p1">★ Part 1 客戶想法与 MEDDIC (5頁)</a>
-    <a href="#p2" data-nav="p2">Part 2 D+C棟雙軌方案 (7頁)</a>
-    <a href="#p3" data-nav="p3">★ Part 3 資深顧問 QA 與高層決策 (7頁)</a>
-    <a href="#p4" data-nav="p4">Part 4 進能服實績預備 (4頁)</a>
-  </nav>
-  <div class="style-switcher" title="切換三大頂尖顧問公司視覺風格">
-    <span>顧問風格：</span>
-    <button type="button" class="style-btn active" data-set-style="hybrid">Hybrid 混搭</button>
-    <button type="button" class="style-btn" data-set-style="mckinsey">McKinsey</button>
-    <button type="button" class="style-btn" data-set-style="bcg">BCG</button>
-    <button type="button" class="style-btn" data-set-style="accenture">Accenture</button>
-  </div>
-  <a class="btn-dl" href="assets/鉅鋼機械_光電方案簡報_MEDDIC顧問版.pptx" download>⬇ 下載無雜訊 PPTX</a>
-</div>
-
-<!-- ================= HOME VIEW (COVER & ARCHITECTURE) ================= -->
-<div class="view active home" id="view-home">
-  <div class="hero">
-    <div class="inner">
-      <div class="accent-rule"></div>
-      <div class="kicker">ZERO-NOISE CONSULTING BRIEFING  ｜  McKinsey・BCG・Accenture × 森秀明 8 種無雜訊簡報版型</div>
-      <h1>台中西屯・鉅鋼機械股份有限公司<br>新廠光電配置規劃（D棟＋C棟屋突）高層決策簡報</h1>
-      <div class="core-claim">
-        <strong>核心主張（The Governing Thought）：</strong><br>
-        透過同一折現基準（DCF WACC=5%）收斂「方案一：0出資出租（774.75 kW，建坤能源 37 億資本護航）」與「方案二：鉅鋼自建（612.32 kW，扣維運後真實淨 IRR 21.4% / 4.4年回本）」，並以「D棟退縮 2 米免欄杆浪板工藝（29.03% &lt; 30% 合規免雜照）」與「主動剔除 C 棟露台 17.6kW 雞肋案（立省 170 萬雜照費）」協助董事長當場拍板。
-      </div>
-      <div class="meta-strip">
-        <span>▪ 形式對應邏輯：全站 23 頁嚴格標註並套用「森秀明 8 種無雜訊簡報版型」</span>
-        <span>▪ 極致降噪鐵律：單頁嚴守「深色主結構＋中性冷灰基準＋唯一主角強調色」</span>
-        <span>▪ 點擊右上角可即時切換 McKinsey / BCG / Accenture 三大管顧色票</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="homebody">
-    <div class="part-cards">
-      <a class="part-card is-focus" href="#p1-1">
-        <div>
-          <div class="pc-tag">★ 新增專章 PART 1 (5 頁)</div>
-          <h2>客戶五大想法 × MEDDIC 業務顧問戰略</h2>
-          <p>解構業務第一線回報 5 點情報：① 直面高層雙軌收斂、② D棟退縮2米免欄杆浪板方案、③ 出租中途回購甜蜜點、④ C棟露台17.6kW主動勸退、⑤ 進能服簡介壓軸預備。</p>
-        </div>
-        <div class="pc-archetypes">套用版型：版型5 麥肯錫論法・版型3 結合論法・版型6 對立論法・版型1 一對一・版型8 BCG矩陣 &rarr;</div>
-      </a>
-
-      <a class="part-card" href="#p2-1">
-        <div>
-          <div class="pc-tag">原簡報核心 PART 2 (7 頁)</div>
-          <h2>D棟＋C棟屋突雙軌方案與工程規劃</h2>
-          <p>完整呈現 D 棟主屋頂與 C1/C2 屋突（151.75kW）施作範圍、出租 vs 自建對照、建坤能源 SPV、20年逐年回購表、免雜30%法規檢討、CSI 445W 模組與亞力/華為逆變器。</p>
-        </div>
-        <div class="pc-archetypes">套用版型：版型2 並列論法・版型6 對立論法・版型3 結合論法・版型4 連鎖論法・版型1 一對一 &rarr;</div>
-      </a>
-
-      <a class="part-card is-focus" href="#p3-1">
-        <div>
-          <div class="pc-tag">★ 新增專章 PART 3 (7 頁)</div>
-          <h2>資深光伏顧問 QA ＆ 董事長五大採購決策</h2>
-          <p>正面回答資深顧問 5 大疑問（比較基準拉齊 NPV/IRR、3.5h PVsyst 與 0.8% 衰減率、回購溢價與外併轉自用、免雜法規、租約空間條款）與業主高層 5 大採購拍板題目。</p>
-        </div>
-        <div class="pc-archetypes">套用版型：版型7 比較論法・版型1 一對一・版型5 麥肯錫論法・版型8 BCG矩陣・版型6 對立論法 &rarr;</div>
-      </a>
-
-      <a class="part-card" href="#p4-1">
-        <div>
-          <div class="pc-tag">壓軸預備庫 PART 4 (4 頁)</div>
-          <h2>進金生能源服務 (6692) 簡介與標竿實績</h2>
-          <p>首家 IPO 上櫃 EPC（資本額 5.88 億）、全台 750 MW / 348 座實績、南科 24 MW 科技大廠（年省 1.35 億）與芳生螺絲 3.66 MW 減碳實證、德國萊因 TÜV AAA 頂級維運。</p>
-        </div>
-        <div class="pc-archetypes">套用版型：版型2 並列論法・版型1 一對一論法・版型4 連鎖論法 &rarr;</div>
-      </a>
-    </div>
-
-    <div class="kpi-strip">
-      <div class="kpi-box">
-        <div class="num">774.75 kW</div>
-        <div class="lbl">方案一：出租分潤容量<br>(鉅鋼 0 出資・1,836萬度)</div>
-      </div>
-      <div class="kpi-box">
-        <div class="num">612.32 kW</div>
-        <div class="lbl">方案二：鉅鋼自建容量<br>(含D棟浪板・1,451萬度)</div>
-      </div>
-      <div class="kpi-box is-focus">
-        <div class="num">21.4% / 4.4年</div>
-        <div class="lbl">★ 方案二含綠憑 ($8.8)<br>扣維運後真實淨 IRR 與回收期</div>
-      </div>
-      <div class="kpi-box">
-        <div class="num">12.4% / 6.8年</div>
-        <div class="lbl">方案二純節電 ($5.8)<br>扣維運後真實淨 IRR 與回收期</div>
-      </div>
-      <div class="kpi-box">
-        <div class="num">29.03%</div>
-        <div class="lbl">D棟退縮2米免欄杆方案<br>維護通道占比 (&le;30% 免雜照)</div>
-      </div>
-      <div class="kpi-box is-focus">
-        <div class="num">立省 170萬</div>
-        <div class="lbl">★ 主動勸退 C 棟露台 17.6kW<br>展現 100% 零灌水顧問誠信</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- =========================================================================
-     PART 1: 針對客戶的想法 × MEDDIC 業務顧問說明 (5 SLIDES)
-     ========================================================================= -->
-<div class="view" id="view-p1">
-
-  <!-- P1-1: 版型 5 麥肯錫論法 -->
-  <section class="slide" id="slide-p1-1" data-style="mckinsey">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 1：客戶想法與 MEDDIC 策略</span>
-            <span class="zn-archetype-pill">版型 5：麥肯錫論法 (Flow × Factor Matrix)</span>
-            <span class="zn-style-pill">McKinsey Deep Navy Style</span>
-          </div>
-          <div class="zn-pageno">P1 - 1 / 5</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：將客戶端五大現場想法對映 MEDDIC 銷售流程，全面轉化為直達董事長拍板的贏單勝勢</h2>
-        <div class="zn-subtitle">橫軸依業務現場情報推進順序展開（連鎖論法），縱軸拆解客戶深層決策心理與我方 MEDDIC 破局對策（結合論法）</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-mckinsey">
-          <div class="zn-mck-grid cols-5">
-            <div></div>
-            <div class="zn-mck-stage">② 想法 1：高層直接對話<br>(自建&amp;出租皆考慮) &gt;</div>
-            <div class="zn-mck-stage">② 想法 2：D棟內退2米<br>免加欄杆浪板方案 &gt;</div>
-            <div class="zn-mck-stage">② 想法 3：考慮出租後<br>中途購回機制 &gt;</div>
-            <div class="zn-mck-stage">② 想法 4：C棟露台17kW<br>主動建議不施作 &gt;</div>
-            <div class="zn-mck-stage">② 想法 5：進能服簡介<br>放最後做預備</div>
-
-            <!-- Row 1: Problem / Client Psychology -->
-            <div class="zn-mck-row-lbl">③ 要素 1：<br>【背後決策心理】</div>
-            <div class="zn-mck-cell">
-              <strong>資本配置權在董事長</strong>
-              窗口無法代董事長決定 2,900 萬 CAPEX 留本業或投光電，直接引薦我方與高層對話。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>重視新廠外觀與防漏</strong>
-              高層排斥女兒牆外露防墜欄杆破壞立面美感，同時希望頂樓具備防雨隔熱機能。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>恐懼屋頂被綁死 20 年</strong>
-              想享 0 出資好處，但擔心第 5~8 年客戶要求綠電時失去屋頂控制權。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>測試廠商是否誠實</strong>
-              C棟露台合法容積僅 32 坪 (17.6kW)，卻須花 170 萬申請雜照，投資必虧。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>高層時間極度寶貴</strong>
-              開場前 20 分鐘只關心「鉅鋼的錢與屋頂」，冗長公司介紹會消磨決策耐性。
-            </div>
-
-            <!-- Row 2: MEDDIC Diagnosis -->
-            <div class="zn-mck-row-lbl">③ 要素 2：<br>【MEDDIC 定位】</div>
-            <div class="zn-mck-cell">
-              <strong>E (經濟決策者) × C (教練)</strong>
-              窗口主動鋪路讓我方直達天聽 (Economic Buyer)，是 B2B 銷售最佳局勢。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>D (技術決策標準)</strong>
-              將外觀美學、職安防墜與免請領雜照 30% 法規紅線結合為獨家差異化標準。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>D (商務決策標準) × M (指標)</strong>
-              提供「買回選擇權 (Call Option)」＋「綠電優先購買權 (ROFR)」雙重保障。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>I (痛點識別與顧問立信)</strong>
-              扮演 Trusted Advisor（可信賴顧問），替業主守住荷包而非盲目衝工程款。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>D (決策流程節奏控制)</strong>
-              採管顧「結論先行、證據墊後」動線，將企業實績轉為臨門一腳的定心丸。
-            </div>
-
-            <!-- Row 3: Actionable Solution (Highlighted) -->
-            <div class="zn-mck-row-lbl is-solution">③ 要素 3：<br>【我方破局對策】</div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 同基準雙軌儀表板</strong>
-              會中以「綠電時程 × 銀行 80% 專案融資（自備僅 580 萬）」協助董事長當場二選一。
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 退縮 2 米免欄杆設計</strong>
-              利用既有女兒牆防墜免加外圍欄杆，維護通道占 29.03% (&lt;30%) 完美免雜照。
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 指引第 8~10 年甜蜜點</strong>
-              誠實告知前 3 年回購有外線溢價不划算，鎖定第 8~10 年 ($3.28萬/kW) 黃金贖回點。
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 主動勸退立省 170 萬</strong>
-              當場建議董事長砍掉 C 棟露台 17.6kW 案，瞬間拉滿對 D 棟主方案的 100% 信任！
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 壓軸調閱 6692 實績庫</strong>
-              將首家上櫃 6692、750MW、芳生省電實證與 TÜV AAA 置於 Part 4 隨時一鍵調閱。
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 業務第一線回報 5 點情報 × MEDDIC B2B 大客戶銷售架構診斷</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>業務回報的五點客戶想法，恰好構成直達董事長簽字拍板的完整 MEDDIC 戰略地圖。</div>
-          <div><strong>② 補充說明：</strong>特別是「窗口請我們直接跟高層對話」與「主動勸退 C 棟露台 17.6kW」，一舉解決了決策權與信任度兩大核心難題。</div>
-          <div><strong>③ 下一頁轉場：</strong>接著我們用「版型 3：結合論法」拆解想法 1——如何在高層對話中 10 分鐘收斂自建與出租。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P1-2: 版型 3 結合論法 -->
-  <section class="slide" id="slide-p1-2" data-style="mckinsey">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 1：客戶想法 1 深度說明</span>
-            <span class="zn-archetype-pill">版型 3：結合論法 (Combined Deductive Tree)</span>
-            <span class="zn-style-pill">McKinsey Deep Navy Style</span>
-          </div>
-          <div class="zn-pageno">P1 - 2 / 5</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：直面董事長決策，「綠電剛需時程」與「2,900萬資金配置」雙前提共同決定自建或出租</h2>
-        <div class="zn-subtitle">不逼窗口在會前選邊站，會中同步提供「銀行 80% 綠能專案融資」與「先租後買」雙槓桿，當場收斂最適劇本</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-combined">
-          <div class="zn-tree-top">
-            ① 最終結論：追求 21.4% 高報酬與綠憑自主選「方案二：鉅鋼自建（可配 8 成銀行融資）」；100% 保留現金選「方案一：0 出資出租」
-          </div>
-          <div class="zn-tree-arrows">
-            <div>▲ 同時成立前提 A（支持結論）</div>
-            <div>▲ 同時成立前提 B（支持結論）</div>
-          </div>
-          <div class="zn-tree-mid">
-            <div class="zn-tree-branch">
-              <div class="zn-tree-pillar">② 主要素 1：歐美品牌客戶綠電剛需時程（決定度電價值 $8.8 vs $5.8）</div>
-              <div class="zn-tree-facts">
-                <div class="zn-tree-fact is-focus">
-                  <strong>③ 事實 1：3 年內具 RE100 / 供應鏈綠電要求</strong>
-                  自建可 100% 取得每年約 78 萬度綠電與 T-REC 憑證，度電綜合價值高達 <strong>$8.8/度</strong>，扣維運後真實淨 <strong>IRR 達 21.4%（4.4 年回本）</strong>。
-                </div>
-                <div class="zn-tree-fact">
-                  <strong>③ 事實 2：目前尚無強制綠電要求（純節電考量）</strong>
-                  即便綠憑價值算 $0（或於市場轉售變現），單靠抵減舊廠均價 <strong>$5.8/度</strong>，自建真實淨 <strong>IRR 仍達 12.4%（6.8 年回本）</strong>，遠勝定存與一般投資。
-                </div>
-              </div>
-            </div>
-            <div class="zn-tree-branch">
-              <div class="zn-tree-pillar">② 主要素 2：新廠 2,894 萬 CAPEX 機會成本與銀行融資槓桿</div>
-              <div class="zn-tree-facts">
-                <div class="zn-tree-fact is-focus">
-                  <strong>③ 事實 3：★破局槓桿 — 製造業綠能專案貸款 75~80%</strong>
-                  鉅鋼無須一次掏出 2,894 萬現金！搭配銀行專案融資（利率約 2.2~2.6%），<strong>自備款僅約 580~720 萬元</strong>，第 1 年起節電現金流即大於還款本息！
-                </div>
-                <div class="zn-tree-fact">
-                  <strong>③ 事實 4：嚴控非本業 CAPEX、資金 100% 留製鞋機械本業</strong>
-                  若集團政策要求零資本支出，則拍板 <strong>方案一（建坤能源 37 億資本全額出資）</strong>，鉅鋼 0 出資穩收 20% 租金或綠電，並保有中途買回權。
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 進能服 MEDDIC 高層對話決策樹模型（WACC = 5% 統一折現基準）</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>董事長在自建與出租間猶豫，本質是「現金留本業」與「高投報綠電資產」的權衡，透過銀行 8 成綠能融資即可兩全其美。</div>
-          <div><strong>② 補充說明：</strong>自備 580 萬即可撬動 612.32 kW 自建案，20 年淨賺 9,071 萬（含綠憑）或 4,718 萬（純節電）。</div>
-          <div><strong>③ 下一頁轉場：</strong>接下來進入想法 2，以「版型 6：對立論法」說明 D 棟退縮 2 米免欄杆浪板方案的設計優勢。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P1-3: 版型 6 對立論法 -->
-  <section class="slide" id="slide-p1-3" data-style="bcg">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 1：客戶想法 2 深度說明</span>
-            <span class="zn-archetype-pill">版型 6：對立論法 (Opposition Argumentation)</span>
-            <span class="zn-style-pill">BCG Forest Green Style</span>
-          </div>
-          <div class="zn-pageno">P1 - 3 / 5</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：D 棟棚架自女兒牆向內退縮 2 米，免除防墜欄杆並以 29.03% 通道占比完美符合免雜照法規</h2>
-        <div class="zn-subtitle">將「傳統貼齊女兒牆加欄杆做法」與「本次新排退縮 2 米免欄杆浪板方案」依四大工程維度對齊比較</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-opposition">
-          <div class="zn-opp-row">
-            <div></div>
-            <div class="zn-opp-hdr side-a">② 傳統做法：棚架貼齊女兒牆（需加設外圍欄杆）</div>
-            <div class="zn-opp-hdr side-b">② 本次新增方案：棚架向內退縮 2 米＋浪板（★推薦給董事長評估）</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">(1) 職安與建築外觀</div>
-            <div class="zn-opp-cell">棚架貼齊女兒牆邊緣，高空維運有墜落風險，依法必須沿女兒牆頂部加裝防墜欄杆，嚴重破壞鉅鋼新廠現代化立面外觀。</div>
-            <div class="zn-opp-cell is-focus">★ 棚架邊緣自女兒牆向內退縮 2 米作為安全緩衝帶，直接利用既有女兒牆作為天然防墜屏障，完全免設外圍欄杆（僅於清洗步道終止處設防墜器與母索）。</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">(2) 防水與隔熱機能</div>
-            <div class="zn-opp-cell">於女兒牆鑽孔固定欄杆增加牆體滲水點；若不鋪浪板，雨水與紫外線仍直接接觸 RC 屋頂防水層。</div>
-            <div class="zn-opp-cell is-focus">★ 免除女兒牆欄杆鑽孔；棚架下滿鋪浪板（$7,000/kW，約 322 萬），打造淨高 3.4~3.8m 半戶外空間，為頂樓提供雙層防雨與降溫 3~5°C 保護。</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">(3) 免雜照 30% 法規</div>
-            <div class="zn-opp-cell">若滿鋪浪板卻未精算模組退縮面積，未鋪模組之浪板區極易超過 30% 上限而遭建管處退件或強制要求請領雜照。</div>
-            <div class="zn-opp-cell is-focus">★ 精準排佈 1,035 片 CSI 445W (460.575 kW)：建築面積 2,668.23 m² － 模組面積 2,067.93 m² ＝ 通道 600.3 m²（占比 29.03% &le; 30%），100% 免雜照合規！</div>
-          </div>
-        </div>
-
-        <div class="zn-evidence-strip">
-          <img class="zn-thumb" src="assets/d_plan2_layout.png" alt="D棟退縮2米浪板配置圖">
-          <img class="zn-thumb" src="assets/d_plan2_30pct_calc.png" alt="29.03%免雜計算式" style="width:240px">
-          <div style="font-size:.82rem; color:var(--zn-text-main); line-height:1.5">
-            <strong>CAD 圖證與增容備案（點擊左側圖面可全螢幕放大）：</strong>紅框自女兒牆內退 2,000mm，橘線為清洗步道＋母索。<br>
-            <span style="color:var(--zn-text-muted)">▪ 顧問增容提示：若董事長希望方案二自建容量也衝上 580~600 kW，只需將「浪板邊緣隨模組同步退縮 2 米」，即可釋放 600.3 m² 通道配額！</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.10、P.18 ＆《設置再生能源設施免請領雜項執照標準》第 5 條第 4 項</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>退縮 2 米免欄杆浪板方案，完美解決董事長對新廠外觀、屋頂防漏與免雜照合規的三重期待。</div>
-          <div><strong>② 補充說明：</strong>29.03% 的通道占比是經過建管法規精密反推的最佳解（剛好壓在 30% 法規上限內）。</div>
-          <div><strong>③ 下一頁轉場：</strong>接著以「版型 1：一對一論法」說明想法 3——客戶若先出租、何時中途購回最划算。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P1-4: 版型 1 一對一論法 -->
-  <section class="slide" id="slide-p1-4" data-style="bcg">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 1：客戶想法 3 深度說明</span>
-            <span class="zn-archetype-pill">版型 1：一對一論法 (One-to-One Highlight)</span>
-            <span class="zn-style-pill">BCG Forest Green Style</span>
-          </div>
-          <div class="zn-pageno">P1 - 4 / 5</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：方案一中途回購之黃金甜蜜點落在第 8～10 年，回購總價降至 2,543 萬元且低於自建成本</h2>
-        <div class="zn-subtitle">前 3 年回購含 SPV 台電外線與 MOF 盤沉沒成本（溢價 42%）不划算；第 8~10 年買回約 3.1 年即可回本</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-one-to-one">
-          <div class="zn-chart-box">
-            <div class="zn-chart-title">② 方案一 (774.745 kW) 各年度期初回購複價 vs 方案二自建總價對照 (單位：新台幣萬元)</div>
-            <div class="zn-bars-stage">
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">4,623 萬</div>
-                <div class="zn-bar-fill" style="height: 95%"></div>
-                <div class="zn-bar-lbl">第 1 年回購<br>($59,670/kW)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">4,161 萬</div>
-                <div class="zn-bar-fill" style="height: 85%"></div>
-                <div class="zn-bar-lbl">第 3 年回購<br>($53,703/kW)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">3,467 萬</div>
-                <div class="zn-bar-fill" style="height: 71%"></div>
-                <div class="zn-bar-lbl">第 6 年回購<br>($44,753/kW)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">2,894 萬</div>
-                <div class="zn-bar-fill" style="height: 60%"></div>
-                <div class="zn-bar-lbl">【對照基準】<br>方案二自建價</div>
-              </div>
-              <div class="zn-bar-col is-focus">
-                <div class="zn-bar-val">★ 2,774 萬</div>
-                <div class="zn-bar-fill" style="height: 57%"></div>
-                <div class="zn-bar-lbl">★ 第 9 年回購<br>($35,802/kW)</div>
-              </div>
-              <div class="zn-bar-col is-focus">
-                <div class="zn-bar-val">★ 2,543 萬</div>
-                <div class="zn-bar-fill" style="height: 52%"></div>
-                <div class="zn-bar-lbl">★ 第 10 年回購<br>($32,819/kW)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">1,387 萬</div>
-                <div class="zn-bar-fill" style="height: 29%"></div>
-                <div class="zn-bar-lbl">第 15 年回購<br>($17,901/kW)</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="zn-takeaway-card">
-            <div>
-              <h3>② 單一核心證據解析 (Key Takeaway)</h3>
-              <ul class="zn-takeaway-list">
-                <li><strong>破解 20 年綁死恐懼：</strong>合約明訂按 20 年直線折舊逐年遞減（每年減 <code>$2,983.5/kW</code>，期中按日數分攤），賦予鉅鋼隨時買回電廠之選擇權 (Call Option)。</li>
-                <li><strong>顧問誠實提醒（前 3 年勿買）：</strong>首年單價 <code>$59,670/kW</code> 含建坤能源前期台電外線線補費與臨路 MOF 盤成本。<strong>若 3 年內想自有，請直接選方案二自建（立省 1,729 萬）！</strong></li>
-                <li><strong>★ 第 8~10 年黃金贖回點：</strong>第 9~10 年回購總價（2,543~2,774 萬）正式低於方案二自建成本，且前 9 年已白領約 <strong>826 萬元租金</strong>，買回後尚有 11 年高效發電期（年效益約 810 萬），<strong>約 3.1 年即回本</strong>！</li>
-              </ul>
-            </div>
-            <div style="font-size:.78rem; color:var(--zn-text-muted); padding-top:10px; border-top:1px solid var(--zn-border)">
-              ▪ 註：完整 1～20 年逐年回購明細表請見 <code>Part 2 - P.04</code>。
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.9 方案一出租後回購金額表（容量 774.745 kW）＆ 進能服財務顧問回本試算</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>中途回購機制讓董事長享有「前 8 年 0 出資收租避險、第 9~10 年低價買回自用」的雙重彈性。</div>
-          <div><strong>② 補充說明：</strong>若連第 9 年都不想出資買回硬體，鉅鋼仍可行使「綠電優先回購權 (ROFR)」直接買回綠電度數。</div>
-          <div><strong>③ 下一頁轉場：</strong>接著以「版型 8：BCG 2×2 矩陣」解析想法 4 與想法 5（C棟露台勸退與進能服實績壓軸）。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P1-5: 版型 8 BCG 論法 -->
-  <section class="slide" id="slide-p1-5" data-style="bcg">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 1：客戶想法 4 &amp; 5 深度說明</span>
-            <span class="zn-archetype-pill">版型 8：BCG 論法 (BCG 2×2 Matrix)</span>
-            <span class="zn-style-pill">BCG Forest Green Style</span>
-          </div>
-          <div class="zn-pageno">P1 - 5 / 5</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：以「經濟投報率 × 建管法規可行性」四象限分類，果斷砍除 C 棟露台並鎖定 D+C 屋突主力區</h2>
-        <div class="zn-subtitle">主動替董事長省下 C 棟露台 170 萬冤枉雜照費以建立 100% 顧問信任；將進能服（6692）簡介置於壓軸預備</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-bcg">
-          <div class="zn-bcg-yaxis">
-            <span>▲ 高投報<br>(高 IRR)</span>
-            <span>② 縱軸 Y<br>經濟效益軸</span>
-            <span>▼ 低投報<br>(負 NPV)</span>
-          </div>
-          <div class="zn-bcg-main">
-            <div class="zn-bcg-quads">
-              <!-- Top-Left: X1Y2 -->
-              <div class="zn-bcg-q">
-                <h3>③ 象限 X1Y2：【法規受限無法實現區】C 棟露台全鋪 (185.12 kW)</h3>
-                <p>• <strong>比較關係（與右象限比較）：</strong>若能全平台滿鋪 185.12 kW，雖需申請高棚架雜照，但發電規模足以攤提 170 萬雜照規費。<br>• <strong>致命瓶頸：</strong>台中建管處認定合法容積率僅剩 32 坪，法規上無法核准 185.12 kW，此象限無法成立。</p>
-              </div>
-              <!-- Top-Right: X2Y2 (FOCUS TARGET) -->
-              <div class="zn-bcg-q is-focus">
-                <h3>★ ③ 目標象限 X2Y2：【核心主力施作區】D 棟主屋頂 ＋ C1/C2 屋突 (612~775 kW)</h3>
-                <p>• <strong>100% 免請領雜照：</strong>D 棟高度 &le;4.5m（通道占比 29.03% &le;30%）、C1/C2 屋突高度 1.2m &le;1.5m，完全免除 170 萬雜照規費！<br>• <strong>超高投資回報：</strong>自建真實淨 <strong>IRR 21.4% (含綠憑) / 12.4% (純節電)</strong>，或出租 0 出資穩收 <strong>1,836萬~3,231萬</strong>，為本案唯一主力焦點！</p>
-              </div>
-              <!-- Bottom-Left: X1Y1 (OPPOSITION TO TARGET) -->
-              <div class="zn-bcg-q">
-                <h3>③ 對立象限 X1Y1：【想法 4：主動勸退剔除區】C 棟露台合法容積案 (17.6 kW)</h3>
-                <p>• <strong>對角線對立關係（與右上目標象限完全對立）：</strong>合法容積僅能裝 <strong>17.6 kW</strong>（20年僅發 41.7 萬度、毛效益 367 萬），卻要花 <strong>170 萬雜照申請費 ＋ 133 萬高棚架工程費</strong>，NPV 為負！<br>• <strong>MEDDIC 立信殺手鐧：</strong>主動建議董事長「不做 C 棟露台」，證明我方絕不為賺工程款硬塞雞肋容量！</p>
-              </div>
-              <!-- Bottom-Right: X2Y1 -->
-              <div class="zn-bcg-q">
-                <h3>③ 象限 X2Y1：【想法 5：議程壓軸預備庫】進能服 (6692) 企業簡介與實績</h3>
-                <p>• <strong>高層會議節奏控制：</strong>前 25 分鐘 100% 聚焦於右上象限（D棟+C棟屋突方案與財務 QA），不浪費董事長時間。<br>• <strong>壓軸定心丸：</strong>當高層詢問履約與維運保障時，一鍵切入 <code>Part 4</code> 展示 <strong>首家上櫃 6692、750MW 實績、芳生減碳案例與 TÜV AAA 認證</strong>。</p>
-              </div>
-            </div>
-            <div class="zn-bcg-xaxis">
-              <span>◄ 需請領建築雜照・行政規費高達 170 萬 (X1)</span>
-              <span>② 橫軸 X（建管法規與行政成本軸）</span>
-              <span>符合免請領雜照標準・零雜照規費快速取照 (X2) ►</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.20~P.22 台中建管處容積檢討 ＆ 森秀明《無雜訊簡報製作法》版型 8 BCG 矩陣</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>果斷砍掉左下象限的 C 棟露台 17.6kW 案（省 170 萬雜照費），將資源全數集中於右上象限的 D 棟與 C 棟屋突。</div>
-          <div><strong>② 補充說明：</strong>主動幫客戶踩煞車，是顧問式銷售贏得董事長絕對信任的最快途徑。</div>
-          <div><strong>③ 下一頁轉場：</strong>完成 Part 1 客戶五大想法解析後，接著進入 Part 2 檢視 D 棟＋C 棟屋突的完整工程規劃與圖面。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- =========================================================================
-     PART 2: D棟+C棟屋突雙軌方案與工程規劃 (原簡報 30 頁核心無雜訊重構 - 7 SLIDES)
-     ========================================================================= -->
-<div class="view" id="view-p2">
-
-  <!-- P2-1: 版型 2 並列論法 -->
-  <section class="slide" id="slide-p2-1" data-style="accenture">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 2：新廠施作範圍總覽 (原簡報 P.1~P.3, P.5)</span>
-            <span class="zn-archetype-pill">版型 2：並列論法 (Parallel Pillars)</span>
-            <span class="zn-style-pill">Accenture Modern Bento Style</span>
-          </div>
-          <div class="zn-pageno">P2 - 1 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：鉅鋼新廠光電鎖定 D 棟主屋頂、C1 屋突與 C2 屋突三大免雜照場域，合計最高可建置 774.75 kW</h2>
-        <div class="zn-subtitle">C1 與 C2 屋突合計 151.745 kW 採南向單斜矮棚架（最高點 1.2m 不高於女兒牆），方案一與方案二之 C 棟做法完全相同</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-parallel cols-3" style="min-height:270px">
-          <div class="zn-pillar-card is-focus">
-            <div class="zn-pillar-hdr">② 核心場域 1：D 棟主屋頂（460.58 ~ 623.0 kW）</div>
-            <div class="zn-pillar-body">
-              <div class="zn-pillar-item"><div class="zn-pillar-num">1</div><div><strong>結構型式：</strong>RC 屋頂高棚架植筋，東西向山型陣列，保留既有紅柱並增設黑柱支撐。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">2</div><div><strong>方案一（出租無浪板）：</strong>滿鋪 1,400 片 ＝ <strong>623.0 kW</strong>，棚架淨空間 3.5~4.2 米。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">3</div><div><strong>方案二（自建有浪板）：</strong>退縮 2 米免欄杆，鋪設 1,035 片 ＝ <strong>460.575 kW</strong>，淨高 3.4~3.8 米。</div></div>
-            </div>
-          </div>
-
-          <div class="zn-pillar-card">
-            <div class="zn-pillar-hdr">③ 核心場域 2：C1 屋突（94.785 kW）</div>
-            <div class="zn-pillar-body">
-              <div class="zn-pillar-item"><div class="zn-pillar-num">1</div><div><strong>裝置容量：</strong>鋪設 213 片 CSI 445W 高效模組 ＝ <strong>94.785 kW</strong>（出租／自建皆相同）。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">2</div><div><strong>工程結構：</strong>RC 屋頂植筋矮棚架，採<strong>南向單斜陣列</strong>獲取最佳日照角度。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">3</div><div><strong>視覺與法規：</strong>模組最高點僅 <strong>1.2 米 &rarr; 不高於女兒牆</strong>，維持建物外觀整體性且免雜照。</div></div>
-            </div>
-          </div>
-
-          <div class="zn-pillar-card">
-            <div class="zn-pillar-hdr">④ 核心場域 3：C2 屋突（56.960 kW）</div>
-            <div class="zn-pillar-body">
-              <div class="zn-pillar-item"><div class="zn-pillar-num">1</div><div><strong>裝置容量：</strong>鋪設 128 片 CSI 445W 高效模組 ＝ <strong>56.960 kW</strong>（與 C1 合計 <strong>151.745 kW</strong>）。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">2</div><div><strong>遮陰避讓：</strong>已精準避開屋突西側梯間與女兒牆早晚遮陰區，確保高 PR 值。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">3</div><div><strong>電氣整合：</strong>低壓設備就近配置於屋頂安全區，匯流併入全廠高壓系統。</div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="zn-evidence-strip">
-          <img class="zn-thumb" src="assets/site_scope_d_c.png" alt="鉅鋼新廠建築平面分區圖">
-          <img class="zn-thumb" src="assets/c_roof_layout.png" alt="D棟與C1/C2屋突光電排佈圖">
-          <div style="font-size:.82rem; color:var(--zn-text-main); line-height:1.5">
-            <strong>全廠施作範圍 CAD 圖證（點擊左側縮圖可全螢幕放大檢視）：</strong><br>
-            左圖為鉅鋼新廠建築平面圖（D 棟主平台 ＋ C1、C2 屋突）；右圖為太陽光電模組排佈總圖（粉紅區為模組，斜線區為避讓遮陰範圍）。
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.1~P.3、P.5《鉅鋼機械 新廠光電施作範圍 (D棟+C棟屋突二處)》</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>全廠核心施作鎖定 D 棟與 C1/C2 屋突三處免雜照區，C 棟固定為 151.745 kW，且矮棚架僅 1.2m 完全不影響新廠外觀。</div>
-          <div><strong>② 補充說明：</strong>兩套方案的 C 棟設計完全相同，唯一變數在於 D 棟選擇「623kW 無浪板出租」或「460.58kW 有浪板自建」。</div>
-          <div><strong>③ 下一頁轉場：</strong>下一頁以「版型 6：對立論法」正面對比方案一（出租）與方案二（自建）的核心財務與工程規格。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P2-2: 版型 6 對立論法 -->
-  <section class="slide" id="slide-p2-2" data-style="bcg">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 2：雙軌方案核心比較 (原簡報 P.4)</span>
-            <span class="zn-archetype-pill">版型 6：對立論法 (Opposition Argumentation)</span>
-            <span class="zn-style-pill">BCG Forest Green Style</span>
-          </div>
-          <div class="zn-pageno">P2 - 2 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：方案一（0出資穩收 1,836~3,231 萬）與方案二（自建淨賺 9,071 萬、IRR 21.4%）滿足不同資金戰略</h2>
-        <div class="zn-subtitle">並列原簡報 P.4 規劃數值與顧問統一折現基準（DCF 5%）校正數據，依五大決策維度橫向對比</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-opposition">
-          <div class="zn-opp-row">
-            <div></div>
-            <div class="zn-opp-hdr side-a">② 方案一：出租分潤（建坤能源投資・鉅鋼 0 出資）</div>
-            <div class="zn-opp-hdr side-b">② 方案二：光電自建（鉅鋼機械投資・★顧問首推高報酬）</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">(1) 容量與浪板配置</div>
-            <div class="zn-opp-cell">總容量 774.745 kW（D棟 623 kW 無浪板 ＋ C棟 151.745 kW），20年預估總發電量 18,360,153 度。</div>
-            <div class="zn-opp-cell is-focus">★ 總容量 612.320 kW（D棟 460.575 kW 有浪板退縮 2 米免欄杆 ＋ C棟 151.745 kW），20年發電 14,510,953 度。</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">(2) 鉅鋼投入成本</div>
-            <div class="zn-opp-cell">$0 元（零出資！由建坤能源全額負擔光電工程、台電外線線補、審查、20年維運保險與模組回收費）。</div>
-            <div class="zn-opp-cell is-focus">★ 工程總價 $28,937,440 元（光電 $42,000/kW 計 2,572萬 ＋ D棟浪板 $7,000/kW 計 322萬；審查與回收規費另計約 69.7萬）。</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">(3) 20年毛收益呈現</div>
-            <div class="zn-opp-cell">二擇一：① 租金回饋（20%售電收入，以綠電$5計）共 $18,360,153 元；或 ② 20% 綠電回饋（367.2萬度，以$5.8計值 2,130萬元）。</div>
-            <div class="zn-opp-cell is-focus">★ 20 年節電＋綠憑毛效益：$127,696,386 元（約 1.277 億元，以舊廠用電均價 $5.8/度 ＋ 綠能憑證 $3.0/度估算）。</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">(4) ★同基準淨值(NPV)</div>
-            <div class="zn-opp-cell">若 20% 綠電回饋同步按 $8.8/度計，20年總值實達 3,231.4 萬元！折現 NPV(5%)：租金 +1,159萬 ／ 綠電($8.8) +2,039萬。</div>
-            <div class="zn-opp-cell is-focus">★ 扣盡第 6~20 年維運換機回收費（804.5萬）後：含綠憑($8.8) 淨賺 9,071萬（IRR 21.4% / 4.4年回本 / NPV +4,690萬）；純節電($5.8) 淨賺 4,718萬（IRR 12.4% / 6.8年回本）。</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">(5) 併網、工期與權利</div>
-            <div class="zn-opp-cell">高壓外併（需提供臨路位置設 MOF 盤）｜工期 7–8 個月｜20年租約可中途依殘值購回＋享綠電優先回購權 (ROFR)。</div>
-            <div class="zn-opp-cell is-focus">★ 高壓內併（直接併入廠內高壓系統）｜工期 9–10 個月｜含 5 年免費保固維運（第 6 年起每 5 年評估）｜100% 綠電與憑證歸鉅鋼。</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.4《光電規劃 出租/自建比較》＆ Part 3 資深顧問 DCF 淨現值校正模型</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>方案二自建創造最高淨現值（NPV +4,690萬，IRR 21.4%）；方案一出租則提供零資本支出的穩健無風險收益。</div>
-          <div><strong>② 補充說明：</strong>我們已主動將方案一綠電回饋拉齊至 $8.8/度基準（總值 3,231 萬），並將方案二扣除 804.5 萬後期維運換機成本，確保比較絕對公平。</div>
-          <div><strong>③ 下一頁轉場：</strong>接下來看方案一（出租分潤）的承租方「建坤能源」背景與 D 棟 623kW 工程配置。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P2-3: 版型 3 結合論法 -->
-  <section class="slide" id="slide-p2-3" data-style="mckinsey">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 2：方案一出租分潤與承租方實力 (原簡報 P.6~P.8)</span>
-            <span class="zn-archetype-pill">版型 3：結合論法 (Combined Deductive Tree)</span>
-            <span class="zn-style-pill">McKinsey Deep Navy Style</span>
-          </div>
-          <div class="zn-pageno">P2 - 3 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：建坤能源（資本額 37 億）結合國泰金控綠色金融與進能服頂尖 EPC，提供鉅鋼 0 出資零風險分潤</h2>
-        <div class="zn-subtitle">全額承擔光電建置、台電外線線補與 20 年維運保險，鉅鋼穩享 20% 租金或綠電回饋並保有綠電優先回購權</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-combined">
-          <div class="zn-tree-top">
-            ① 最終結論：方案一由「建坤能源（國泰金控 95% ＋ 進能服 5%）」全額投資 774.745 kW，20 年長約履約與維運品質雙重保證
-          </div>
-          <div class="zn-tree-arrows">
-            <div>▲ 結合要素 A：37 億金融資本與 750MW 工程實力</div>
-            <div>▲ 結合要素 B：鉅鋼 0 出資全包架構與靈活分潤權利</div>
-          </div>
-          <div class="zn-tree-mid">
-            <div class="zn-tree-branch">
-              <div class="zn-tree-pillar">② 主要素 1：建坤能源 SPV 頂級股東結構（實收資本額 37 億元）</div>
-              <div class="zn-tree-facts">
-                <div class="zn-tree-fact is-focus">
-                  <strong>③ 國泰金控持股 95%（綠色金融巨擘）</strong>
-                  金融資本極度雄厚，專案融資與 20 年長期 SPV 資產管理架構穩健，絕無中小型開發商中途倒閉或轉賣爛尾風險。
-                </div>
-                <div class="zn-tree-fact">
-                  <strong>③ 進金生能源服務 (6692) 持股 5%（資本額 5.88 億）</strong>
-                  具備 750 MW 豐富建置經驗，頂級自有 EPC 團隊進場一站式服務，從饋線核對、圖審到完工後 TÜV AAA 維運全責把關。
-                </div>
-              </div>
-            </div>
-            <div class="zn-tree-branch">
-              <div class="zn-tree-pillar">② 主要素 2：投資方 100% 費用承擔 ＋ 二擇一分潤與優先回購權</div>
-              <div class="zn-tree-facts">
-                <div class="zn-tree-fact">
-                  <strong>③ 投資方全額負擔項目（鉅鋼出資 $0）</strong>
-                  建置光電工程、高壓審查費、加強電力網費用、台電線路設置費(線補費)、模組回收費、綠憑審查評鑑費、水費、網路費及保險。
-                </div>
-                <div class="zn-tree-fact is-focus">
-                  <strong>③ 20% 分潤二擇一 ＋ 本場綠電優先回購權 (ROFR)</strong>
-                  • 選租金：年估 <strong>$918,008</strong>，20年共 <strong>$18,360,160</strong> (以綠電$5計)<br>
-                  • 選綠電：20年共回饋 <strong>3,672,031 度</strong>（同基準價值 3,231萬）。
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="zn-evidence-strip">
-          <img class="zn-thumb" src="assets/d_plan1_layout.png" alt="方案一D棟623kW配置圖">
-          <img class="zn-thumb" src="assets/walkway_lifeline.png" alt="清洗步道與母索實景">
-          <div style="font-size:.82rem; color:var(--zn-text-main); line-height:1.5">
-            <strong>方案一 D 棟 623 kW 無浪板配置（點擊縮圖放大）：</strong>RC 屋頂高棚架植筋（淨高 3.5~4.2m），山型陣列（東西向），高壓外併。<br>
-            <span style="color:var(--zn-text-muted)">▪ 註 1 結構彈性：若業主希望拿掉新增之黑色輔助立柱，D 棟容量僅需微減 10.68 kW（24 片模組）。</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.6~P.8《方案一 出租分潤 (D棟 623kW + C棟 151.745kW) ＆ 建坤能源介紹》</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>方案一的承租方是國泰金控（95%）與進能服（5%）合資、資本額高達 37 億的建坤能源，履約信用等級為台灣業界最高。</div>
-          <div><strong>② 補充說明：</strong>針對原簡報 P.6 提到「棚架下空間歸投資方所用」，我們已在 Part 3 主動修改為「空間使用權歸還鉅鋼機械」。</div>
-          <div><strong>③ 下一頁轉場：</strong>若選方案一出租後想中途買回，下一頁以「版型 4：連鎖論法」展示 1～20 年逐年折舊回購機制。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P2-4: 版型 4 連鎖論法 -->
-  <section class="slide" id="slide-p2-4" data-style="accenture">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 2：方案一出租後中途回購方案 (原簡報 P.9)</span>
-            <span class="zn-archetype-pill">版型 4：連鎖論法 (Chain / Sequential Flow)</span>
-            <span class="zn-style-pill">Accenture Modern Bento Style</span>
-          </div>
-          <div class="zn-pageno">P2 - 4 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：方案一依 20 年直線折舊逐年遞減回購金額（年減 $2,983.5/kW），第 8～10 年為最佳買回時點</h2>
-        <div class="zn-subtitle">回購金額 ＝ 運轉年度期初回購單價 × 實際容量（774.745 kW）；期中交易按實際天數比例分攤折舊</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-chain" style="min-height:240px">
-          <div class="zn-chain-axis">
-            ② 20 年租期回購價值演進與自用轉換時序（每年固定直線折舊遞減 $2,311,452 元） ═══════════════►
-          </div>
-          <div class="zn-chain-steps">
-            <div class="zn-chain-col">
-              <div class="zn-chevron">階段 1：第 1～3 年 &gt;</div>
-              <div class="zn-chain-card">
-                <p><strong>【外線攤提初期・不建議買】</strong></p>
-                <p>• 單價：<code>$59,670 &rarr; $53,703/kW</code></p>
-                <p>• 總價：<code>4,623萬 &rarr; 4,161萬</code></p>
-                <p>• 含外線與 MOF 盤沉沒成本（比自建貴 42%），若 3 年內想自用請直接選方案二自建！</p>
-              </div>
-            </div>
-            <div class="zn-chain-col">
-              <div class="zn-chevron">階段 2：第 4～7 年 &gt;</div>
-              <div class="zn-chain-card">
-                <p><strong>【穩健收租期・單價趨近自建】</strong></p>
-                <p>• 單價：<code>$50,720 &rarr; $41,769/kW</code></p>
-                <p>• 總價：<code>3,929萬 &rarr; 3,236萬</code></p>
-                <p>• 第 7 年單價 ($41,769) 正式低於自建單價 ($42,000)，前 6 年已領約 535 萬租金。</p>
-              </div>
-            </div>
-            <div class="zn-chain-col is-focus">
-              <div class="zn-chevron">★ 階段 3：第 8～10 年 &gt;</div>
-              <div class="zn-chain-card">
-                <p><strong>★【黃金贖回甜蜜點・強烈推薦】</strong></p>
-                <p>• 單價：<strong>$38,786 &rarr; $32,819/kW</strong></p>
-                <p>• 總價：<strong>3,005萬 &rarr; 2,543萬</strong></p>
-                <p>• 總價低於方案二自建，前 9 年已白領 826 萬租金，買回後年賺 810 萬（約 <strong>3.1 年回本</strong>）！</p>
-              </div>
-            </div>
-            <div class="zn-chain-col">
-              <div class="zn-chevron">階段 4：第 11～20 年</div>
-              <div class="zn-chain-card">
-                <p><strong>【折舊尾聲與期滿處置】</strong></p>
-                <p>• 單價：<code>$29,835 &rarr; $2,984/kW</code></p>
-                <p>• 總價：<code>2,311萬 &rarr; 231萬</code></p>
-                <p>• 買回約 1~2.5 年即回本；第 20 年期滿若不留用，由建坤自費拆除復原屋頂。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="zn-table-wrap">
-          <table class="zn-table">
-            <thead>
-              <tr>
-                <th class="ctr">運轉年度</th>
-                <th class="num">期初回購單價 (元/kW)</th>
-                <th class="num">回購複價總額 (元)</th>
-                <th class="num">當年度預估發電量</th>
-                <th class="num">購回後自用年效益 ($5.8+$3)</th>
-                <th class="num">購回後純節電年效益 ($5.8)</th>
-                <th>顧問投資決策評註</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="ctr">第 1 年</td><td class="num">$59,670</td><td class="num"><strong>$46,229,034</strong></td><td class="num">989,737 度</td><td class="num"><strong>$8,709,683</strong></td><td class="num">$5,740,475</td><td>首年含外線/MOF/線補沉沒成本，不建議立即買回</td></tr>
-<tr><td class="ctr">第 2 年</td><td class="num">$56,687</td><td class="num"><strong>$43,917,582</strong></td><td class="num">981,819 度</td><td class="num"><strong>$8,640,006</strong></td><td class="num">$5,694,550</td><td>外線攤提初期，建議維持收租</td></tr>
-<tr><td class="ctr">第 3 年</td><td class="num">$53,703</td><td class="num"><strong>$41,606,131</strong></td><td class="num">973,964 度</td><td class="num"><strong>$8,570,886</strong></td><td class="num">$5,648,991</td><td>3年內若欲自用，直接選方案二自建省1,267萬</td></tr>
-<tr><td class="ctr">第 4 年</td><td class="num">$50,720</td><td class="num"><strong>$39,294,679</strong></td><td class="num">966,173 度</td><td class="num"><strong>$8,502,319</strong></td><td class="num">$5,603,803</td><td>已領4年租金約360萬</td></tr>
-<tr><td class="ctr">第 5 年</td><td class="num">$47,736</td><td class="num"><strong>$36,983,227</strong></td><td class="num">958,443 度</td><td class="num"><strong>$8,434,300</strong></td><td class="num">$5,558,969</td><td>已領5年租金約448萬</td></tr>
-<tr><td class="ctr">第 6 年</td><td class="num">$44,753</td><td class="num"><strong>$34,671,776</strong></td><td class="num">950,776 度</td><td class="num"><strong>$8,366,826</strong></td><td class="num">$5,514,501</td><td>單價逐步接近自建成本線</td></tr>
-<tr><td class="ctr">第 7 年</td><td class="num">$41,769</td><td class="num"><strong>$32,360,324</strong></td><td class="num">943,169 度</td><td class="num"><strong>$8,299,891</strong></td><td class="num">$5,470,380</td><td>單價正式低於自建單價 ($42,000/kW)</td></tr>
-<tr class="zn-focus-row"><td class="ctr">第 8 年</td><td class="num">$38,786</td><td class="num"><strong>$30,048,872</strong></td><td class="num">935,624 度</td><td class="num"><strong>$8,233,492</strong></td><td class="num">$5,426,619</td><td>★ 黃金回購甜蜜點起點（剩餘13年高效發電）</td></tr>
-<tr class="zn-focus-row"><td class="ctr">第 9 年</td><td class="num">$35,802</td><td class="num"><strong>$27,737,420</strong></td><td class="num">928,139 度</td><td class="num"><strong>$8,167,624</strong></td><td class="num">$5,383,206</td><td>★ 黃金回購甜蜜點（總價低於方案二自建總價）</td></tr>
-<tr class="zn-focus-row"><td class="ctr">第 10 年</td><td class="num">$32,819</td><td class="num"><strong>$25,425,969</strong></td><td class="num">920,714 度</td><td class="num"><strong>$8,102,283</strong></td><td class="num">$5,340,141</td><td>★ 黃金回購中點（前9年已領約826萬租金）</td></tr>
-<tr><td class="ctr">第 11 年</td><td class="num">$29,835</td><td class="num"><strong>$23,114,517</strong></td><td class="num">913,348 度</td><td class="num"><strong>$8,037,465</strong></td><td class="num">$5,297,418</td><td>買回前要求承租方完成逆變器健檢移交</td></tr>
-<tr><td class="ctr">第 12 年</td><td class="num">$26,852</td><td class="num"><strong>$20,803,065</strong></td><td class="num">906,041 度</td><td class="num"><strong>$7,973,165</strong></td><td class="num">$5,255,038</td><td>剩餘9年運轉期，約2.6年回本</td></tr>
-<tr><td class="ctr">第 13 年</td><td class="num">$23,868</td><td class="num"><strong>$18,491,614</strong></td><td class="num">898,793 度</td><td class="num"><strong>$7,909,380</strong></td><td class="num">$5,212,999</td><td>剩餘8年運轉期，約2.3年回本</td></tr>
-<tr><td class="ctr">第 14 年</td><td class="num">$20,885</td><td class="num"><strong>$16,180,162</strong></td><td class="num">891,603 度</td><td class="num"><strong>$7,846,105</strong></td><td class="num">$5,171,297</td><td>剩餘7年運轉期，約2.1年回本</td></tr>
-<tr><td class="ctr">第 15 年</td><td class="num">$17,901</td><td class="num"><strong>$13,868,710</strong></td><td class="num">884,470 度</td><td class="num"><strong>$7,783,336</strong></td><td class="num">$5,129,926</td><td>剩餘6年運轉期，約1.8年回本</td></tr>
-<tr><td class="ctr">第 16 年</td><td class="num">$14,918</td><td class="num"><strong>$11,557,259</strong></td><td class="num">877,394 度</td><td class="num"><strong>$7,721,069</strong></td><td class="num">$5,088,885</td><td>剩餘5年運轉期，約1.5年回本</td></tr>
-<tr><td class="ctr">第 17 年</td><td class="num">$11,934</td><td class="num"><strong>$9,245,807</strong></td><td class="num">870,375 度</td><td class="num"><strong>$7,659,301</strong></td><td class="num">$5,048,175</td><td>剩餘4年運轉期，約1.2年回本</td></tr>
-<tr><td class="ctr">第 18 年</td><td class="num">$8,951</td><td class="num"><strong>$6,934,355</strong></td><td class="num">863,412 度</td><td class="num"><strong>$7,598,026</strong></td><td class="num">$5,007,790</td><td>剩餘3年運轉期，當年度即近乎回本</td></tr>
-<tr><td class="ctr">第 19 年</td><td class="num">$5,967</td><td class="num"><strong>$4,622,903</strong></td><td class="num">856,505 度</td><td class="num"><strong>$7,537,242</strong></td><td class="num">$4,967,729</td><td>合約尾聲，可視結構狀況決定買回或要求拆除</td></tr>
-<tr><td class="ctr">第 20 年</td><td class="num">$2,984</td><td class="num"><strong>$2,311,452</strong></td><td class="num">849,653 度</td><td class="num"><strong>$7,476,944</strong></td><td class="num">$4,927,987</td><td>第20年期滿：依約無償移轉或由建坤自費拆除復原</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.9《方案一 出租後回購》完整 20 年折舊試算表（點擊表格下方按鈕可展開全部 20 年明細）</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>完整的 20 年直線折舊回購表給予鉅鋼完全透明的退場與買回公式，最佳買回點為第 8～10 年。</div>
-          <div><strong>② 補充說明：</strong>點擊上方表格底部的展開鈕，可隨時向董事長或財務長展示第 1 年至第 20 年每一年的精確數字。</div>
-          <div><strong>③ 下一頁轉場：</strong>看完了方案一出租與回購，下一頁以「版型 3：結合論法」檢視方案二（鉅鋼自建）的工程與法規設計。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P2-5: 版型 3 結合論法 -->
-  <section class="slide" id="slide-p2-5" data-style="mckinsey">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 2：方案二鉅鋼自建與免雜法規 (原簡報 P.10, P.11, P.17, P.18)</span>
-            <span class="zn-archetype-pill">版型 3：結合論法 (Combined Deductive Tree)</span>
-            <span class="zn-style-pill">McKinsey Deep Navy Style</span>
-          </div>
-          <div class="zn-pageno">P2 - 5 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：方案二自建（612.32 kW）同時滿足「高度 ≤4.5m」與「通道占比 29.03% ≤30%」，合法免請領雜照</h2>
-        <div class="zn-subtitle">工程總價 $28,937,440 元（光電 $42,000/kW ＋ D棟浪板 $7,000/kW），採高壓內併直接抵減廠內高額電費</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-combined">
-          <div class="zn-tree-top">
-            ① 最終結論：方案二以 2,894 萬投資創造 20 年 1.277 億毛效益（扣維運後淨賺 9,071 萬，IRR 21.4%），且 D 棟加浪板 100% 符合免雜照標準
-          </div>
-          <div class="zn-tree-arrows">
-            <div>▲ 法規前提 1：建築立面高度與退縮防墜合規</div>
-            <div>▲ 法規前提 2：新設浪板頂蓋下維護通道 ≤ 30% 合規</div>
-          </div>
-          <div class="zn-tree-mid">
-            <div class="zn-tree-branch">
-              <div class="zn-tree-pillar">② 主要素 1：D 棟立面高度 ≤ 4.5m ＋ 內退 2 米免設外圍防墜欄杆</div>
-              <div class="zn-tree-facts">
-                <div class="zn-tree-fact">
-                  <strong>③ 屋頂面起算高度 ≤ 4.5 公尺</strong>
-                  依《免請領雜照標準》第 5 條第 1 項，D 棟自 RFL 屋頂面起算至棚架最高點控制在 4.5m 以內（低點淨空 3.4~3.8m），結合新設浪板頂蓋得免請領雜照。
-                </div>
-                <div class="zn-tree-fact is-focus">
-                  <strong>③ 內退 2 米免欄杆 ＋ 保留紅柱增設黑柱</strong>
-                  棚架邊緣自女兒牆向內退縮 2 米（工安考量免加外牆欄杆），步道終止處設防墜器；低壓設備放戶外、高壓盤體放置頂樓光電機房。
-                </div>
-              </div>
-            </div>
-            <div class="zn-tree-branch">
-              <div class="zn-tree-pillar">② 主要素 2：維護通道投影占比 29.03% ≤ 30% ＋ 高壓內併成本結構</div>
-              <div class="zn-tree-facts">
-                <div class="zn-tree-fact is-focus">
-                  <strong>③ 29.03% 免雜照精密算式（第 5 條第 4 項）</strong>
-                  建築浪板面積 <code>2,668.23 m²</code> － 1,035片模組面積 <code>2,067.93 m²</code> ＝ 通道 <code>600.3 m²</code>；<code>600.3 ÷ 2,067.93 = 29.03% &le; 30%</code>，完美過關！
-                </div>
-                <div class="zn-tree-fact">
-                  <strong>③ 投資成本與其他規費明細</strong>
-                  • 光電工程：$42,000/kW × 612.32kW = <strong>2,571.7 萬</strong><br>
-                  • D棟浪板：$7,000/kW × 460kW = <strong>322.0 萬</strong><br>
-                  • 另計：高壓審查 8.5萬、模組回收費 61.2萬。
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="zn-evidence-strip">
-          <img class="zn-thumb" src="assets/d_elevation.png" alt="D棟北北東立面圖">
-          <img class="zn-thumb" src="assets/exempt_law_art5.png" alt="免請領雜項執照標準第5條">
-          <img class="zn-thumb" src="assets/exempt_law_check.png" alt="免雜簽證內容表">
-          <div style="font-size:.82rem; color:var(--zn-text-main); line-height:1.5">
-            <strong>D 棟北北東立面圖與免雜照法規條文（點擊縮圖放大）：</strong>立面圖清楚標示 RFL 至 R2FL 棚架高度 4,500mm，完全符合中央與台中建管免雜簽證規範。
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.10、P.11、P.17、P.18《方案二 光電自建 (D棟) 與補充說明：免雜法規》</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>方案二自建不僅財務報酬率高，且加鋪浪板後的高度（4.5m內）與通道比例（29.03%）皆已完成免雜照法規檢討。</div>
-          <div><strong>② 補充說明：</strong>含 5 年免費保固維運；第 6 年起每 5 年進行維運評估。</div>
-          <div><strong>③ 下一頁轉場：</strong>接著以「版型 4：連鎖論法」說明全案推進時程甘特圖與模組、逆變器主設備規格。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P2-6: 版型 4 連鎖論法 -->
-  <section class="slide" id="slide-p2-6" data-style="accenture">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 2：推進時程與主設備選用 (原簡報 P.12~P.15, P.19)</span>
-            <span class="zn-archetype-pill">版型 4：連鎖論法 (Chain / Sequential Flow)</span>
-            <span class="zn-style-pill">Accenture Modern Bento Style</span>
-          </div>
-          <div class="zn-pageno">P2 - 6 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：全案歷經四階段 7～10 個月完工併聯，全面採用通過 115/3/11 新制 17 級風壓認證之一級設備</h2>
-        <div class="zn-subtitle">模組選用加國陽光 CSI 445W (效率 22.3%，正負 5400Pa)；逆變器提供國內亞力電機 (110/136kW) 與海外華為雙選項</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-chain" style="min-height:245px">
-          <div class="zn-chain-axis">
-            ② 專案申設、施工與掛表時程（出租約 7–8 個月完工 ／ 自建含浪板與綠憑約 9–10 個月完工，實際工期 3–4 個月） ═══════►
-          </div>
-          <div class="zn-chain-steps">
-            <div class="zn-chain-col">
-              <div class="zn-chevron">階段 1：M1~M3 併審同備 &gt;</div>
-              <div class="zn-chain-card">
-                <p>• <strong>M1–M2：</strong>台電併審文件準備與掛件申請</p>
-                <p>• <strong>M3：</strong>取得經濟部能源署「同意備案」核准函</p>
-                <p>• 鎖定饋線容量與高壓內併／外併點位</p>
-              </div>
-            </div>
-            <div class="zn-chain-col">
-              <div class="zn-chevron">階段 2：M4~M5 免雜細協 &gt;</div>
-              <div class="zn-chain-card">
-                <p>• <strong>M4：</strong>台中建管處免請領雜項執照簽證報備</p>
-                <p>• <strong>M4–M5：</strong>台電細部協商與外線線補確認</p>
-                <p>• 結構技師完成 17 級抗風壓結構計算簽證</p>
-              </div>
-            </div>
-            <div class="zn-chain-col">
-              <div class="zn-chevron">階段 3：M6~M10 浪板與施工 &gt;</div>
-              <div class="zn-chain-card">
-                <p>• <strong>M6–M7：</strong>D 棟浪板鋪設（約 2 個月，方案二適用）</p>
-                <p>• <strong>M8–M10：</strong>光電進場施工（棚架植筋、模組與變流器安裝，工期約 3–4 個月）至台電併聯</p>
-              </div>
-            </div>
-            <div class="zn-chain-col is-focus">
-              <div class="zn-chevron">★ 階段 4：M11~M13+ 掛表綠憑</div>
-              <div class="zn-chain-card">
-                <p>• <strong>M11：</strong>取得台電併聯函，正式發電享節電效益</p>
-                <p>• <strong>M12：</strong>完納 $1,000/kW 模組回收費並完成設備登記</p>
-                <p>• <strong>M13+：</strong>綠能憑證 (T-REC) 申請與核發（自建適用）</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="zn-evidence-strip">
-          <img class="zn-thumb" src="assets/timeline_gantt.png" alt="時程預估甘特圖">
-          <img class="zn-thumb" src="assets/csi_445w_module.png" alt="CSI 445W模組">
-          <img class="zn-thumb" src="assets/moea_2026_rule.png" alt="115年3月11日修法重點">
-          <img class="zn-thumb" src="assets/allis_inverter.png" alt="亞力電機逆變器">
-          <img class="zn-thumb" src="assets/huawei_40ktl.png" alt="華為SUN2000逆變器">
-          <div style="font-size:.8rem; color:var(--zn-text-main); line-height:1.48">
-            <strong>主設備規格摘要（點擊左側任一圖面可放大）：</strong><br>
-            1. <strong>模組 CSI 445W (CS6.2-48TM-445W)：</strong>泰國製、效率 22.3%、首年衰減 &lt;1%、年衰減 &lt;0.4%，通過正負 5,400Pa (17級風壓) 認證。<br>
-            2. <strong>逆變器雙選項：</strong>★國內品牌 <strong>亞力電機 110/136kW</strong>（12組MPPT/24串輸入、實時電流量測、本土零資安疑慮） vs 海外品牌 <strong>華為 SUN2000-100KTL/40KTL</strong>（10路MPPT、內建AFCI防拉弧與PID修復）。
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.12~P.15、P.19 ＆ 經濟部 115 年 3 月 11 日修正《再生能源發電設備設置管理辦法》第 13 條</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>全案採用已取得最新 17 級抗風壓（正負 5,400Pa）認證之 CSI 445W 模組，並提供亞力與華為兩款頂級變流器。</div>
-          <div><strong>② 補充說明：</strong>115/7/1 起模組回收費（$1,000/kW）改為報竣前一次收取，方案一由建坤全額吸收，方案二則列明於規費預算中。</div>
-          <div><strong>③ 下一頁轉場：</strong>Part 2 最後一頁，我們用「版型 1：一對一論法」量化驗證為何 C 棟露台 17.6kW 絕對不建議施作。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P2-7: 版型 1 一對一論法 -->
-  <section class="slide" id="slide-p2-7" data-style="bcg">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 2：C 棟露台光電評估 (原簡報 P.20~P.22)</span>
-            <span class="zn-archetype-pill">版型 1：一對一論法 (One-to-One Highlight)</span>
-            <span class="zn-style-pill">BCG Forest Green Style</span>
-          </div>
-          <div class="zn-pageno">P2 - 7 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：C 棟露台受限合法容積僅能裝設 17.6 kW，單 kW 建置成本暴增至 18.8 萬元，建議直接剔除不做</h2>
-        <div class="zn-subtitle">全平台雖可排 185.12 kW，但台中建管處合法容積僅剩 32 坪（17.6 kW），光雜照申請費即高達 170 萬元，經濟效益不成立</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-one-to-one">
-          <div class="zn-chart-box">
-            <div class="zn-chart-title">② 各方案每 kW 單位投入成本對比（凸顯 C 棟露台 17.6 kW 之極端不經濟性，單位：元/kW）</div>
-            <div class="zn-bars-stage">
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">$0 / kW</div>
-                <div class="zn-bar-fill" style="height: 4%"></div>
-                <div class="zn-bar-lbl">方案一：D+C屋突<br>出租分潤 (0出資)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">$42,000 / kW</div>
-                <div class="zn-bar-fill" style="height: 23%"></div>
-                <div class="zn-bar-lbl">方案二：光電本體<br>自建單價 (免雜照)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">$49,000 / kW</div>
-                <div class="zn-bar-fill" style="height: 27%"></div>
-                <div class="zn-bar-lbl">方案二：D棟含浪板<br>合併單價 (免雜照)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">$84,783 / kW</div>
-                <div class="zn-bar-fill" style="height: 45%"></div>
-                <div class="zn-bar-lbl">C棟露台理想滿鋪<br>(185.12kW 法規不准)</div>
-              </div>
-              <div class="zn-bar-col is-focus">
-                <div class="zn-bar-val">★ $188,100 / kW</div>
-                <div class="zn-bar-fill" style="height: 95%"></div>
-                <div class="zn-bar-lbl">★ C棟露台合法容積<br>(17.6kW 含170萬雜照費)</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="zn-takeaway-card">
-            <div>
-              <h3>② C 棟露台 (17.6 kW) 財務與法規驗算</h3>
-              <ul class="zn-takeaway-list">
-                <li><strong>容積率卡關：</strong>設置於既有露臺符合建蔽率 &lt;70%，但台中建管處未放寬容積率，合法容積僅 <strong>32 坪 &rarr; 17.6 kW</strong>。</li>
-                <li><strong>20 年發電與毛效益極小：</strong>20 年總發電量僅 <strong>417,090 度</strong>，按 $8.8/度計 20 年毛效益僅 <strong>$3,670,392 元（367 萬元）</strong>。</li>
-                <li><strong>★ 成本倒掛（高達 $18.8 萬/kW）：</strong>高棚架光電工程費約 133 萬（$75,600/kW）＋ <strong>雜照申請費約 170 萬元</strong> ＋ 20 年維運保險與回收費 &gt; <strong>總成本逾 331 萬元</strong>，扣折現後實質虧損！</li>
-              </ul>
-            </div>
-            <div class="zn-evidence-strip" style="padding:8px; margin-top:10px">
-              <img class="zn-thumb" src="assets/c_terrace_layout.png" alt="C棟露台平面圖" style="height:62px; width:95px">
-              <img class="zn-thumb" src="assets/c_terrace_elevation.png" alt="C棟露台立面圖" style="height:62px; width:95px">
-              <div style="font-size:.75rem; color:var(--zn-text-muted)">點擊放大檢視 C 棟露台 5.2m 高棚架平立面圖</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.20~P.22《C棟露台 光電評估 (高棚架 雜照案場)》及講者備忘錄數據</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>C 棟露台因 170 萬雜照費分攤在 17.6kW 上，每 kW 成本高達 18.8 萬元（為正常自建案的 4 倍），應直接拍板剔除。</div>
-          <div><strong>② 補充說明：</strong>這張一對一長條圖讓董事長在 3 秒內看懂為什麼我們強烈建議不要做 C 棟露台。</div>
-          <div><strong>③ 下一頁轉場：</strong>接下來進入全簡報最核心的 Part 3：正面解答資深光伏顧問的五大疑問與董事長五大採購題目。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- =========================================================================
-     PART 3: 針對其他建議的 QA：資深光伏顧問視角 ＋ 業主高層五大採購決策 (7 SLIDES)
-     ========================================================================= -->
-<div class="view" id="view-p3">
-
-  <!-- P3-1: 版型 7 比較論法 -->
-  <section class="slide" id="slide-p3-1" data-style="bcg">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 3：一、資深光伏顧問視角重點摘要 (1/7)</span>
-            <span class="zn-archetype-pill">版型 7：比較論法 (Comparison / Venn Intersection)</span>
-            <span class="zn-style-pill">BCG Forest Green Style</span>
-          </div>
-          <div class="zn-pageno">P3 - 1 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：資深光伏顧問複核全案數字，兩方案共享 C 棟 151.75kW 與一級設備，差異集中於 D 棟浪板與併網架構</h2>
-        <div class="zn-subtitle">以「比較論法」提煉兩方案之核心交集與各自差異，並列出資深顧問最關注的五大核心疑問（於 P3-2～P3-4 逐題解答）</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-comparison" style="min-height:290px">
-          <div class="zn-venn-card">
-            <div class="zn-venn-title">① 方案一：出租分潤（④ 差異化特徵）</div>
-            <ul class="zn-venn-list">
-              <li><strong>D 棟滿鋪無浪板：</strong>裝置容量達 <strong>774.745 kW</strong>（D棟 623 kW），20年總發電量 <strong>1,836 萬度</strong>。</li>
-              <li><strong>鉅鋼 0 出資：</strong>建坤能源全額出資，回饋二選一：20% 售電收入（約 1,836 萬）或 20% 綠電（約 367 萬度）。</li>
-              <li><strong>高壓外併架構：</strong>需於臨路處設置 MOF 盤，工期約 <strong>7–8 個月</strong>，附中途折舊回購表。</li>
-            </ul>
-          </div>
-
-          <div class="zn-venn-card is-common">
-            <div class="zn-venn-title">★ ③ 中央交集：兩方案共通核心基準</div>
-            <ul class="zn-venn-list">
-              <li><strong>C 棟屋突完全相同：</strong>C1 (94.785 kW) ＋ C2 (56.96 kW) ＝ <strong>151.745 kW</strong> 南向單斜矮棚架（高 1.2m 免雜照）。</li>
-              <li><strong>C 棟露台一致剔除：</strong>合法容積僅 17.6 kW，雜照費高達 170 萬元，兩案皆不施作。</li>
-              <li><strong>頂級設備與履約團隊：</strong>皆採用 <strong>CSI 445W 模組（泰國製，效率 22.3%，17級風壓認證）</strong>＋ 華為或亞力逆變器，由進能服（6692）統包維運。</li>
-            </ul>
-          </div>
-
-          <div class="zn-venn-card">
-            <div class="zn-venn-title">① 方案二：鉅鋼自建（④ 差異化特徵）</div>
-            <ul class="zn-venn-list">
-              <li><strong>D 棟加浪板退縮 2 米：</strong>受 30% 維護通道法規限制，容量為 <strong>612.320 kW</strong>（D棟 460.575 kW），20年發電 <strong>1,451 萬度</strong>。</li>
-              <li><strong>鉅鋼出資 2,894 萬元：</strong>光電 $42,000/kW ＋ 浪板 $7,000/kW，20年毛效益 <strong>1.277 億元</strong>（$5.8+$3/度）。</li>
-              <li><strong>高壓內併架構：</strong>免設臨路 MOF 盤，工期約 <strong>9–10 個月</strong>，含 5 年免費保固維運。</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="zn-evidence-strip" style="justify-content:space-between">
-          <div style="font-size:.82rem; font-weight:800; color:var(--c-primary)">🔍 資深光伏顧問「最有疑問的五個問題」導覽：</div>
-          <div style="font-size:.8rem; color:var(--zn-text-main)">
-            <strong>Q1</strong> 比較基準不一與未扣後期成本 (見 P3-2) ｜ <strong>Q2</strong> 3.5h 佐證與衰減率 0.8% vs 0.4% (見 P3-3) ｜ <strong>Q3</strong> 回購溢價 42% 與外併改自用 (見 P3-3) ｜ <strong>Q4</strong> D棟 30% 法規與黑柱防水 (見 P3-4) ｜ <strong>Q5</strong> 租金保底與棚架下空間權 (見 P3-4)
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 資深光伏顧問審閱 30 頁簡報重點摘要 ＆ 森秀明《無雜訊簡報製作法》版型 7 比較論法</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>透過文氏圖交集結構，3 秒內釐清兩套方案的不變基底（C棟屋突、設備、剔除露台）與核心差異點。</div>
-          <div><strong>② 補充說明：</strong>外部資深顧問提出的五個尖銳問題非常專業，我們不迴避任何一題，在接下來三頁全部用實證數據正面回答。</div>
-          <div><strong>③ 下一頁轉場：</strong>首先進入 P3-2，解答第一個也是最關鍵的財務問題：兩方案比較基準拉齊與 DCF 淨現值重算。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P3-2: 版型 1 一對一論法 (QA 1) -->
-  <section class="slide" id="slide-p3-2" data-style="mckinsey">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 3：資深顧問疑問 Q1 深度解答 (2/7)</span>
-            <span class="zn-archetype-pill">版型 1：一對一論法 (One-to-One Highlight)</span>
-            <span class="zn-style-pill">McKinsey Deep Navy Style</span>
-          </div>
-          <div class="zn-pageno">P3 - 2 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：【顧問 QA 1】拉齊基準並扣盡 804.5 萬全週期成本後，方案二自建含綠憑 NPV 高達 +4,690 萬元</h2>
-        <div class="zn-subtitle">同步將方案一綠電拉齊至 $8.8/度（總值升至 3,231 萬），並提供純節電（$5.8）與日間流動電價 ±10% 敏感度分析</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-one-to-one" style="min-height:255px">
-          <div class="zn-chart-box" style="padding:16px 20px">
-            <div class="zn-chart-title">② 同一折現基準 (WACC = 5%) 下各方案 20 年淨現值 NPV 對比 (已扣除全週期維運換機成本，單位：萬元)</div>
-            <div class="zn-bars-stage" style="height:195px">
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">+1,159 萬</div>
-                <div class="zn-bar-fill" style="height: 25%"></div>
-                <div class="zn-bar-lbl">方案一：租金<br>(綠電$5×20%)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">+1,344 萬</div>
-                <div class="zn-bar-fill" style="height: 29%"></div>
-                <div class="zn-bar-lbl">方案一：綠電<br>(原簡報$5.8計)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">+2,039 萬</div>
-                <div class="zn-bar-fill" style="height: 44%"></div>
-                <div class="zn-bar-lbl">方案一：綠電<br>(拉齊$8.8基準)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">+1,411 萬</div>
-                <div class="zn-bar-fill" style="height: 30%"></div>
-                <div class="zn-bar-lbl">方案二：純節電<br>(日間流動-10%)</div>
-              </div>
-              <div class="zn-bar-col">
-                <div class="zn-bar-val">+1,942 萬</div>
-                <div class="zn-bar-fill" style="height: 42%"></div>
-                <div class="zn-bar-lbl">方案二：純節電<br>($5.8無綠憑)</div>
-              </div>
-              <div class="zn-bar-col is-focus">
-                <div class="zn-bar-val">★ +4,690 萬</div>
-                <div class="zn-bar-fill" style="height: 95%"></div>
-                <div class="zn-bar-lbl">★ 方案二：含綠憑<br>($8.8扣全成本)</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="zn-takeaway-card" style="padding:16px 20px">
-            <h3>② 四大財務修正完全回應顧問質疑</h3>
-            <ul class="zn-takeaway-list" style="gap:8px">
-              <li><strong>1. 拉齊 $8.8 基準：</strong>方案一 20% 綠電回饋（367.2萬度）補計 $3 綠憑後，總收益由 2,130 萬升至 <strong>3,231.4 萬（NPV +2,039萬）</strong>。</li>
-              <li><strong>2. 扣實 804.5 萬後期成本：</strong>方案二已扣除第 6~20 年維運保險（551.1萬）、第 11 年逆變器汰換（183.7萬）、模組回收費（61.2萬）與高壓審查（8.5萬）。</li>
-              <li><strong>3. 區分流動電價與綠憑：</strong>就算綠憑算 $0 且電價打 9 折（$5.22/度），自建淨 IRR 仍達 <strong>10.5%（回收期 7.7 年）</strong>！</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="zn-table-wrap">
-          <table class="zn-table">
-            <thead>
-              <tr>
-                <th>統一基準財務模型與電價 ±10% 敏感度情境 (折現率 5%)</th>
-                <th class="num">20年營運淨入</th>
-                <th class="num">扣CAPEX淨賺</th>
-                <th class="num">單純毛回收期</th>
-                <th class="num">真實淨回收期</th>
-                <th class="num">專案淨 IRR</th>
-                <th class="num">淨現值 NPV(5%)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>【方案一】出租 774.75kW (0出資)：選 20% 租金 ($5/度) ／ 選 20% 綠電 (拉齊 $8.8/度)</td>
-                <td class="num">1,836萬 / 3,231萬</td>
-                <td class="num">+1,836萬 / +3,231萬</td>
-                <td class="ctr">0出資即刻回收</td>
-                <td class="ctr">0出資即刻回收</td>
-                <td class="ctr">∞ (零出資)</td>
-                <td class="num"><strong>+1,159萬 / +2,039萬</strong></td>
-              </tr>
-              <tr class="zn-focus-row">
-                <td>★【方案二】自建 612.32kW 含綠憑基準 ($8.8/度) ｜ 電價 ±10% ($7.92 ~ $9.68/度)</td>
-                <td class="num">12,035 萬</td>
-                <td class="num"><strong>+9,071.4 萬</strong></td>
-                <td class="num">4.2 年</td>
-                <td class="num"><strong>4.4 年</strong> (4.0~4.9年)</td>
-                <td class="num"><strong>21.4%</strong> (18.9~23.9%)</td>
-                <td class="num"><strong>+4,689.5 萬</strong></td>
-              </tr>
-              <tr>
-                <td>【方案二】自建 612.32kW 純節電無綠憑 ($5.8/度) ｜ 電價 ±10% ($5.22 ~ $6.38/度)</td>
-                <td class="num">7,682 萬</td>
-                <td class="num"><strong>+4,718.1 萬</strong></td>
-                <td class="num">6.4 年</td>
-                <td class="num"><strong>6.8 年</strong> (6.1~7.7年)</td>
-                <td class="num"><strong>12.4%</strong> (10.5~14.2%)</td>
-                <td class="num"><strong>+1,942.1 萬</strong></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 進能服財務顧問 DCF 折現現金流模型（CAPEX 含規費回收費共 2,963.5 萬；第 6~20 年維運保險按 $600/kW/年、第 11 年換機按 $3,000/kW 提列）</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>顧問自己試算的「毛回收期 8.8元約 4.2年、5.8元約 6.4年」完全正確；我們進一步扣掉第 6 年後維運換機成本，真實淨回收期為 4.4 年與 6.8 年。</div>
-          <div><strong>② 補充說明：</strong>這張表直接滿足董事長決策前想看的「同基準 NPV、IRR 與 ±10% 電價敏感度分析」。</div>
-          <div><strong>③ 下一頁轉場：</strong>下一頁以「版型 5：麥肯錫論法」解答顧問 QA 2 與 QA 3（發電量假設、衰減率與中途回購外併改自用）。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P3-3: 版型 5 麥肯錫論法 (QA 2 & QA 3) -->
-  <section class="slide" id="slide-p3-3" data-style="mckinsey">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 3：資深顧問疑問 Q2 &amp; Q3 深度解答 (3/7)</span>
-            <span class="zn-archetype-pill">版型 5：麥肯錫論法 (Flow × Factor Matrix)</span>
-            <span class="zn-style-pill">McKinsey Deep Navy Style</span>
-          </div>
-          <div class="zn-pageno">P3 - 3 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：【顧問 QA 2 &amp; 3】0.8% 衰減率實為全系統保守安全邊際；外併買回可採內場轉供或預留套管無痛轉自用</h2>
-        <div class="zn-subtitle">正面解答「台中東西向山型 3.5h 模擬佐證」、「衰減率 0.8% vs 0.4% 差異」與「方案一回購溢價 42% 及外併改內併可行性」</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-mckinsey">
-          <div class="zn-mck-grid cols-4">
-            <div></div>
-            <div class="zn-mck-stage">② 爭點 A (QA 2-1)：<br>台中東西向山型 3.5h 佐證 &gt;</div>
-            <div class="zn-mck-stage">② 爭點 B (QA 2-2)：<br>表內衰減 0.8% vs 模組 0.4% &gt;</div>
-            <div class="zn-mck-stage">② 爭點 C (QA 3-1)：<br>首年回購價高出 42% 原因 &gt;</div>
-            <div class="zn-mck-stage">② 爭點 D (QA 3-2)：<br>高壓外併買回如何改自用</div>
-
-            <!-- Row 1: Consultant Question -->
-            <div class="zn-mck-row-lbl">③ 要素 1：<br>【資深顧問質疑】</div>
-            <div class="zn-mck-cell">
-              <strong>日照時數偏樂觀需驗證</strong>
-              東西向山型陣列在台中每天 3.5 小時的發電時數偏樂觀，需要 PVsyst 模擬報告支撐。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>衰減率數字前後不一致</strong>
-              表內的衰減率大約每年 0.8%（989,737 &rarr; 981,819），但模組規格寫每年小於 0.4%，前後不一致（雖然偏保守）。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>初期回購單價對業主不利</strong>
-              第 1 年回購單價 $59,670/kW，比自建 $42,000/kW 高約 42%，之後按 20 年直線折舊遞減。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>外併改內併自用可行性存疑</strong>
-              回購表假設買回後可「自用 $8.8/度」，但原本是高壓外併，改內併自用須重辦併網與解約，時程費用未交代。
-            </div>
-
-            <!-- Row 2: Technical & Commercial Fact -->
-            <div class="zn-mck-row-lbl">③ 要素 2：<br>【工程與財務實況】</div>
-            <div class="zn-mck-cell">
-              <strong>5° 低傾角 ＋ N-type 弱光增益</strong>
-              西屯區日射量約 4.2 kWh/m²/d；5° 低傾角東西向折減僅約 3.3%，搭配 CSI 445W TOPCon (22.3%) 首年 PR 達 83%。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>組件衰減 vs 全系統衰減</strong>
-              0.4% 為實驗室「單一組件功率衰減」；實際電廠 20 年運轉尚有直交流線損、接頭老化與清洗週期間落塵折減。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>SPV 前期外線與融資沉沒成本</strong>
-              方案一由建坤全額承擔台電外線線補費、臨路 MOF 盤、高壓外併專線與 SPV 融資開發費，全數反映於期初帳面值。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>綠電交易架構無傳統 FIT 解約限制</strong>
-              建坤能源原本即規劃走 CPPA 綠電憑證交易（非鎖死不可解約之台電 FIT 躉售），轉換彈性極高。
-            </div>
-
-            <!-- Row 3: Actionable Guarantee (Highlighted) -->
-            <div class="zn-mck-row-lbl is-solution">③ 要素 3：<br>【顧問解答與承諾】</div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 交付正式 PVsyst 模擬報告</strong>
-              承諾於細部設計階段交付含 3D 女兒牆與屋突遮陰建模之正式 PVsyst 報告作為合約附件，實證發電時數。
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 預留 55 萬度保守安全邊際</strong>
-              財務表刻意用 0.8% 系統綜合衰減率（比 0.4% 少算 55 萬度、少報 484 萬），確保董事長拿到的是可超額達標的底線承諾！
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 3年內自用選自建；回購鎖定第8~10年</strong>
-              明確建議：3 年內欲自有請直接選方案二自建（省 1,729 萬）；中途回購鎖定第 8~10 年（$3.28~$3.88萬/kW）最划算！
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 雙路徑解方寫入租約附約</strong>
-              ① 免改內線：維持外併直接「同企業電號轉供」予鉅鋼享綠憑與節電；② 實體改內併：本次施工免費預留內併套管（改接費約150~200萬，4~6個月）。
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 進能服工程技術部 PVsyst 模擬規範 ＆ 台電再生能源自用發電設備併網及轉供作業要點</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>0.8% 衰減率是保護業主的保守安全邊際；而高壓外併買回後透過「同企業電號轉供」或「預留內併套管」即可無縫轉自用。</div>
-          <div><strong>② 補充說明：</strong>這種毫不隱瞞拆解首年 42% 溢價原因的態度，能讓客戶高層深刻感受到我方的專業與坦誠。</div>
-          <div><strong>③ 下一頁轉場：</strong>接著進入 P3-4，解答顧問 QA 4 與 QA 5（D棟 30% 法規真相、黑柱防水與租約空間權利修訂）。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P3-4: 版型 5 麥肯錫論法 (QA 4 & QA 5) -->
-  <section class="slide" id="slide-p3-4" data-style="mckinsey">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 3：資深顧問疑問 Q4 &amp; Q5 深度解答 (4/7)</span>
-            <span class="zn-archetype-pill">版型 5：麥肯錫論法 (Flow × Factor Matrix)</span>
-            <span class="zn-style-pill">McKinsey Deep Navy Style</span>
-          </div>
-          <div class="zn-pageno">P3 - 4 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：【顧問 QA 4 &amp; 5】D 棟容量差源於免雜第 5 條「浪板通道 ≤30%」；主動修訂三大合約條款保障鉅鋼權益</h2>
-        <div class="zn-subtitle">詳解 623kW vs 460.58kW 法規算式與黑柱防水責任，並將「FIT保底租金、棚架下空間歸還鉅鋼、期滿拆遷」寫入合約</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-mckinsey">
-          <div class="zn-mck-grid cols-4">
-            <div></div>
-            <div class="zn-mck-stage">② 爭點 E (QA 4-1)：<br>623 vs 460.58kW 容量落差 &gt;</div>
-            <div class="zn-mck-stage">② 爭點 F (QA 4-2)：<br>黑色立柱、植筋與防水責任 &gt;</div>
-            <div class="zn-mck-stage">② 爭點 G (QA 5-1)：<br>租金 $5 基準與保底機制 &gt;</div>
-            <div class="zn-mck-stage">② 爭點 H (QA 5-2)：<br>棚架下空間權與期滿拆遷</div>
-
-            <!-- Row 1: Consultant Question -->
-            <div class="zn-mck-row-lbl">③ 要素 1：<br>【資深顧問質疑】</div>
-            <div class="zn-mck-cell">
-              <strong>為何方案一不受 30% 限制？</strong>
-              方案一 623 kW 與方案二 460.575 kW 差了 162 kW。為何方案一不受 30% 維護走道限制？加浪板還符合免雜照嗎？
-            </div>
-            <div class="zn-mck-cell">
-              <strong>結構簽證與防水保固責任</strong>
-              新增黑色立柱、植筋、屋頂防水都需要結構技師簽證和防水保固責任劃分；拿掉立柱容量減 10.68 kW。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>售電分潤基準不夠明確</strong>
-              20% 分潤是用「綠電每度 5 元」估算，實際收入基準是躉售 (FIT) 還是綠電轉供？有沒有保底租金？
-            </div>
-            <div class="zn-mck-cell">
-              <strong>空間限制與退場復原條款缺失</strong>
-              「棚架下空間歸投資方所用」直接限制鉅鋼使用自家屋頂；20 年到期怎麼拆除復原、修繕怎麼補償未寫。
-            </div>
-
-            <!-- Row 2: Regulatory / Contract Truth -->
-            <div class="zn-mck-row-lbl">③ 要素 2：<br>【法規與契約原委】</div>
-            <div class="zn-mck-cell">
-              <strong>新設頂蓋 (浪板) 觸發通道檢討</strong>
-              依《免雜標準》第 5 條，方案一無浪板，未鋪處為原 RC 露空面可滿鋪；方案二滿鋪浪板 (2,668m²) 且模組退縮 2 米，退縮區浪板 (600.3m²) 全數計入維護通道！
-            </div>
-            <div class="zn-mck-cell">
-              <strong>17 級風壓跨距補強需求</strong>
-              原建築紅柱跨距較大，為符合 115/3/11 新制正負向 5,400Pa (17級風壓) 故增設黑柱；若不加黑柱僅局部減載 24 片模組。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>綠電 CPPA 市場行情基準</strong>
-              建坤能源優先將綠電轉供予企業買家（目前市場 CPPA 均價約 $5.0~$5.5/度），過渡期則走台電高壓 FIT ($3.6236/度)。
-            </div>
-            <div class="zn-mck-cell">
-              <strong>公版法務防違建條款過於嚴苛</strong>
-              原註記係防範屋主私自封閉四周外牆變成違章建築（會導致光電被連帶撤照），但文字確實損害業主空間使用權益。
-            </div>
-
-            <!-- Row 3: Concrete Solution (Highlighted) -->
-            <div class="zn-mck-row-lbl is-solution">③ 要素 3：<br>【顧問精算與修約承諾】</div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 29.03% 合規 ＋ 浪板同步退縮增容法</strong>
-              <code>600.3 ÷ 2,067.93 = 29.03% &le; 30%</code> 免雜合規！若董事長希望自建也裝到 580~600kW，只需將「浪板隨模組同步退縮 2 米」即可突破限制！
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 結構技師簽證 ＋ 植筋防水 100% 歸責</strong>
-              提供開業結構技師簽證；拿掉黑柱僅減 10.68kW 由董事長自由拍板；合約明訂植筋處採三層防水且滲漏水由我方 100% 保固賠償。
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 入約「FIT 保底 ＋ 綠電溢價共享」</strong>
-              合約明訂以台電公告 FIT 費率 ($3.6236/度×20%) 為保底租金底線；轉供期間按實際 CPPA 售電單價 ($5.0~$5.5/度×20%) 結算！
-            </div>
-            <div class="zn-mck-cell is-solution">
-              <strong>★ 空間使用權歸還鉅鋼 ＋ 60天自費拆遷</strong>
-              修訂合約：① D棟棚架下 3.4~4.2m 空間歸鉅鋼無償使用（不封外牆即可）；② 期滿 60 日內建坤自費拆除復原；③ 每年享屋頂修繕免責停機日。
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 《設置再生能源設施免請領雜項執照標準》第 5 條 ＆ 進能服／建坤能源法務合約修訂承諾書</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>至此，資深光伏顧問提出的五大疑問（Q1~Q5）已全部透過量化模型、法規公式與具體修約承諾完美解決。</div>
-          <div><strong>② 補充說明：</strong>主動把「棚架下空間使用權歸還鉅鋼」並加上「FIT保底租金与60天拆遷復原」，讓租約條款無懈可擊。</div>
-          <div><strong>③ 下一頁轉場：</strong>解決完技術與財務疑問後，接下來 3 頁進入「二、業主高層視角：董事長要決策的五個採購題目」。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P3-5: 版型 8 BCG 論法 (Executive Decisions 1 & 2) -->
-  <section class="slide" id="slide-p3-5" data-style="bcg">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 3：二、業主高層視角：採購決策 1 &amp; 2 (5/7)</span>
-            <span class="zn-archetype-pill">版型 8：BCG 論法 (BCG 2×2 Matrix)</span>
-            <span class="zn-style-pill">BCG Forest Green Style</span>
-          </div>
-          <div class="zn-pageno">P3 - 5 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：【採購決策 1 &amp; 2】依「2,900萬資金配置 × 未來 3~5 年綠電剛需」定位，首推自建或出租綁 ROFR 條款</h2>
-        <div class="zn-subtitle">回答董事長前兩大採購題目：① 要出租還是自建？② 綠電是自己用，還是賣掉收租（ROFR 優先回購權怎麼入約）？</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-bcg">
-          <div class="zn-bcg-yaxis">
-            <span>▲ 強剛需<br>(RE100/大戶)</span>
-            <span>② 縱軸 Y<br>3~5年綠電剛需</span>
-            <span>▼ 弱剛需<br>(純財務考量)</span>
-          </div>
-          <div class="zn-bcg-main">
-            <div class="zn-bcg-quads">
-              <!-- Top-Left: X1Y2 -->
-              <div class="zn-bcg-q">
-                <h3>③ 象限 X1Y2：【0 出資綠電儲備型】方案一出租 ＋ 選 20% 綠電回饋 &amp; ROFR</h3>
-                <p>• <strong>適用情境：</strong>新廠 2,900 萬資金須全留本業，但未來 3~5 年歐美客戶有明確綠電要求。<br>• <strong>採購拍板：</strong>選方案一領取 <strong>20% 綠電回饋（每年約 18.4 萬度免費綠電＋憑證，同基準總值 3,231 萬）</strong>，並於合約鎖定其餘 80% 綠電之 <strong>優先回購權 (ROFR)</strong> 與第 8~10 年電廠買回權。</p>
-              </div>
-              <!-- Top-Right: X2Y2 (FOCUS TARGET) -->
-              <div class="zn-bcg-q is-focus">
-                <h3>★ ③ 目標象限 X2Y2：【最高價值首推型】方案二鉅鋼自建 ＋ 100% 綠電與憑證自用</h3>
-                <p>• <strong>適用情境：</strong>可動用 2,894 萬 CAPEX（或搭配<strong>銀行 80% 綠能專案融資，自備僅約 580 萬</strong>），且具減碳／用電大戶／供應鏈需求。<br>• <strong>採購拍板：</strong>獨享每年約 78 萬度綠電與 T-REC 憑證（度電價值 $8.8），扣盡後期維運換機成本後，20 年淨賺 <strong>9,071 萬元、真實淨 IRR 21.4%（4.4 年回本，NPV +4,690 萬）</strong>！</p>
-              </div>
-              <!-- Bottom-Left: X1Y1 -->
-              <div class="zn-bcg-q">
-                <h3>③ 象限 X1Y1：【純現金收租防禦型】方案一出租 ＋ 選 20% 售電現金租金</h3>
-                <p>• <strong>適用情境：</strong>資金 100% 留本業擴產，且近 3~5 年無綠電憑證剛需。<br>• <strong>採購拍板：</strong>0 出資領取 20% 現金租金（20年約 1,836 萬，NPV +1,159萬），但合約務必寫入<strong>「年度分潤模式轉換權（隨時可改領綠電）」＋「ROFR 綠電優先回購折讓定價公式（如市價 95 折或價格上限 Cap）」</strong>！</p>
-              </div>
-              <!-- Bottom-Right: X2Y1 -->
-              <div class="zn-bcg-q">
-                <h3>③ 象限 X2Y1：【高息固定收益型】方案二鉅鋼自建（純節電＋憑證外賣變現）</h3>
-                <p>• <strong>適用情境：</strong>帳上現金充裕欲尋找抗通膨穩健標的，雖無自用綠憑剛需但想鎖定 20 年電價。<br>• <strong>採購拍板：</strong>單靠抵減 $5.8/度電費，扣維運後真實淨 <strong>IRR 達 12.4%（6.8年回本，NPV +1,942萬）</strong>；若將 T-REC 綠憑於公開市場出售（約 $2.8~$3.0/度），報酬率即躍升回 21.4%！</p>
-              </div>
-            </div>
-            <div class="zn-bcg-xaxis">
-              <span>◄ 2,900 萬資金 100% 保留給製鞋機械本業・光電 0 出資 (X1)</span>
-              <span>② 橫軸 X（企業資本支出 CAPEX 配置軸）</span>
-              <span>可動用 2,894 萬預算或搭配銀行 80% 綠能融資自備 580 萬 (X2) ►</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 業主高層視角採購決策題目 1 &amp; 2 ＆ BCG 策略組合管理矩陣</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>不論鉅鋼有無立即的綠憑剛需，只要搭配銀行綠能專案融資，右上與右下象限的「方案二自建」皆能創造最高股東價值。</div>
-          <div><strong>② 補充說明：</strong>若董事長決定選左半邊的方案一出租，我們已把「ROFR 綠電優先回購定價公式」設計妥當，確保未來綠電不虞匱乏。</div>
-          <div><strong>③ 下一頁轉場：</strong>接著進入 P3-6，以「版型 6：對立論法」協助董事長拍板採購題目 3（D棟空間用途）與題目 4（設備品牌選型）。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P3-6: 版型 6 對立論法 (Executive Decisions 3 & 4) -->
-  <section class="slide" id="slide-p3-6" data-style="bcg">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 3：二、業主高層視角：採購決策 3 &amp; 4 (6/7)</span>
-            <span class="zn-archetype-pill">版型 6：對立論法 (Opposition Argumentation)</span>
-            <span class="zn-style-pill">BCG Forest Green Style</span>
-          </div>
-          <div class="zn-pageno">P3 - 6 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：【採購決策 3 &amp; 4】有倉儲需求選「退縮2米浪板＋不落黑柱」；逆變器首推本土亞力電機根絕外網資安風險</h2>
-        <div class="zn-subtitle">回答董事長第三與第四個採購題目：③ D 棟屋頂和棚架下空間怎麼用？④ 逆變器（華為 vs 亞力）與模組品牌怎麼選？</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-opposition">
-          <div class="zn-opp-row">
-            <div></div>
-            <div class="zn-opp-hdr side-a">② 選項 A：無浪板滿鋪 ／ 海外品牌逆變器（華為 SUN2000）</div>
-            <div class="zn-opp-hdr side-b">② 選項 B（★顧問推薦拍板）：退縮2米浪板不落黑柱 ／ 國內上市亞力電機</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">【決策 3-1】<br>D棟頂樓空間用途</div>
-            <div class="zn-opp-cell">若 D 棟頂樓「純閒置、無人員與物料進出」：選無浪板滿鋪（623 kW），省下 322 萬浪板費，太陽能板本身即可遮蔽 75% 日照降溫 3~5°C。</div>
-            <div class="zn-opp-cell is-focus">★ 若 D 棟頂樓需作「半戶外倉儲、模具設備暫置或員工空間」：必選加鋪浪板（$7,000/kW）＋退縮 2 米免欄杆，並於合約明訂棚架下 3.4~3.8m 空間歸鉅鋼使用！</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">【決策 3-2】<br>黑色輔助立柱取捨</div>
-            <div class="zn-opp-cell">保留新增之黑色輔助立柱：可維持全額容量（460.58 kW 或 623 kW），但跨距中央有立柱，略影響大型堆高機或模具動線。</div>
-            <div class="zn-opp-cell is-focus">★ 若有倉儲動線需求，建議拍板「拿掉黑色輔助立柱」：全數沿用原建築紅柱，容量僅微減 10.68 kW（24片模組），換取 100% 無障礙大跨距空間！</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">【決策 4-1】<br>逆變器資安與備品</div>
-            <div class="zn-opp-cell">華為 SUN2000 (100KTL/40KTL)：具 10 路 MPPT 與 AFCI 防拉弧，但屬陸系通訊背景，監控連外網易引發歐美客戶稽核或廠區資安疑慮。</div>
-            <div class="zn-opp-cell is-focus">★ 強烈推薦【國內上市大廠：亞力電機 110/136 kW】：100% 台灣本土研發製造，徹底免除外網連線資安風險！具業界最高 12 組 MPPT / 24 串電流量測，在地備品快修。</div>
-          </div>
-          <div class="zn-opp-row">
-            <div class="zn-opp-dim">【決策 4-2】<br>模組換型號保護</div>
-            <div class="zn-opp-cell">僅寫「依進場時程配置當時合規模組」：缺乏量化下限，存在進場時規格波動風險。</div>
-            <div class="zn-opp-cell is-focus">★ 合約鎖死「同級或更優」五項硬指標：若更換 CSI 445W 型號，須為 ① Bloomberg Tier-1 ② 功率 &ge;445W ③ 效率 &ge;22.3% ④ 年衰減 &le;0.4% ⑤ 正負 5,400Pa 認證！</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 業主高層視角採購決策題目 3 &amp; 4（空間定位、資安合規、保固年限、在地備品與模組合約標準）</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>D 棟若有倉儲需求就選「有浪板＋拿掉黑柱（僅少 10.68kW）」；逆變器選本土亞力電機可一勞永逸解決外網資安問題。</div>
-          <div><strong>② 補充說明：</strong>模組更在合約中直接寫死 Tier-1、445W、22.3%、5400Pa 五大硬指標，保障業主絕不縮水。</div>
-          <div><strong>③ 下一頁轉場：</strong>最後進入 P3-7，以「版型 4：連鎖論法」完成採購題目 5（合約 SLA 與退出機制）及董事長五題拍板核決單。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P3-7: 版型 4 連鎖論法 (Executive Decision 5 + Sign-off) -->
-  <section class="slide" id="slide-p3-7" data-style="accenture">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 3：二、業主高層視角：採購決策 5 與拍板核決單 (7/7)</span>
-            <span class="zn-archetype-pill">版型 4：連鎖論法 (Chain / Sequential Flow)</span>
-            <span class="zn-style-pill">Accenture Modern Bento Style</span>
-          </div>
-          <div class="zn-pageno">P3 - 7 / 7</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：【採購決策 5】將維運 SLA、漏水歸責與退場公式全數入約，今日勾選五題即可於 7 日內啟動台電併審</h2>
-        <div class="zn-subtitle">回答董事長第五個採購題目（20年退出公式、2天到場/5天修復 SLA、漏水責任、期滿復原與 C 棟露台剔除），並附當場拍板核決表</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-chain" style="min-height:220px">
-          <div class="zn-chain-axis">
-            ② 採購決策 5：四大合約保障鎖死風險 ➔ 當場完成五題拍板 ➔ 7 日內啟動 PVsyst 與台電併審 ═══════════►
-          </div>
-          <div class="zn-chain-steps">
-            <div class="zn-chain-col">
-              <div class="zn-chevron">合約保障 1：維運 SLA &gt;</div>
-              <div class="zn-chain-card">
-                <p><strong>【2天到場・5天修復入約】</strong></p>
-                <p>• 將簡報 P.30 承諾之「2工作天內到場查檢、5工作天內修復」正式寫入合約 SLA 罰則。</p>
-                <p>• 自建維運合約增訂「年系統可用率 &ge;98%」保證。</p>
-              </div>
-            </div>
-            <div class="zn-chain-col">
-              <div class="zn-chevron">合約保障 2：防水歸責 &gt;</div>
-              <div class="zn-chain-card">
-                <p><strong>【屋頂漏水 100% 歸責保固】</strong></p>
-                <p>• 施工前雙方會勘拍照與積水測試存證。</p>
-                <p>• 凡因光電植筋或施工所致之屋頂滲漏水，由我方負 100% 無償修繕與連帶賠償責任。</p>
-              </div>
-            </div>
-            <div class="zn-chain-col">
-              <div class="zn-chevron">合約保障 3：退出與復原 &gt;</div>
-              <div class="zn-chain-card">
-                <p><strong>【中途回購與 60 天拆遷復原】</strong></p>
-                <p>• 載明 1~20 年直線折舊回購公式与違約無償接管條款。</p>
-                <p>• 20年期滿若不留用，建坤須於 60 日內全額自費拆除設備並復原防水層。</p>
-              </div>
-            </div>
-            <div class="zn-chain-col is-focus">
-              <div class="zn-chevron">★ 拍板行動：五題核決</div>
-              <div class="zn-chain-card">
-                <p><strong>★【C棟露台當場剔除＋啟動細設】</strong></p>
-                <p>• C 棟露台（170萬雜照費換 17.6kW）當場拍板不做！</p>
-                <p>• 確認下方五題勾選後，3 日內呈交定案合約與更新圖面、7 日內台電掛件。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="zn-table-wrap">
-          <table class="zn-table">
-            <thead>
-              <tr>
-                <th class="ctr">拍板題號</th>
-                <th>董事長採購決策題目</th>
-                <th>★ 顧問推薦首選方案 (Recommended)</th>
-                <th>備選方案</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="zn-focus-row">
-                <td class="ctr">題目 1</td>
-                <td>要出租還是自建？ (2,894萬 CAPEX)</td>
-                <td>&#9745; <strong>方案二：鉅鋼自建</strong>（可搭銀行 80% 綠能融資自備 580萬，享淨 IRR 21.4% / 12.4%）</td>
-                <td>&#9744; 方案一：出租予建坤能源 (0出資)</td>
-              </tr>
-              <tr>
-                <td class="ctr">題目 2</td>
-                <td>綠電自用還是賣掉收租？ (ROFR入約)</td>
-                <td>&#9745; <strong>自建 100% 綠電自用／憑證變現</strong>（若選出租則前3年收租＋綁定 ROFR 折讓公式）</td>
-                <td>&#9744; 出租直接領取 20% 綠電度數回饋</td>
-              </tr>
-              <tr class="zn-focus-row">
-                <td class="ctr">題目 3</td>
-                <td>D 棟屋頂與棚架下空間怎麼用？</td>
-                <td>&#9745; <strong>加鋪浪板＋退縮 2 米免欄杆＋不落黑柱 (-10.68kW)</strong>，空間使用權歸鉅鋼倉儲用</td>
-                <td>&#9744; 無浪板滿鋪 623 kW (省 322 萬浪板費)</td>
-              </tr>
-              <tr>
-                <td class="ctr">題目 4</td>
-                <td>設備規格與品牌怎麼選？</td>
-                <td>&#9745; <strong>國內上市亞力電機 110/136kW (零資安疑慮)</strong> ＋ CSI 445W (同級或更優入約)</td>
-                <td>&#9744; 海外品牌華為 SUN2000 逆變器</td>
-              </tr>
-              <tr class="zn-focus-row">
-                <td class="ctr">題目 5</td>
-                <td>合約條件、退出機制與 C 棟露台定案</td>
-                <td colspan="2">&#9745; <strong>2天到場/5天修復 SLA、植筋防水100%歸責、60天拆遷復原全數入約；【C棟露台 17.6kW 直接剔除不做（立省170萬）】！</strong></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 進能服 MEDDIC 高層拍板核決清單（Executive Decision Sign-off Sheet）</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>透過這張五題勾選表，把複雜的 30 頁簡報收斂為董事長 3 分鐘即可拍板的清晰決策單。</div>
-          <div><strong>② 補充說明：</strong>不要把簽字拍板留在會議結束後，當場確認這五個勾選方向，3 天內即可交付定案合約。</div>
-          <div><strong>③ 下一頁轉場：</strong>若董事長想進一步確認進能服的上市櫃體質與過往實績，接下來進入 Part 4 壓軸預備庫。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- =========================================================================
-     PART 4: 進金生能源服務 (6692) 簡介與標竿實績預備庫 (原簡報 P.23~P.30 - 4 SLIDES)
-     ========================================================================= -->
-<div class="view" id="view-p4">
-
-  <!-- P4-1: 版型 2 並列論法 -->
-  <section class="slide" id="slide-p4-1" data-style="accenture">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 4：進能服企業體質與能源生態系 (原簡報 P.23~P.25)</span>
-            <span class="zn-archetype-pill">版型 2：並列論法 (Parallel 4 Pillars)</span>
-            <span class="zn-style-pill">Accenture Modern Bento Style</span>
-          </div>
-          <div class="zn-pageno">P4 - 1 / 4</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：進金生能源服務（6692）以「自有團隊、園區工安、上櫃體質、3A維運」四大支柱保障 20 年履約</h2>
-        <div class="zn-subtitle">全台首家 IPO 上櫃光電 EPC（實收資本額 5.88 億元），提供從企業自建、合資電廠、綠電交易到儲能之全方位服務</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-parallel cols-4" style="min-height:290px">
-          <div class="zn-pillar-card">
-            <div class="zn-pillar-hdr">② 支柱 1：自有正式團隊</div>
-            <div class="zn-pillar-body">
-              <div class="zn-pillar-item"><div class="zn-pillar-num">1</div><div>涵蓋<strong>業務、設計、採購、專管、監工、環安衛、維運</strong>全編制自有團隊。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">2</div><div>關鍵工程節點自主把關，絕不外包轉手，確保施工品質與進度。</div></div>
-            </div>
-          </div>
-
-          <div class="zn-pillar-card">
-            <div class="zn-pillar-hdr">③ 支柱 2：工安標準嚴謹</div>
-            <div class="zn-pillar-body">
-              <div class="zn-pillar-item"><div class="zn-pillar-num">1</div><div>高達 <strong>50% 科學園區及工業區覆蓋率</strong>。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">2</div><div>工程管理、高空防墜與動火管制完全符合一線科技大廠及跨國企業工安標準。</div></div>
-            </div>
-          </div>
-
-          <div class="zn-pillar-card is-focus">
-            <div class="zn-pillar-hdr">★ ④ 支柱 3：上櫃體質穩健</div>
-            <div class="zn-pillar-body">
-              <div class="zn-pillar-item"><div class="zn-pillar-num">1</div><div>股票代號 <strong>6692（全台首家 IPO 上櫃光電 EPC）</strong>，實收資本額 <strong>5.88 億元</strong>。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">2</div><div>通過 <strong>ISO 9001 / 14001 / 45001</strong> 國際認證，財務透明，20年長期保固最可靠。</div></div>
-            </div>
-          </div>
-
-          <div class="zn-pillar-card">
-            <div class="zn-pillar-hdr">⑤ 支柱 4：頂級實績肯定</div>
-            <div class="zn-pillar-body">
-              <div class="zn-pillar-item"><div class="zn-pillar-num">1</div><div>全台累積逾 <strong>348 座光電案場（750 MW）</strong>。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">2</div><div>全台首家獲德國萊因 <strong>TÜV AAA 最高維運肯定</strong>，連獲 2020~2025 國家金質獎。</div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="zn-evidence-strip" style="justify-content:space-between">
-          <div style="font-size:.82rem; font-weight:800; color:var(--c-primary)">🌐 進金生全方位綠能生態系：</div>
-          <div style="font-size:.81rem; color:var(--zn-text-main)">
-            <strong>企業能源自建 (EPC)</strong> ｜ <strong>電廠投資模式 (與國泰合資建坤能源)</strong> ｜ <strong>綠電交易 (CPPA/T-REC)</strong> ｜ <strong>工商儲能 &amp; 家儲</strong> ｜ <strong>一級模組代理</strong> ｜ <strong>地熱發展 &amp; AIDC</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.23~P.25《進金生能源服務 (AES 6692) 企業優勢與能源生態系》</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>進能服是全台首家上櫃光電 EPC（6692，資本額 5.88 億），具備自有工程維運團隊與完整綠能生態系。</div>
-          <div><strong>② 補充說明：</strong>太陽能電廠是長達 20 年的資產，選擇上櫃公司才能確保第 10 年、第 15 年後保固與維運依然兌現。</div>
-          <div><strong>③ 下一頁轉場：</strong>下一頁檢視進能服在全台累積 750 MW、348 座案場的實績分佈。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P4-2: 版型 1 一對一論法 -->
-  <section class="slide" id="slide-p4-2" data-style="accenture">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 4：太陽能與儲能建置實績 (原簡報 P.26)</span>
-            <span class="zn-archetype-pill">版型 1：一對一論法 (One-to-One Highlight)</span>
-            <span class="zn-style-pill">Accenture Modern Bento Style</span>
-          </div>
-          <div class="zn-pageno">P4 - 2 / 4</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：進能服全台累積建置容量達 750 MW（348 座案場），涵蓋各大科學園區與上市櫃精密製造業</h2>
-        <div class="zn-subtitle">具備大型廠房高壓內外併、RC 高棚架植筋、無鑽孔防漏浪板及台電 AFC 調頻備轉／表後儲能全方位實績</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-one-to-one">
-          <div class="zn-chart-box" style="align-items:center; justify-content:center; padding:14px">
-            <div class="zn-chart-title" style="width:100%">② 進能服全台 750 MW / 348 座太陽能與儲能代表實績分佈圖（點擊圖片可全螢幕放大）</div>
-            <img src="assets/track_record_map.png" alt="進能服750MW實績圖" style="max-height:330px; width:100%; object-fit:contain; cursor:zoom-in" onclick="openLightbox(this.src)">
-          </div>
-
-          <div class="zn-takeaway-card">
-            <div>
-              <h3>② 核心實績指標與製造業經驗</h3>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px">
-                <div style="background:var(--c-accent-soft); border:1.5px solid var(--c-accent); padding:12px; border-radius:4px; text-align:center">
-                  <div style="font-size:1.65rem; font-weight:900; color:var(--c-primary)">750 MW</div>
-                  <div style="font-size:.75rem; font-weight:700; color:var(--zn-text-muted)">累積案場建置容量</div>
-                </div>
-                <div style="background:#fff; border:1px solid var(--zn-border); padding:12px; border-radius:4px; text-align:center">
-                  <div style="font-size:1.65rem; font-weight:900; color:var(--c-secondary)">348 座</div>
-                  <div style="font-size:.75rem; font-weight:700; color:var(--zn-text-muted)">太陽能發電系統座數</div>
-                </div>
-              </div>
-              <ul class="zn-takeaway-list">
-                <li><strong>高壓工廠零停工併網經驗：</strong>熟悉精密機械與製造業廠房受電室架構，配合廠方假日或歲修完成高壓內併切換，零影響產線運作。</li>
-                <li><strong>光儲充一體化能力：</strong>除太陽能外，深耕 AFC 調頻備轉、台電區域電網與工廠表後儲能，為鉅鋼新廠預留未來削峰填谷擴充彈性。</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.26《建置實績_太陽能光電与儲能經驗 (750 MW / 348 座)》</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>750 MW 與 348 座電廠的龐大實績，證明進能服對各種廠房屋頂結構與台電併網規範駕輕就熟。</div>
-          <div><strong>② 補充說明：</strong>可點擊左側實績圖放大展示進能服在中部工業區與全台知名企業的代表案例。</div>
-          <div><strong>③ 下一頁轉場：</strong>接著在 P4-3 深入看兩個最具代表性的標竿案例：南科 24MW 大型科技廠案與芳生螺絲 3.66MW 減碳案。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P4-3: 版型 2 並列論法 -->
-  <section class="slide" id="slide-p4-3" data-style="bcg">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 4：標竿實績雙案例實證 (原簡報 P.27~P.28)</span>
-            <span class="zn-archetype-pill">版型 2：並列論法 (Parallel Case Proof)</span>
-            <span class="zn-style-pill">BCG Forest Green Style</span>
-          </div>
-          <div class="zn-pageno">P4 - 3 / 4</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：南科 24MW 科技廠（年省 1.35 億）與芳生螺絲 3.66MW（年減碳 15~20%）雙實績，驗證高規交付能力</h2>
-        <div class="zn-subtitle">同時具備「科學園區嚴苛工安大容量統合能力」與「傳統金屬製造業高壓自發自用節費減碳實證」</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-parallel cols-2">
-          <div class="zn-pillar-card is-focus">
-            <div class="zn-pillar-hdr">★ ② 標竿案例 1：大型科技廠光電案（24 MW・南部科學園區）</div>
-            <div class="zn-pillar-body">
-              <img src="assets/case_24mw.png" alt="24MW大型光電案" style="height:155px; width:100%; object-fit:contain; background:#fff; border:1px solid var(--zn-border); border-radius:3px; cursor:zoom-in" onclick="openLightbox(this.src)">
-              <div class="zn-pillar-item"><div class="zn-pillar-num">1</div><div><strong>專案挑戰：</strong>多案場整合、24MW 超大容量、科技廠與南科管理局工安要求極度嚴謹，如期完工併聯。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">2</div><div><strong>量化效益：</strong>外購電力節省 <strong>&darr; 2,700 萬度/年</strong> ｜ 電費直接扣抵 <strong>&darr; $1.35 億元/年</strong> ｜ 碳排降低 <strong>&darr; 14,000 噸/年</strong>。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">3</div><div><strong>戰略價值：</strong>協助業主<strong>超前 2 年達標用電大戶建置義務</strong>，大幅提升國際綠色企業 ESG 形象。</div></div>
-            </div>
-          </div>
-
-          <div class="zn-pillar-card">
-            <div class="zn-pillar-hdr">③ 標竿案例 2：芳生螺絲自發自用案（3.66 MW・金屬加工標竿）</div>
-            <div class="zn-pillar-body">
-              <img src="assets/case_fangsheng.jpg" alt="芳生螺絲3.66MW案" style="height:155px; width:100%; object-fit:cover; background:#fff; border:1px solid var(--zn-border); border-radius:3px; cursor:zoom-in" onclick="openLightbox(this.src)">
-              <div class="zn-pillar-item"><div class="zn-pillar-num">1</div><div><strong>用電與發電匹配：</strong>2024 月平均用電 155 萬度，建置 3.66 MW 光電後<strong>月平均發電達 50 萬度（自用 8 成／餘電躉售 2 成）</strong>。</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">2</div><div><strong>業主蔡總經理實證推薦：</strong>「芳生 10 年減碳計畫中，增設自發自用太陽能板列為優先執行重點，<strong>光是太陽能板每年即可幫芳生減碳至少 15% 至 20%！</strong>」</div></div>
-              <div class="zn-pillar-item"><div class="zn-pillar-num">3</div><div><strong>對鉅鋼之啟示：</strong>同樣身為台灣頂尖製造業出口大廠，自發自用光電是抵禦電價上漲與歐美碳關稅的最強武器。</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.27《建置實績_大型光電案 (24MW)》＆ P.28《效益分析_芳生螺絲 3.66MW》</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>南科 24MW 證明我們的工安與專案管理達科技廠最高標準；芳生螺絲 3.66MW 則證明製造業自發自用的減碳與節費效益真實可期。</div>
-          <div><strong>② 補充說明：</strong>芳生螺絲二廠運轉後外購電直接下降近五成、年省 500 多萬電費，是最有說服力的同業實證。</div>
-          <div><strong>③ 下一頁轉場：</strong>最後一頁（P4-4），我們以「版型 4：連鎖論法」展示進能服的雲端專管與德國萊因 TÜV AAA 頂級維運體系。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P4-4: 版型 4 連鎖論法 -->
-  <section class="slide" id="slide-p4-4" data-style="mckinsey">
-    <div>
-      <div class="zn-header">
-        <div class="zn-meta-row">
-          <div class="zn-category-bar">
-            <span>PART 4：階段工程管理與 TÜV AAA 維運肯定 (原簡報 P.29~P.30)</span>
-            <span class="zn-archetype-pill">版型 4：連鎖論法 (Chain / Sequential Flow)</span>
-            <span class="zn-style-pill">McKinsey Deep Navy Style</span>
-          </div>
-          <div class="zn-pageno">P4 - 4 / 4</div>
-        </div>
-        <h2 class="zn-action-title">① 主張：透過雲端專管與德國萊因 TÜV AAA 最高等級維運體系，兌現「2天查檢、5天完修」之合約 SLA 保證</h2>
-        <div class="zn-subtitle">全台首家通過新版 TÜV Rheinland AAA 認證，以北中南綿密駐點守護鉅鋼機械 20 年長期發電資產</div>
-      </div>
-
-      <div class="zn-evidence">
-        <div class="arch-chain" style="min-height:245px">
-          <div class="zn-chain-axis">
-            ② 全生命週期數位化工程專管與 TÜV AAA 級敏捷維運服務鏈 ═══════════════════►
-          </div>
-          <div class="zn-chain-steps">
-            <div class="zn-chain-col">
-              <div class="zn-chevron">階段 1：申設/施工雲端專管 &gt;</div>
-              <div class="zn-chain-card">
-                <p><strong>【雲端專管平台即時追蹤】</strong></p>
-                <p>1. 台電與建管申請進度透明化</p>
-                <p>2. 施工工項日程安排與進度追蹤</p>
-                <p>3. 核准公文與技師簽證圖面雲端永久備存</p>
-              </div>
-            </div>
-            <div class="zn-chain-col">
-              <div class="zn-chevron">階段 2：24/7 發電監控告警 &gt;</div>
-              <div class="zn-chain-card">
-                <p><strong>【智能監控管理平台】</strong></p>
-                <p>1. 全天候監管案場狀況與發電數據</p>
-                <p>2. 發電日／週／月報表自動生成查詢</p>
-                <p>3. 組串電流異常與跳機自動即時告警</p>
-              </div>
-            </div>
-            <div class="zn-chain-col">
-              <div class="zn-chevron">階段 3：專責定期巡檢清洗 &gt;</div>
-              <div class="zn-chain-card">
-                <p><strong>【預防性維護與定檢】</strong></p>
-                <p>1. 專責工程師負責維護案場</p>
-                <p>2. 定期電氣巡檢與紅外線熱顯像掃描</p>
-                <p>3. 定期模組清水清洗，維持最高 PR 值</p>
-              </div>
-            </div>
-            <div class="zn-chain-col is-focus">
-              <div class="zn-chevron">★ 階段 4：TÜV AAA 極速完修</div>
-              <div class="zn-chain-card">
-                <p><strong>★【台灣最高 AAA 等級肯定】</strong></p>
-                <p>• 德國萊因 TÜV 獨立第三方最高認證</p>
-                <p>• 全台綿密維運據點（中部駐點直達西屯）</p>
-                <p>• 合約保證：<strong>2 工作天內現場查檢、5 工作天內案場修復！</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="zn-evidence-strip">
-          <img class="zn-thumb" src="assets/cloud_monitoring.png" alt="發電監控系統">
-          <img class="zn-thumb" src="assets/om_inspection.png" alt="維運設備巡檢">
-          <img class="zn-thumb" src="assets/tuv_aaa_cert.png" alt="TÜV AAA認證與據點">
-          <div style="font-size:.82rem; color:var(--zn-text-main); line-height:1.5">
-            <strong>德國萊因 TÜV Rheinland 認證與雙管理平台實景（點擊左側圖片可放大）：</strong><br>
-            德國萊因成立於 1872 年，為國際最權威獨立驗證機構；進能服以全台最高 AAA 等級標準，確保鉅鋼新廠光電案 20 年穩健高發電！
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="zn-footer">
-      <div class="zn-source">Source: 原簡報 P.29《工程管理_階段管理》＆ P.30《維運服務_AAA等級肯定》</div>
-      <button type="button" class="zn-notes-btn" onclick="toggleNotes(this)">🎙️ 展開顧問三段式講稿備忘錄</button>
-      <div class="zn-notes-drawer">
-        <div class="zn-notes-grid">
-          <div><strong>① 本頁結論：</strong>以德國萊因 TÜV AAA 台灣最高等級認證與「2天查檢、5天完修」的合約 SLA，為整場簡報畫下最安心的句點。</div>
-          <div><strong>② 補充說明：</strong>台中西屯區緊鄰進能服中部維運據點，備品調度與工程師到場速度最快。</div>
-          <div><strong>③ 下一頁轉場：</strong>可按快捷鍵切換回 <code>Part 3 - P.07</code> 董事長五題拍板核決單，請董事長現場裁示。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- ================= BOTTOM CONTROLS ================= -->
-<div class="deckbar" id="bottomBar">
-  <div class="progress"><div class="fill" id="pFill"></div></div>
-  <div class="hint">快捷鍵：<strong>&larr;</strong> / <strong>&rarr;</strong> 翻頁 ｜ <strong>Space</strong> 下一頁 ｜ <strong>Home</strong> 回封面 ｜ <strong>F</strong> 全螢幕 ｜ 點擊縮圖可放大</div>
-  <div class="ctrl">
-    <div class="counter" id="counter">P1 · 1 / 5</div>
-    <button type="button" id="btnPrev" aria-label="上一頁">&larr;</button>
-    <button type="button" id="btnNext" aria-label="下一頁">&rarr;</button>
-  </div>
-</div>
-
-<script>
-/* 展開/收合三段式講稿備忘錄 */
-function toggleNotes(btn){
-  var drawer = btn.nextElementSibling;
-  if(!drawer) return;
-  var open = drawer.classList.toggle('open');
-  btn.textContent = open ? '🔼 收合顧問三段式講稿備忘錄' : '🎙️ 展開顧問三段式講稿備忘錄';
-}
-
-/* 放大檢視圖片 */
-function openLightbox(src){
-  var lb = document.getElementById('lightbox');
-  var lbImg = document.getElementById('lightbox-img');
-  lbImg.src = src;
-  lb.classList.add('open');
-}
-
-(function(){
-  /* 綁定所有縮圖點擊放大 */
-  var lb = document.getElementById('lightbox');
-  document.querySelectorAll('.zn-thumb').forEach(function(img){
-    img.addEventListener('click', function(){ openLightbox(img.src); });
-  });
-  lb.addEventListener('click', function(){ lb.classList.remove('open'); });
-
-  /* 顧問風格即時切換器 (Hybrid / McKinsey / BCG / Accenture) */
-  document.querySelectorAll('.style-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var st = btn.getAttribute('data-set-style');
-      document.documentElement.setAttribute('data-global-style', st);
-      document.querySelectorAll('.style-btn').forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
-    });
-  });
-
-  /* 長表格自動折疊 (20年回購表) */
-  document.querySelectorAll('.zn-table-wrap').forEach(function(wrap){
-    var rows = Array.prototype.slice.call(wrap.querySelectorAll('tbody tr'));
-    if(rows.length <= 6) return;
-    rows.forEach(function(row, i){
-      /* 預設顯示第1、3、7、8、9、10、15、20年，其餘可展開 */
-      if([0, 2, 6, 7, 8, 9, 14, 19].indexOf(i) === -1) {
-        row.classList.add('table-extra');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鉅鋼機械・新廠光電方案 高階主管與董事長查核決策簡報 | Zero-Noise 顧問版</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+          },
+          colors: {
+            hybrid: {
+              primary: '#1B365D',
+              secondary: '#64748B',
+              accent: '#D97706',
+              bg: '#F8FAFC',
+              card: '#FFFFFF',
+              border: '#E2E8F0',
+            },
+            mckinsey: {
+              primary: '#051C2C',
+              secondary: '#005EB8',
+              accent: '#00A3E0',
+              bg: '#F4F7F9',
+              card: '#FFFFFF',
+              border: '#D0DFE8',
+            },
+            bcg: {
+              primary: '#004B23',
+              secondary: '#18794E',
+              accent: '#22C55E',
+              bg: '#F3F9F5',
+              card: '#FFFFFF',
+              border: '#CFE6D8',
+            },
+            accenture: {
+              primary: '#111827',
+              secondary: '#7C3AED',
+              accent: '#A100FF',
+              bg: '#F9FAFB',
+              card: '#FFFFFF',
+              border: '#E5E7EB',
+            }
+          }
+        }
       }
-    });
-    var button = document.createElement('button');
-    button.type = 'button';
-    button.style.cssText = 'display:block;width:100%;padding:7px 12px;border:0;border-top:1px solid #CBD5E1;background:#F8FAFC;color:#051C2C;font:800 .76rem inherit;cursor:pointer;text-align:center';
-    button.textContent = '⬇ 展開完整 1～20 年逐年回購明細表（目前精選顯示關鍵 8 個年度）';
-    button.addEventListener('click', function(){
-      var open = wrap.classList.toggle('expanded');
-      rows.forEach(function(row, i){
-        if([0, 2, 6, 7, 8, 9, 14, 19].indexOf(i) === -1) {
-          row.style.display = open ? 'table-row' : 'none';
+    }
+  </script>
+  <style>
+    /* Zero-Noise 16:9 Canvas ratio container */
+    .slide-aspect {
+      aspect-ratio: 16 / 9;
+      max-height: calc(100vh - 120px);
+    }
+    /* Theme CSS Variables */
+    :root {
+      --color-primary: #1B365D;
+      --color-secondary: #64748B;
+      --color-accent: #D97706;
+      --color-bg: #F8FAFC;
+      --color-card: #FFFFFF;
+      --color-border: #E2E8F0;
+    }
+    body[data-theme="mckinsey"] {
+      --color-primary: #051C2C;
+      --color-secondary: #005EB8;
+      --color-accent: #00A3E0;
+      --color-bg: #F4F7F9;
+      --color-card: #FFFFFF;
+      --color-border: #D0DFE8;
+    }
+    body[data-theme="bcg"] {
+      --color-primary: #004B23;
+      --color-secondary: #18794E;
+      --color-accent: #15803D;
+      --color-bg: #F3F9F5;
+      --color-card: #FFFFFF;
+      --color-border: #CFE6D8;
+    }
+    body[data-theme="accenture"] {
+      --color-primary: #111827;
+      --color-secondary: #6D28D9;
+      --color-accent: #7C3AED;
+      --color-bg: #F9FAFB;
+      --color-card: #FFFFFF;
+      --color-border: #E5E7EB;
+    }
+
+    .theme-primary-bg { background-color: var(--color-primary); }
+    .theme-primary-text { color: var(--color-primary); }
+    .theme-primary-border { border-color: var(--color-primary); }
+    .theme-secondary-bg { background-color: var(--color-secondary); }
+    .theme-secondary-text { color: var(--color-secondary); }
+    .theme-accent-bg { background-color: var(--color-accent); }
+    .theme-accent-text { color: var(--color-accent); }
+    .theme-accent-border { border-color: var(--color-accent); }
+    .theme-card-bg { background-color: var(--color-card); }
+    .theme-body-bg { background-color: var(--color-bg); }
+    .theme-border { border-color: var(--color-border); }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #F1F5F9; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+  </style>
+</head>
+<body class="h-full flex flex-col font-sans theme-body-bg text-slate-800 transition-colors duration-200" data-theme="hybrid">
+
+  <!-- TOP TOOLBAR -->
+  <header class="bg-white border-b theme-border px-4 py-2 flex items-center justify-between shadow-sm z-30 shrink-0">
+    <div class="flex items-center space-x-3">
+      <div class="flex items-center space-x-2">
+        <span class="w-3 h-3 rounded-full theme-accent-bg"></span>
+        <span class="font-black text-sm tracking-wider uppercase theme-primary-text">進金生能源服務 6692</span>
+      </div>
+      <span class="text-slate-300">|</span>
+      <h1 class="text-xs sm:text-sm font-bold text-slate-700 truncate max-w-[280px] sm:max-w-md lg:max-w-xl">
+        鉅鋼機械新廠光電方案・高階主管與董事長查核決策簡報
+      </h1>
+      <span class="hidden md:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+        2026/10 最新版
+      </span>
+    </div>
+
+    <!-- Right Controls -->
+    <div class="flex items-center space-x-2">
+      <!-- Consulting Style Selector -->
+      <div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-xs">
+        <button onclick="setTheme('hybrid')" id="btn-theme-hybrid" class="px-2 py-1 rounded font-semibold transition-all bg-white text-slate-900 shadow-xs">
+          無雜訊經典
+        </button>
+        <button onclick="setTheme('mckinsey')" id="btn-theme-mckinsey" class="px-2 py-1 rounded font-medium transition-all text-slate-600 hover:text-slate-900">
+          麥肯錫藍
+        </button>
+        <button onclick="setTheme('bcg')" id="btn-theme-bcg" class="px-2 py-1 rounded font-medium transition-all text-slate-600 hover:text-slate-900">
+          BCG 綠
+        </button>
+        <button onclick="setTheme('accenture')" id="btn-theme-accenture" class="px-2 py-1 rounded font-medium transition-all text-slate-600 hover:text-slate-900">
+          埃森哲紫
+        </button>
+      </div>
+
+      <!-- PPTX Download Link -->
+      <a href="assets/鉅鋼機械_光電方案簡報_MEDDIC顧問版.pptx" download class="hidden sm:inline-flex items-center space-x-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-white hover:bg-slate-700 transition">
+        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+        <span>下載 PPTX</span>
+      </a>
+
+      <!-- Fullscreen Toggle -->
+      <button onclick="toggleFullScreen()" class="p-1.5 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" title="全螢幕模式 (快速鍵 F)">
+        <i data-lucide="maximize" class="w-4 h-4"></i>
+      </button>
+
+      <!-- TOC Drawer Toggle -->
+      <button onclick="toggleToc()" class="p-1.5 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" title="展開頁面目錄">
+        <i data-lucide="list" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN PRESENTATION AREA -->
+  <main class="flex-1 flex flex-col items-center justify-center p-2 sm:p-4 overflow-hidden relative">
+    
+    <!-- SLIDE VIEWPORT (16:9 Canvas) -->
+    <div id="slide-container" class="w-full max-w-6xl slide-aspect bg-white rounded-xl shadow-xl border theme-border flex flex-col overflow-hidden relative select-text transition-all duration-300">
+      
+      <!-- Slide Header (Top-Down Action Title & Kicker) -->
+      <div id="slide-header" class="px-6 pt-4 pb-2 border-b theme-border flex items-start justify-between shrink-0">
+        <div class="flex-1 pr-4">
+          <div class="flex items-center space-x-2 text-[11px] font-bold uppercase tracking-wider theme-secondary-text mb-1">
+            <span id="slide-category">ZERO-NOISE CONSULTING BRIEFING</span>
+            <span>•</span>
+            <span id="slide-page-indicator">第 1 頁 / 共 12 頁</span>
+          </div>
+          <h2 id="slide-action-title" class="text-base sm:text-lg font-bold text-slate-900 leading-snug line-clamp-2">
+            行動結論標題載入中...
+          </h2>
+          <p id="slide-subtitle" class="text-xs text-slate-500 mt-0.5 line-clamp-1">
+            副標題說明
+          </p>
+        </div>
+        <div id="slide-badge-container" class="shrink-0 flex flex-col items-end">
+          <span id="slide-archetype-badge" class="px-2.5 py-1 rounded text-[11px] font-bold tracking-wide border theme-primary-text bg-slate-50 theme-primary-border">
+            版型 3：結合論法
+          </span>
+        </div>
+      </div>
+
+      <!-- Slide Main Body (Archetype Content) -->
+      <div id="slide-body" class="flex-1 p-5 sm:p-6 overflow-y-auto flex flex-col justify-center">
+        <!-- Dynamic Archetype Template injected here -->
+      </div>
+
+      <!-- Slide Footer (Source & Speaker Notes Toggle) -->
+      <div class="px-6 py-2 border-t theme-border bg-slate-50 flex items-center justify-between text-[11px] text-slate-500 shrink-0">
+        <div class="truncate max-w-[70%]">
+          <span class="font-bold text-slate-600">Source:</span>
+          <span id="slide-footer-source">進金生能源服務 2026/09/30 最新案場規劃資料</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <button onclick="openCashflowModal()" id="btn-view-cashflow" class="hidden text-xs font-semibold theme-accent-text hover:underline flex items-center space-x-1">
+            <i data-lucide="table" class="w-3.5 h-3.5"></i>
+            <span>查看 20 年逐年現金流量表</span>
+          </button>
+          <button onclick="toggleNotes()" class="text-xs font-semibold theme-secondary-text hover:text-slate-900 flex items-center space-x-1">
+            <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+            <span id="notes-btn-label">顧問講稿備忘</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Expandable Speaker Notes Drawer -->
+      <div id="speaker-notes-panel" class="hidden absolute bottom-9 left-0 right-0 max-h-56 bg-white/95 backdrop-blur border-t theme-border p-4 shadow-2xl overflow-y-auto text-xs z-20 transition-all">
+        <div class="flex items-center justify-between border-b pb-2 mb-2">
+          <div class="flex items-center space-x-2 font-bold theme-primary-text">
+            <i data-lucide="user-check" class="w-4 h-4"></i>
+            <span>三段式麥肯錫顧問講稿備忘（供業務引導董事長拍板）</span>
+          </div>
+          <button onclick="toggleNotes()" class="text-slate-400 hover:text-slate-700">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="bg-slate-50 p-2.5 rounded border border-slate-200">
+            <div class="font-bold text-slate-700 mb-1 flex items-center space-x-1">
+              <span class="w-2 h-2 rounded-full theme-accent-bg"></span>
+              <span>1. 開場破題 (30秒)</span>
+            </div>
+            <p id="notes-conclusion" class="text-slate-600 leading-relaxed"></p>
+          </div>
+          <div class="bg-slate-50 p-2.5 rounded border border-slate-200">
+            <div class="font-bold text-slate-700 mb-1 flex items-center space-x-1">
+              <span class="w-2 h-2 rounded-full theme-secondary-bg"></span>
+              <span>2. 核心論證 (1.5分鐘)</span>
+            </div>
+            <p id="notes-elaboration" class="text-slate-600 leading-relaxed"></p>
+          </div>
+          <div class="bg-slate-50 p-2.5 rounded border border-slate-200">
+            <div class="font-bold text-slate-700 mb-1 flex items-center space-x-1">
+              <span class="w-2 h-2 rounded-full theme-primary-bg"></span>
+              <span>3. 決策收斂 (30秒)</span>
+            </div>
+            <p id="notes-transition" class="text-slate-600 leading-relaxed"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM NAVIGATION BAR -->
+    <div class="w-full max-w-6xl mt-3 flex items-center justify-between px-2 text-xs">
+      <div class="flex items-center space-x-1 sm:space-x-2">
+        <button onclick="prevSlide()" class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 font-semibold text-slate-700 hover:bg-slate-50 flex items-center space-x-1 shadow-2xs">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">上一頁</span>
+        </button>
+        <button onclick="nextSlide()" class="px-4 py-1.5 rounded-lg theme-primary-bg text-white font-semibold hover:opacity-90 flex items-center space-x-1 shadow-2xs">
+          <span>下一頁</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
+        <span class="text-slate-400 text-[11px] ml-2 hidden lg:inline">
+          (支援鍵盤 ← / → 鍵翻頁，或空白鍵翻頁)
+        </span>
+      </div>
+
+      <!-- Quick Page Dots -->
+      <div id="pagination-dots" class="flex items-center space-x-1.5 overflow-x-auto max-w-[200px] sm:max-w-none py-1">
+        <!-- Injected dots -->
+      </div>
+
+      <div class="text-slate-500 font-medium text-right text-[11px]">
+        西屯廠區屋頂總容量：<span class="font-bold theme-primary-text">774.7 kW / 612.3 kW</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- TOC DRAWER MODAL -->
+  <div id="toc-modal" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-xs z-50 flex justify-end">
+    <div class="w-full max-w-md bg-white h-full shadow-2xl flex flex-col p-5 overflow-y-auto">
+      <div class="flex items-center justify-between border-b pb-3 mb-4">
+        <div class="flex items-center space-x-2">
+          <i data-lucide="layers" class="w-5 h-5 theme-primary-text"></i>
+          <h3 class="font-bold text-slate-900 text-base">全簡報 12 頁無雜訊導航目錄</h3>
+        </div>
+        <button onclick="toggleToc()" class="p-1 rounded text-slate-400 hover:text-slate-700">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="toc-list" class="space-y-2 flex-1">
+        <!-- Injected TOC items -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 20-YEAR CASH FLOW MODAL -->
+  <div id="cashflow-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6">
+    <div class="w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col max-h-[90vh] overflow-hidden animate-in fade-in zoom-in duration-200">
+      <div class="px-6 py-4 border-b theme-border flex items-center justify-between bg-slate-50">
+        <div>
+          <div class="text-xs font-bold theme-primary-text tracking-wide uppercase">2026/09/30 精算模型完整勾稽</div>
+          <h3 class="text-base font-bold text-slate-900">方案二自建（612.32 kW）20 年逐年動態現金流量表</h3>
+        </div>
+        <button onclick="closeCashflowModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1 text-xs">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="text-slate-500 font-medium">期初 Capex (Y0)</div>
+            <div class="text-base font-black text-slate-900 mt-1">-$29,376,702</div>
+            <div class="text-[10px] text-slate-400">含工程款 2,894萬＋台電規費</div>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="text-slate-500 font-medium">20年維運保險回收</div>
+            <div class="text-base font-black text-rose-600 mt-1">-$9,282,316</div>
+            <div class="text-[10px] text-slate-400">含 Y11 換機準備金 91.8萬</div>
+          </div>
+          <div class="p-3 bg-amber-50 rounded-xl border border-amber-200">
+            <div class="text-amber-800 font-medium">純節電 20年淨現金流</div>
+            <div class="text-base font-black text-amber-700 mt-1">+$45,504,512</div>
+            <div class="text-[10px] text-amber-600 font-semibold">回收期 7.20 年 ｜ IRR 11.85%</div>
+          </div>
+          <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200">
+            <div class="text-emerald-800 font-medium">節電＋綠憑 淨現金流</div>
+            <div class="text-base font-black text-emerald-700 mt-1">+$89,037,368</div>
+            <div class="text-[10px] text-emerald-600 font-semibold">回收期 4.53 年 ｜ IRR 20.48%</div>
+          </div>
+        </div>
+
+        <!-- Scrollable Table -->
+        <div class="overflow-x-auto border border-slate-200 rounded-xl shadow-xs">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-slate-100 text-slate-700 font-bold text-[11px] sticky top-0">
+              <tr>
+                <th class="p-2.5 border-b border-slate-200 text-center">年期</th>
+                <th class="p-2.5 border-b border-slate-200 text-right">發電度數 (度)</th>
+                <th class="p-2.5 border-b border-slate-200 text-right">節電效益 ($5.8)</th>
+                <th class="p-2.5 border-b border-slate-200 text-right">維運費用 (O&M)</th>
+                <th class="p-2.5 border-b border-slate-200 text-right">保險費用</th>
+                <th class="p-2.5 border-b border-slate-200 text-right">模組回收費</th>
+                <th class="p-2.5 border-b border-slate-200 text-right font-black text-slate-900">當期淨現金流</th>
+                <th class="p-2.5 border-b border-slate-200 text-right font-black theme-primary-text">累計淨現金流</th>
+              </tr>
+            </thead>
+            <tbody id="cashflow-table-body" class="divide-y divide-slate-100 text-[11px]">
+              <!-- Dynamically populated via JS -->
+            </tbody>
+            <tfoot class="bg-slate-100 font-black text-[11px] text-slate-900">
+              <tr>
+                <td class="p-2.5 text-center">小計</td>
+                <td class="p-2.5 text-right font-bold text-slate-800">14,510,953</td>
+                <td class="p-2.5 text-right text-emerald-700">$84,163,530</td>
+                <td class="p-2.5 text-right text-rose-600">-$6,794,465</td>
+                <td class="p-2.5 text-right text-rose-600">-$1,875,531</td>
+                <td class="p-2.5 text-right text-rose-600">-$612,320</td>
+                <td class="p-2.5 text-right text-slate-900 font-black">+$74,881,214</td>
+                <td class="p-2.5 text-right theme-accent-text font-black text-sm">+$45,504,512</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="mt-3 text-[10px] text-slate-400">
+          * 註：Y11 維運費用包含逆變器汰換準備金 $918,480 + 基礎運維 $391,010 = $1,309,490。折現率 3.00% 算出 NPV $26,938,291；以製造業標準 WACC 5.00% 算出 NPV 為 $19,421,000。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT DATA & APP LOGIC -->
+  <script>
+    const slidesData = [{"type": "cover", "style": "mckinsey", "category": "ZERO-NOISE CONSULTING BRIEFING  |  MEDDIC Sales Strategy × Executive Audit", "title": "台中西屯・鉅鋼機械新廠光電方案\n高階主管與董事長查核決策簡報（2026/10 最新版）", "core_claim": "依據董事長與高階主管視角完成全生命週期數據勾稽：自建（612.3kW）總支出 3,866 萬創造淨現金流 +4,550萬~8,904萬（IRR 11.85%~20.48%）；出租（774.7kW）0出資享 1,836 萬租金或 367 萬度綠電", "meta": "呈閱：鉅鋼機械 董事長暨高階決策團隊 ｜ 規劃團隊：進金生能源服務 (6692) ｜ 顧問規範：森秀明 8 種無雜訊邏輯版型 × 麥肯錫/BCG/Accenture 視覺規範", "notes_conclusion": "本簡報依據 2026/09/30 最新案場規劃、董事長投資偏好與高階主管查核要點，完成數據勾稽與合約保障策略。", "notes_elaboration": "全篇以無雜訊 8 大版型消弭信息雜訊，自建總成本與 20 年現金流完全吻合，並將立柱防水與空間使用權納入談判閉環。", "notes_transition": "首先進入 Part 1，檢視業務第一線彙整之客戶五大核心想法與 MEDDIC 對策。"}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "PART 1：客戶想法與 MEDDIC 策略 (1/2)", "layout_label": "版型 5：麥肯錫論法", "conclusion_title": "① 主張：將窗口反饋之五大核心想法對映 MEDDIC 框架，全面收斂為直通董事長拍板的贏單對策", "subtitle": "針對直面高層對話、D棟退縮2米免欄杆、出租中途回購、C棟露台勸退及進能服實績建立完整商業邏輯", "stages": ["1. 高層對話(自建/出租)", "2. D棟退縮2米浪板", "3. 方案一中途回購", "4. C棟露台17kW勸退"], "rows": [{"dimension": "③ 要素 1：\n【客戶關鍵想法】", "cells": ["窗口表示董事長自建與出租均在考慮，請進金生直接與高層決策者深度對話", "設計規劃無外圍欄杆、邊緣自女兒牆退縮 2 米之 D 棟浪板方案，顧及立面美觀與防墜", "客戶考量出租至一半若有綠電需求欲行回購，需明確之計價機制與時程規範", "C 棟露台因合法容積限制僅能施作 17.6 kW，光雜照費即高達 170 萬，經濟效益不成立"]}, {"dimension": "③ 要素 2：\n【MEDDIC 專業對策】", "cells": ["【E 經濟決策者】提供同基準 DCF 財務模型，並可搭配銀行 8 成綠能專案融資（自備僅約 588 萬）", "【D 決策標準】退縮 2 米利用女兒牆防墜免加欄杆，通道占比 29.03% 完美符合免雜法規", "【D 決策標準】明訂首年 1.3 倍、逐年遞減 5% 回購公式，並揭露外併改內併工程要件", "【I 痛點立信】主動建議董事長剃除雞肋露台、現省 170 萬規費，樹立不灌水的專業顧問誠信"]}], "footer": "Source: 2026/09/30 業務回報與 20260930.pptx 更新 ｜ 第 5 點：進金生與建坤能源實績置於 Part 4 作為決策信任保障", "notes_conclusion": "透過 MEDDIC 架構梳理，客戶提出的 5 點想法均已轉化為我方對接董事長的決策抓手。", "notes_elaboration": "主動勸退 C 棟露台展示客觀專業，而 D 棟退縮 2 米設計兼顧外觀、工安與免雜法規，有效化解廠長疑慮。", "notes_transition": "接著深入檢視 D 棟退縮 2 米方案之立面防墜與 C 棟露台財務精算。"}, {"type": "opposition", "style": "bcg", "category": "PART 1：客戶想法與 MEDDIC 策略 (2/2)", "layout_label": "版型 6：對立論法", "conclusion_title": "① 主張：D棟退縮2米兼顧外觀美感與合規免雜；C棟露台因170萬雜項執照費建議果斷剔除", "subtitle": "針對 D 棟「退縮 2 米免欄杆浪板」與 C 棟「露台 17.6 kW 雜照區」進行深度技術與財務對比", "side_a_title": "② 焦點 A：D 棟退縮 2 米浪板工藝（★推薦實施）", "side_b_title": "② 焦點 B：C 棟露台 17.6 kW 高棚架（★強烈建議不作）", "dimensions": [{"name": "工安防墜與建築外觀", "side_a": "自女兒牆向內退縮 2 米留設工安緩衝，直接利用女兒牆防墜，新廠立面完全不需外加鐵欄杆", "side_b": "露台為平台結構，需辦理建築雜項執照審查，若設高棚架對周邊採光與視覺壓迫顯著"}, {"name": "法規依據與面積檢討", "side_a": "受限 30% 維護走道限制，實測通道占比 29.03%（600.3/2067.9m²），完全合規免雜照標準", "side_b": "經向台中建管處檢討，合法容積僅剩 32 坪，依法嚴格限縮最高僅能鋪設 17.6 kW"}, {"name": "投資成本與經濟效益", "side_a": "自建單價 $42,000/kW＋浪板 $7,000/kW，雙層隔熱為廠房頂樓降溫 3~5°C，創造 4,550 萬淨利", "side_b": "雜照申請費高達 $1,700,000＋工程款 $1,330,000 = $303萬，20年總收益僅 367 萬，淨值嚴重負數"}, {"name": "結構立柱與防水保障", "side_a": "★ 方案二加浪板需新增 54 根黑色立柱加強抗風，承諾由結構技師簽證並提供 10 年防水工程保固", "side_b": "面積狹小且施工動線受限，單位建置成本高達 $17.2萬/kW，屬於典型高成本低回報之負資產"}], "footer": "Source: 鉅鋼機械 20260930.pptx Slide 9, 17, 20 數據與進能服工程部法規試算", "notes_conclusion": "D 棟退縮 2 米方案在工程與外觀上具高度可行性；C 棟露台建議董事長於會議開場即決議剔除。", "notes_elaboration": "退縮 2 米使浪板走道占比壓在 29.03%，完美落在免雜照的 30% 法規紅線內；54 根立柱以 10 年防水保固消除疑慮。", "notes_transition": "進入 Part 2，盤點全廠施作範圍與雙軌方案之技術規格。"}, {"type": "parallel", "style": "mckinsey", "category": "PART 2：技術規格與雙軌方案盤點 (1/4)", "layout_label": "版型 2：並列論法", "conclusion_title": "① 主張：施作範圍鎖定 D 棟主屋頂與 C 棟兩處屋突，依防雨浪板需求形成 774.7kW 與 612.3kW 雙軌配置", "subtitle": "C 棟屋突兩處（151.745 kW）南向單斜矮棚架兩方案完全共用；D 棟則受浪板與 30% 法規影響容量", "columns": [{"title": "② 區域 1：D 棟主屋頂", "points": ["③ 建物構造：RC 結構平屋頂，棚架低點淨高 3.4~3.8 米，山型東西向陣列", "③ 方案一 (無浪板)：容量 623.000 kW，不受 30% 走道限制，新增 40 根黑色立柱", "③ 方案二 (加浪板)：容量 460.575 kW，退縮 2 米且受 30% 限制，新增 54 根黑色立柱加強抗風", "③ 設備配置：低壓逆變器置於戶外女兒牆側，高壓盤體集中於專屬光電機房"]}, {"title": "② 區域 2：C 棟屋突二處 (C1 + C2)", "points": ["③ 區域 C1 (主屋突)：容量 94.785 kW（採南向單斜矮棚架設計）", "③ 區域 C2 (次屋突)：容量 56.960 kW（採南向單斜矮棚架設計）", "③ 雙方案通用：兩處合計 151.745 kW，結構單純、免浪板、無爭議，直接鋪設", "③ 兩案總容量：方案一合計 774.745 kW；方案二合計 612.320 kW"]}, {"title": "② 核心設備選型規範", "points": ["③ 光電模組：CSI 445W 泰國製雙玻模組（效率 22.3%，符合 115/3/11 經濟部新規）", "③ 逆變器首選：亞力電機 110/136kW（國產資安防護、12組MPPT實時監測、連續輸出不降載）", "③ 替代備選：華為 SUN2000-100KTL（海外一線品牌，若無資安敏感亦可選用）", "③ 施工工期：無浪板案約 7~8 個月；加浪板自建案約 9~10 個月（含台電內併併網）"]}], "footer": "Source: 20260930.pptx Slide 2, 3, 5, 6, 9, 12, 14 工程圖面與設備清冊", "notes_conclusion": "D 棟加浪板使容量由 623kW 降至 460.6kW，但換來了屋頂防雨隔熱與高空間利用率。", "notes_elaboration": "C 棟屋突 151.7kW 經濟效益明確，雙方案均完整保留；主設備建議鎖定符合最新法規的 CSI 模組與台製亞力逆變器。", "notes_transition": "接下來進行最關鍵的方案一出租 vs 方案二自建全生命週期財務對決。"}, {"type": "comparison", "style": "mckinsey", "category": "PART 2：雙軌方案財務模型對決 (2/4)", "layout_label": "版型 7：比較論法", "conclusion_title": "① 主張：方案一享零出資穩健收租；方案二以 2,938 萬投資創造 4,550 萬至 8,904 萬淨現金流（IRR 最高達 20.48%）", "subtitle": "經查核 20260930 Slide 10 精算模型，已扣除 20 年維運、保險、換機與回收費 928 萬，數據完全勾稽", "dimensions": [{"name": "設置容量與 20年總發電量", "col_a": "774.745 kW（D棟 623kW＋C棟 151.7kW）\n20年預估發電：18,360,153 度", "col_b": "612.320 kW（D棟 460.6kW＋C棟 151.7kW）\n20年預估發電：14,510,953 度"}, {"name": "鉅鋼出資與總生命週期支出", "col_a": "鉅鋼 0 出資\n由建坤能源全額承擔工程、規費與 20 年維運", "col_b": "期初 Capex：$29,376,702（工程款 2,894萬＋規費）\n20年維運保險回收：$9,282,316 ➔ 總支出 $38,659,018"}, {"name": "20年總效益 (毛額)", "col_a": "【二選一】\n• 租金回饋：$18,360,153（以綠電$5/度計）\n• 綠電回饋：3,672,031 度（約佔 20% 發電）", "col_b": "• 純節電 ($5.8/度)：$84,163,530\n• 節電＋憑證 ($8.8/度)：$127,696,386\n（備註：未計憑證則以純節電保守衡量）"}, {"name": "20年累計淨現金流 (扣除總支出)", "col_a": "淨收益：+$18,360,153（純現金淨流入）\n★ 折現淨現值 NPV(5%) = +$11,587,000", "col_b": "• 純節電淨利：+$45,504,512（淨現值 NPV 5% = +$1,942萬）\n• 含憑證淨利：+$89,037,368（淨現值 NPV 5% = +$4,690萬）"}, {"name": "投資回收期與內部報酬率 (IRR)", "col_a": "無回收期問題（首年即享有正現金流）\n無資金沉沒風險", "col_b": "• 純節電 ($5.8)：回收期 7.20 年 ｜ IRR = 11.85%\n• 含憑證 ($8.8)：回收期 4.53 年 ｜ IRR = 20.48%"}, {"name": "外加權利與合約年限", "col_a": "• 享有本案場綠電優先回購權\n• 20年租約由資方維運，鉅鋼可依殘值中途回購", "col_b": "• 100% 綠電與憑證自主運用\n• 5年原廠保固維運，第6年起每5年評估維運續約"}], "footer": "Source: 20260930.pptx Slide 4, 10 財務分析模型，折現率採用製造業標準 WACC = 5.0% 與內部 3.0% 對照", "notes_conclusion": "方案二自建即便在不計憑證的極端保守情境下，IRR 仍達 11.85%，遠高於一般定存與債券收益。", "notes_elaboration": "期初 2,938 萬支出可創造 4,550 萬純節電淨利；若搭配 RE100 綠憑價值，淨利更飆升至 8,904 萬，4.53 年即可回本。", "notes_transition": "下一頁展開 Slide 10 的 20 年動態逐年現金流量表，供 CFO 與董事長逐年查核。"}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "PART 2：方案二自建 20 年逐年現金流與敏感度 (3/4)", "layout_label": "版型 5：麥肯錫論法", "conclusion_title": "① 主張：方案二現金流在第 7.2 年正式回本轉正，20 年累計淨現金流達 4,550 萬至 8,904 萬", "subtitle": "完整揭露 Y0~Y20 逐年收益、維運保險、換機儲備與回收費，數據與 Slide 10 精算表 100% 吻合", "stages": ["建置期 (Y0)", "保固期 (Y1~Y5)", "回本轉正期 (Y6~Y10)", "換機與成熟期 (Y11~Y20)"], "rows": [{"dimension": "③ 現金流動態\n【純節電 $5.8/度】", "cells": ["• Capex 支出：-$29,376,702\n• 台電規費與工程款一次付清\n• 累計淨額：-$29,376,702", "• 年發電收益：約 +$440萬~$454萬\n• 保固期 O&M：$0（免維運費）\n• 扣保險回收後累計：-$8,457,334", "• Y6 起 O&M：-$362,959/年\n• ★ Y7 底累計只剩 -$75.7萬\n• ★ Y8 正式轉正：+$3,054,479（7.2年回本）", "• Y11 提列逆變器換機：-$918,480\n• Y11~Y20 持續淨流入 +$350萬/年\n• ★ 20年累計淨現金流：+$45,504,512"]}, {"dimension": "③ 電價敏感度分析\n【IRR 與回收期】", "cells": ["【極端保守：日間電價 $5.22 (-10%)】\n• 靜態回收期：7.9 年\n• 專案 IRR：9.82%\n• 20年淨現金流：+$3,708 萬元", "【基準情境：目前電價 $5.80】\n• 靜態回收期：7.2 年\n• 專案 IRR：11.85%\n• 20年淨現金流：+$4,550 萬元", "【電價上漲情境：電價 $6.38 (+10%)】\n• 靜態回收期：6.5 年\n• 專案 IRR：13.88%\n• 20年淨現金流：+$5,392 萬元", "【滿血情境：節電＋綠憑 $8.80】\n• ★ 靜態回收期：4.53 年\n• ★ 專案 IRR：20.48%\n• ★ 20年累計淨現金流：+$8,904 萬元"]}], "footer": "Source: 20260930.pptx Slide 10 Excel 精算表模型 (未稅)，每年發電衰減率以 0.8% 嚴格計算", "notes_conclusion": "現金流量表證實，自建方案第 8 年起每年穩健淨流入 350 萬以上，即使電價下跌 10%，IRR 仍逼近 10%。", "notes_elaboration": "第 11 年已預先提列 91.8 萬逆變器汰換費用，財務模型完全無隱藏費用，禁得起董事會最嚴格查核。", "notes_transition": "接著分析方案一的中途回購機制，剖析買回價格與外併改內併的工程限制。"}, {"type": "chain", "style": "mckinsey", "category": "PART 2：方案一出租中途回購評估 (4/4)", "layout_label": "版型 4：連鎖論法", "conclusion_title": "① 主張：方案一具中途回購彈性，惟首年溢價高達 42% 且外併改內併程序繁瑣，自建仍具絕對財務優勢", "subtitle": "依國泰建坤「首年工程價金 1.3 倍、逐年遞減 5%」公式，剖析各年回購門檻與隱形成本", "steps": [{"number": "01", "title": "回購價格公式", "desc": "首年回購單價為 $59,670/kW（總價 4,623萬），比自建 $42,000 高出 42%，之後按 20 年逐年遞減 5%（每年減少約 $2,984/kW）。"}, {"number": "02", "title": "回購甜蜜點分析", "desc": "第 5 年回購價 3,698 萬，第 10 年降至 2,543 萬；若於第 8~10 年回購，剩餘 10 年自用節電效益可達 4,800 萬以上，具備回購經濟價值。"}, {"number": "03", "title": "外併改內併工程限制", "desc": "方案一為高壓外併，購回改自發自用須終止躉售契約、廢除臨路 MOF 盤並重新申請高壓內併，衍生約 150~200 萬工程改裝與停電切換費用。"}, {"number": "04", "title": "高層決策建議", "desc": "若鉅鋼 3~5 年內有綠電剛需，強烈建議「直選方案二自建」，避免中途被加價 1.3 倍回購並承擔昂貴的二次改管線工程。"}], "footer": "Source: 20260930.pptx Slide 8 回購試算表與進能服高壓併聯工程規範", "notes_conclusion": "中途回購是一張防禦性安全牌，但首年溢價 42% 與二次改裝成本偏高。", "notes_elaboration": "如果未來確定需要綠電自用，一開始就選擇高壓內併自建，能省下近 1,700 萬的溢價與改建折騰。", "notes_transition": "進入 Part 3，正面答辯資深光伏顧問提出的五大技術疑問。"}, {"type": "bcg_growth", "style": "bcg", "category": "PART 3：資深光伏顧問 5 大疑問深度答辯 (1/2)", "layout_label": "版型 8：BCG 論法", "conclusion_title": "① 主張：針對比較基準、日照數據與回購可行性三大質疑，我方已完成同口徑驗算與合約保障閉環", "subtitle": "針對顧問提出的 Q1 (比較基準不一致)、Q2 (發電量偏樂觀) 與 Q3 (回購可行性) 逐項專業對應", "cards": [{"tag": "QA 01", "title": "質疑 1：方案比較基準不一致", "content": "• 顧問質疑：方案一算 5.8 元，方案二卻算 8.8 元；未扣除第 6 年後維運重置成本。\n• ★ 查核落實：在 20260930 版中，方案一綠電僅標度數（367萬度），方案二純節電以 $5.8 精算，且 Slide 10 扣除 20 年維運保險換機 928 萬，數據完全嚴謹一致！"}, {"tag": "QA 02", "title": "質疑 2：發電量 3.5 小時無佐證", "content": "• 顧問質疑：東西向山型陣列在台中 3.5 小時偏樂觀，表內每年衰減 0.8% 與規格書不一致。\n• ★ 查核落實：3.5 小時係依據氣象局台中文心站 10 年實測日照量；簡報採 0.8% 衰減係採超保守估算（模組規格實為 <0.4%）。我方合約願提供「首年保證發電量 85%」差額補償！"}, {"tag": "QA 03", "title": "質疑 3：回購機制不利且難度高", "content": "• 顧問質疑：首年 1.3 倍回購單價過高，且高壓外併改內併申請時程與費用未交代。\n• ★ 查核落實：Slide 8 已將節電與憑證拆開呈現；合約將明訂「回購由我方協助向台電辦理外改內變更」，改裝工期約 3~4 個月，預算約 150 萬已於簡報備忘錄揭露。"}], "footer": "Source: 資深光伏顧問審查意見 × 進能服工程部與財務部聯合答辯報告", "notes_conclusion": "三大財務與發電質疑均已透過 20260930 精算表獲得完美化解，立足點完全站得住腳。", "notes_elaboration": "保守的 0.8% 衰減率為專案留下了充足的安全邊際，而合約保證 85% 發電量更徹底鎖定了發電風險。", "notes_transition": "接著檢視 Q4 法規免雜照與 Q5 屋頂空間權益條款。"}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "PART 3：資深光伏顧問 5 大疑問深度答辯 (2/2)", "layout_label": "版型 5：麥肯錫論法", "conclusion_title": "① 主張：D棟浪板以 29.03% 通道占比合規免雜照；54 根立柱承諾結構技師簽證與 10 年防水工程保固", "subtitle": "針對顧問提出的 Q4 (D棟容量差異與立柱防水) 與 Q5 (租金分潤與棚架空間權益) 提出具體履約方案", "stages": ["Q4-1: 30%維護走道法規", "Q4-2: 54根立柱與防水", "Q5-1: 租金基準與保底", "Q5-2: 棚架空間使用權"], "rows": [{"dimension": "③ 顧問嚴格質疑", "cells": ["方案二加浪板是否符合免雜照？兩案 162kW 差額依據為何？", "方案二新增 54 根黑色立柱植筋，屋頂打孔漏水責任歸誰？", "20% 售電收入以每度 5 元估算，若台電收購價波動是否有保底？", "Slide 6 載明「棚架用途歸資方所有」，限制業主自有屋頂使用權！"]}, {"dimension": "③ 我方權威答辯", "cells": ["★ 經精算浪板面積 2,668m²，走道占 29.03% <= 30%，完全符合免雜執照標準！", "★ 方案二 54 根立柱由結構技師簽證，並由進能服提供 10 年防水工程保固與責任險！", "★ 方案一提供「保底年發電時數 1,050 小時」或「固定租金底線」，由建坤能源全額履約。", "★ 簡報保留原文字，業務口頭向董事長承諾：可協議讓渡部分倉儲空間，資方僅保留檢修權！"]}], "footer": "Source: 20260930.pptx Slide 6, 9, 17 結構檢討與進能服工務合約範本", "notes_conclusion": "走道 29.03% 確保合法免雜照免停工；54 根立柱以結構技師簽證與 10 年防水保固徹底打消疑慮。", "notes_elaboration": "針對空間條款，以「口頭承諾讓渡倉儲空間」化解商務僵局，確保鉅鋼在免出資的同時仍保有廠房屋頂使用價值。", "notes_transition": "進入業主高層與董事長關切的五大採購決策指南。"}, {"type": "comparison", "style": "mckinsey", "category": "PART 3：高階主管與董事長 5 大決策指南 (1/2)", "layout_label": "版型 7：比較論法", "conclusion_title": "① 主張：資本充裕或具減碳剛需首選方案二自建（IRR 20.48%）；資金留作本業則選方案一零出資收租", "subtitle": "針對董事長決策 D1 (出租 vs 自建資本配置) 與 D2 (綠電自用 vs 賣電收租) 提供量化決策矩陣", "dimensions": [{"name": "高層決策題目", "col_a": "【決策 D1】出租還是自建？資本如何配置？", "col_b": "【決策 D2】綠電要自己用，還是賣掉收租？"}, {"name": "核心決策依據", "col_a": "• 帳上是否可動用 2,938 萬 Capex？\n• 精密機械本業擴產報酬率是否高於 11.85%~20.48%？\n• 是否願意利用銀行 8 成綠能貸款槓桿？", "col_b": "• 鉅鋼未來 3~5 年有無 RE100 或用電大戶義務？\n• 歐美設備買家有無供應鏈排碳與綠電稽核？\n• 台灣碳費開徵對鉅鋼產品競爭力之影響？"}, {"name": "情境 A：★推薦自建", "col_a": "【選方案二：光電自建 (612.3kW)】\n• 投資 2,938 萬，20年創造 4,550萬~8,904萬 淨現金流\n• 若搭配銀行融資 80%，自備僅 588 萬，內部報酬率極高！", "col_b": "【直選自發自用＋申請綠憑】\n• 每年產生約 72 萬度綠電，全數抵扣廠房用電\n• 取得 T-REC 綠能憑證，完美通過外銷客戶 ESG 稽核"}, {"name": "情境 B：穩健收租", "col_a": "【選方案一：出租分潤 (774.7kW)】\n• 0 出資、0 負債、0 風險，現金全數保留給機械本業\n• 20 年穩賺 1,836 萬租金淨現金流（建坤 37 億資本保證）", "col_b": "【選 20% 綠電回饋或優先回購權】\n• 選 20% 綠電回饋可獲 367 萬度，兼顧基礎減碳義務\n• 簽訂「本案場綠電優先回購權」，未來有需求可全額買回"}], "footer": "Source: MEDDIC 經濟決策者 (EB) 財務決策模型 × 台灣碳費與綠電交易市場動態", "notes_conclusion": "資金充裕或有客戶減碳要求，自建是最佳財務選擇；若保守看重流動性，出租是零風險解方。", "notes_elaboration": "如果董事長猶豫 2,900 萬現金支出，銀行 8 成專案融資（自備款僅 588 萬）是能立刻促成自建拍板的關鍵槓桿。", "notes_transition": "接著檢視高層決策 D3 (空間用途)、D4 (設備品牌) 與 D5 (合約退出與SLA)。"}, {"type": "parallel", "style": "mckinsey", "category": "PART 3：高階主管與董事長 5 大決策指南 (2/2)", "layout_label": "版型 2：並列論法", "conclusion_title": "① 主張：確立空間用途、首選台製亞力逆變器強化資安，並將 48 小時到場 SLA 與防水責任明載入約", "subtitle": "針對決策 D3 (棚架空間與防水)、D4 (設備規格與資安) 與 D5 (合約退出與維運SLA) 建立高層防護網", "columns": [{"title": "② 決策 D3：棚架用途與防水責任", "points": ["③ 空間用途：高棚架淨高 3.4~3.8 米，可作為精密模具暫存區或停車空間", "③ 空間權利：出租方案維持簡報文字，業務口頭協議讓渡部分倉儲空間", "③ 防水保固：方案二 54 根黑色立柱植筋處，由結構技師簽證＋進能服提供 10 年防水工程保固", "③ 露台果斷捨棄：C 棟露台 170 萬雜照費不合算，大會建議直接拍板不作"]}, {"title": "② 決策 D4：設備選型與國產資安", "points": ["③ 逆變器首選亞力：國產台製品牌（110/136kW），消除監控連外資安疑慮，在地零組件備品充沛", "③ 模組規約入約：CSI 445W 泰國製雙玻模組符合經濟部 115/3/11 最新法規，合約載明若換型號需「同級或更優」", "③ 雲端監控：配置 24 小時智慧 SCADA 監控，實時偵測組串電流異常"]}, {"title": "② 決策 D5：合約退出與維運 SLA", "points": ["③ 維運 SLA 承諾：合約明訂「2 個工作天內現場查檢、5 個工作天內完成修復」，逾期按日扣減補償", "③ 20年到期處理：合約載明期滿電廠「免費無償贈與鉅鋼」或由投資方「免費拆除復原」二選一", "③ 中途退出機制：出租方案明訂各年度固定折舊回購價，並明訂外併改內併之技術銜接義務"]}], "footer": "Source: 20260930.pptx Slide 14, 28, 29 設備規格書與維運合約標準條款", "notes_conclusion": "空間、設備、合約三大防線完整落地，讓董事長簽約無任何後顧之憂。", "notes_elaboration": "亞力逆變器解決了外商軟體的資安隱憂，而德國萊因認證團隊的 48 小時到場 SLA 則確保了 20 年的發電穩定性。", "notes_transition": "最後進入 Part 4，檢視國泰金控建坤能源與進能服之團隊實績背書。"}, {"type": "combined", "style": "mckinsey", "category": "PART 4：投資方背景與進能服工程實績", "layout_label": "版型 3：結合論法", "conclusion_title": "① 主張：國泰金控與進金生合資 37 億建坤能源，結合進能服 200MW 實績與雙認證團隊提供 20 年保障", "subtitle": "滿足 MEDDIC「競爭優勢」與「強大履約能力」，確保光電案場 20 年如期如質營運不中斷", "top_claim": "① 核心優勢：百億金融資本後盾（建坤）＋ 上櫃工程實力與 AAA 級維運（進能服），同業唯一雙保險", "pillars": [{"title": "② 投資方：建坤能源 (國泰金控 95% + 進金生 5%)", "facts": ["③ 雄厚資本：實收資本額 37 億元，全台投資超過 300MW，絕非空頭紙上專案公司。", "③ 信譽保障：國泰金控跨國金融風控標準，履約 20 年不倒閉、不停運、不中途棄管。", "③ 費用全包：出租方案由建坤全額負擔工程、台電審查、線補、綠憑評鑑與水電網路費。"]}, {"title": "② EPC 與維運：進金生能源服務 (股票代號 6692)", "facts": ["③ 建置實績：累積工程建置逾 200MW，包含南科 24MW 指標科技大廠及芳生螺絲 3.66MW。", "③ 國際認證：德國萊因 TÜV Rheinland 最高「AAA 等級維運認證」，具備嚴謹階段工程管理。", "③ SLA 承諾：全台綿密工務據點，承諾 2 工作天內現場查檢、5 工作天內修復完成。"]}], "footer": "Source: 20260930.pptx Slide 22~29 進能服企業簡介與建坤能源公司登記資料", "notes_conclusion": "建坤能源的資本深度與進能服的工程專業，是這份簡報向董事長提案最堅實的底牌。", "notes_elaboration": "光電合約長達 20 年，最怕投資方中途倒閉變孤兒電廠；國泰與進能服的雙重背書能讓高層 100% 放心。", "notes_transition": "以上為完整簡報，建議業務團隊直接引導董事長在自建（配融資）與出租中拍板定案。"}];
+    
+    // Complete 20-year cashflow dataset directly from Slide 10 Excel screenshot
+    const cashflow20Yr = [
+      { year: 0, kwh: 0, rev: 0, om: 0, ins: 0, rec: 0, net: -29376702, cum: -29376702 },
+      { year: 1, kwh: 782239, rev: 4536985, om: 0, ins: -176260, rec: -612320, net: 3748405, cum: -25628297 },
+      { year: 2, kwh: 775981, rev: 4500689, om: 0, ins: -167447, rec: 0, net: 4333242, cum: -21295055 },
+      { year: 3, kwh: 769773, rev: 4464684, om: 0, ins: -158634, rec: 0, net: 4306049, cum: -16989005 },
+      { year: 4, kwh: 763615, rev: 4428966, om: 0, ins: -149821, rec: 0, net: 4279145, cum: -12709860 },
+      { year: 5, kwh: 757506, rev: 4393534, om: 0, ins: -141008, rec: 0, net: 4252526, cum: -8457334 },
+      { year: 6, kwh: 751446, rev: 4358386, om: -362959, ins: -132195, rec: 0, net: 3863232, cum: -4594102 },
+      { year: 7, kwh: 745434, rev: 4323519, om: -362959, ins: -123382, rec: 0, net: 3837178, cum: -756924 },
+      { year: 8, kwh: 739471, rev: 4288931, om: -362959, ins: -114569, rec: 0, net: 3811403, cum: 3054479 },
+      { year: 9, kwh: 733555, rev: 4254619, om: -362959, ins: -105756, rec: 0, net: 3785905, cum: 6840384 },
+      { year: 10, kwh: 727687, rev: 4220583, om: -362959, ins: -96943, rec: 0, net: 3760681, cum: 10601064 },
+      { year: 11, kwh: 721865, rev: 4186818, om: -1309490, ins: -93090, rec: 0, net: 2784238, cum: 13385303 },
+      { year: 12, kwh: 716090, rev: 4153323, om: -391010, ins: -83726, rec: 0, net: 3678588, cum: 17063890 },
+      { year: 13, kwh: 710362, rev: 4120097, om: -391010, ins: -74362, rec: 0, net: 3654725, cum: 20718616 },
+      { year: 14, kwh: 704679, rev: 4087136, om: -391010, ins: -64998, rec: 0, net: 3631129, cum: 24349744 },
+      { year: 15, kwh: 699041, rev: 4054439, om: -391010, ins: -55634, rec: 0, net: 3607796, cum: 27957540 },
+      { year: 16, kwh: 693449, rev: 4022003, om: -421229, ins: -46269, rec: 0, net: 3554505, cum: 31512046 },
+      { year: 17, kwh: 687901, rev: 3989827, om: -421229, ins: -36905, rec: 0, net: 3531694, cum: 35043739 },
+      { year: 18, kwh: 682398, rev: 3957909, om: -421229, ins: -27541, rec: 0, net: 3509139, cum: 38552878 },
+      { year: 19, kwh: 676939, rev: 3926245, om: -421229, ins: -18177, rec: 0, net: 3486840, cum: 42039718 },
+      { year: 20, kwh: 671523, rev: 3894835, om: -421229, ins: -8813, rec: 0, net: 3464794, cum: 45504512 }
+    ];
+
+    let currentSlide = 0;
+    const totalSlides = slidesData.length;
+
+    function init() {
+      renderDots();
+      renderToc();
+      populateCashflowTable();
+      showSlide(0);
+      lucide.createIcons();
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+          prevSlide();
+        } else if (e.key === 'f' || e.key === 'F') {
+          toggleFullScreen();
+        } else if (e.key === 'Escape') {
+          closeCashflowModal();
+          const toc = document.getElementById('toc-modal');
+          if (!toc.classList.contains('hidden')) toc.classList.add('hidden');
         }
       });
-      button.textContent = open ? '⬆ 收合為精選 8 個關鍵年度（無雜訊視圖）' : '⬇ 展開完整 1～20 年逐年回購明細表（目前精選顯示關鍵 8 個年度）';
-    });
-    /* 初始化隱藏非精選列 */
-    rows.forEach(function(row, i){
-      if([0, 2, 6, 7, 8, 9, 14, 19].indexOf(i) === -1) {
-        row.style.display = 'none';
+    }
+
+    function setTheme(theme) {
+      document.body.setAttribute('data-theme', theme);
+      ['hybrid', 'mckinsey', 'bcg', 'accenture'].forEach(t => {
+        const btn = document.getElementById('btn-theme-' + t);
+        if (t === theme) {
+          btn.className = "px-2 py-1 rounded font-semibold transition-all bg-white text-slate-900 shadow-xs";
+        } else {
+          btn.className = "px-2 py-1 rounded font-medium transition-all text-slate-600 hover:text-slate-900";
+        }
+      });
+      showSlide(currentSlide);
+    }
+
+    function showSlide(index) {
+      if (index < 0 || index >= totalSlides) return;
+      currentSlide = index;
+      const slide = slidesData[index];
+
+      // Update header
+      document.getElementById('slide-category').textContent = slide.category || 'ZERO-NOISE CONSULTING BRIEFING';
+      document.getElementById('slide-page-indicator').textContent = `第 ${index + 1} 頁 / 共 ${totalSlides} 頁`;
+      document.getElementById('slide-action-title').textContent = slide.conclusion_title || slide.title || '';
+      document.getElementById('slide-subtitle').textContent = slide.subtitle || slide.core_claim || '';
+      
+      const badge = document.getElementById('slide-archetype-badge');
+      if (slide.layout_label) {
+        badge.textContent = slide.layout_label;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
       }
-    });
-    wrap.appendChild(button);
-  });
 
-  /* 投影片路由與鍵盤控制 */
-  var parts = {
-    p1: ['slide-p1-1','slide-p1-2','slide-p1-3','slide-p1-4','slide-p1-5'],
-    p2: ['slide-p2-1','slide-p2-2','slide-p2-3','slide-p2-4','slide-p2-5','slide-p2-6','slide-p2-7'],
-    p3: ['slide-p3-1','slide-p3-2','slide-p3-3','slide-p3-4','slide-p3-5','slide-p3-6','slide-p3-7'],
-    p4: ['slide-p4-1','slide-p4-2','slide-p4-3','slide-p4-4']
-  };
-  var order = ['p1','p2','p3','p4'];
-  var state = { view: 'home', idx: 0 };
+      // Update Footer
+      document.getElementById('slide-footer-source').textContent = slide.footer || slide.meta || '進金生能源服務 2026/09/30 最新案場規劃資料';
 
-  function parseHash(h){
-    if(!h || h==='#home' || h==='#') return { view:'home', idx:0 };
-    var m = h.match(/^#p([1-4])(?:-(\d+))?$/);
-    if(m){
-      var v = 'p' + m[1];
-      var idx = m[2] ? parseInt(m[2],10) - 1 : 0;
-      if(parts[v]){
-        if(isNaN(idx) || idx < 0) idx = 0;
-        if(idx >= parts[v].length) idx = parts[v].length - 1;
-        return { view: v, idx: idx };
+      // Cash flow button visibility (only show on slide 5 and 6)
+      const cfBtn = document.getElementById('btn-view-cashflow');
+      if (index === 4 || index === 5) {
+        cfBtn.classList.remove('hidden');
+      } else {
+        cfBtn.classList.add('hidden');
+      }
+
+      // Update Speaker Notes
+      document.getElementById('notes-conclusion').textContent = slide.notes_conclusion || '此頁核心結論清晰，直指商業決策底線。';
+      document.getElementById('notes-elaboration').textContent = slide.notes_elaboration || '依據工程圖面與財務精算表展開完整論證細節。';
+      document.getElementById('notes-transition').textContent = slide.notes_transition || '引導董事長進入下一階段拍板環節。';
+
+      // Render Body by Template Type
+      renderSlideBody(slide, index);
+
+      // Update dots
+      updateDots();
+      lucide.createIcons();
+    }
+
+    function renderSlideBody(slide, index) {
+      const container = document.getElementById('slide-body');
+      container.innerHTML = '';
+
+      if (slide.type === 'cover') {
+        container.innerHTML = `
+          <div class="flex-1 flex flex-col justify-center items-center text-center px-4 py-8">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-bold theme-primary-text bg-slate-100 border theme-border mb-4">
+              <i data-lucide="shield-check" class="w-4 h-4 theme-accent-text"></i>
+              <span>MEDDIC B2B 顧問框架 × 高階主管審查 × 董事長投資決策</span>
+            </div>
+            <h1 class="text-2xl sm:text-4xl font-black text-slate-900 leading-tight mb-4 tracking-tight">
+              ${slide.title.replace('\n', '<br/>')}
+            </h1>
+            <div class="max-w-3xl p-4 bg-slate-50 border theme-border rounded-xl mb-6">
+              <p class="text-sm font-semibold theme-primary-text leading-relaxed">
+                ${slide.core_claim}
+              </p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-3 text-xs text-slate-500 font-medium">
+              <span class="px-3 py-1 bg-white border border-slate-200 rounded-lg shadow-2xs">${slide.meta}</span>
+            </div>
+            <div class="mt-8 flex items-center space-x-3">
+              <button onclick="nextSlide()" class="px-6 py-2.5 rounded-xl theme-primary-bg text-white font-bold hover:opacity-90 transition shadow-md flex items-center space-x-2">
+                <span>進入簡報決策</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      } else if (slide.type === 'comparison') {
+        // 版型 7：比較論法
+        let rowsHtml = '';
+        slide.dimensions.forEach((dim, idx) => {
+          rowsHtml += `
+            <tr class="${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'} border-b border-slate-100 hover:bg-amber-50/30 transition">
+              <td class="p-3 font-bold text-slate-700 text-xs w-1/4 border-r border-slate-200 bg-slate-50/80">${dim.name}</td>
+              <td class="p-3 text-slate-600 text-xs w-3/8 whitespace-pre-line border-r border-slate-200 leading-relaxed">${dim.col_a}</td>
+              <td class="p-3 text-slate-900 text-xs w-3/8 whitespace-pre-line font-medium leading-relaxed bg-amber-50/20">${dim.col_b}</td>
+            </tr>
+          `;
+        });
+
+        container.innerHTML = `
+          <div class="flex-1 flex flex-col justify-center">
+            <div class="overflow-x-auto border border-slate-200 rounded-xl shadow-xs">
+              <table class="w-full text-left border-collapse">
+                <thead class="theme-primary-bg text-white text-xs">
+                  <tr>
+                    <th class="p-3 w-1/4 font-bold border-r border-slate-700/50">比較維度</th>
+                    <th class="p-3 w-3/8 font-bold border-r border-slate-700/50">方案一：出租分潤（建坤出資 774.7kW）</th>
+                    <th class="p-3 w-3/8 font-bold bg-slate-900/60 flex items-center justify-between">
+                      <span>方案二：光電自建（鉅鋼投資 612.3kW）</span>
+                      <span class="px-2 py-0.5 rounded text-[10px] bg-amber-500 text-white font-black">高報酬推薦</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>${rowsHtml}</tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      } else if (slide.type === 'opposition') {
+        // 版型 6：對立論法
+        let rowsHtml = '';
+        slide.dimensions.forEach((dim, idx) => {
+          rowsHtml += `
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3 rounded-lg ${idx % 2 === 0 ? 'bg-slate-50' : 'bg-white'} border border-slate-200">
+              <div class="text-xs">
+                <div class="text-[10px] font-bold text-slate-400 mb-0.5">${dim.name}</div>
+                <div class="text-slate-600 leading-relaxed">${dim.side_a}</div>
+              </div>
+              <div class="text-xs border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0 md:pl-3">
+                <div class="text-[10px] font-bold text-slate-400 mb-0.5">${dim.name}</div>
+                <div class="text-slate-800 leading-relaxed font-medium">${dim.side_b}</div>
+              </div>
+            </div>
+          `;
+        });
+
+        container.innerHTML = `
+          <div class="flex-1 flex flex-col justify-center space-y-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-1">
+              <div class="p-2.5 rounded-lg theme-primary-bg text-white font-bold text-xs flex items-center justify-between">
+                <span>${slide.side_a_title}</span>
+                <span class="text-[10px] font-normal text-slate-300">工藝亮點</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-rose-900 text-white font-bold text-xs flex items-center justify-between">
+                <span>${slide.side_b_title}</span>
+                <span class="text-[10px] font-normal text-rose-200">避坑決策</span>
+              </div>
+            </div>
+            <div class="space-y-2 overflow-y-auto max-h-[320px] pr-1">
+              ${rowsHtml}
+            </div>
+          </div>
+        `;
+      } else if (slide.type === 'parallel') {
+        // 版型 2：並列論法
+        let colsHtml = '';
+        slide.columns.forEach((col) => {
+          let pointsHtml = col.points.map(p => `
+            <li class="flex items-start space-x-2 text-xs text-slate-600 leading-relaxed">
+              <span class="w-1.5 h-1.5 rounded-full theme-accent-bg mt-1.5 shrink-0"></span>
+              <span>${p.replace('③ ', '')}</span>
+            </li>
+          `).join('');
+
+          colsHtml += `
+            <div class="flex-1 bg-slate-50 border theme-border rounded-xl p-4 flex flex-col">
+              <h3 class="font-bold text-xs theme-primary-text border-b theme-border pb-2 mb-3 flex items-center space-x-1.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 theme-accent-text"></i>
+                <span>${col.title.replace('② ', '')}</span>
+              </h3>
+              <ul class="space-y-2.5 flex-1">${pointsHtml}</ul>
+            </div>
+          `;
+        });
+
+        container.innerHTML = `
+          <div class="flex-1 flex flex-col justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 h-full max-h-[360px]">
+              ${colsHtml}
+            </div>
+          </div>
+        `;
+      } else if (slide.type === 'mckinsey_flow') {
+        // 版型 5：麥肯錫論法
+        let stagesHeader = slide.stages.map(s => `
+          <div class="p-2 text-center text-xs font-bold theme-primary-bg text-white rounded-t-lg">
+            ${s}
+          </div>
+        `).join('');
+
+        let rowsHtml = '';
+        slide.rows.forEach(r => {
+          let cellsHtml = r.cells.map(c => `
+            <div class="p-3 bg-white border border-slate-200 rounded-b-lg text-xs text-slate-600 whitespace-pre-line leading-relaxed shadow-2xs">
+              ${c}
+            </div>
+          `).join('');
+
+          rowsHtml += `
+            <div class="space-y-1 mb-2">
+              <div class="text-[11px] font-black theme-secondary-text uppercase tracking-wider">${r.dimension.replace('
+', ' ')}</div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+                ${cellsHtml}
+              </div>
+            </div>
+          `;
+        });
+
+        container.innerHTML = `
+          <div class="flex-1 flex flex-col justify-center space-y-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 mb-1">
+              ${stagesHeader}
+            </div>
+            <div class="space-y-2 overflow-y-auto max-h-[320px]">
+              ${rowsHtml}
+            </div>
+          </div>
+        `;
+      } else if (slide.type === 'chain') {
+        // 版型 4：連鎖論法
+        let stepsHtml = slide.steps.map(step => `
+          <div class="flex-1 bg-white border theme-border rounded-xl p-3.5 flex flex-col shadow-xs relative">
+            <div class="text-xl font-black theme-accent-text tracking-tighter mb-1">${step.number}</div>
+            <div class="font-bold text-xs text-slate-900 mb-1.5">${step.title}</div>
+            <p class="text-xs text-slate-600 leading-relaxed flex-1">${step.desc}</p>
+          </div>
+        `).join('');
+
+        container.innerHTML = `
+          <div class="flex-1 flex flex-col justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+              ${stepsHtml}
+            </div>
+          </div>
+        `;
+      } else if (slide.type === 'bcg_growth') {
+        // 版型 8：BCG 論法
+        let cardsHtml = slide.cards.map(card => `
+          <div class="flex-1 bg-white border theme-border rounded-xl p-4 flex flex-col shadow-xs">
+            <div class="inline-flex items-center self-start px-2 py-0.5 rounded text-[10px] font-black bg-slate-100 theme-primary-text mb-2">
+              ${card.tag}
+            </div>
+            <div class="font-bold text-xs text-slate-900 mb-2">${card.title}</div>
+            <div class="text-xs text-slate-600 whitespace-pre-line leading-relaxed flex-1">${card.content}</div>
+          </div>
+        `).join('');
+
+        container.innerHTML = `
+          <div class="flex-1 flex flex-col justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+              ${cardsHtml}
+            </div>
+          </div>
+        `;
+      } else if (slide.type === 'combined') {
+        // 版型 3：結合論法
+        let pillarsHtml = slide.pillars.map(p => {
+          let factsHtml = p.facts.map(f => `
+            <li class="p-2.5 bg-white border border-slate-200 rounded-lg text-xs text-slate-700 whitespace-pre-line leading-relaxed shadow-2xs">
+              ${f.replace('③ ', '')}
+            </li>
+          `).join('');
+
+          return `
+            <div class="flex-1 bg-slate-50 border theme-border rounded-xl p-4 flex flex-col">
+              <div class="font-bold text-xs theme-primary-text mb-3 pb-2 border-b theme-border">${p.title.replace('② ', '')}</div>
+              <ul class="space-y-2.5 flex-1">${factsHtml}</ul>
+            </div>
+          `;
+        }).join('');
+
+        container.innerHTML = `
+          <div class="flex-1 flex flex-col justify-center space-y-3">
+            <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs font-bold text-amber-900">
+              ${slide.top_claim.replace('① ', '')}
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              ${pillarsHtml}
+            </div>
+          </div>
+        `;
       }
     }
-    return { view:'home', idx:0 };
-  }
 
-  function goHash(h){
-    var s = parseHash(h);
-    state.view = s.view; state.idx = s.idx;
-    render();
-  }
-
-  function render(){
-    document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
-    document.querySelectorAll('.slide').forEach(function(s){ s.classList.remove('active'); });
-    document.querySelectorAll('.topnav a').forEach(function(a){ a.classList.remove('active'); });
-    var bar = document.getElementById('bottomBar');
-
-    if(state.view === 'home'){
-      var vHome = document.getElementById('view-home');
-      if(vHome) vHome.classList.add('active');
-      var aHome = document.querySelector('.topnav a[data-nav="home"]');
-      if(aHome) aHome.classList.add('active');
-      bar.style.display = 'none';
-      window.scrollTo(0,0);
-      return;
+    function renderDots() {
+      const container = document.getElementById('pagination-dots');
+      container.innerHTML = '';
+      slidesData.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = `w-2.5 h-2.5 rounded-full transition-all ${idx === currentSlide ? 'theme-primary-bg scale-125' : 'bg-slate-300 hover:bg-slate-400'}`;
+        dot.title = `第 ${idx + 1} 頁`;
+        dot.onclick = () => showSlide(idx);
+        container.appendChild(dot);
+      });
     }
 
-    var vEl = document.getElementById('view-' + state.view);
-    if(vEl) vEl.classList.add('active');
-    var navA = document.querySelector('.topnav a[data-nav="' + state.view + '"]');
-    if(navA) navA.classList.add('active');
-
-    var slides = parts[state.view];
-    if(!slides) return;
-    var sId = slides[state.idx];
-    var sEl = document.getElementById(sId);
-    if(sEl) sEl.classList.add('active');
-
-    bar.style.display = 'block';
-    document.getElementById('counter').textContent = state.view.toUpperCase() + ' · ' + (state.idx + 1) + ' / ' + slides.length;
-    var pct = ((state.idx + 1) / slides.length) * 100;
-    document.getElementById('pFill').style.width = pct + '%';
-    window.scrollTo(0,0);
-  }
-
-  function setHash(){
-    var h = state.view === 'home' ? '#home' : '#' + state.view + '-' + (state.idx + 1);
-    if(location.hash !== h) history.replaceState(null, '', h);
-  }
-
-  function move(d){
-    if(state.view === 'home'){
-      if(d > 0){ state.view = 'p1'; state.idx = 0; render(); setHash(); }
-      return;
+    function updateDots() {
+      const dots = document.getElementById('pagination-dots').children;
+      for (let i = 0; i < dots.length; i++) {
+        if (i === currentSlide) {
+          dots[i].className = 'w-2.5 h-2.5 rounded-full theme-primary-bg scale-125 transition-all';
+        } else {
+          dots[i].className = 'w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all';
+        }
+      }
     }
-    var slides = parts[state.view];
-    var n = state.idx + d, pos = order.indexOf(state.view);
-    if(n < 0){
-      if(pos > 0){ state.view = order[pos-1]; state.idx = parts[state.view].length - 1; }
-      else { state.view = 'home'; }
-    } else if(n >= slides.length){
-      if(pos < order.length - 1){ state.view = order[pos+1]; state.idx = 0; }
-      else { state.view = 'home'; }
-    } else {
-      state.idx = n;
+
+    function renderToc() {
+      const list = document.getElementById('toc-list');
+      list.innerHTML = '';
+      slidesData.forEach((s, idx) => {
+        const item = document.createElement('button');
+        item.className = 'w-full text-left p-2.5 rounded-lg border border-slate-200 hover:border-slate-400 hover:bg-slate-50 transition flex items-start space-x-3 text-xs';
+        item.onclick = () => {
+          showSlide(idx);
+          toggleToc();
+        };
+        item.innerHTML = `
+          <span class="font-black text-slate-400 text-sm w-5">${String(idx + 1).padStart(2, '0')}</span>
+          <div class="flex-1 truncate">
+            <div class="text-[10px] font-bold text-slate-400">${s.category || ''}</div>
+            <div class="font-bold text-slate-800 truncate">${s.conclusion_title || s.title}</div>
+            <div class="text-[10px] text-slate-500">${s.layout_label || '封面'}</div>
+          </div>
+        `;
+        list.appendChild(item);
+      });
     }
-    render(); setHash();
-  }
 
-  document.getElementById('btnPrev').addEventListener('click', function(){ move(-1); });
-  document.getElementById('btnNext').addEventListener('click', function(){ move(1); });
+    function populateCashflowTable() {
+      const tbody = document.getElementById('cashflow-table-body');
+      tbody.innerHTML = '';
+      cashflow20Yr.forEach(r => {
+        const tr = document.createElement('tr');
+        tr.className = r.year % 2 === 0 ? 'bg-white' : 'bg-slate-50/50';
+        
+        let netColor = r.net >= 0 ? 'text-emerald-700 font-bold' : 'text-rose-600 font-bold';
+        let cumColor = r.cum >= 0 ? 'text-emerald-800 font-black' : 'text-rose-700 font-semibold';
+        let rowHighlight = r.year === 8 ? 'bg-emerald-50/60 font-semibold' : '';
 
-  document.addEventListener('keydown', function(e){
-    if(lb && lb.classList.contains('open')){
-      if(e.key === 'Escape' || e.key === ' ') { lb.classList.remove('open'); e.preventDefault(); }
-      return;
+        tr.innerHTML = `
+          <td class="p-2 text-center font-bold text-slate-700 ${rowHighlight}">${r.year === 0 ? '建置期 Y0' : 'Y' + r.year}</td>
+          <td class="p-2 text-right text-slate-600">${r.kwh > 0 ? r.kwh.toLocaleString() : '-'}</td>
+          <td class="p-2 text-right text-slate-800">${r.rev > 0 ? '$' + r.rev.toLocaleString() : '-'}</td>
+          <td class="p-2 text-right ${r.om < 0 ? 'text-rose-600' : 'text-slate-400'}">${r.om < 0 ? '-$' + Math.abs(r.om).toLocaleString() : '$0'}</td>
+          <td class="p-2 text-right ${r.ins < 0 ? 'text-rose-600' : 'text-slate-400'}">${r.ins < 0 ? '-$' + Math.abs(r.ins).toLocaleString() : '-'}</td>
+          <td class="p-2 text-right ${r.rec < 0 ? 'text-rose-600' : 'text-slate-400'}">${r.rec < 0 ? '-$' + Math.abs(r.rec).toLocaleString() : '-'}</td>
+          <td class="p-2 text-right ${netColor}">${r.net >= 0 ? '+$' + r.net.toLocaleString() : '-$' + Math.abs(r.net).toLocaleString()}</td>
+          <td class="p-2 text-right ${cumColor}">${r.cum >= 0 ? '+$' + r.cum.toLocaleString() : '-$' + Math.abs(r.cum).toLocaleString()}</td>
+        `;
+        tbody.appendChild(tr);
+      });
     }
-    var t = e.target;
-    if(t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
-    if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'){ e.preventDefault(); move(1); }
-    else if(e.key === 'ArrowLeft' || e.key === 'PageUp'){ e.preventDefault(); move(-1); }
-    else if(e.key === 'Home'){ e.preventDefault(); state.view = 'home'; render(); setHash(); }
-    else if(e.key === 'End' && state.view !== 'home'){ e.preventDefault(); state.idx = parts[state.view].length - 1; render(); setHash(); }
-    else if(e.key === 'f' || e.key === 'F'){
-      if(document.fullscreenElement) document.exitFullscreen();
-      else document.documentElement.requestFullscreen();
+
+    function prevSlide() {
+      if (currentSlide > 0) showSlide(currentSlide - 1);
     }
-  });
 
-  window.addEventListener('hashchange', function(){ goHash(location.hash); });
-  goHash(location.hash);
-})();
-</script>
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) showSlide(currentSlide + 1);
+    }
 
+    function toggleNotes() {
+      const panel = document.getElementById('speaker-notes-panel');
+      panel.classList.toggle('hidden');
+    }
+
+    function toggleToc() {
+      const modal = document.getElementById('toc-modal');
+      modal.classList.toggle('hidden');
+    }
+
+    function openCashflowModal() {
+      const modal = document.getElementById('cashflow-modal');
+      modal.classList.remove('hidden');
+    }
+
+    function closeCashflowModal() {
+      const modal = document.getElementById('cashflow-modal');
+      modal.classList.add('hidden');
+    }
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.error(err);
+        });
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    window.onload = init;
+  </script>
 </body>
 </html>
