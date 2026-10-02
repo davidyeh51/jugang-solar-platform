@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>鉅鋼機械・新廠光電方案 高階主管與董事長查核決策簡報 | Zero-Noise 顧問版</title>
+  <title>鉅鋼機械・新廠光電方案 高階主管與董事長查核決策簡報 | Zero-Noise 顧問版 (2026/10/01 最新修訂)</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Inter & Noto Sans TC -->
@@ -59,12 +59,10 @@
     }
   </script>
   <style>
-    /* Zero-Noise 16:9 Canvas ratio container */
     .slide-aspect {
       aspect-ratio: 16 / 9;
       max-height: calc(100vh - 120px);
     }
-    /* Theme CSS Variables */
     :root {
       --color-primary: #1B365D;
       --color-secondary: #64748B;
@@ -110,7 +108,6 @@
     .theme-body-bg { background-color: var(--color-bg); }
     .theme-border { border-color: var(--color-border); }
 
-    /* Custom scrollbar */
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #F1F5F9; }
     ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
@@ -131,7 +128,7 @@
         鉅鋼機械新廠光電方案・高階主管與董事長查核決策簡報
       </h1>
       <span class="hidden md:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-        2026/10 最新版
+        2026/10/01 最新修訂版
       </span>
     </div>
 
@@ -208,7 +205,7 @@
       <div class="px-6 py-2 border-t theme-border bg-slate-50 flex items-center justify-between text-[11px] text-slate-500 shrink-0">
         <div class="truncate max-w-[70%]">
           <span class="font-bold text-slate-600">Source:</span>
-          <span id="slide-footer-source">進金生能源服務 2026/09/30 最新案場規劃資料</span>
+          <span id="slide-footer-source">進金生能源服務 2026/10/01 最新業務修訂資料</span>
         </div>
         <div class="flex items-center space-x-2">
           <button onclick="openCashflowModal()" id="btn-view-cashflow" class="hidden text-xs font-semibold theme-accent-text hover:underline flex items-center space-x-1">
@@ -310,7 +307,7 @@
     <div class="w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col max-h-[90vh] overflow-hidden animate-in fade-in zoom-in duration-200">
       <div class="px-6 py-4 border-b theme-border flex items-center justify-between bg-slate-50">
         <div>
-          <div class="text-xs font-bold theme-primary-text tracking-wide uppercase">2026/09/30 精算模型完整勾稽</div>
+          <div class="text-xs font-bold theme-primary-text tracking-wide uppercase">2026/10/01 精算模型完整勾稽</div>
           <h3 class="text-base font-bold text-slate-900">方案二自建（612.32 kW）20 年逐年動態現金流量表</h3>
         </div>
         <button onclick="closeCashflowModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200">
@@ -330,8 +327,8 @@
             <div class="text-[10px] text-slate-400">含 Y11 換機準備金 91.8萬</div>
           </div>
           <div class="p-3 bg-amber-50 rounded-xl border border-amber-200">
-            <div class="text-amber-800 font-medium">純節電 20年淨現金流</div>
-            <div class="text-base font-black text-amber-700 mt-1">+$45,504,512</div>
+            <div class="text-amber-800 font-medium">淨現值 (NPV 3%)</div>
+            <div class="text-base font-black text-amber-700 mt-1">+$26,938,291</div>
             <div class="text-[10px] text-amber-600 font-semibold">回收期 7.20 年 ｜ IRR 11.85%</div>
           </div>
           <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200">
@@ -382,9 +379,8 @@
 
   <!-- SCRIPT DATA & APP LOGIC -->
   <script>
-    const slidesData = [{"type": "cover", "style": "mckinsey", "category": "ZERO-NOISE CONSULTING BRIEFING  |  MEDDIC Sales Strategy × Executive Audit", "title": "台中西屯・鉅鋼機械新廠光電方案\n高階主管與董事長查核決策簡報（2026/10 最新版）", "core_claim": "依據董事長與高階主管視角完成全生命週期數據勾稽：自建（612.3kW）總支出 3,866 萬創造淨現金流 +4,550萬~8,904萬（IRR 11.85%~20.48%）；出租（774.7kW）0出資享 1,836 萬租金或 367 萬度綠電", "meta": "呈閱：鉅鋼機械 董事長暨高階決策團隊 ｜ 規劃團隊：進金生能源服務 (6692) ｜ 顧問規範：森秀明 8 種無雜訊邏輯版型 × 麥肯錫/BCG/Accenture 視覺規範", "notes_conclusion": "本簡報依據 2026/09/30 最新案場規劃、董事長投資偏好與高階主管查核要點，完成數據勾稽與合約保障策略。", "notes_elaboration": "全篇以無雜訊 8 大版型消弭信息雜訊，自建總成本與 20 年現金流完全吻合，並將立柱防水與空間使用權納入談判閉環。", "notes_transition": "首先進入 Part 1，檢視業務第一線彙整之客戶五大核心想法與 MEDDIC 對策。"}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "PART 1：客戶想法與 MEDDIC 策略 (1/2)", "layout_label": "版型 5：麥肯錫論法", "conclusion_title": "① 主張：將窗口反饋之五大核心想法對映 MEDDIC 框架，全面收斂為直通董事長拍板的贏單對策", "subtitle": "針對直面高層對話、D棟退縮2米免欄杆、出租中途回購、C棟露台勸退及進能服實績建立完整商業邏輯", "stages": ["1. 高層對話(自建/出租)", "2. D棟退縮2米浪板", "3. 方案一中途回購", "4. C棟露台17kW勸退"], "rows": [{"dimension": "③ 要素 1：\n【客戶關鍵想法】", "cells": ["窗口表示董事長自建與出租均在考慮，請進金生直接與高層決策者深度對話", "設計規劃無外圍欄杆、邊緣自女兒牆退縮 2 米之 D 棟浪板方案，顧及立面美觀與防墜", "客戶考量出租至一半若有綠電需求欲行回購，需明確之計價機制與時程規範", "C 棟露台因合法容積限制僅能施作 17.6 kW，光雜照費即高達 170 萬，經濟效益不成立"]}, {"dimension": "③ 要素 2：\n【MEDDIC 專業對策】", "cells": ["【E 經濟決策者】提供同基準 DCF 財務模型，並可搭配銀行 8 成綠能專案融資（自備僅約 588 萬）", "【D 決策標準】退縮 2 米利用女兒牆防墜免加欄杆，通道占比 29.03% 完美符合免雜法規", "【D 決策標準】明訂首年 1.3 倍、逐年遞減 5% 回購公式，並揭露外併改內併工程要件", "【I 痛點立信】主動建議董事長剃除雞肋露台、現省 170 萬規費，樹立不灌水的專業顧問誠信"]}], "footer": "Source: 2026/09/30 業務回報與 20260930.pptx 更新 ｜ 第 5 點：進金生與建坤能源實績置於 Part 4 作為決策信任保障", "notes_conclusion": "透過 MEDDIC 架構梳理，客戶提出的 5 點想法均已轉化為我方對接董事長的決策抓手。", "notes_elaboration": "主動勸退 C 棟露台展示客觀專業，而 D 棟退縮 2 米設計兼顧外觀、工安與免雜法規，有效化解廠長疑慮。", "notes_transition": "接著深入檢視 D 棟退縮 2 米方案之立面防墜與 C 棟露台財務精算。"}, {"type": "opposition", "style": "bcg", "category": "PART 1：客戶想法與 MEDDIC 策略 (2/2)", "layout_label": "版型 6：對立論法", "conclusion_title": "① 主張：D棟退縮2米兼顧外觀美感與合規免雜；C棟露台因170萬雜項執照費建議果斷剔除", "subtitle": "針對 D 棟「退縮 2 米免欄杆浪板」與 C 棟「露台 17.6 kW 雜照區」進行深度技術與財務對比", "side_a_title": "② 焦點 A：D 棟退縮 2 米浪板工藝（★推薦實施）", "side_b_title": "② 焦點 B：C 棟露台 17.6 kW 高棚架（★強烈建議不作）", "dimensions": [{"name": "工安防墜與建築外觀", "side_a": "自女兒牆向內退縮 2 米留設工安緩衝，直接利用女兒牆防墜，新廠立面完全不需外加鐵欄杆", "side_b": "露台為平台結構，需辦理建築雜項執照審查，若設高棚架對周邊採光與視覺壓迫顯著"}, {"name": "法規依據與面積檢討", "side_a": "受限 30% 維護走道限制，實測通道占比 29.03%（600.3/2067.9m²），完全合規免雜照標準", "side_b": "經向台中建管處檢討，合法容積僅剩 32 坪，依法嚴格限縮最高僅能鋪設 17.6 kW"}, {"name": "投資成本與經濟效益", "side_a": "自建單價 $42,000/kW＋浪板 $7,000/kW，雙層隔熱為廠房頂樓降溫 3~5°C，創造 4,550 萬淨利", "side_b": "雜照申請費高達 $1,700,000＋工程款 $1,330,000 = $303萬，20年總收益僅 367 萬，淨值嚴重負數"}, {"name": "結構立柱與防水保障", "side_a": "★ 方案二加浪板需新增 54 根黑色立柱加強抗風，承諾由結構技師簽證並提供 10 年防水工程保固", "side_b": "面積狹小且施工動線受限，單位建置成本高達 $17.2萬/kW，屬於典型高成本低回報之負資產"}], "footer": "Source: 鉅鋼機械 20260930.pptx Slide 9, 17, 20 數據與進能服工程部法規試算", "notes_conclusion": "D 棟退縮 2 米方案在工程與外觀上具高度可行性；C 棟露台建議董事長於會議開場即決議剔除。", "notes_elaboration": "退縮 2 米使浪板走道占比壓在 29.03%，完美落在免雜照的 30% 法規紅線內；54 根立柱以 10 年防水保固消除疑慮。", "notes_transition": "進入 Part 2，盤點全廠施作範圍與雙軌方案之技術規格。"}, {"type": "parallel", "style": "mckinsey", "category": "PART 2：技術規格與雙軌方案盤點 (1/4)", "layout_label": "版型 2：並列論法", "conclusion_title": "① 主張：施作範圍鎖定 D 棟主屋頂與 C 棟兩處屋突，依防雨浪板需求形成 774.7kW 與 612.3kW 雙軌配置", "subtitle": "C 棟屋突兩處（151.745 kW）南向單斜矮棚架兩方案完全共用；D 棟則受浪板與 30% 法規影響容量", "columns": [{"title": "② 區域 1：D 棟主屋頂", "points": ["③ 建物構造：RC 結構平屋頂，棚架低點淨高 3.4~3.8 米，山型東西向陣列", "③ 方案一 (無浪板)：容量 623.000 kW，不受 30% 走道限制，新增 40 根黑色立柱", "③ 方案二 (加浪板)：容量 460.575 kW，退縮 2 米且受 30% 限制，新增 54 根黑色立柱加強抗風", "③ 設備配置：低壓逆變器置於戶外女兒牆側，高壓盤體集中於專屬光電機房"]}, {"title": "② 區域 2：C 棟屋突二處 (C1 + C2)", "points": ["③ 區域 C1 (主屋突)：容量 94.785 kW（採南向單斜矮棚架設計）", "③ 區域 C2 (次屋突)：容量 56.960 kW（採南向單斜矮棚架設計）", "③ 雙方案通用：兩處合計 151.745 kW，結構單純、免浪板、無爭議，直接鋪設", "③ 兩案總容量：方案一合計 774.745 kW；方案二合計 612.320 kW"]}, {"title": "② 核心設備選型規範", "points": ["③ 光電模組：CSI 445W 泰國製雙玻模組（效率 22.3%，符合 115/3/11 經濟部新規）", "③ 逆變器首選：亞力電機 110/136kW（國產資安防護、12組MPPT實時監測、連續輸出不降載）", "③ 替代備選：華為 SUN2000-100KTL（海外一線品牌，若無資安敏感亦可選用）", "③ 施工工期：無浪板案約 7~8 個月；加浪板自建案約 9~10 個月（含台電內併併網）"]}], "footer": "Source: 20260930.pptx Slide 2, 3, 5, 6, 9, 12, 14 工程圖面與設備清冊", "notes_conclusion": "D 棟加浪板使容量由 623kW 降至 460.6kW，但換來了屋頂防雨隔熱與高空間利用率。", "notes_elaboration": "C 棟屋突 151.7kW 經濟效益明確，雙方案均完整保留；主設備建議鎖定符合最新法規的 CSI 模組與台製亞力逆變器。", "notes_transition": "接下來進行最關鍵的方案一出租 vs 方案二自建全生命週期財務對決。"}, {"type": "comparison", "style": "mckinsey", "category": "PART 2：雙軌方案財務模型對決 (2/4)", "layout_label": "版型 7：比較論法", "conclusion_title": "① 主張：方案一享零出資穩健收租；方案二以 2,938 萬投資創造 4,550 萬至 8,904 萬淨現金流（IRR 最高達 20.48%）", "subtitle": "經查核 20260930 Slide 10 精算模型，已扣除 20 年維運、保險、換機與回收費 928 萬，數據完全勾稽", "dimensions": [{"name": "設置容量與 20年總發電量", "col_a": "774.745 kW（D棟 623kW＋C棟 151.7kW）\n20年預估發電：18,360,153 度", "col_b": "612.320 kW（D棟 460.6kW＋C棟 151.7kW）\n20年預估發電：14,510,953 度"}, {"name": "鉅鋼出資與總生命週期支出", "col_a": "鉅鋼 0 出資\n由建坤能源全額承擔工程、規費與 20 年維運", "col_b": "期初 Capex：$29,376,702（工程款 2,894萬＋規費）\n20年維運保險回收：$9,282,316 ➔ 總支出 $38,659,018"}, {"name": "20年總效益 (毛額)", "col_a": "【二選一】\n• 租金回饋：$18,360,153（以綠電$5/度計）\n• 綠電回饋：3,672,031 度（約佔 20% 發電）", "col_b": "• 純節電 ($5.8/度)：$84,163,530\n• 節電＋憑證 ($8.8/度)：$127,696,386\n（備註：未計憑證則以純節電保守衡量）"}, {"name": "20年累計淨現金流 (扣除總支出)", "col_a": "淨收益：+$18,360,153（純現金淨流入）\n★ 折現淨現值 NPV(5%) = +$11,587,000", "col_b": "• 純節電淨利：+$45,504,512（淨現值 NPV 5% = +$1,942萬）\n• 含憑證淨利：+$89,037,368（淨現值 NPV 5% = +$4,690萬）"}, {"name": "投資回收期與內部報酬率 (IRR)", "col_a": "無回收期問題（首年即享有正現金流）\n無資金沉沒風險", "col_b": "• 純節電 ($5.8)：回收期 7.20 年 ｜ IRR = 11.85%\n• 含憑證 ($8.8)：回收期 4.53 年 ｜ IRR = 20.48%"}, {"name": "外加權利與合約年限", "col_a": "• 享有本案場綠電優先回購權\n• 20年租約由資方維運，鉅鋼可依殘值中途回購", "col_b": "• 100% 綠電與憑證自主運用\n• 5年原廠保固維運，第6年起每5年評估維運續約"}], "footer": "Source: 20260930.pptx Slide 4, 10 財務分析模型，折現率採用製造業標準 WACC = 5.0% 與內部 3.0% 對照", "notes_conclusion": "方案二自建即便在不計憑證的極端保守情境下，IRR 仍達 11.85%，遠高於一般定存與債券收益。", "notes_elaboration": "期初 2,938 萬支出可創造 4,550 萬純節電淨利；若搭配 RE100 綠憑價值，淨利更飆升至 8,904 萬，4.53 年即可回本。", "notes_transition": "下一頁展開 Slide 10 的 20 年動態逐年現金流量表，供 CFO 與董事長逐年查核。"}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "PART 2：方案二自建 20 年逐年現金流與敏感度 (3/4)", "layout_label": "版型 5：麥肯錫論法", "conclusion_title": "① 主張：方案二現金流在第 7.2 年正式回本轉正，20 年累計淨現金流達 4,550 萬至 8,904 萬", "subtitle": "完整揭露 Y0~Y20 逐年收益、維運保險、換機儲備與回收費，數據與 Slide 10 精算表 100% 吻合", "stages": ["建置期 (Y0)", "保固期 (Y1~Y5)", "回本轉正期 (Y6~Y10)", "換機與成熟期 (Y11~Y20)"], "rows": [{"dimension": "③ 現金流動態\n【純節電 $5.8/度】", "cells": ["• Capex 支出：-$29,376,702\n• 台電規費與工程款一次付清\n• 累計淨額：-$29,376,702", "• 年發電收益：約 +$440萬~$454萬\n• 保固期 O&M：$0（免維運費）\n• 扣保險回收後累計：-$8,457,334", "• Y6 起 O&M：-$362,959/年\n• ★ Y7 底累計只剩 -$75.7萬\n• ★ Y8 正式轉正：+$3,054,479（7.2年回本）", "• Y11 提列逆變器換機：-$918,480\n• Y11~Y20 持續淨流入 +$350萬/年\n• ★ 20年累計淨現金流：+$45,504,512"]}, {"dimension": "③ 電價敏感度分析\n【IRR 與回收期】", "cells": ["【極端保守：日間電價 $5.22 (-10%)】\n• 靜態回收期：7.9 年\n• 專案 IRR：9.82%\n• 20年淨現金流：+$3,708 萬元", "【基準情境：目前電價 $5.80】\n• 靜態回收期：7.2 年\n• 專案 IRR：11.85%\n• 20年淨現金流：+$4,550 萬元", "【電價上漲情境：電價 $6.38 (+10%)】\n• 靜態回收期：6.5 年\n• 專案 IRR：13.88%\n• 20年淨現金流：+$5,392 萬元", "【滿血情境：節電＋綠憑 $8.80】\n• ★ 靜態回收期：4.53 年\n• ★ 專案 IRR：20.48%\n• ★ 20年累計淨現金流：+$8,904 萬元"]}], "footer": "Source: 20260930.pptx Slide 10 Excel 精算表模型 (未稅)，每年發電衰減率以 0.8% 嚴格計算", "notes_conclusion": "現金流量表證實，自建方案第 8 年起每年穩健淨流入 350 萬以上，即使電價下跌 10%，IRR 仍逼近 10%。", "notes_elaboration": "第 11 年已預先提列 91.8 萬逆變器汰換費用，財務模型完全無隱藏費用，禁得起董事會最嚴格查核。", "notes_transition": "接著分析方案一的中途回購機制，剖析買回價格與外併改內併的工程限制。"}, {"type": "chain", "style": "mckinsey", "category": "PART 2：方案一出租中途回購評估 (4/4)", "layout_label": "版型 4：連鎖論法", "conclusion_title": "① 主張：方案一具中途回購彈性，惟首年溢價高達 42% 且外併改內併程序繁瑣，自建仍具絕對財務優勢", "subtitle": "依國泰建坤「首年工程價金 1.3 倍、逐年遞減 5%」公式，剖析各年回購門檻與隱形成本", "steps": [{"number": "01", "title": "回購價格公式", "desc": "首年回購單價為 $59,670/kW（總價 4,623萬），比自建 $42,000 高出 42%，之後按 20 年逐年遞減 5%（每年減少約 $2,984/kW）。"}, {"number": "02", "title": "回購甜蜜點分析", "desc": "第 5 年回購價 3,698 萬，第 10 年降至 2,543 萬；若於第 8~10 年回購，剩餘 10 年自用節電效益可達 4,800 萬以上，具備回購經濟價值。"}, {"number": "03", "title": "外併改內併工程限制", "desc": "方案一為高壓外併，購回改自發自用須終止躉售契約、廢除臨路 MOF 盤並重新申請高壓內併，衍生約 150~200 萬工程改裝與停電切換費用。"}, {"number": "04", "title": "高層決策建議", "desc": "若鉅鋼 3~5 年內有綠電剛需，強烈建議「直選方案二自建」，避免中途被加價 1.3 倍回購並承擔昂貴的二次改管線工程。"}], "footer": "Source: 20260930.pptx Slide 8 回購試算表與進能服高壓併聯工程規範", "notes_conclusion": "中途回購是一張防禦性安全牌，但首年溢價 42% 與二次改裝成本偏高。", "notes_elaboration": "如果未來確定需要綠電自用，一開始就選擇高壓內併自建，能省下近 1,700 萬的溢價與改建折騰。", "notes_transition": "進入 Part 3，正面答辯資深光伏顧問提出的五大技術疑問。"}, {"type": "bcg_growth", "style": "bcg", "category": "PART 3：資深光伏顧問 5 大疑問深度答辯 (1/2)", "layout_label": "版型 8：BCG 論法", "conclusion_title": "① 主張：針對比較基準、日照數據與回購可行性三大質疑，我方已完成同口徑驗算與合約保障閉環", "subtitle": "針對顧問提出的 Q1 (比較基準不一致)、Q2 (發電量偏樂觀) 與 Q3 (回購可行性) 逐項專業對應", "cards": [{"tag": "QA 01", "title": "質疑 1：方案比較基準不一致", "content": "• 顧問質疑：方案一算 5.8 元，方案二卻算 8.8 元；未扣除第 6 年後維運重置成本。\n• ★ 查核落實：在 20260930 版中，方案一綠電僅標度數（367萬度），方案二純節電以 $5.8 精算，且 Slide 10 扣除 20 年維運保險換機 928 萬，數據完全嚴謹一致！"}, {"tag": "QA 02", "title": "質疑 2：發電量 3.5 小時無佐證", "content": "• 顧問質疑：東西向山型陣列在台中 3.5 小時偏樂觀，表內每年衰減 0.8% 與規格書不一致。\n• ★ 查核落實：3.5 小時係依據氣象局台中文心站 10 年實測日照量；簡報採 0.8% 衰減係採超保守估算（模組規格實為 <0.4%）。我方合約願提供「首年保證發電量 85%」差額補償！"}, {"tag": "QA 03", "title": "質疑 3：回購機制不利且難度高", "content": "• 顧問質疑：首年 1.3 倍回購單價過高，且高壓外併改內併申請時程與費用未交代。\n• ★ 查核落實：Slide 8 已將節電與憑證拆開呈現；合約將明訂「回購由我方協助向台電辦理外改內變更」，改裝工期約 3~4 個月，預算約 150 萬已於簡報備忘錄揭露。"}], "footer": "Source: 資深光伏顧問審查意見 × 進能服工程部與財務部聯合答辯報告", "notes_conclusion": "三大財務與發電質疑均已透過 20260930 精算表獲得完美化解，立足點完全站得住腳。", "notes_elaboration": "保守的 0.8% 衰減率為專案留下了充足的安全邊際，而合約保證 85% 發電量更徹底鎖定了發電風險。", "notes_transition": "接著檢視 Q4 法規免雜照與 Q5 屋頂空間權益條款。"}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "PART 3：資深光伏顧問 5 大疑問深度答辯 (2/2)", "layout_label": "版型 5：麥肯錫論法", "conclusion_title": "① 主張：D棟浪板以 29.03% 通道占比合規免雜照；54 根立柱承諾結構技師簽證與 10 年防水工程保固", "subtitle": "針對顧問提出的 Q4 (D棟容量差異與立柱防水) 與 Q5 (租金分潤與棚架空間權益) 提出具體履約方案", "stages": ["Q4-1: 30%維護走道法規", "Q4-2: 54根立柱與防水", "Q5-1: 租金基準與保底", "Q5-2: 棚架空間使用權"], "rows": [{"dimension": "③ 顧問嚴格質疑", "cells": ["方案二加浪板是否符合免雜照？兩案 162kW 差額依據為何？", "方案二新增 54 根黑色立柱植筋，屋頂打孔漏水責任歸誰？", "20% 售電收入以每度 5 元估算，若台電收購價波動是否有保底？", "Slide 6 載明「棚架用途歸資方所有」，限制業主自有屋頂使用權！"]}, {"dimension": "③ 我方權威答辯", "cells": ["★ 經精算浪板面積 2,668m²，走道占 29.03% <= 30%，完全符合免雜執照標準！", "★ 方案二 54 根立柱由結構技師簽證，並由進能服提供 10 年防水工程保固與責任險！", "★ 方案一提供「保底年發電時數 1,050 小時」或「固定租金底線」，由建坤能源全額履約。", "★ 簡報保留原文字，業務口頭向董事長承諾：可協議讓渡部分倉儲空間，資方僅保留檢修權！"]}], "footer": "Source: 20260930.pptx Slide 6, 9, 17 結構檢討與進能服工務合約範本", "notes_conclusion": "走道 29.03% 確保合法免雜照免停工；54 根立柱以結構技師簽證與 10 年防水保固徹底打消疑慮。", "notes_elaboration": "針對空間條款，以「口頭承諾讓渡倉儲空間」化解商務僵局，確保鉅鋼在免出資的同時仍保有廠房屋頂使用價值。", "notes_transition": "進入業主高層與董事長關切的五大採購決策指南。"}, {"type": "comparison", "style": "mckinsey", "category": "PART 3：高階主管與董事長 5 大決策指南 (1/2)", "layout_label": "版型 7：比較論法", "conclusion_title": "① 主張：資本充裕或具減碳剛需首選方案二自建（IRR 20.48%）；資金留作本業則選方案一零出資收租", "subtitle": "針對董事長決策 D1 (出租 vs 自建資本配置) 與 D2 (綠電自用 vs 賣電收租) 提供量化決策矩陣", "dimensions": [{"name": "高層決策題目", "col_a": "【決策 D1】出租還是自建？資本如何配置？", "col_b": "【決策 D2】綠電要自己用，還是賣掉收租？"}, {"name": "核心決策依據", "col_a": "• 帳上是否可動用 2,938 萬 Capex？\n• 精密機械本業擴產報酬率是否高於 11.85%~20.48%？\n• 是否願意利用銀行 8 成綠能貸款槓桿？", "col_b": "• 鉅鋼未來 3~5 年有無 RE100 或用電大戶義務？\n• 歐美設備買家有無供應鏈排碳與綠電稽核？\n• 台灣碳費開徵對鉅鋼產品競爭力之影響？"}, {"name": "情境 A：★推薦自建", "col_a": "【選方案二：光電自建 (612.3kW)】\n• 投資 2,938 萬，20年創造 4,550萬~8,904萬 淨現金流\n• 若搭配銀行融資 80%，自備僅 588 萬，內部報酬率極高！", "col_b": "【直選自發自用＋申請綠憑】\n• 每年產生約 72 萬度綠電，全數抵扣廠房用電\n• 取得 T-REC 綠能憑證，完美通過外銷客戶 ESG 稽核"}, {"name": "情境 B：穩健收租", "col_a": "【選方案一：出租分潤 (774.7kW)】\n• 0 出資、0 負債、0 風險，現金全數保留給機械本業\n• 20 年穩賺 1,836 萬租金淨現金流（建坤 37 億資本保證）", "col_b": "【選 20% 綠電回饋或優先回購權】\n• 選 20% 綠電回饋可獲 367 萬度，兼顧基礎減碳義務\n• 簽訂「本案場綠電優先回購權」，未來有需求可全額買回"}], "footer": "Source: MEDDIC 經濟決策者 (EB) 財務決策模型 × 台灣碳費與綠電交易市場動態", "notes_conclusion": "資金充裕或有客戶減碳要求，自建是最佳財務選擇；若保守看重流動性，出租是零風險解方。", "notes_elaboration": "如果董事長猶豫 2,900 萬現金支出，銀行 8 成專案融資（自備款僅 588 萬）是能立刻促成自建拍板的關鍵槓桿。", "notes_transition": "接著檢視高層決策 D3 (空間用途)、D4 (設備品牌) 與 D5 (合約退出與SLA)。"}, {"type": "parallel", "style": "mckinsey", "category": "PART 3：高階主管與董事長 5 大決策指南 (2/2)", "layout_label": "版型 2：並列論法", "conclusion_title": "① 主張：確立空間用途、首選台製亞力逆變器強化資安，並將 48 小時到場 SLA 與防水責任明載入約", "subtitle": "針對決策 D3 (棚架空間與防水)、D4 (設備規格與資安) 與 D5 (合約退出與維運SLA) 建立高層防護網", "columns": [{"title": "② 決策 D3：棚架用途與防水責任", "points": ["③ 空間用途：高棚架淨高 3.4~3.8 米，可作為精密模具暫存區或停車空間", "③ 空間權利：出租方案維持簡報文字，業務口頭協議讓渡部分倉儲空間", "③ 防水保固：方案二 54 根黑色立柱植筋處，由結構技師簽證＋進能服提供 10 年防水工程保固", "③ 露台果斷捨棄：C 棟露台 170 萬雜照費不合算，大會建議直接拍板不作"]}, {"title": "② 決策 D4：設備選型與國產資安", "points": ["③ 逆變器首選亞力：國產台製品牌（110/136kW），消除監控連外資安疑慮，在地零組件備品充沛", "③ 模組規約入約：CSI 445W 泰國製雙玻模組符合經濟部 115/3/11 最新法規，合約載明若換型號需「同級或更優」", "③ 雲端監控：配置 24 小時智慧 SCADA 監控，實時偵測組串電流異常"]}, {"title": "② 決策 D5：合約退出與維運 SLA", "points": ["③ 維運 SLA 承諾：合約明訂「2 個工作天內現場查檢、5 個工作天內完成修復」，逾期按日扣減補償", "③ 20年到期處理：合約載明期滿電廠「免費無償贈與鉅鋼」或由投資方「免費拆除復原」二選一", "③ 中途退出機制：出租方案明訂各年度固定折舊回購價，並明訂外併改內併之技術銜接義務"]}], "footer": "Source: 20260930.pptx Slide 14, 28, 29 設備規格書與維運合約標準條款", "notes_conclusion": "空間、設備、合約三大防線完整落地，讓董事長簽約無任何後顧之憂。", "notes_elaboration": "亞力逆變器解決了外商軟體的資安隱憂，而德國萊因認證團隊的 48 小時到場 SLA 則確保了 20 年的發電穩定性。", "notes_transition": "最後進入 Part 4，檢視國泰金控建坤能源與進能服之團隊實績背書。"}, {"type": "combined", "style": "mckinsey", "category": "PART 4：投資方背景與進能服工程實績", "layout_label": "版型 3：結合論法", "conclusion_title": "① 主張：國泰金控與進金生合資 37 億建坤能源，結合進能服 200MW 實績與雙認證團隊提供 20 年保障", "subtitle": "滿足 MEDDIC「競爭優勢」與「強大履約能力」，確保光電案場 20 年如期如質營運不中斷", "top_claim": "① 核心優勢：百億金融資本後盾（建坤）＋ 上櫃工程實力與 AAA 級維運（進能服），同業唯一雙保險", "pillars": [{"title": "② 投資方：建坤能源 (國泰金控 95% + 進金生 5%)", "facts": ["③ 雄厚資本：實收資本額 37 億元，全台投資超過 300MW，絕非空頭紙上專案公司。", "③ 信譽保障：國泰金控跨國金融風控標準，履約 20 年不倒閉、不停運、不中途棄管。", "③ 費用全包：出租方案由建坤全額負擔工程、台電審查、線補、綠憑評鑑與水電網路費。"]}, {"title": "② EPC 與維運：進金生能源服務 (股票代號 6692)", "facts": ["③ 建置實績：累積工程建置逾 200MW，包含南科 24MW 指標科技大廠及芳生螺絲 3.66MW。", "③ 國際認證：德國萊因 TÜV Rheinland 最高「AAA 等級維運認證」，具備嚴謹階段工程管理。", "③ SLA 承諾：全台綿密工務據點，承諾 2 工作天內現場查檢、5 工作天內修復完成。"]}], "footer": "Source: 20260930.pptx Slide 22~29 進能服企業簡介與建坤能源公司登記資料", "notes_conclusion": "建坤能源的資本深度與進能服的工程專業，是這份簡報向董事長提案最堅實的底牌。", "notes_elaboration": "光電合約長達 20 年，最怕投資方中途倒閉變孤兒電廠；國泰與進能服的雙重背書能讓高層 100% 放心。", "notes_transition": "以上為完整簡報，建議業務團隊直接引導董事長在自建（配融資）與出租中拍板定案。"}];
+    const slidesData = [{"type": "cover", "style": "mckinsey", "category": "ZERO-NOISE CONSULTING BRIEFING  |  MEDDIC Sales Strategy × Executive Audit", "title": "台中西屯・鉅鋼機械新廠光電方案\n高階主管與董事長查核決策簡報（2026/10/01 最新修訂版）", "core_claim": "依據董事長與高階主管視角完成全生命週期數據勾稽：自建（612.3kW）總支出 3,866 萬創造淨現金流 +4,550萬~8,904萬（IRR 11.85%~20.48%）；出租（774.7kW）0出資享 1,836 萬租金或 367 萬度綠電", "meta": "呈閱：鉅鋼機械 董事長暨高階決策團隊 ｜ 規劃團隊：進金生能源服務 (6692) ｜ 顧問規範：森秀明 8 種無雜訊邏輯版型 × 麥肯錫/BCG/Accenture 視覺規範 ｜ 更新日期：2026/10/01", "notes_conclusion": "本簡報依據 2026/10/01 最新業務簡報修訂，全面收斂「方案一租金收益優先」與「方案二淨現值 NPV 2,694 萬」之同口徑比較。", "notes_elaboration": "全篇以無雜訊 8 大版型消弭信息雜訊，自建總成本與 20 年現金流完全吻合，並將立柱防水與空間使用權納入談判閉環。", "notes_transition": "首先進入 Part 1，檢視業務第一線彙整之客戶五大核心想法與 MEDDIC 對策。"}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "PART 1：客戶想法與 MEDDIC 策略 (1/2)", "layout_label": "版型 5：麥肯錫論法", "conclusion_title": "① 主張：將窗口反饋之五大核心想法對映 MEDDIC 框架，全面收斂為直通董事長拍板的贏單對策", "subtitle": "針對直面高層對話、D棟退縮2米免欄杆、出租中途回購、C棟露台勸退及進能服實績建立完整商業邏輯", "stages": ["1. 高層對話(自建/出租)", "2. D棟退縮2米浪板", "3. 方案一中途回購", "4. C棟露台17kW勸退"], "rows": [{"dimension": "③ 要素 1：\n【客戶關鍵想法】", "cells": ["窗口表示董事長自建與出租均在考慮，請進金生直接與高層決策者深度對話", "設計規劃無外圍欄杆、邊緣自女兒牆退縮 2 米之 D 棟浪板方案，顧及立面美觀與防墜", "客戶考量出租至一半若有綠電需求欲行回購，需明確之計價機制與時程規範", "C 棟露台因合法容積限制僅能施作 17.6 kW，光雜照費即高達 170 萬，經濟效益不成立"]}, {"dimension": "③ 要素 2：\n【MEDDIC 專業對策】", "cells": ["【E 經濟決策者】提供同基準 DCF 財務模型，並可搭配銀行 8 成綠能專案融資（自備僅約 588 萬）", "【D 決策標準】退縮 2 米利用女兒牆防墜免加欄杆，通道占比 29.03% 完美符合免雜法規", "【D 決策標準】明訂首年 1.3 倍、逐年遞減 5% 回購公式，並揭露外併改內併工程要件", "【I 痛點立信】主動建議董事長剃除雞肋露台、現省 170 萬規費，樹立不灌水的專業顧問誠信"]}], "footer": "Source: 2026/09/30 業務回報與 20260930.pptx 更新 ｜ 第 5 點：進金生與建坤能源實績置於 Part 4 作為決策信任保障", "notes_conclusion": "透過 MEDDIC 架構梳理，客戶提出的 5 點想法均已轉化為我方對接董事長的決策抓手。", "notes_elaboration": "主動勸退 C 棟露台展示客觀專業，而 D 棟退縮 2 米設計兼顧外觀、工安與免雜法規，有效化解廠長疑慮。", "notes_transition": "接著深入檢視 D 棟退縮 2 米方案之立面防墜與 C 棟露台財務精算。"}, {"type": "opposition", "style": "bcg", "category": "PART 1：客戶想法與 MEDDIC 策略 (2/2)", "layout_label": "版型 6：對立論法", "conclusion_title": "① 主張：D棟退縮2米兼顧外觀美感與合規免雜；C棟露台因170萬雜項執照費建議果斷剔除", "subtitle": "針對 D 棟「退縮 2 米免欄杆浪板」與 C 棟「露台 17.6 kW 雜照區」進行深度技術與財務對比", "side_a_title": "② 焦點 A：D 棟退縮 2 米浪板工藝（★推薦實施）", "side_b_title": "② 焦點 B：C 棟露台 17.6 kW 高棚架（★強烈建議不作）", "dimensions": [{"name": "工安防墜與建築外觀", "side_a": "自女兒牆向內退縮 2 米留設工安緩衝，直接利用女兒牆防墜，新廠立面完全不需外加鐵欄杆", "side_b": "露台為平台結構，需辦理建築雜項執照審查，若設高棚架對周邊採光與視覺壓迫顯著"}, {"name": "法規依據與面積檢討", "side_a": "受限 30% 維護走道限制，實測通道占比 29.03%（600.3/2067.9m²），完全合規免雜照標準", "side_b": "經向台中建管處檢討，合法容積僅剩 32 坪，依法嚴格限縮最高僅能鋪設 17.6 kW"}, {"name": "投資成本與經濟效益", "side_a": "自建單價 $42,000/kW＋浪板 $7,000/kW，雙層隔熱為廠房頂樓降溫 3~5°C，創造 4,550 萬淨利", "side_b": "雜照申請費高達 $1,700,000＋工程款 $1,330,000 = $303萬，20年總收益僅 367 萬，淨值嚴重負數"}, {"name": "結構立柱與防水保障", "side_a": "★ 方案二加浪板需新增 54 根黑色立柱加強抗風，承諾由結構技師簽證並提供 10 年防水工程保固", "side_b": "面積狹小且施工動線受限，單位建置成本高達 $17.2萬/kW，屬於典型高成本低回報之負資產"}], "footer": "Source: 鉅鋼機械 20260930.pptx Slide 9, 17, 20 數據與進能服工程部法規試算", "notes_conclusion": "D 棟退縮 2 米方案在工程與外觀上具高度可行性；C 棟露台建議董事長於會議開場即決議剔除。", "notes_elaboration": "退縮 2 米使浪板走道占比壓在 29.03%，完美落在免雜照的 30% 法規紅線內；54 根立柱以 10 年防水保固消除疑慮。", "notes_transition": "進入 Part 2，盤點全廠施作範圍與雙軌方案之技術規格。"}, {"type": "parallel", "style": "mckinsey", "category": "PART 2：技術規格與雙軌方案盤點 (1/4)", "layout_label": "版型 2：並列論法", "conclusion_title": "① 主張：施作範圍鎖定 D 棟主屋頂與 C 棟兩處屋突，依防雨浪板需求形成 774.7kW 與 612.3kW 雙軌配置", "subtitle": "C 棟屋突兩處（151.745 kW）南向單斜矮棚架兩方案完全共用；D 棟則受浪板與 30% 法規影響容量", "columns": [{"title": "② 區域 1：D 棟主屋頂", "points": ["③ 建物構造：RC 結構平屋頂，棚架低點淨高 3.4~3.8 米，山型東西向陣列", "③ 方案一 (無浪板)：容量 623.000 kW，不受 30% 走道限制，新增 40 根黑色立柱", "③ 方案二 (加浪板)：容量 460.575 kW，退縮 2 米且受 30% 限制，新增 54 根黑色立柱加強抗風", "③ 設備配置：低壓逆變器置於戶外女兒牆側，高壓盤體集中於專屬光電機房"]}, {"title": "② 區域 2：C 棟屋突二處 (C1 + C2)", "points": ["③ 區域 C1 (主屋突)：容量 94.785 kW（採南向單斜矮棚架設計）", "③ 區域 C2 (次屋突)：容量 56.960 kW（採南向單斜矮棚架設計）", "③ 雙方案通用：兩處合計 151.745 kW，結構單純、免浪板、無爭議，直接鋪設", "③ 兩案總容量：方案一合計 774.745 kW；方案二合計 612.320 kW"]}, {"title": "② 核心設備選型規範", "points": ["③ 光電模組：CSI 445W 泰國製雙玻模組（效率 22.3%，符合 115/3/11 經濟部新規）", "③ 逆變器首選：亞力電機 110/136kW（國產資安防護、12組MPPT實時監測、連續輸出不降載）", "③ 替代備選：華為 SUN2000-100KTL（海外一線品牌，若無資安敏感亦可選用）", "③ 施工工期：無浪板案約 7~8 個月；加浪板自建案約 9~10 個月（含台電內併併網）"]}], "footer": "Source: 20261001.pptx Slide 2, 3, 5, 6, 9, 12, 14 工程圖面與設備清冊", "notes_conclusion": "D 棟加浪板使容量由 623kW 降至 460.6kW，但換來了屋頂防雨隔熱與高空間利用率。", "notes_elaboration": "C 棟屋突 151.7kW 經濟效益明確，雙方案均完整保留；主設備建議鎖定符合最新法規的 CSI 模組與台製亞力逆變器。", "notes_transition": "接下來進行最關鍵的方案一出租 vs 方案二自建全生命週期財務對決。"}, {"type": "comparison", "style": "mckinsey", "category": "PART 2：雙軌方案財務模型對決 (2/4)", "layout_label": "版型 7：比較論法", "conclusion_title": "① 主張：方案一享零出資穩健收租；方案二以 2,938 萬投資創造 4,550 萬至 8,904 萬淨現金流（IRR 最高達 20.48%）", "subtitle": "經查核 20260930 Slide 10 精算模型，已扣除 20 年維運、保險、換機與回收費 928 萬，數據完全勾稽", "dimensions": [{"name": "設置容量與 20年總發電量", "col_a": "774.745 kW（D棟 623kW＋C棟 151.7kW）\n20年預估發電：18,360,153 度", "col_b": "612.320 kW（D棟 460.6kW＋C棟 151.7kW）\n20年預估發電：14,510,953 度"}, {"name": "鉅鋼出資與總生命週期支出", "col_a": "鉅鋼 0 出資\n由建坤能源全額承擔工程、規費與 20 年維運", "col_b": "期初 Capex：$29,376,702（工程款 2,894萬＋規費）\n20年維運保險回收：$9,282,316 ➔ 總支出 $38,659,018"}, {"name": "20年實質效益 (淨值/NPV 基準)", "col_a": "★ 租金收益優先：$18,360,153\n（以綠電$5/度計，純現金流入；亦可選20%綠電 3,672,031度）", "col_b": "★ 淨現值 NPV(3%)：$26,938,291\n（純節電 $5.8/度折現淨值；製造業 5% 折現 NPV 為 $19,421,000）"}, {"name": "20年累計淨現金流 (扣除總支出)", "col_a": "淨收益：+$18,360,153（純現金淨流入）\n★ 折現淨現值 NPV(5%) = +$11,587,000", "col_b": "• 純節電淨現金流：+$45,504,512（對應 NPV $26,938,291）\n• 含憑證淨現金流：+$89,037,368（對應 NPV $57,504,375）"}, {"name": "投資回收期與內部報酬率 (IRR)", "col_a": "無回收期問題（首年即享有正現金流）\n無資金沉沒風險", "col_b": "• 純節電 ($5.8)：回收期 7.20 年 ｜ IRR = 11.85%\n• 含憑證 ($8.8)：回收期 4.53 年 ｜ IRR = 20.48%"}, {"name": "外加權利與合約年限", "col_a": "• 享有本案場綠電優先回購權\n• 20年租約由資方維運，鉅鋼可依殘值中途回購", "col_b": "• 100% 綠電與憑證自主運用\n• 5年原廠保固維運，第6年起每5年評估維運續約"}], "footer": "Source: 20261001.pptx Slide 4, 10 財務精算模型（方案二 20 年效益以 NPV $26,938,291 嚴格呈現）", "notes_conclusion": "方案二自建即便在不計憑證的極端保守情境下，IRR 仍達 11.85%，遠高於一般定存與債券收益。", "notes_elaboration": "期初 2,938 萬支出可創造 4,550 萬純節電淨利；若搭配 RE100 綠憑價值，淨利更飆升至 8,904 萬，4.53 年即可回本。", "notes_transition": "下一頁展開 Slide 10 的 20 年動態逐年現金流量表，供 CFO 與董事長逐年查核。"}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "PART 2：方案二自建 20 年逐年現金流與敏感度 (3/4)", "layout_label": "版型 5：麥肯錫論法", "conclusion_title": "① 主張：方案二現金流在第 7.2 年正式回本轉正，20 年累計淨現金流達 4,550 萬至 8,904 萬", "subtitle": "完整揭露 Y0~Y20 逐年收益、維運保險、換機儲備與回收費，數據與 Slide 10 精算表 100% 吻合", "stages": ["建置期 (Y0)", "保固期 (Y1~Y5)", "回本轉正期 (Y6~Y10)", "換機與成熟期 (Y11~Y20)"], "rows": [{"dimension": "③ 現金流動態\n【純節電 $5.8/度】", "cells": ["• Capex 支出：-$29,376,702\n• 台電規費與工程款一次付清\n• 累計淨額：-$29,376,702", "• 年發電收益：約 +$440萬~$454萬\n• 保固期 O&M：$0（免維運費）\n• 扣保險回收後累計：-$8,457,334", "• Y6 起 O&M：-$362,959/年\n• ★ Y7 底累計只剩 -$75.7萬\n• ★ Y8 正式轉正：+$3,054,479（7.2年回本）", "• Y11 提列逆變器換機：-$918,480\n• Y11~Y20 持續淨流入 +$350萬/年\n• ★ 20年累計淨現金流：+$45,504,512"]}, {"dimension": "③ 電價敏感度分析\n【IRR 與回收期】", "cells": ["【極端保守：日間電價 $5.22 (-10%)】\n• 靜態回收期：7.9 年\n• 專案 IRR：9.82%\n• 20年淨現金流：+$3,708 萬元", "【基準情境：目前電價 $5.80】\n• 靜態回收期：7.2 年\n• 專案 IRR：11.85%\n• 20年淨現金流：+$4,550 萬元", "【電價上漲情境：電價 $6.38 (+10%)】\n• 靜態回收期：6.5 年\n• 專案 IRR：13.88%\n• 20年淨現金流：+$5,392 萬元", "【滿血情境：節電＋綠憑 $8.80】\n• ★ 靜態回收期：4.53 年\n• ★ 專案 IRR：20.48%\n• ★ 20年累計淨現金流：+$8,904 萬元"]}], "footer": "Source: 20261001.pptx Slide 10 Excel 精算表模型 (未稅)，每年發電衰減率以 0.8% 嚴格計算", "notes_conclusion": "現金流量表證實，自建方案第 8 年起每年穩健淨流入 350 萬以上，即使電價下跌 10%，IRR 仍逼近 10%。", "notes_elaboration": "第 11 年已預先提列 91.8 萬逆變器汰換費用，財務模型完全無隱藏費用，禁得起董事會最嚴格查核。", "notes_transition": "接著分析方案一的中途回購機制，剖析買回價格與外併改內併的工程限制。"}, {"type": "chain", "style": "mckinsey", "category": "PART 2：方案一出租中途回購評估 (4/4)", "layout_label": "版型 4：連鎖論法", "conclusion_title": "① 主張：方案一具中途回購彈性，惟首年溢價高達 42% 且外併改內併程序繁瑣，自建仍具絕對財務優勢", "subtitle": "依國泰建坤「首年工程價金 1.3 倍、逐年遞減 5%」公式，剖析「轉成發電自用」各年門檻與工程要件", "steps": [{"number": "01", "title": "回購價格公式", "desc": "首年回購單價為 $59,670/kW（總價 4,623萬），比自建 $42,000 高出 42%，之後按 20 年逐年遞減 5%（每年減少約 $2,984/kW）。"}, {"number": "02", "title": "回購甜蜜點分析", "desc": "第 5 年回購價 3,698 萬，第 10 年降至 2,543 萬；若於第 8~10 年回購，剩餘 10 年自用節電效益可達 4,800 萬以上，具備回購經濟價值。"}, {"number": "03", "title": "轉成自用工程限制", "desc": "方案一為高壓外併，回購後欲「轉成發電自用」須終止台電躉售契約、廢除臨路 MOF 盤並重新申請高壓內併，衍生約 150~200 萬改裝與停電切換費用。"}, {"number": "04", "title": "高層決策建議", "desc": "若鉅鋼 3~5 年內有綠電剛需，強烈建議「直選方案二自建」，避免中途被加價 1.3 倍回購並承擔昂貴的二次改管線工程。"}], "footer": "Source: 20261001.pptx Slide 8 轉成發電自用回購試算表與進能服高壓併聯工程規範", "notes_conclusion": "中途回購是一張防禦性安全牌，但首年溢價 42% 與二次改裝成本偏高。", "notes_elaboration": "如果未來確定需要綠電自用，一開始就選擇高壓內併自建，能省下近 1,700 萬的溢價與改建折騰。", "notes_transition": "進入 Part 3，正面答辯資深光伏顧問提出的五大技術疑問。"}, {"type": "bcg_growth", "style": "bcg", "category": "PART 3：資深光伏顧問 5 大疑問深度答辯 (1/2)", "layout_label": "版型 8：BCG 論法", "conclusion_title": "① 主張：針對比較基準、日照數據與回購可行性三大質疑，我方已完成同口徑驗算與合約保障閉環", "subtitle": "針對顧問提出的 Q1 (比較基準不一致)、Q2 (發電量偏樂觀) 與 Q3 (回購可行性) 逐項專業對應", "cards": [{"tag": "QA 01", "title": "質疑 1：方案比較基準不一致", "content": "• 顧問質疑：方案一算 5.8 元，方案二卻算 8.8 元；未扣除第 6 年後維運重置成本。\n• ★ 查核落實：在 20260930 版中，方案一綠電僅標度數（367萬度），方案二純節電以 $5.8 精算，且 Slide 10 扣除 20 年維運保險換機 928 萬，數據完全嚴謹一致！"}, {"tag": "QA 02", "title": "質疑 2：發電量 3.5 小時無佐證", "content": "• 顧問質疑：東西向山型陣列在台中 3.5 小時偏樂觀，表內每年衰減 0.8% 與規格書不一致。\n• ★ 查核落實：3.5 小時係依據氣象局台中文心站 10 年實測日照量；簡報採 0.8% 衰減係採超保守估算（模組規格實為 <0.4%）。我方合約願提供「首年保證發電量 85%」差額補償！"}, {"tag": "QA 03", "title": "質疑 3：回購機制不利且難度高", "content": "• 顧問質疑：首年 1.3 倍回購單價過高，且高壓外併改內併申請時程與費用未交代。\n• ★ 查核落實：Slide 8 已將節電與憑證拆開呈現；合約將明訂「回購由我方協助向台電辦理外改內變更」，改裝工期約 3~4 個月，預算約 150 萬已於簡報備忘錄揭露。"}], "footer": "Source: 資深光伏顧問審查意見 × 進能服工程部與財務部聯合答辯報告", "notes_conclusion": "三大財務與發電質疑均已透過 20260930 精算表獲得完美化解，立足點完全站得住腳。", "notes_elaboration": "保守的 0.8% 衰減率為專案留下了充足的安全邊際，而合約保證 85% 發電量更徹底鎖定了發電風險。", "notes_transition": "接著檢視 Q4 法規免雜照與 Q5 屋頂空間權益條款。"}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "PART 3：資深光伏顧問 5 大疑問深度答辯 (2/2)", "layout_label": "版型 5：麥肯錫論法", "conclusion_title": "① 主張：D棟浪板以 29.03% 通道占比合規免雜照；54 根立柱承諾結構技師簽證與 10 年防水工程保固", "subtitle": "針對顧問提出的 Q4 (D棟容量差異與立柱防水) 與 Q5 (租金分潤與棚架空間權益) 提出具體履約方案", "stages": ["Q4-1: 30%維護走道法規", "Q4-2: 54根立柱與防水", "Q5-1: 租金基準與保底", "Q5-2: 棚架空間使用權"], "rows": [{"dimension": "③ 顧問嚴格質疑", "cells": ["方案二加浪板是否符合免雜照？兩案 162kW 差額依據為何？", "方案二新增 54 根黑色立柱植筋，屋頂打孔漏水責任歸誰？", "20% 售電收入以每度 5 元估算，若台電收購價波動是否有保底？", "Slide 6 載明「棚架用途歸資方所有」，限制業主自有屋頂使用權！"]}, {"dimension": "③ 我方權威答辯", "cells": ["★ 經精算浪板面積 2,668m²，走道占 29.03% <= 30%，完全符合免雜執照標準！", "★ 方案二 54 根立柱由結構技師簽證，並由進能服提供 10 年防水工程保固與責任險！", "★ 方案一提供「保底年發電時數 1,050 小時」或「固定租金底線」，由建坤能源全額履約。", "★ 簡報保留原文字，業務口頭向董事長承諾：可協議讓渡部分倉儲空間，資方僅保留檢修權！"]}], "footer": "Source: 20260930.pptx Slide 6, 9, 17 結構檢討與進能服工務合約範本", "notes_conclusion": "走道 29.03% 確保合法免雜照免停工；54 根立柱以結構技師簽證與 10 年防水保固徹底打消疑慮。", "notes_elaboration": "針對空間條款，以「口頭承諾讓渡倉儲空間」化解商務僵局，確保鉅鋼在免出資的同時仍保有廠房屋頂使用價值。", "notes_transition": "進入業主高層與董事長關切的五大採購決策指南。"}, {"type": "comparison", "style": "mckinsey", "category": "PART 3：高階主管與董事長 5 大決策指南 (1/2)", "layout_label": "版型 7：比較論法", "conclusion_title": "① 主張：資本充裕或具減碳剛需首選方案二自建（IRR 20.48%）；資金留作本業則選方案一零出資收租", "subtitle": "針對董事長決策 D1 (出租 vs 自建資本配置) 與 D2 (綠電自用 vs 賣電收租) 提供量化決策矩陣", "dimensions": [{"name": "高層決策題目", "col_a": "【決策 D1】出租還是自建？資本如何配置？", "col_b": "【決策 D2】綠電要自己用，還是賣掉收租？"}, {"name": "核心決策依據", "col_a": "• 帳上是否可動用 2,938 萬 Capex？\n• 精密機械本業擴產報酬率是否高於 11.85%~20.48%？\n• 是否願意利用銀行 8 成綠能貸款槓桿？", "col_b": "• 鉅鋼未來 3~5 年有無 RE100 或用電大戶義務？\n• 歐美設備買家有無供應鏈排碳與綠電稽核？\n• 台灣碳費開徵對鉅鋼產品競爭力之影響？"}, {"name": "情境 A：★推薦自建", "col_a": "【選方案二：光電自建 (612.3kW)】\n• 投資 2,938 萬，20年創造 4,550萬~8,904萬 淨現金流\n• 若搭配銀行融資 80%，自備僅 588 萬，內部報酬率極高！", "col_b": "【直選自發自用＋申請綠憑】\n• 每年產生約 72 萬度綠電，全數抵扣廠房用電\n• 取得 T-REC 綠能憑證，完美通過外銷客戶 ESG 稽核"}, {"name": "情境 B：穩健收租", "col_a": "【選方案一：出租分潤 (774.7kW)】\n• 0 出資、0 負債、0 風險，現金全數保留給機械本業\n• 20 年穩賺 1,836 萬租金淨現金流（建坤 37 億資本保證）", "col_b": "【選 20% 綠電回饋或優先回購權】\n• 選 20% 綠電回饋可獲 367 萬度，兼顧基礎減碳義務\n• 簽訂「本案場綠電優先回購權」，未來有需求可全額買回"}], "footer": "Source: MEDDIC 經濟決策者 (EB) 財務決策模型 × 台灣碳費與綠電交易市場動態", "notes_conclusion": "資金充裕或有客戶減碳要求，自建是最佳財務選擇；若保守看重流動性，出租是零風險解方。", "notes_elaboration": "如果董事長猶豫 2,900 萬現金支出，銀行 8 成專案融資（自備款僅 588 萬）是能立刻促成自建拍板的關鍵槓桿。", "notes_transition": "接著檢視高層決策 D3 (空間用途)、D4 (設備品牌) 與 D5 (合約退出與SLA)。"}, {"type": "parallel", "style": "mckinsey", "category": "PART 3：高階主管與董事長 5 大決策指南 (2/2)", "layout_label": "版型 2：並列論法", "conclusion_title": "① 主張：確立空間用途、首選台製亞力逆變器強化資安，並將 48 小時到場 SLA 與防水責任明載入約", "subtitle": "針對決策 D3 (棚架空間與防水)、D4 (設備規格與資安) 與 D5 (合約退出與維運SLA) 建立高層防護網", "columns": [{"title": "② 決策 D3：棚架用途與防水責任", "points": ["③ 空間用途：高棚架淨高 3.4~3.8 米，可作為精密模具暫存區或停車空間", "③ 空間權利：出租方案維持簡報文字，業務口頭協議讓渡部分倉儲空間", "③ 防水保固：方案二 54 根黑色立柱植筋處，由結構技師簽證＋進能服提供 10 年防水工程保固", "③ 露台果斷捨棄：C 棟露台 170 萬雜照費不合算，大會建議直接拍板不作"]}, {"title": "② 決策 D4：設備選型與國產資安", "points": ["③ 逆變器首選亞力：國產台製品牌（110/136kW），消除監控連外資安疑慮，在地零組件備品充沛", "③ 模組規約入約：CSI 445W 泰國製雙玻模組符合經濟部 115/3/11 最新法規，合約載明若換型號需「同級或更優」", "③ 雲端監控：配置 24 小時智慧 SCADA 監控，實時偵測組串電流異常"]}, {"title": "② 決策 D5：合約退出與維運 SLA", "points": ["③ 維運 SLA 承諾：合約明訂「2 個工作天內現場查檢、5 個工作天內完成修復」，逾期按日扣減補償", "③ 20年到期處理：合約載明期滿電廠「免費無償贈與鉅鋼」或由投資方「免費拆除復原」二選一", "③ 中途退出機制：出租方案明訂各年度固定折舊回購價，並明訂外併改內併之技術銜接義務"]}], "footer": "Source: 20260930.pptx Slide 14, 28, 29 設備規格書與維運合約標準條款", "notes_conclusion": "空間、設備、合約三大防線完整落地，讓董事長簽約無任何後顧之憂。", "notes_elaboration": "亞力逆變器解決了外商軟體的資安隱憂，而德國萊因認證團隊的 48 小時到場 SLA 則確保了 20 年的發電穩定性。", "notes_transition": "最後進入 Part 4，檢視國泰金控建坤能源與進能服之團隊實績背書。"}, {"type": "combined", "style": "mckinsey", "category": "PART 4：投資方背景與進能服工程實績", "layout_label": "版型 3：結合論法", "conclusion_title": "① 主張：國泰金控與進金生合資 37 億建坤能源，結合進能服 200MW 實績與雙認證團隊提供 20 年保障", "subtitle": "滿足 MEDDIC「競爭優勢」與「強大履約能力」，確保光電案場 20 年如期如質營運不中斷", "top_claim": "① 核心優勢：百億金融資本後盾（建坤）＋ 上櫃工程實力與 AAA 級維運（進能服），同業唯一雙保險", "pillars": [{"title": "② 投資方：建坤能源 (國泰金控 95% + 進金生 5%)", "facts": ["③ 雄厚資本：實收資本額 37 億元，全台投資超過 300MW，絕非空頭紙上專案公司。", "③ 信譽保障：國泰金控跨國金融風控標準，履約 20 年不倒閉、不停運、不中途棄管。", "③ 費用全包：出租方案由建坤全額負擔工程、台電審查、線補、綠憑評鑑與水電網路費。"]}, {"title": "② EPC 與維運：進金生能源服務 (股票代號 6692)", "facts": ["③ 建置實績：累積工程建置逾 200MW，包含南科 24MW 指標科技大廠及芳生螺絲 3.66MW。", "③ 國際認證：德國萊因 TÜV Rheinland 最高「AAA 等級維運認證」，具備嚴謹階段工程管理。", "③ SLA 承諾：全台綿密工務據點，承諾 2 工作天內現場查檢、5 工作天內修復完成。"]}], "footer": "Source: 20260930.pptx Slide 22~29 進能服企業簡介與建坤能源公司登記資料", "notes_conclusion": "建坤能源的資本深度與進能服的工程專業，是這份簡報向董事長提案最堅實的底牌。", "notes_elaboration": "光電合約長達 20 年，最怕投資方中途倒閉變孤兒電廠；國泰與進能服的雙重背書能讓高層 100% 放心。", "notes_transition": "以上為完整簡報，建議業務團隊直接引導董事長在自建（配融資）與出租中拍板定案。"}];
     
-    // Complete 20-year cashflow dataset directly from Slide 10 Excel screenshot
     const cashflow20Yr = [
       { year: 0, kwh: 0, rev: 0, om: 0, ins: 0, rec: 0, net: -29376702, cum: -29376702 },
       { year: 1, kwh: 782239, rev: 4536985, om: 0, ins: -176260, rec: -612320, net: 3748405, cum: -25628297 },
@@ -419,7 +415,6 @@
       showSlide(0);
       lucide.createIcons();
 
-      // Keyboard navigation
       document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight' || e.key === ' ') {
           nextSlide();
@@ -453,7 +448,6 @@
       currentSlide = index;
       const slide = slidesData[index];
 
-      // Update header
       document.getElementById('slide-category').textContent = slide.category || 'ZERO-NOISE CONSULTING BRIEFING';
       document.getElementById('slide-page-indicator').textContent = `第 ${index + 1} 頁 / 共 ${totalSlides} 頁`;
       document.getElementById('slide-action-title').textContent = slide.conclusion_title || slide.title || '';
@@ -467,10 +461,8 @@
         badge.classList.add('hidden');
       }
 
-      // Update Footer
-      document.getElementById('slide-footer-source').textContent = slide.footer || slide.meta || '進金生能源服務 2026/09/30 最新案場規劃資料';
+      document.getElementById('slide-footer-source').textContent = slide.footer || slide.meta || '進金生能源服務 2026/10/01 最新業務修訂資料';
 
-      // Cash flow button visibility (only show on slide 5 and 6)
       const cfBtn = document.getElementById('btn-view-cashflow');
       if (index === 4 || index === 5) {
         cfBtn.classList.remove('hidden');
@@ -478,15 +470,11 @@
         cfBtn.classList.add('hidden');
       }
 
-      // Update Speaker Notes
       document.getElementById('notes-conclusion').textContent = slide.notes_conclusion || '此頁核心結論清晰，直指商業決策底線。';
       document.getElementById('notes-elaboration').textContent = slide.notes_elaboration || '依據工程圖面與財務精算表展開完整論證細節。';
       document.getElementById('notes-transition').textContent = slide.notes_transition || '引導董事長進入下一階段拍板環節。';
 
-      // Render Body by Template Type
       renderSlideBody(slide, index);
-
-      // Update dots
       updateDots();
       lucide.createIcons();
     }
@@ -522,7 +510,6 @@
           </div>
         `;
       } else if (slide.type === 'comparison') {
-        // 版型 7：比較論法
         let rowsHtml = '';
         slide.dimensions.forEach((dim, idx) => {
           rowsHtml += `
@@ -544,7 +531,7 @@
                     <th class="p-3 w-3/8 font-bold border-r border-slate-700/50">方案一：出租分潤（建坤出資 774.7kW）</th>
                     <th class="p-3 w-3/8 font-bold bg-slate-900/60 flex items-center justify-between">
                       <span>方案二：光電自建（鉅鋼投資 612.3kW）</span>
-                      <span class="px-2 py-0.5 rounded text-[10px] bg-amber-500 text-white font-black">高報酬推薦</span>
+                      <span class="px-2 py-0.5 rounded text-[10px] bg-amber-500 text-white font-black">高回報推薦</span>
                     </th>
                   </tr>
                 </thead>
@@ -554,7 +541,6 @@
           </div>
         `;
       } else if (slide.type === 'opposition') {
-        // 版型 6：對立論法
         let rowsHtml = '';
         slide.dimensions.forEach((dim, idx) => {
           rowsHtml += `
@@ -589,7 +575,6 @@
           </div>
         `;
       } else if (slide.type === 'parallel') {
-        // 版型 2：並列論法
         let colsHtml = '';
         slide.columns.forEach((col) => {
           let pointsHtml = col.points.map(p => `
@@ -618,7 +603,6 @@
           </div>
         `;
       } else if (slide.type === 'mckinsey_flow') {
-        // 版型 5：麥肯錫論法
         let stagesHeader = slide.stages.map(s => `
           <div class="p-2 text-center text-xs font-bold theme-primary-bg text-white rounded-t-lg">
             ${s}
@@ -655,7 +639,6 @@
           </div>
         `;
       } else if (slide.type === 'chain') {
-        // 版型 4：連鎖論法
         let stepsHtml = slide.steps.map(step => `
           <div class="flex-1 bg-white border theme-border rounded-xl p-3.5 flex flex-col shadow-xs relative">
             <div class="text-xl font-black theme-accent-text tracking-tighter mb-1">${step.number}</div>
@@ -672,7 +655,6 @@
           </div>
         `;
       } else if (slide.type === 'bcg_growth') {
-        // 版型 8：BCG 論法
         let cardsHtml = slide.cards.map(card => `
           <div class="flex-1 bg-white border theme-border rounded-xl p-4 flex flex-col shadow-xs">
             <div class="inline-flex items-center self-start px-2 py-0.5 rounded text-[10px] font-black bg-slate-100 theme-primary-text mb-2">
@@ -691,7 +673,6 @@
           </div>
         `;
       } else if (slide.type === 'combined') {
-        // 版型 3：結合論法
         let pillarsHtml = slide.pillars.map(p => {
           let factsHtml = p.facts.map(f => `
             <li class="p-2.5 bg-white border border-slate-200 rounded-lg text-xs text-slate-700 whitespace-pre-line leading-relaxed shadow-2xs">
