@@ -491,7 +491,7 @@
               <span>MEDDIC B2B 顧問框架 × 高階主管審查 × 董事長投資決策</span>
             </div>
             <h1 class="text-2xl sm:text-4xl font-black text-slate-900 leading-tight mb-4 tracking-tight">
-              ${slide.title.replace('\n', '<br/>')}
+              ${slide.title.replace(/\n/g, '<br/>')}
             </h1>
             <div class="max-w-3xl p-4 bg-slate-50 border theme-border rounded-xl mb-6">
               <p class="text-sm font-semibold theme-primary-text leading-relaxed">
@@ -619,8 +619,7 @@
 
           rowsHtml += `
             <div class="space-y-1 mb-2">
-              <div class="text-[11px] font-black theme-secondary-text uppercase tracking-wider">${r.dimension.replace('
-', ' ')}</div>
+              <div class="text-[11px] font-black theme-secondary-text uppercase tracking-wider">${r.dimension.replace(/\n/g, ' ')}</div>
               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
                 ${cellsHtml}
               </div>
